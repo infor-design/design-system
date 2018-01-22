@@ -1,0 +1,19 @@
+---
+  global:
+    category: "links"
+  imports:
+    - "./aliases.yml"
+  props:
+    LINK-COLOR:
+      value: "{!AZURE06}"
+      type: "color"
+    LINK-COLOR-DISABLED:
+      value: "{!GRAPHITE04}"
+      type: "color"
+    LINK-COLOR-HOVER:
+      value: "{!AZURE06}"
+      type: "color"
+    LINK-COLOR-VISITED:
+      value: "{!AMETHYST06}"
+      type: "color"
+

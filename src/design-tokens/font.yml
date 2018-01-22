@@ -1,0 +1,40 @@
+---
+  global:
+    category: "fonts"
+  imports:
+    - "./aliases.yml"
+  props:
+    FONT-FAMILY-BASE:
+      value: "Helvetica, Arial, san-serif"
+      type: "string"
+    HEADER-PRIMARY-FONT-SIZE:
+      value: "1.8rem"
+      type: "size"
+    HEADER-SECONDARY-FONT-SIZE:
+      value: "1.6rem"
+      type: "size"
+    FONT-SIZE-BASE:
+      value: "1.4rem"
+      type: "size"
+    FONT-WEIGHT-NORMAL:
+      value: "normal"
+      type: "string"
+    LINE-HEIGHT-BASE:
+      value: "1.5"
+      type: "number"
+    TEXT-SMALL:
+      value: "1.2rem"
+      type: "size"
+    TEXT-ALERT:
+      value: "{!STATUS-RED}"
+      type: "color"
+    TEXT-DESCRIPTIVE:
+      value: "{!GRAPHITE06}"
+      type: "color"
+    TEXT-MUTED:
+      value: "{!GRAPHITE04}"
+      type: "color"
+    TEXT-STRONG:
+      value: "700"
+      type: "number"
+

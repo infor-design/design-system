@@ -1,0 +1,46 @@
+---
+  global:
+    category: "checkboxes"
+  imports:
+    - "./aliases.yml"
+  props:
+    CHECKBOX-ARROW-COLOR:
+      value: "{!WHITE}"
+      type: "color"
+    CHECKBOX-ARROW-COLOR-DISABLED:
+      value: "#f4f4f4"
+      type: "color"
+    CHECKBOX-BORDER-COLOR:
+      value: "{!GRAPHITE04}"
+      type: "color"
+    CHECKBOX-BORDER-COLOR-DISABLED:
+      value: "{!GRAPHITE03}"
+      type: "color"
+    CHECKBOX-BG:
+      value: "{!WHITE}"
+      type: "color"
+    CHECKBOX-BG-DISABLED:
+      value: "{!WHITE}"
+      type: "color"
+    CHECKBOX-BG-DISABLED-CHECKED:
+      value: "{!GRAPHITE03}"
+      type: "color"
+    CHECKBOX-SHADOW-FOCUS:
+      value: "0 0 0 1px {!GRAPHITE01}, 0 0 0 2px {!AZURE06}"
+      type: "shadow"
+    CHECKBOX-COLOR:
+      value: "{!AZURE06}"
+      type: "color"
+    CHECKBOX-BOX-H:
+      value: "17px"
+      type: "size"
+    CHECKBOX-BOX-W:
+      value: "17px"
+      type: "size"
+    CHECKBOX-CHECK-H:
+      value: "11px"
+      type: "size"
+    CHECKBOX-CHECK-W:
+      value: "5px"
+      type: "size"
+

@@ -1,0 +1,14 @@
+---
+  global:
+    category: "body"
+    type: "color"
+  imports:
+    - "./aliases.yml"
+  props:
+    BODY-BG:
+      value: "{!GRAPHITE01}"
+    BODY-BG-SECONDARY:
+      value: "{!WHITE}"
+    BODY-COLOR:
+      value: "{!GRAPHITE10}"
+

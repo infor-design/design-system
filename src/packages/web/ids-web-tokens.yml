@@ -1,0 +1,13 @@
+---
+  imports:
+    - "../../design-tokens/adaptive.yml"
+    - "../../design-tokens/body.yml"
+    - "../../design-tokens/button.yml"
+    - "../../design-tokens/checkboxes.yml"
+    - "../../design-tokens/font.yml"
+    - "../../design-tokens/icons.yml"
+    - "../../design-tokens/inputs.yml"
+    - "../../design-tokens/layout.yml"
+    - "../../design-tokens/links.yml"
+    - "../../design-tokens/radio-buttons.yml"
+

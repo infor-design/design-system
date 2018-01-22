@@ -1,0 +1,19 @@
+---
+  global: 
+    category: "layout"
+  imports: 
+    - "./aliases.yml"
+  props: 
+    GRID-GUTTER-SM: 
+      value: "10px"
+      type: "size"
+    GRID-GUTTER-LG: 
+      value: "20px"
+      type: "size"
+    CONTAINER-PADDING-SM: 
+      value: "10px"
+      type: "size"
+    CONTAINER-PADDING-LG: 
+      value: "20px"
+      type: "size"
+
