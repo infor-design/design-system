@@ -1,0 +1,16 @@
+---
+  global: 
+    category: "icons"
+  imports: 
+    - "./color-palette.yml"
+  props: 
+    ICON-HEIGHT: 
+      value: "16px"
+      type: "size"
+    ICON-WIDTH: 
+      value: "22px"
+      type: "size"
+    ICON-FILL: 
+      value: "{!GRAPHITE04}"
+      type: "color"
+

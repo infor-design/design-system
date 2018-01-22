@@ -1,3 +1,7 @@
+# Compiled #
+############
+platforms/
+
 # Packages #
 ############
 node_modules/

@@ -1,0 +1,130 @@
+---
+  imports:
+    - "./color-palette.yml"
+  props:
+    INPUT-SIZE-XS:
+      value: "75px"
+      type: "size"
+      category: "input sizes"
+    INPUT-SIZE-SM:
+      value: "150px"
+      type: "size"
+      category: "input sizes"
+    INPUT-SIZE-MD:
+      value: "300px"
+      type: "size"
+      category: "input sizes"
+    INPUT-SIZE-LG:
+      value: "400px"
+      type: "size"
+      category: "input sizes"
+    INPUT-BORDER-RADIUS:
+      value: "2px"
+      type: "size"
+      category: "inputs"
+    INPUT-BORDER-SIZE:
+      value: "1px"
+      type: "size"
+      category: "inputs"
+    INPUT-BORDER-WIDTH:
+      value: "1px"
+      type: "size"
+      category: "inputs"
+    INPUT-COLOR-PLACEHOLDER:
+      value: "{!GRAPHITE04}"
+      type: "color"
+      category: "inputs"
+    INPUT-HEIGHT:
+      value: "3.4rem"
+      type: "size"
+      category: "inputs"
+    INPUT-INFO-BLOCK-COLOR:
+      value: "{!GRAPHITE04}"
+      type: "color"
+      category: "inputs"
+    INPUT-LABEL-COLOR:
+      value: "{!GRAPHITE06}"
+      type: "color"
+      category: "inputs"
+    INPUT-LINE-HEIGHT:
+      comment: "calc({!input-height} - (2 * {!input-padding-y}} - (2 * {!input-border-size}}}"
+      value: "16px"
+      type: "size"
+      category: "inputs"
+    INPUT-PADDING-X:
+      value: "12px"
+      type: "size"
+      category: "inputs"
+    INPUT-PADDING-Y:
+      value: "8px"
+      type: "size"
+      category: "inputs"
+    INPUT-TRANSITION:
+      value: "border 300ms ease 0s, box-shadow 300ms ease 0s"
+      type: "string"
+      category: "inputs"
+    INPUT-BG:
+      value: "transparent"
+      type: "color"
+      category: "input normal"
+    INPUT-BORDER-COLOR:
+      value: "{!GRAPHITE04}"
+      type: "color"
+      category: "input normal"
+    INPUT-COLOR:
+      value: "{!GRAPHITE10}"
+      type: "color"
+      category: "input normal"
+    INPUT-BG-DISABLED:
+      value: "transparent"
+      type: "color"
+      category: "input disabled"
+    INPUT-BORDER-COLOR-DISABLED:
+      value: "{!GRAPHITE03}"
+      type: "color"
+      category: "input disabled"
+    INPUT-COLOR-DISABLED:
+      value: "{!GRAPHITE04}"
+      type: "color"
+      category: "input disabled"
+    INPUT-BG-HOVER:
+      value: "transparent"
+      type: "color"
+      category: "input hover"
+    INPUT-BORDER-COLOR-HOVER:
+      value: "{!GRAPHITE10}"
+      type: "color"
+      category: "input hover"
+    INPUT-COLOR-HOVER:
+      value: "{!GRAPHITE10}"
+      type: "color"
+      category: "input hover"
+    INPUT-BG-FOCUS:
+      value: "transparent"
+      type: "color"
+      category: "input focus"
+    INPUT-BORDER-COLOR-FOCUS:
+      value: "{!AZURE06}"
+      type: "color"
+      category: "input focus"
+    INPUT-COLOR-FOCUS:
+      value: "{!GRAPHITE10}"
+      type: "color"
+      category: "input focus"
+    INPUT-BG-READONLY:
+      value: "{!GRAPHITE02}"
+      type: "color"
+      category: "input readonly"
+    INPUT-BORDER-COLOR-READONLY:
+      value: "{!GRAPHITE03}"
+      type: "color"
+      category: "input readonly"
+    INPUT-COLOR-READONLY:
+      value: "{!GRAPHITE04}"
+      type: "color"
+      category: "input readonly"
+    SELECT-BG-CARET:
+      value: "url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZHJvcGRvd248L3RpdGxlPjxwYXRoIGQ9Ik00IDZsNSA2IDUtNkg0eiIvPjwvc3ZnPg==}"
+      type: "string"
+      category: "selects"
+
