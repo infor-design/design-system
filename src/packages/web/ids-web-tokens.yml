@@ -1,6 +1,7 @@
 ---
   imports:
     - "../../design-tokens/adaptive.yml"
+    - "../../design-tokens/breakpoints.yml"
     - "../../design-tokens/body.yml"
     - "../../design-tokens/button.yml"
     - "../../design-tokens/checkboxes.yml"
