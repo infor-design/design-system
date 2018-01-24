@@ -10,7 +10,7 @@
     "build:high-contrast": "theo design-tokens/theme-high-contrast.yml --format custom-properties.css,raw.json --dest ./platforms/web",
     "clean": "del dist/*",
     "prepublishOnly": "npm test && npm run build",
-    "test": "yamllint ./*.yml"
+    "test": "yamllint ./**/*.yml"
   },
   "repository": {
     "type": "git",

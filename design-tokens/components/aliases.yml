@@ -20,6 +20,7 @@
     AMBER08: "#e4882b"
     AMBER09: "#db7726"
     AMBER10: "#d66221"
+
     AMETHYST01: "#ede3fc"
     AMETHYST02: "#daccec"
     AMETHYST03: "#c7b4db"
@@ -30,6 +31,7 @@
     AMETHYST08: "#6e5282"
     AMETHYST09: "#5d3e70"
     AMETHYST10: "#4b2a5e"
+
     TURQUOISE01: "#c0ede3"
     TURQUOISE02: "#a9e1d6"
     TURQUOISE03: "#8ed1c6"
@@ -40,6 +42,7 @@
     TURQUOISE08: "#317c73"
     TURQUOISE09: "#206b62"
     TURQUOISE10: "#0e5b52"
+
     RUBY01: "#f4bcbc"
     RUBY02: "#eb9d9d"
     RUBY03: "#de8181"
@@ -50,6 +53,7 @@
     RUBY08: "#a13030"
     RUBY09: "#941e1e"
     RUBY10: "#880e0e"
+
     EMERALD01: "#d5f6c0"
     EMERALD02: "#c3e8ac"
     EMERALD03: "#afdc91"
@@ -70,6 +74,7 @@
     GRAPHITE08: "#383838"
     GRAPHITE09: "#292929"
     GRAPHITE10: "#1a1a1a"
+
     SLATE01: "#dee1e8"
     SLATE02: "#c8cbd4"
     SLATE03: "#abaeb7"
@@ -80,10 +85,11 @@
     SLATE08: "#313236"
     SLATE09: "#212224"
     SLATE10: "#1c1819"
+
     WHITE: "#fff"
     BLACK: "#000"
+
     STATUS-GREEN: "#80ce4d"
     STATUS-ORANGE: "#ff9426"
     STATUS-RED: "#e84f4f"
     STATUS-YELLOW: "#ffd726"
-
