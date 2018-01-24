@@ -11,4 +11,3 @@
     - "./components/layout.yml"
     - "./components/links.yml"
     - "./components/radio-buttons.yml"
-    - "./components/themes/theme-dark.yml"

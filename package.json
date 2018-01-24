@@ -4,11 +4,9 @@
   "version": "1.0.0-alpha.1",
   "description": "Infor Design System Design Tokens",
   "scripts": {
-    "build": "npm run build:default && npm run build:dark && npm run build:high-contrast",
-    "build:default": "theo design-tokens/theme-default.yml --format custom-properties.css,raw.json --dest ./platforms/web",
-    "build:dark": "theo design-tokens/theme-dark.yml --format custom-properties.css,raw.json --dest ./platforms/web",
-    "build:high-contrast": "theo design-tokens/theme-high-contrast.yml --format custom-properties.css,raw.json --dest ./platforms/web",
-    "clean": "del dist/*",
+    "build": "npm run build:web",
+    "build:web": "npm run clean && node ./scripts/build-web.js --format=custom-properties.css,sass",
+    "clean": "del platforms",
     "prepublishOnly": "npm test && npm run build",
     "test": "yamllint ./**/*.yml"
   },
@@ -24,10 +22,17 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "del-cli": "^1.1.0",
+    "glob-fs": "^0.1.7",
+    "minimalist": "^1.0.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "path": "^0.12.7",
+    "rename": "^1.0.4",
     "theo": "^6.0.0-beta.9",
     "yaml-lint": "^1.0.0"
   },
   "files": [
     "platforms"
-  ]
+  ],
+  "dependencies": {}
 }
