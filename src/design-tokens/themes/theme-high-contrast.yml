@@ -17,10 +17,6 @@
     LINK-COLOR-HOVER:
       value: "{!AZURE09}"
       category: "links"
-    TEXT-DISABLED:
-      value: "{!GRAPHITE04}"
-    HEADINGS-COLOR:
-      value: "{!BLACK}"
     BTN-DEFAULT-BG:
       value: "{!GRAPHITE07}"
       category: "buttons"
