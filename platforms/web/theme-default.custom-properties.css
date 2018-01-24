@@ -1,0 +1,122 @@
+
+:root {
+  --input-height-adaptive-touch: 4.4rem;
+  /* calc({!input-height-adaptive-touch} - (2 * {!input-padding-y}} - (2 * {!input-border-size}}} */
+  --input-line-height-adaptive-touch: 26px;
+  /* calc(({!input-height-adaptive-touch} - {!line-height-base}} / 2} */
+  --input-padding-adaptive-touch: 12px;
+  /* calc({!radio-outer-h-adaptive-touch} - 8} */
+  --radio-inner-h-adaptive-touch: 16px;
+  /* {!radio-inner-h-adaptive-touch} */
+  --radio-inner-w-adaptive-touch: 16px;
+  /* calc({!radio-outer-h} * 1.3} */
+  --radio-outer-h-adaptive-touch: 24px;
+  /* calc({!radio-outer-h-adaptive-touch} + 1} */
+  --radio-outer-w-adaptive-touch: 24px;
+  --breakpoint-xs: 400px;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 840px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1440px;
+  --body-bg: #f0f0f0;
+  --body-bg-secondary: #fff;
+  --body-color: #1a1a1a;
+  --btn-primary-hover: #2578a9;
+  --btn-primary-bg: #368ac0;
+  --btn-link-color: #5c5c5c;
+  --btn-default-bg: #bdbdbd;
+  --btn-default-color: #383838;
+  --btn-link-bg: transparent;
+  --btn-primary-color: #fff;
+  --btn-link-active: #368ac0;
+  --btn-disabled-opacity: 0.5;
+  --btn-padding-x: 30px;
+  --btn-padding-y: 9px;
+  --btn-line-height: 2.2rem;
+  /* {!btn-default-focus} */
+  --btn-link-focus: #368ac0;
+  --btn-link-hover: #1a1a1a;
+  --btn-default-focus: #368ac0;
+  /* {!btn-default-focus} */
+  --btn-primary-focus: #368ac0;
+  --btn-default-hover: #999;
+  --checkbox-check-w: 5px;
+  --checkbox-box-w: 17px;
+  --checkbox-border-color: #999;
+  --checkbox-bg: #fff;
+  --checkbox-bg-disabled-checked: #bdbdbd;
+  --checkbox-arrow-color-disabled: #f4f4f4;
+  --checkbox-arrow-color: #fff;
+  --checkbox-shadow-focus: 0 0 0 1px #f0f0f0, 0 0 0 2px #368ac0;
+  --checkbox-check-h: 11px;
+  --checkbox-color: #368ac0;
+  --checkbox-bg-disabled: #fff;
+  --checkbox-box-h: 17px;
+  --checkbox-border-color-disabled: #bdbdbd;
+  --header-secondary-font-size: 1.6rem;
+  --text-small: 1.2rem;
+  --text-muted: #999;
+  --text-descriptive: #5c5c5c;
+  --header-primary-font-size: 1.8rem;
+  --text-strong: 700;
+  --text-alert: #e84f4f;
+  --font-family-base: Helvetica, Arial, san-serif;
+  --font-weight-normal: "normal";
+  --line-height-base: 1.5;
+  --font-size-base: 1.4rem;
+  --icon-height: 16px;
+  --icon-width: 22px;
+  --icon-fill: #999;
+  --input-color: #1a1a1a;
+  --input-size-md: 300px;
+  --input-bg-disabled: transparent;
+  --input-size-sm: 150px;
+  --input-size-xs: 75px;
+  --input-border-color-disabled: #bdbdbd;
+  --input-size-lg: 400px;
+  --input-border-color: #999;
+  --input-color-placeholder: #999;
+  --input-bg-readonly: #d8d8d8;
+  --input-label-color: #5c5c5c;
+  --input-info-block-color: #999;
+  --input-bg: transparent;
+  --input-border-width: 1px;
+  --input-color-disabled: #999;
+  --input-height: 3.4rem;
+  --input-border-color-readonly: #bdbdbd;
+  --input-color-focus: #1a1a1a;
+  --select-bg-caret: "url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZHJvcGRvd248L3RpdGxlPjxwYXRoIGQ9Ik00IDZsNSA2IDUtNkg0eiIvPjwvc3ZnPg==}";
+  --input-color-hover: #1a1a1a;
+  --input-color-readonly: #999;
+  --input-border-radius: 2px;
+  --input-border-color-focus: #368ac0;
+  --input-bg-focus: transparent;
+  --input-border-color-hover: #1a1a1a;
+  --input-bg-hover: transparent;
+  --input-transition: "border 300ms ease 0s, box-shadow 300ms ease 0s";
+  --input-padding-x: 12px;
+  --input-padding-y: 8px;
+  /* calc({!input-height} - (2 * {!input-padding-y}} - (2 * {!input-border-size}}} */
+  --input-line-height: 16px;
+  --input-border-size: 1px;
+  --grid-gutter-sm: 10px;
+  --grid-gutter-lg: 20px;
+  --container-padding-sm: 10px;
+  --container-padding-lg: 20px;
+  --link-color: #368ac0;
+  --link-color-disabled: #999;
+  --link-color-hover: #368ac0;
+  --link-color-visited: #9279a6;
+  --radio-outer-h: 19px;
+  --radio-bg-disabled-checked: #bdbdbd;
+  --radio-inner-w: 11px;
+  --radio-color: #fff;
+  --radio-bg-checked: #368ac0;
+  --radio-bg-disabled: #fff;
+  --radio-outer-w: 19px;
+  --radio-border-color: #999;
+  --radio-border-color-disabled: #bdbdbd;
+  --radio-bg: #fff;
+  --radio-shadow-focus: "0 0 0 1px #f0f0f0, 0 0 0 2px #368ac0";
+  --radio-inner-h: 11px;
+}

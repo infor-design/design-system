@@ -1,8 +1,9 @@
 ---
+  imports:
+    - "./components/aliases.yml"
+    - "./theme-default.yml"
   global:
     type: "color"
-  imports:
-    - "../aliases.yml"
   props:
     BODY-BG:
       value: "{!GRAPHITE03}"
@@ -36,34 +37,34 @@
       category: "buttons"
     BTN-LINK-COLOR:
       value: "{!GRAPHITE09}"
-      category: "button links"
+      category: "buttons"
     BTN-LINK-HOVER:
       value: "{!BLACK}"
-      category: "button links"
+      category: "buttons"
     ICON-FILL:
       value: "{!SLATE03}"
       category: "icons"
     INPUT-INFO-BLOCK-COLOR:
       value: "{!GRAPHITE05}"
-      category: "inputs"
+      category: "input"
     INPUT-LABEL-COLOR:
       value: "{!GRAPHITE09}"
-      category: "inputs"
+      category: "input"
     INPUT-BG:
       value: "{!WHITE}"
-      category: "inputs"
+      category: "input"
     INPUT-BORDER-COLOR:
       value: "{!GRAPHITE04}"
-      category: "inputs"
+      category: "input"
     INPUT-COLOR:
       value: "{!BLACK}"
-      category: "inputs"
-    INPUT-BORDER-COLOR-DISABLED:
+      category: "input"
+    INPUT-BORDER-COLOR-DIsabled:
       value: "{!GRAPHITE04}"
-      category: "inputs"
-    INPUT-BORDER-COLOR-HOVER:
+      category: "input"
+    INPUT-BORDER-COLOR-HOver:
       value: "{!GRAPHITE10}"
-      category: "inputs"
-    INPUT-BORDER-COLOR-FOCUS:
+      category: "input"
+    INPUT-BORDER-COLOR-focus:
       value: "{!AZURE07}"
-      category: "inputs"
+      category: "input"

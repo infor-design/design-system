@@ -1,10 +1,13 @@
 {
   "private": true,
-  "name": "@infor/ids-ios-tokens",
+  "name": "@infor/ids-web-tokens",
   "version": "1.0.0-alpha.1",
   "description": "Infor Design System Design Tokens",
   "scripts": {
-    "build": "npm run clean && theo ./ids-ios-tokens.yml --format ios.json,raw.json --dest ./dist",
+    "build": "npm run build:default && npm run build:dark && npm run build:high-contrast",
+    "build:default": "theo design-tokens/theme-default.yml --format custom-properties.css,raw.json --dest ./platforms/web",
+    "build:dark": "theo design-tokens/theme-dark.yml --format custom-properties.css,raw.json --dest ./platforms/web",
+    "build:high-contrast": "theo design-tokens/theme-high-contrast.yml --format custom-properties.css,raw.json --dest ./platforms/web",
     "clean": "del dist/*",
     "prepublishOnly": "npm test && npm run build",
     "test": "yamllint ./*.yml"
@@ -15,8 +18,7 @@
   },
   "keywords": [
     "design tokens",
-    "infor design system",
-    "ios"
+    "infor design system"
   ],
   "author": "Hook & Loop",
   "license": "UNLICENSED",
@@ -26,6 +28,6 @@
     "yaml-lint": "^1.0.0"
   },
   "files": [
-    "dist"
+    "platforms"
   ]
 }
