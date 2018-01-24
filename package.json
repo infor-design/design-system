@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:web",
     "build:web": "npm run clean && node ./scripts/build-web.js --format=custom-properties.css,sass",
-    "clean": "del platforms",
+    "clean": "del ./platforms/*/*",
     "prepublishOnly": "npm test && npm run build",
     "test": "yamllint ./**/*.yml"
   },
