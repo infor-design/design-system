@@ -6,7 +6,7 @@
   props:
     FONT-FAMILY-BASE:
       value: "Helvetica, Arial, san-serif"
-      type: "string"
+      type: "font"
     HEADER-PRIMARY-FONT-SIZE:
       value: "1.8rem"
       type: "size"
