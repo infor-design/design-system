@@ -1,6 +1,6 @@
 ---
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     BTN-DEFAULT-BG:
       value: "{!GRAPHITE03}"

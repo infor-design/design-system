@@ -2,7 +2,7 @@
   global:
     category: "checkboxes"
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     CHECKBOX-ARROW-COLOR:
       value: "{!WHITE}"

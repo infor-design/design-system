@@ -2,7 +2,7 @@
   global:
     category: "fonts"
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     FONT-FAMILY-BASE:
       value: "Helvetica, Arial, san-serif"

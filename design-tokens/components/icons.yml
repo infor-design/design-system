@@ -2,7 +2,7 @@
   global: 
     category: "icons"
   imports: 
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props: 
     ICON-HEIGHT: 
       value: "16px"

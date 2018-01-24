@@ -3,7 +3,7 @@
     category: "adative inputs"
     type: "size"
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     INPUT-HEIGHT-ADAPTIVE-TOUCH:
       value: "4.4rem"

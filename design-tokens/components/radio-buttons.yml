@@ -2,7 +2,7 @@
   global:
     category: "radio buttons"
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     RADIO-BG:
       value: "{!WHITE}"

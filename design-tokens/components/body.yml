@@ -3,7 +3,7 @@
     category: "body"
     type: "color"
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     BODY-BG:
       value: "{!GRAPHITE01}"

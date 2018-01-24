@@ -1,6 +1,6 @@
 ---
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     INPUT-SIZE-XS:
       value: "75px"

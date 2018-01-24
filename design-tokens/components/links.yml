@@ -2,7 +2,7 @@
   global:
     category: "links"
   imports:
-    - "./aliases.yml"
+    - "./color-palette.yml"
   props:
     LINK-COLOR:
       value: "{!AZURE06}"
