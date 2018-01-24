@@ -1,7 +1,9 @@
 ---
   global:
-    type: "COLOR"
-    props:
+    type: "color"
+  imports:
+    - "../aliases.yml"
+  props:
     BODY-BG:
       value: "{!GRAPHITE03}"
       category: "body"
@@ -15,7 +17,7 @@
       value: "{!AZURE09}"
       category: "links"
     LINK-COLOR-HOVER:
-      value: "{!LINK-color}"
+      value: "{!AZURE09}"
       category: "links"
     BTN-DEFAULT-BG:
       value: "{!GRAPHITE07}"
@@ -54,7 +56,7 @@
       value: "{!GRAPHITE04}"
       category: "input"
     INPUT-COLOR:
-      value: "{!BODY-COLOR}"
+      value: "{!BLACK}"
       category: "input"
     INPUT-BORDER-COLOR-DIsabled:
       value: "{!GRAPHITE04}"

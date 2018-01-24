@@ -1,6 +1,8 @@
 ---
   global:
-    type: "COLOR"
+    type: "color"
+  imports:
+    - "../aliases.yml"
   props:
     BODY-BG:
       value: "{!GRAPHITE03}"

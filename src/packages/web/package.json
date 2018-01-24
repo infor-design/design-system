@@ -4,7 +4,10 @@
   "version": "1.0.0-alpha.1",
   "description": "Infor Design System Design Tokens",
   "scripts": {
-    "build": "npm run clean && theo ./ids-web-tokens.yml --format custom-properties.css,json,raw.json --dest ./dist",
+    "build": "npm run build:default && npm run build:dark && npm run build:hc",
+    "build:default": "theo ./ids-web-tokens.yml --format custom-properties.css,json,raw.json --dest ./dist",
+    "build:dark": "theo ./ids-web-tokens_dark.yml --format custom-properties.css,json,raw.json --dest ./dist",
+    "build:hc": "theo ./ids-web-tokens_high-contrast.yml --format custom-properties.css,json,raw.json --dest ./dist",
     "clean": "del dist/*",
     "prepublishOnly": "npm test && npm run build",
     "test": "yamllint ./*.yml"
