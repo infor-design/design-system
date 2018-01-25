@@ -1,0 +1,75 @@
+---
+  imports:
+    - "./color-palette.yml"
+  props:
+    BTN-DEFAULT-BG:
+      value: "{!GRAPHITE03}"
+      type: "color"
+      category: "buttons"
+    BTN-DEFAULT-COLOR:
+      value: "{!GRAPHITE08}"
+      type: "color"
+      category: "buttons"
+    BTN-DEFAULT-FOCUS:
+      value: "{!AZURE06}"
+      type: "color"
+      category: "buttons"
+    BTN-DEFAULT-HOVER:
+      value: "{!GRAPHITE04}"
+      type: "color"
+      category: "buttons"
+    BTN-DISABLED-OPACITY:
+      value: "0.5"
+      type: "number"
+      category: "buttons"
+    BTN-LINE-HEIGHT:
+      value: "2.2rem"
+      type: "size"
+      category: "buttons"
+    BTN-PADDING-X:
+      value: "30px"
+      type: "size"
+      category: "buttons"
+    BTN-PADDING-Y:
+      value: "9px"
+      type: "size"
+      category: "buttons"
+    BTN-PRIMARY-BG:
+      value: "{!AZURE06}"
+      type: "color"
+      category: "button primary"
+    BTN-PRIMARY-COLOR:
+      value: "{!WHITE}"
+      type: "color"
+      category: "button primary"
+    BTN-PRIMARY-FOCUS:
+      comment: "{!btn-default-focus}"
+      value: "{!AZURE06}"
+      type: "color"
+      category: "button primary"
+    BTN-PRIMARY-HOVER:
+      value: "{!AZURE07}"
+      type: "color"
+      category: "button primary"
+    BTN-LINK-BG:
+      value: "transparent"
+      type: "color"
+      category: "button links"
+    BTN-LINK-COLOR:
+      value: "{!GRAPHITE06}"
+      type: "color"
+      category: "button links"
+    BTN-LINK-FOCUS:
+      comment: "{!btn-default-focus}"
+      value: "{!AZURE06}"
+      type: "color"
+      category: "button links"
+    BTN-LINK-HOVER:
+      value: "{!GRAPHITE10}"
+      type: "color"
+      category: "button links"
+    BTN-LINK-ACTIVE:
+      value: "{!AZURE06}"
+      type: "color"
+      category: "button links"
+

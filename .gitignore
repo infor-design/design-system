@@ -1,0 +1,17 @@
+# Compiled #
+############
+platforms/
+
+# Packages #
+############
+node_modules/
+npm-debug.log
+log/
+
+# OS generated files #
+############
+.DS_Store
+
+# Editor Files #
+.vscode
+*.code-*

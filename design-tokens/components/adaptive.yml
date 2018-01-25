@@ -1,0 +1,28 @@
+---
+  global:
+    category: "adative inputs"
+    type: "size"
+  imports:
+    - "./color-palette.yml"
+  props:
+    INPUT-HEIGHT-ADAPTIVE-TOUCH:
+      value: "4.4rem"
+    INPUT-LINE-HEIGHT-ADAPTIVE-TOUCH:
+      comment: "calc({!input-height-adaptive-touch} - (2 * {!input-padding-y}} - (2 * {!input-border-size}}}"
+      value: "26px"
+    INPUT-PADDING-ADAPTIVE-TOUCH:
+      comment: "calc(({!input-height-adaptive-touch} - {!line-height-base}} / 2}"
+      value: "12px"
+    RADIO-INNER-H-ADAPTIVE-TOUCH:
+      comment: "calc({!radio-outer-h-adaptive-touch} - 8}"
+      value: "16px"
+    RADIO-INNER-W-ADAPTIVE-TOUCH:
+      comment: "{!radio-inner-h-adaptive-touch}"
+      value: "16px"
+    RADIO-OUTER-H-ADAPTIVE-TOUCH:
+      comment: "calc({!radio-outer-h} * 1.3}"
+      value: "24px"
+    RADIO-OUTER-W-ADAPTIVE-TOUCH:
+      comment: "calc({!radio-outer-h-adaptive-touch} + 1}"
+      value: "24px"
+

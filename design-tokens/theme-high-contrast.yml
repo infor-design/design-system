@@ -1,0 +1,70 @@
+---
+  imports:
+    - "./components/color-palette.yml"
+    - "./theme-default.yml"
+  global:
+    type: "color"
+  props:
+    BODY-BG:
+      value: "{!GRAPHITE03}"
+      category: "body"
+    BODY-BG-SECONDARY:
+      value: "{!GRAPHITE02}"
+      category: "body"
+    BODY-COLOR:
+      value: "{!BLACK}"
+      category: "body"
+    LINK-COLOR:
+      value: "{!AZURE09}"
+      category: "links"
+    LINK-COLOR-HOVER:
+      value: "{!AZURE09}"
+      category: "links"
+    BTN-DEFAULT-BG:
+      value: "{!GRAPHITE07}"
+      category: "buttons"
+    BTN-DEFAULT-COLOR:
+      value: "{!SLATE10}"
+      category: "buttons"
+    BTN-DEFAULT-HOVER:
+      value: "{!SLATE04}"
+      category: "buttons"
+    BTN-PRIMARY-BG:
+      value: "{!AZURE06}"
+      category: "buttons"
+    BTN-PRIMARY-HOVER:
+      value: "{!AZURE10}"
+      category: "buttons"
+    BTN-LINK-COLOR:
+      value: "{!GRAPHITE09}"
+      category: "button links"
+    BTN-LINK-HOVER:
+      value: "{!BLACK}"
+      category: "button links"
+    ICON-FILL:
+      value: "{!SLATE03}"
+      category: "icons"
+    INPUT-INFO-BLOCK-COLOR:
+      value: "{!GRAPHITE05}"
+      category: "inputs"
+    INPUT-LABEL-COLOR:
+      value: "{!GRAPHITE09}"
+      category: "inputs"
+    INPUT-BG:
+      value: "{!WHITE}"
+      category: "inputs"
+    INPUT-BORDER-COLOR:
+      value: "{!GRAPHITE04}"
+      category: "inputs"
+    INPUT-COLOR:
+      value: "{!BLACK}"
+      category: "inputs"
+    INPUT-BORDER-COLOR-DISABLED:
+      value: "{!GRAPHITE04}"
+      category: "inputs"
+    INPUT-BORDER-COLOR-HOVER:
+      value: "{!GRAPHITE10}"
+      category: "inputs"
+    INPUT-BORDER-COLOR-FOCUS:
+      value: "{!AZURE07}"
+      category: "inputs"
