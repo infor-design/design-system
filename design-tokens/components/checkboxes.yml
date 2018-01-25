@@ -27,7 +27,7 @@
       type: "color"
     CHECKBOX-SHADOW-FOCUS:
       value: "0 0 0 1px {!GRAPHITE01}, 0 0 0 2px {!AZURE06}"
-      type: "shadow"
+      type: "box-shadow"
     CHECKBOX-COLOR:
       value: "{!AZURE06}"
       type: "color"

@@ -59,10 +59,6 @@
       value: "8px"
       type: "size"
       category: "inputs"
-    INPUT-TRANSITION:
-      value: "border 300ms ease 0s, box-shadow 300ms ease 0s"
-      type: "string"
-      category: "inputs"
     INPUT-BG:
       value: "transparent"
       type: "color"
@@ -123,8 +119,3 @@
       value: "{!GRAPHITE04}"
       type: "color"
       category: "input readonly"
-    SELECT-BG-CARET:
-      value: "url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZHJvcGRvd248L3RpdGxlPjxwYXRoIGQ9Ik00IDZsNSA2IDUtNkg0eiIvPjwvc3ZnPg==}"
-      type: "string"
-      category: "selects"
-
