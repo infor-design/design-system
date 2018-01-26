@@ -1,0 +1,11 @@
+---
+  imports:
+    - "./components/color-palette.yml"
+    - "./theme-default.yml"
+  global:
+    type: "color"
+  props:
+    PRIMARY-COLOR:
+      value: "{!AMBER06}"
+    SECONDARY-COLOR:
+      value: "{!AMBER01}"
