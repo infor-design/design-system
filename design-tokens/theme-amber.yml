@@ -4,6 +4,7 @@
     - "./theme-default.yml"
   global:
     type: "color"
+    category: "brand"
   props:
     PRIMARY-COLOR:
       value: "{!AMBER06}"

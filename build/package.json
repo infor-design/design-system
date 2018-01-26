@@ -1,12 +1,12 @@
 {
   "name": "@infor/ids-tokens",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Infor Design System Design Tokens",
   "scripts": {
-    "build": "npm test && npm run build:web",
-    "build:web": "node ./scripts/build-web.js --files=../design-tokens/*.yml --format=custom-properties.css,sass,json",
+    "build": "npm run build:web",
+    "build:web": "node ./scripts/build-web.js --files=../design-tokens/*.yml --format=custom-properties.css,sass,json,less",
     "clean": "del ./platforms/*/*",
-    "prepublishOnly": "npm test && npm run build",
+    "prepublishOnly": "npm run clean && npm test && npm run build",
     "test": "yamllint ./**/*.yml"
   },
   "repository": {
