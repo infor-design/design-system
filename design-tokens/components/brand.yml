@@ -1,0 +1,11 @@
+---
+  global:
+    category: "brand"
+    type: "color"
+  imports:
+    - "./color-palette.yml"
+  props:
+    PRIMARY-COLOR:
+      value: "{!AZURE06}"
+    SECONDARY-COLOR:
+      value: "{!WHITE}"

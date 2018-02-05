@@ -1,6 +1,7 @@
 ---
   imports:
     - "./components/adaptive.yml"
+    - "./components/brand.yml"
     - "./components/breakpoints.yml"
     - "./components/body.yml"
     - "./components/button.yml"

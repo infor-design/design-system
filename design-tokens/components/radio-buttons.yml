@@ -27,7 +27,7 @@
       type: "color"
     RADIO-SHADOW-FOCUS:
       value: "0 0 0 1px {!GRAPHITE01}, 0 0 0 2px {!AZURE06}"
-      type: "string"
+      type: "box-shadow"
     RADIO-OUTER-H:
       value: "19px"
       type: "size"
