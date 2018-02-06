@@ -6,6 +6,14 @@
     - "./color-palette.yml"
   props:
     PRIMARY-COLOR:
-      value: "{!AZURE06}"
+      value: "{!PALETTE_AZURE_6}"
     SECONDARY-COLOR:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
+    COLOR_SUCCESS:
+      value: "{!PALETTE_STATUS_GREEN}"
+    COLOR_CAUTION:
+      value: "{!PALETTE_STATUS_YELLOW}"
+    COLOR_WARNING:
+      value: "{!PALETTE_STATUS_ORANGE}"
+    COLOR_DANGER:
+      value: "{!PALETTE_STATUS_RED}"

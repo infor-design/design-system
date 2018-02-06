@@ -11,6 +11,6 @@
       value: "22px"
       type: "size"
     ICON-FILL: 
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
 

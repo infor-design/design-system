@@ -6,9 +6,8 @@
     - "./color-palette.yml"
   props:
     BODY-BG:
-      value: "{!GRAPHITE01}"
+      value: "{!PALETTE_GRAPHITE_1}"
     BODY-BG-SECONDARY:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
     BODY-COLOR:
-      value: "{!GRAPHITE10}"
-
+      value: "{!PALETTE_GRAPHITE_10}"

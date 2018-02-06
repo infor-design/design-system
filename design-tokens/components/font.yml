@@ -26,13 +26,13 @@
       value: "1.2rem"
       type: "size"
     TEXT-ALERT:
-      value: "{!STATUS-RED}"
+      value: "{!PALETTE_STATUS_RED}"
       type: "color"
     TEXT-DESCRIPTIVE:
-      value: "{!GRAPHITE06}"
+      value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
     TEXT-MUTED:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
     TEXT-STRONG:
       value: "700"

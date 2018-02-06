@@ -31,7 +31,7 @@
       type: "size"
       category: "inputs"
     INPUT-COLOR-PLACEHOLDER:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
       category: "inputs"
     INPUT-HEIGHT:
@@ -39,11 +39,11 @@
       type: "size"
       category: "inputs"
     INPUT-INFO-BLOCK-COLOR:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
       category: "inputs"
     INPUT-LABEL-COLOR:
-      value: "{!GRAPHITE06}"
+      value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
       category: "inputs"
     INPUT-LINE-HEIGHT:
@@ -64,11 +64,11 @@
       type: "color"
       category: "input normal"
     INPUT-BORDER-COLOR:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
       category: "input normal"
     INPUT-COLOR:
-      value: "{!GRAPHITE10}"
+      value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
       category: "input normal"
     INPUT-BG-DISABLED:
@@ -76,11 +76,11 @@
       type: "color"
       category: "input disabled"
     INPUT-BORDER-COLOR-DISABLED:
-      value: "{!GRAPHITE03}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
       category: "input disabled"
     INPUT-COLOR-DISABLED:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
       category: "input disabled"
     INPUT-BG-HOVER:
@@ -88,11 +88,11 @@
       type: "color"
       category: "input hover"
     INPUT-BORDER-COLOR-HOVER:
-      value: "{!GRAPHITE10}"
+      value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
       category: "input hover"
     INPUT-COLOR-HOVER:
-      value: "{!GRAPHITE10}"
+      value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
       category: "input hover"
     INPUT-BG-FOCUS:
@@ -100,22 +100,22 @@
       type: "color"
       category: "input focus"
     INPUT-BORDER-COLOR-FOCUS:
-      value: "{!AZURE06}"
+      value: "{!PALETTE_AZURE_6}"
       type: "color"
       category: "input focus"
     INPUT-COLOR-FOCUS:
-      value: "{!GRAPHITE10}"
+      value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
       category: "input focus"
     INPUT-BG-READONLY:
-      value: "{!GRAPHITE02}"
+      value: "{!PALETTE_GRAPHITE_2}"
       type: "color"
       category: "input readonly"
     INPUT-BORDER-COLOR-READONLY:
-      value: "{!GRAPHITE03}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
       category: "input readonly"
     INPUT-COLOR-READONLY:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
       category: "input readonly"

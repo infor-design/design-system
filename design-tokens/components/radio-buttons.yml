@@ -5,28 +5,28 @@
     - "./color-palette.yml"
   props:
     RADIO-BG:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
       type: ""
     RADIO-BG-CHECKED:
-      value: "{!AZURE06}"
+      value: "{!PALETTE_AZURE_6}"
       type: "color"
     RADIO-BG-DISABLED:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
       type: "color"
     RADIO-BG-DISABLED-CHECKED:
-      value: "{!GRAPHITE03}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     RADIO-BORDER-COLOR:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
     RADIO-BORDER-COLOR-DISABLED:
-      value: "{!GRAPHITE03}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     RADIO-COLOR:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
       type: "color"
     RADIO-SHADOW-FOCUS:
-      value: "0 0 0 1px {!GRAPHITE01}, 0 0 0 2px {!AZURE06}"
+      value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!PALETTE_AZURE_6}"
       type: "box-shadow"
     RADIO-OUTER-H:
       value: "19px"

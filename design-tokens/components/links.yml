@@ -5,15 +5,15 @@
     - "./color-palette.yml"
   props:
     LINK-COLOR:
-      value: "{!AZURE06}"
+      value: "{!PALETTE_AZURE_6}"
       type: "color"
     LINK-COLOR-DISABLED:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
     LINK-COLOR-HOVER:
-      value: "{!AZURE06}"
+      value: "{!PALETTE_AZURE_6}"
       type: "color"
     LINK-COLOR-VISITED:
-      value: "{!AMETHYST06}"
+      value: "{!PALETTE_AMETHYST_6}"
       type: "color"
 

@@ -5,31 +5,31 @@
     - "./color-palette.yml"
   props:
     CHECKBOX-ARROW-COLOR:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
       type: "color"
     CHECKBOX-ARROW-COLOR-DISABLED:
       value: "#f4f4f4"
       type: "color"
     CHECKBOX-BORDER-COLOR:
-      value: "{!GRAPHITE04}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
     CHECKBOX-BORDER-COLOR-DISABLED:
-      value: "{!GRAPHITE03}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     CHECKBOX-BG:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
       type: "color"
     CHECKBOX-BG-DISABLED:
-      value: "{!WHITE}"
+      value: "{!PALETTE_WHITE}"
       type: "color"
     CHECKBOX-BG-DISABLED-CHECKED:
-      value: "{!GRAPHITE03}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     CHECKBOX-SHADOW-FOCUS:
-      value: "0 0 0 1px {!GRAPHITE01}, 0 0 0 2px {!AZURE06}"
+      value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!PALETTE_AZURE_6}"
       type: "box-shadow"
     CHECKBOX-COLOR:
-      value: "{!AZURE06}"
+      value: "{!PALETTE_AZURE_6}"
       type: "color"
     CHECKBOX-BOX-H:
       value: "17px"
