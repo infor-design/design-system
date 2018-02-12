@@ -4,7 +4,7 @@
     type: "size"
   props:
     BREAKPOINT-XS:
-      "value": "400px"
+      "value": "360px"
     BREAKPOINT-SM:
       "value": "600px"
     BREAKPOINT-MD:

@@ -5,7 +5,7 @@
     - "./color-palette.yml"
   props:
     FONT-FAMILY-BASE:
-      value: "Helvetica, Arial, san-serif"
+      value: "Source Sans Pro, Helvetica, Arial, san-serif"
       type: "font"
     HEADER-PRIMARY-FONT-SIZE:
       value: "1.8rem"
