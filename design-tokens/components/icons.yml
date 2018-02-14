@@ -4,13 +4,13 @@
   imports: 
     - "./color-palette.yml"
   props: 
-    ICON-HEIGHT: 
+    icon-height: 
       value: "16px"
       type: "size"
-    ICON-WIDTH: 
+    icon-width: 
       value: "22px"
       type: "size"
-    ICON-FILL: 
+    icon-fill: 
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
 

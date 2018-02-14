@@ -4,43 +4,43 @@
   imports:
     - "./color-palette.yml"
   props:
-    CHECKBOX-ARROW-COLOR:
+    checkbox-arrow-color:
       value: "{!PALETTE_WHITE}"
       type: "color"
-    CHECKBOX-ARROW-COLOR-DISABLED:
+    checkbox-arrow-color-disabled:
       value: "#f4f4f4"
       type: "color"
-    CHECKBOX-BORDER-COLOR:
+    checkbox-border-color:
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
-    CHECKBOX-BORDER-COLOR-DISABLED:
+    checkbox-border-color-disabled:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
-    CHECKBOX-BG:
+    checkbox-bg:
       value: "{!PALETTE_WHITE}"
       type: "color"
-    CHECKBOX-BG-DISABLED:
+    checkbox-bg-disabled:
       value: "{!PALETTE_WHITE}"
       type: "color"
-    CHECKBOX-BG-DISABLED-CHECKED:
+    checkbox-bg-disabled-checked:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
-    CHECKBOX-SHADOW-FOCUS:
+    checkbox-shadow-focus:
       value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!PALETTE_AZURE_6}"
       type: "box-shadow"
-    CHECKBOX-COLOR:
+    checkbox-color:
       value: "{!PALETTE_AZURE_6}"
       type: "color"
-    CHECKBOX-BOX-H:
+    checkbox-box-h:
       value: "17px"
       type: "size"
-    CHECKBOX-BOX-W:
+    checkbox-box-w:
       value: "17px"
       type: "size"
-    CHECKBOX-CHECK-H:
+    checkbox-check-h:
       value: "11px"
       type: "size"
-    CHECKBOX-CHECK-W:
+    checkbox-check-w:
       value: "5px"
       type: "size"
 

@@ -5,15 +5,15 @@
   imports:
     - "./color-palette.yml"
   props:
-    PRIMARY-COLOR:
+    primary-color:
       value: "{!PALETTE_AZURE_6}"
-    SECONDARY-COLOR:
+    secondary-color:
       value: "{!PALETTE_WHITE}"
-    COLOR_SUCCESS:
+    color_success:
       value: "{!PALETTE_STATUS_GREEN}"
-    COLOR_CAUTION:
+    color_caution:
       value: "{!PALETTE_STATUS_YELLOW}"
-    COLOR_WARNING:
+    color_warning:
       value: "{!PALETTE_STATUS_ORANGE}"
-    COLOR_DANGER:
+    color_danger:
       value: "{!PALETTE_STATUS_RED}"

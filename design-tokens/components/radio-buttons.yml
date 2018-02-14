@@ -4,40 +4,40 @@
   imports:
     - "./color-palette.yml"
   props:
-    RADIO-BG:
+    radio-bg:
       value: "{!PALETTE_WHITE}"
       type: ""
-    RADIO-BG-CHECKED:
+    radio-bg-checked:
       value: "{!PALETTE_AZURE_6}"
       type: "color"
-    RADIO-BG-DISABLED:
+    radio-bg-disabled:
       value: "{!PALETTE_WHITE}"
       type: "color"
-    RADIO-BG-DISABLED-CHECKED:
+    radio-bg-disabled-checked:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
-    RADIO-BORDER-COLOR:
+    radio-border-color:
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
-    RADIO-BORDER-COLOR-DISABLED:
+    radio-border-color-disabled:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
-    RADIO-COLOR:
+    radio-color:
       value: "{!PALETTE_WHITE}"
       type: "color"
-    RADIO-SHADOW-FOCUS:
+    radio-shadow-focus:
       value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!PALETTE_AZURE_6}"
       type: "box-shadow"
-    RADIO-OUTER-H:
+    radio-outer-h:
       value: "19px"
       type: "size"
-    RADIO-OUTER-W:
+    radio-outer-w:
       value: "19px"
       type: "size"
-    RADIO-INNER-H:
+    radio-inner-h:
       value: "11px"
       type: "size"
-    RADIO-INNER-W:
+    radio-inner-w:
       value: "11px"
       type: "size"
 

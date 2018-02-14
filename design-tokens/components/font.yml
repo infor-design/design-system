@@ -4,37 +4,37 @@
   imports:
     - "./color-palette.yml"
   props:
-    FONT-FAMILY-BASE:
+    font-family-base:
       value: "Source Sans Pro, Helvetica, Arial, san-serif"
       type: "font"
-    HEADER-PRIMARY-FONT-SIZE:
+    header-primary-font-size:
       value: "1.8rem"
       type: "size"
-    HEADER-SECONDARY-FONT-SIZE:
+    header-secondary-font-size:
       value: "1.6rem"
       type: "size"
-    FONT-SIZE-BASE:
+    font-size-base:
       value: "1.4rem"
       type: "size"
-    FONT-WEIGHT-NORMAL:
+    font-weight-normal:
       value: "normal"
       type: "string"
-    LINE-HEIGHT-BASE:
+    line-height-base:
       value: "1.5"
       type: "number"
-    TEXT-SMALL:
+    text-small:
       value: "1.2rem"
       type: "size"
-    TEXT-ALERT:
+    text-alert:
       value: "{!PALETTE_STATUS_RED}"
       type: "color"
-    TEXT-DESCRIPTIVE:
+    text-descriptive:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
-    TEXT-MUTED:
+    text-muted:
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
-    TEXT-STRONG:
+    text-strong:
       value: "700"
       type: "number"
 

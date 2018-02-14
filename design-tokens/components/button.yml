@@ -2,73 +2,73 @@
   imports:
     - "./color-palette.yml"
   props:
-    BTN-DEFAULT-BG:
+    btn-default-bg:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
       category: "buttons"
-    BTN-DEFAULT-COLOR:
+    btn-default-color:
       value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
       category: "buttons"
-    BTN-DEFAULT-FOCUS:
+    btn-default-focus:
       value: "{!PALETTE_AZURE_6}"
       type: "color"
       category: "buttons"
-    BTN-DEFAULT-HOVER:
+    btn-default-hover:
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
       category: "buttons"
-    BTN-DISABLED-OPACITY:
+    btn-disabled-opacity:
       value: "0.5"
       type: "number"
       category: "buttons"
-    BTN-LINE-HEIGHT:
+    btn-line-height:
       value: "2.2rem"
       type: "size"
       category: "buttons"
-    BTN-PADDING-X:
+    btn-padding-x:
       value: "30px"
       type: "size"
       category: "buttons"
-    BTN-PADDING-Y:
+    btn-padding-y:
       value: "9px"
       type: "size"
       category: "buttons"
-    BTN-PRIMARY-BG:
+    btn-primary-bg:
       value: "{!PALETTE_AZURE_6}"
       type: "color"
       category: "button primary"
-    BTN-PRIMARY-COLOR:
+    btn-primary-color:
       value: "{!PALETTE_WHITE}"
       type: "color"
       category: "button primary"
-    BTN-PRIMARY-FOCUS:
+    btn-primary-focus:
       comment: "{!btn-default-focus}"
       value: "{!PALETTE_AZURE_6}"
       type: "color"
       category: "button primary"
-    BTN-PRIMARY-HOVER:
+    btn-primary-hover:
       value: "{!PALETTE_AZURE_7}"
       type: "color"
       category: "button primary"
-    BTN-LINK-BG:
+    btn-link-bg:
       value: "transparent"
       type: "color"
       category: "button links"
-    BTN-LINK-COLOR:
+    btn-link-color:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
       category: "button links"
-    BTN-LINK-FOCUS:
+    btn-link-focus:
       comment: "{!btn-default-focus}"
       value: "{!PALETTE_AZURE_6}"
       type: "color"
       category: "button links"
-    BTN-LINK-HOVER:
+    btn-link-hover:
       value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
       category: "button links"
-    BTN-LINK-ACTIVE:
+    btn-link-active:
       value: "{!PALETTE_AZURE_6}"
       type: "color"
       category: "button links"

@@ -3,13 +3,13 @@
     category: "breakpoints"
     type: "size"
   props:
-    BREAKPOINT-XS:
+    breakpoint-xs:
       "value": "360px"
-    BREAKPOINT-SM:
+    breakpoint-sm:
       "value": "600px"
-    BREAKPOINT-MD:
+    breakpoint-md:
       "value": "840px"
-    BREAKPOINT-LG:
+    breakpoint-lg:
       "value": "1280px"
-    BREAKPOINT-XL:
+    breakpoint-xl:
       "value": "1440px"

@@ -4,16 +4,16 @@
   imports: 
     - "./color-palette.yml"
   props: 
-    GRID-GUTTER-SM: 
+    grid-gutter-sm:
       value: "16px"
       type: "size"
-    GRID-GUTTER-LG: 
+    grid-gutter-lg: 
       value: "24px"
       type: "size"
-    CONTAINER-PADDING-SM: 
+    container-padding-sm: 
       value: "16px"
       type: "size"
-    CONTAINER-PADDING-LG: 
+    container-padding-lg: 
       value: "24px"
       type: "size"
 

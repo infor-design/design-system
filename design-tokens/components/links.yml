@@ -4,16 +4,16 @@
   imports:
     - "./color-palette.yml"
   props:
-    LINK-COLOR:
+    link-color:
       value: "{!PALETTE_AZURE_6}"
       type: "color"
-    LINK-COLOR-DISABLED:
+    link-color-disabled:
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
-    LINK-COLOR-HOVER:
+    link-color-hover:
       value: "{!PALETTE_AZURE_6}"
       type: "color"
-    LINK-COLOR-VISITED:
+    link-color-visited:
       value: "{!PALETTE_AMETHYST_6}"
       type: "color"
 
