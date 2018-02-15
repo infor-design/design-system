@@ -1,11 +1,40 @@
 ---
+  imports:
+    - "../aliases/base.yml"
   global:
     category: "brand"
     type: "color"
-  imports:
-    - "./color-palette.yml"
   props:
-    PRIMARY-COLOR:
-      value: "{!AZURE06}"
-    SECONDARY-COLOR:
-      value: "{!WHITE}"
+    ## Default Colors
+    color-default:
+      value: "{!COLOR_DEFAULT}"
+    color-default-alt:
+      value: "{!COLOR_DEFAULT_ALT}"
+    color-default-contrast:
+      value: "{!COLOR_DEFAULT_CONTRAST}"
+
+    ## Primary Colors
+    color-primary:
+      value: "{!COLOR_PRIMARY}"
+    color-primary-alt:
+      value: "{!COLOR_PRIMARY_ALT}"
+    color-primary-contrast:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+
+    ## Status Colors
+    color-success:
+      value: "{!COLOR_SUCCESS}"
+    color-caution:
+      value: "{!COLOR_CAUTION}"
+    color-warning:
+      value: "{!COLOR_WARNING}"
+    color-danger:
+      value: "{!COLOR_DANGER}"
+    color-muted:
+      value: "{!COLOR_MUTED}"
+    color-disabled:
+      value: "{!COLOR_DISABLED}"
+    color-readonly:
+      value: "{!COLOR_READONLY}"
+    color-info:
+      value: "{!COLOR_INFO}"

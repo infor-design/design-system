@@ -1,46 +1,50 @@
 ---
+  imports:
+    - "../aliases/base.yml"
   global:
     category: "checkboxes"
-  imports:
-    - "./color-palette.yml"
   props:
-    CHECKBOX-ARROW-COLOR:
-      value: "{!WHITE}"
-      type: "color"
-    CHECKBOX-ARROW-COLOR-DISABLED:
-      value: "#f4f4f4"
-      type: "color"
-    CHECKBOX-BORDER-COLOR:
-      value: "{!GRAPHITE04}"
-      type: "color"
-    CHECKBOX-BORDER-COLOR-DISABLED:
-      value: "{!GRAPHITE03}"
-      type: "color"
-    CHECKBOX-BG:
-      value: "{!WHITE}"
-      type: "color"
-    CHECKBOX-BG-DISABLED:
-      value: "{!WHITE}"
-      type: "color"
-    CHECKBOX-BG-DISABLED-CHECKED:
-      value: "{!GRAPHITE03}"
-      type: "color"
-    CHECKBOX-SHADOW-FOCUS:
-      value: "0 0 0 1px {!GRAPHITE01}, 0 0 0 2px {!AZURE06}"
-      type: "box-shadow"
-    CHECKBOX-COLOR:
-      value: "{!AZURE06}"
-      type: "color"
-    CHECKBOX-BOX-H:
+    checkbox-box-size:
       value: "17px"
       type: "size"
-    CHECKBOX-BOX-W:
-      value: "17px"
-      type: "size"
-    CHECKBOX-CHECK-H:
+    checkbox-check-h:
       value: "11px"
       type: "size"
-    CHECKBOX-CHECK-W:
+    checkbox-check-w:
       value: "5px"
       type: "size"
 
+    ## Normal State
+    checkbox-arrow-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    checkbox-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    checkbox-border-color:
+      value: "{!BORDER_COLOR}"
+      type: "color"
+    
+    ## Checked State
+    checkbox-checked-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+
+    ## Disabled State
+    checkbox-disabled-arrow-color:
+      value: "#f4f4f4"
+      type: "color"
+    checkbox-disabled-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    checkbox-disabled-border-color:
+      value: "{!COLOR_DISABLED}"
+      type: "color"
+    checkbox-disabled-checked-bg-color:
+      value: "{!COLOR_DISABLED}"
+      type: "color"
+
+    ## Focus State
+    checkbox-focus-shadow:
+      value: "0 0 0 1px {!COLOR_BG}, 0 0 0 2px {!COLOR_PRIMARY}"
+      type: "box-shadow"

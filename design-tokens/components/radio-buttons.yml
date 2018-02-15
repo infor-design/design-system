@@ -2,42 +2,48 @@
   global:
     category: "radio buttons"
   imports:
-    - "./color-palette.yml"
+    - "../aliases/base.yml"
   props:
-    RADIO-BG:
-      value: "{!WHITE}"
+    ## Normal State
+    radio-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
       type: ""
-    RADIO-BG-CHECKED:
-      value: "{!AZURE06}"
+    radio-bg-checked-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"
-    RADIO-BG-DISABLED:
-      value: "{!WHITE}"
+    radio-border-color:
+      value: "{!BORDER_COLOR}"
       type: "color"
-    RADIO-BG-DISABLED-CHECKED:
-      value: "{!GRAPHITE03}"
+    radio-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
-    RADIO-BORDER-COLOR:
-      value: "{!GRAPHITE04}"
-      type: "color"
-    RADIO-BORDER-COLOR-DISABLED:
-      value: "{!GRAPHITE03}"
-      type: "color"
-    RADIO-COLOR:
-      value: "{!WHITE}"
-      type: "color"
-    RADIO-SHADOW-FOCUS:
-      value: "0 0 0 1px {!GRAPHITE01}, 0 0 0 2px {!AZURE06}"
-      type: "box-shadow"
-    RADIO-OUTER-H:
-      value: "19px"
-      type: "size"
-    RADIO-OUTER-W:
-      value: "19px"
-      type: "size"
-    RADIO-INNER-H:
-      value: "11px"
-      type: "size"
-    RADIO-INNER-W:
-      value: "11px"
-      type: "size"
 
+    ## Disabled State
+    radio-disabled-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    radio-disabled-border-color:
+      value: "{!COLOR_DISABLED}"
+      type: "color"
+    radio-disabled-checked-bg-color:
+      value: "{!COLOR_DISABLED}"
+      type: "color"
+
+    ## Focus State
+    radio-focus-shadow:
+      value: "0 0 0 1px {!COLOR_BG}, 0 0 0 2px {!COLOR_PRIMARY}"
+      type: "box-shadow"
+
+    ## Dimensions
+    radio-outer-h:
+      value: "19px"
+      type: "size"
+    radio-outer-w:
+      value: "19px"
+      type: "size"
+    radio-inner-h:
+      value: "11px"
+      type: "size"
+    radio-inner-w:
+      value: "11px"
+      type: "size"

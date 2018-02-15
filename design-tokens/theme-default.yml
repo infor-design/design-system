@@ -1,14 +1,12 @@
 ---
   imports:
-    - "./components/adaptive.yml"
+    ## Components
     - "./components/brand.yml"
-    - "./components/breakpoints.yml"
-    - "./components/body.yml"
-    - "./components/button.yml"
+    - "./components/buttons.yml"
     - "./components/checkboxes.yml"
     - "./components/font.yml"
     - "./components/icons.yml"
     - "./components/inputs.yml"
-    - "./components/layout.yml"
+    - "./components/page-structure.yml"
     - "./components/links.yml"
     - "./components/radio-buttons.yml"

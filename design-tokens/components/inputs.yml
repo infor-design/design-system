@@ -1,121 +1,138 @@
 ---
   imports:
-    - "./color-palette.yml"
+    - "../aliases/base.yml"
   props:
-    INPUT-SIZE-XS:
+    ## Adaptive
+    input-height-adaptive-touch:
+      value: "4.4rem"
+      category: "adative"
+      type: "size"
+
+    ## Sizes
+    input-width-xs:
       value: "75px"
       type: "size"
       category: "input sizes"
-    INPUT-SIZE-SM:
+    input-width-sm:
       value: "150px"
       type: "size"
       category: "input sizes"
-    INPUT-SIZE-MD:
+    input-width-md:
       value: "300px"
       type: "size"
       category: "input sizes"
-    INPUT-SIZE-LG:
+    input-width-lg:
       value: "400px"
       type: "size"
       category: "input sizes"
-    INPUT-BORDER-RADIUS:
-      value: "2px"
-      type: "size"
-      category: "inputs"
-    INPUT-BORDER-SIZE:
-      value: "1px"
-      type: "size"
-      category: "inputs"
-    INPUT-BORDER-WIDTH:
-      value: "1px"
-      type: "size"
-      category: "inputs"
-    INPUT-COLOR-PLACEHOLDER:
-      value: "{!GRAPHITE04}"
-      type: "color"
-      category: "inputs"
-    INPUT-HEIGHT:
+    input-height:
       value: "3.4rem"
       type: "size"
       category: "inputs"
-    INPUT-INFO-BLOCK-COLOR:
-      value: "{!GRAPHITE04}"
-      type: "color"
-      category: "inputs"
-    INPUT-LABEL-COLOR:
-      value: "{!GRAPHITE06}"
-      type: "color"
-      category: "inputs"
-    INPUT-LINE-HEIGHT:
+    input-line-height:
       comment: "calc({!input-height} - (2 * {!input-padding-y}} - (2 * {!input-border-size}}}"
       value: "16px"
       type: "size"
       category: "inputs"
-    INPUT-PADDING-X:
+    input-padding-x:
       value: "12px"
       type: "size"
       category: "inputs"
-    INPUT-PADDING-Y:
+    input-padding-y:
       value: "8px"
       type: "size"
       category: "inputs"
-    INPUT-BG:
+
+    ## Borders
+    input-border-radius:
+      value: "{!BORDER_RADIUS}"
+      type: "size"
+      category: "inputs"
+    input-border-width:
+      value: "1px"
+      type: "size"
+      category: "inputs"
+    input-box-shadow:
+      value: "none"
+      type: "box-shadow"
+      category: "inputs"
+
+    ## Other Colors
+    input-placeholder-text-color:
+      value: "{!COLOR_MUTED}"
+      type: "color"
+      category: "inputs"
+    input-info-block-text-color:
+      value: "{!COLOR_MUTED}"
+      type: "color"
+      category: "inputs"
+    input-label-text-color:
+      value: "{!COLOR_INFO}"
+      type: "color"
+      category: "inputs"
+    
+    ## Normal State
+    input-bg-color:
       value: "transparent"
       type: "color"
       category: "input normal"
-    INPUT-BORDER-COLOR:
-      value: "{!GRAPHITE04}"
+    input-border-color:
+      value: "{!BORDER_COLOR}"
       type: "color"
       category: "input normal"
-    INPUT-COLOR:
-      value: "{!GRAPHITE10}"
+    input-text-color:
+      value: "{!COLOR_TEXT}"
       type: "color"
       category: "input normal"
-    INPUT-BG-DISABLED:
+
+    ## Disabled State
+    input-disabled-bg-color:
       value: "transparent"
       type: "color"
       category: "input disabled"
-    INPUT-BORDER-COLOR-DISABLED:
-      value: "{!GRAPHITE03}"
+    input-disabled-border-color:
+      value: "{!COLOR_DISABLED}"
       type: "color"
       category: "input disabled"
-    INPUT-COLOR-DISABLED:
-      value: "{!GRAPHITE04}"
+    input-disabled-text-color:
+      value: "{!COLOR_MUTED}"
       type: "color"
       category: "input disabled"
-    INPUT-BG-HOVER:
+
+    ## Hover State
+    input-hover-bg-color:
       value: "transparent"
       type: "color"
       category: "input hover"
-    INPUT-BORDER-COLOR-HOVER:
-      value: "{!GRAPHITE10}"
+    input-hover-border-color:
+      value: "{!COLOR_TEXT}"
       type: "color"
       category: "input hover"
-    INPUT-COLOR-HOVER:
-      value: "{!GRAPHITE10}"
-      type: "color"
-      category: "input hover"
-    INPUT-BG-FOCUS:
+
+    ## Focus State
+    input-focus-bg-color:
       value: "transparent"
       type: "color"
       category: "input focus"
-    INPUT-BORDER-COLOR-FOCUS:
-      value: "{!AZURE06}"
+    input-focus-border-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"
       category: "input focus"
-    INPUT-COLOR-FOCUS:
-      value: "{!GRAPHITE10}"
+    input-focus-text-color:
+      value: "{!COLOR_TEXT}"
       type: "color"
       category: "input focus"
-    INPUT-BG-READONLY:
-      value: "{!GRAPHITE02}"
+
+    ## Readonly State
+    input-readonly-bg-color:
+      value: "{!COLOR_READONLY}"
       type: "color"
       category: "input readonly"
-    INPUT-BORDER-COLOR-READONLY:
-      value: "{!GRAPHITE03}"
+    input-readonly-border-color:
+      value: "{!COLOR_DISABLED}"
       type: "color"
       category: "input readonly"
-    INPUT-COLOR-READONLY:
-      value: "{!GRAPHITE04}"
+    input-readonly-text-color:
+      value: "{!COLOR_MUTED}"
       type: "color"
       category: "input readonly"

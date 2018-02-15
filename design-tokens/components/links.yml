@@ -2,18 +2,18 @@
   global:
     category: "links"
   imports:
-    - "./color-palette.yml"
+    - "../aliases/base.yml"
   props:
-    LINK-COLOR:
-      value: "{!AZURE06}"
+    link-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"
-    LINK-COLOR-DISABLED:
-      value: "{!GRAPHITE04}"
+    link-disabled-color:
+      value: "{!COLOR_DISABLED}"
       type: "color"
-    LINK-COLOR-HOVER:
-      value: "{!AZURE06}"
+    link-hover-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"
-    LINK-COLOR-VISITED:
-      value: "{!AMETHYST06}"
+    link-visited-color:
+      value: "{!COLOR_PRIMARY_ALT}"
       type: "color"
 

@@ -1,0 +1,70 @@
+---
+  imports:
+    - "../aliases/base.yml"
+  global:
+    category: "buttons"
+  props:
+    ## Buttons
+    button-disabled-opacity:
+      value: "{!DISABLED_OPACITY}"
+      type: "number"
+    button-line-height:
+      value: "{!LINE_HEIGHT}"
+      type: "size"
+    button-padding-x:
+      value: "30px"
+      type: "size"
+    button-padding-y:
+      value: "9px"
+      type: "size"
+
+    ## Button Default
+    button-default-bg-color:
+      value: "{!COLOR_DEFAULT}"
+      type: "color"
+    button-default-text-color:
+      value: "{!COLOR_DEFAULT_CONTRAST}"
+      type: "color"
+    button-default-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-default-hover-bg-color:
+      value: "{!COLOR_DEFAULT_ALT}"
+      type: "color"
+
+    ## Button Primary
+    button-primary-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-primary-text-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    button-primary-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-primary-hover-bg-color:
+      value: "{!PALETTE_AZURE_7}"
+      type: "color"
+      category: "button primary"
+    
+    ## Button Links
+    button-link-bg-color:
+      value: "transparent"
+      type: "color"
+      category: "button links"
+    button-link-text-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+      category: "button links"
+    button-link-focus-text-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+      category: "button links"
+    button-link-hover-text-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
+      category: "button links"
+    button-link-active-text-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+      category: "button links"
