@@ -1,19 +1,24 @@
 ---
-  global: 
-    category: "layout"
-  imports: 
-    - "./color-palette.yml"
-  props: 
-    grid-gutter-sm:
-      value: "16px"
+  imports:
+    - "../aliases/base.yml"
+  props:
+    ## Spacing
+    container-padding-sm:
+      value: "{!SPACING_SM}"
       type: "size"
-    grid-gutter-lg: 
-      value: "24px"
+      category: "layout"
+    container-padding-lg:
+      value: "{!SPACING_LG}"
       type: "size"
-    container-padding-sm: 
-      value: "16px"
-      type: "size"
-    container-padding-lg: 
-      value: "24px"
-      type: "size"
+      category: "layout"
 
+    ## Colors
+    body-bg-color:
+      value: "{!COLOR_BG}"
+      type: "color"
+      category: "body"
+    body-text-color:
+      value: "{!COLOR_TEXT}"
+      type: "color"
+      category: "body"
+   

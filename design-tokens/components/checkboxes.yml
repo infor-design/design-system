@@ -1,40 +1,10 @@
 ---
+  imports:
+    - "../aliases/base.yml"
   global:
     category: "checkboxes"
-  imports:
-    - "./color-palette.yml"
   props:
-    checkbox-arrow-color:
-      value: "{!PALETTE_WHITE}"
-      type: "color"
-    checkbox-arrow-color-disabled:
-      value: "#f4f4f4"
-      type: "color"
-    checkbox-border-color:
-      value: "{!PALETTE_GRAPHITE_4}"
-      type: "color"
-    checkbox-border-color-disabled:
-      value: "{!PALETTE_GRAPHITE_3}"
-      type: "color"
-    checkbox-bg:
-      value: "{!PALETTE_WHITE}"
-      type: "color"
-    checkbox-bg-disabled:
-      value: "{!PALETTE_WHITE}"
-      type: "color"
-    checkbox-bg-disabled-checked:
-      value: "{!PALETTE_GRAPHITE_3}"
-      type: "color"
-    checkbox-shadow-focus:
-      value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!PALETTE_AZURE_6}"
-      type: "box-shadow"
-    checkbox-color:
-      value: "{!PALETTE_AZURE_6}"
-      type: "color"
-    checkbox-box-h:
-      value: "17px"
-      type: "size"
-    checkbox-box-w:
+    checkbox-box-size:
       value: "17px"
       type: "size"
     checkbox-check-h:
@@ -44,3 +14,37 @@
       value: "5px"
       type: "size"
 
+    ## Normal State
+    checkbox-arrow-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    checkbox-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    checkbox-border-color:
+      value: "{!BORDER_COLOR}"
+      type: "color"
+    
+    ## Checked State
+    checkbox-checked-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+
+    ## Disabled State
+    checkbox-disabled-arrow-color:
+      value: "#f4f4f4"
+      type: "color"
+    checkbox-disabled-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    checkbox-disabled-border-color:
+      value: "{!COLOR_DISABLED}"
+      type: "color"
+    checkbox-disabled-checked-bg-color:
+      value: "{!COLOR_DISABLED}"
+      type: "color"
+
+    ## Focus State
+    checkbox-focus-shadow:
+      value: "0 0 0 1px {!COLOR_BG}, 0 0 0 2px {!COLOR_PRIMARY}"
+      type: "box-shadow"

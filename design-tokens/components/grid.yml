@@ -1,0 +1,12 @@
+---
+  imports:
+    - "../aliases/base.yml"
+  global:
+    category: "grid"
+    type: "size"
+  props:
+    grid-gutter-sm:
+      value: "{!SPACING_SM}"
+    grid-gutter-lg:
+      value: "{!SPACING_LG}"
+      

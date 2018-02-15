@@ -1,6 +1,6 @@
 ---
   imports:
-    - "./components/color-palette.yml"
+    - "./aliases/color-palette.yml"
     - "./theme-default.yml"
   global:
     type: "color"

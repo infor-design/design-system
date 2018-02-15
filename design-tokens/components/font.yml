@@ -1,40 +1,32 @@
 ---
+  imports:
+    - "../aliases/base.yml"
   global:
     category: "fonts"
-  imports:
-    - "./color-palette.yml"
   props:
+    ## Font Family
     font-family-base:
       value: "Source Sans Pro, Helvetica, Arial, san-serif"
       type: "font"
-    header-primary-font-size:
+
+    ## Font Size
+    font-size-xl:
       value: "1.8rem"
       type: "size"
-    header-secondary-font-size:
+    font-size-lg:
       value: "1.6rem"
       type: "size"
     font-size-base:
       value: "1.4rem"
       type: "size"
-    font-weight-normal:
-      value: "normal"
-      type: "string"
-    line-height-base:
-      value: "1.5"
-      type: "number"
-    text-small:
+    font-size-sm:
       value: "1.2rem"
       type: "size"
-    text-alert:
-      value: "{!PALETTE_STATUS_RED}"
-      type: "color"
-    text-descriptive:
-      value: "{!PALETTE_GRAPHITE_6}"
-      type: "color"
-    text-muted:
-      value: "{!PALETTE_GRAPHITE_4}"
-      type: "color"
-    text-strong:
-      value: "700"
-      type: "number"
 
+    ## Font Weight
+    font-weight-normal:
+      value: "400"
+      type: "font-weight"
+    font-weight-bold:
+      value: "600"
+      type: "font-weight"
