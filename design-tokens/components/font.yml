@@ -30,3 +30,8 @@
     font-weight-bold:
       value: "600"
       type: "font-weight"
+
+    ## Height
+    line-height-base:
+      value: "1.5"
+      type: "number"

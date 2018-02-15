@@ -1,9 +1,0 @@
----
-  global:
-    category: "typography"
-  imports:
-    - "../aliases/base.yml"
-  props:
-    line-height-base:
-      value: "1.5"
-      type: "number"

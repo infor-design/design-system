@@ -1,9 +1,22 @@
 ---
   imports:
+    ## Colors
     - "./aliases/color-palette.yml"
-    - "./theme-default.yml"
+
+    ## Components
+    - "./components/brand.yml"
+    - "./components/buttons.yml"
+    - "./components/checkboxes.yml"
+    - "./components/font.yml"
+    - "./components/icons.yml"
+    - "./components/inputs.yml"
+    - "./components/page-structure.yml"
+    - "./components/links.yml"
+    - "./components/radio-buttons.yml"
+
   global:
     type: "color"
+
   props:
     BODY-BG:
       value: "{!PALETTE_GRAPHITE_3}"

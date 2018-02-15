@@ -1,0 +1,57 @@
+---
+  imports:
+    - "../aliases/base.yml"
+
+  props:
+    ## Spacing
+    container-padding-sm:
+      value: "{!SPACING_SM}"
+      type: "size"
+      category: "layout"
+    container-padding-lg:
+      value: "{!SPACING_LG}"
+      type: "size"
+      category: "layout"
+
+    ## Body Colors
+    body-bg-color:
+      value: "{!COLOR_BG}"
+      type: "color"
+      category: "body"
+    body-text-color:
+      value: "{!COLOR_TEXT}"
+      type: "color"
+      category: "body"
+
+    ## Layout Grid
+    grid-gutter-sm:
+      value: "{!SPACING_SM}"
+      type: "size"
+      category: "grid"
+    grid-gutter-lg:
+      value: "{!SPACING_LG}"
+      type: "size"
+      category: "grid"
+
+    ## Breakpoints
+    breakpoint-xs:
+      value: "360px"
+      type: "size"
+      category: "responsive"
+    breakpoint-sm:
+      value: "600px"
+      type: "size"
+      category: "responsive"
+    breakpoint-md:
+      value: "840px"
+      type: "size"
+      category: "responsive"
+    breakpoint-lg:
+      value: "1280px"
+      type: "size"
+      category: "responsive"
+    breakpoint-xl:
+      value: "1440px"
+      type: "size"
+      category: "responsive"
+
