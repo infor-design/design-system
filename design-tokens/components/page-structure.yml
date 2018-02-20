@@ -3,16 +3,6 @@
     - "../aliases/base.yml"
 
   props:
-    ## Spacing
-    container-padding-sm:
-      value: "{!SPACING_SM}"
-      type: "size"
-      category: "layout"
-    container-padding-lg:
-      value: "{!SPACING_LG}"
-      type: "size"
-      category: "layout"
-
     ## Body Colors
     body-bg-color:
       value: "{!COLOR_BG}"
@@ -22,16 +12,6 @@
       value: "{!COLOR_TEXT}"
       type: "color"
       category: "body"
-
-    ## Layout Grid
-    grid-gutter-sm:
-      value: "{!SPACING_SM}"
-      type: "size"
-      category: "grid"
-    grid-gutter-lg:
-      value: "{!SPACING_LG}"
-      type: "size"
-      category: "grid"
 
     ## Breakpoints
     breakpoint-xs:
@@ -55,3 +35,8 @@
       type: "size"
       category: "responsive"
 
+    ## Spacing
+    spacing-base:
+      value: "{!SPACING_BASE}"
+      type: "size"
+      category: "spacing"
