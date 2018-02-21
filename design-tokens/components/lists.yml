@@ -1,0 +1,10 @@
+---
+  imports:
+    - "../aliases/base.yml"
+  global:
+    category: "lists"
+  props:
+    ## Font Family
+    list-link-hover-color:
+      value: "{!PALETTE_AZURE_1}"
+      type: "color"
