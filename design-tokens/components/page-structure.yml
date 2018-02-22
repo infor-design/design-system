@@ -27,16 +27,6 @@
       type: "color"
       category: "body"
 
-    ## Layout Grid
-    grid-gutter-sm:
-      value: "{!SPACING_SM}"
-      type: "size"
-      category: "grid"
-    grid-gutter-lg:
-      value: "{!SPACING_LG}"
-      type: "size"
-      category: "grid"
-
     ## Breakpoints
     breakpoint-xs:
       value: "360px"
@@ -58,4 +48,3 @@
       value: "1440px"
       type: "size"
       category: "responsive"
-

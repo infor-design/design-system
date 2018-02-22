@@ -32,9 +32,9 @@
     DISABLED_OPACITY: "0.5"
     LINE_HEIGHT: "2.2rem"
 
-    ## Spacing
-    SPACING_SM: "16px"
-    SPACING_LG: "24px"
+    ## Spacing (rhythm of 8)
+    SPACING_BASE: "8px"
 
+    ## Borders
     BORDER_RADIUS: "2px"
     BORDER_COLOR: "{!PALETTE_GRAPHITE_4}"
