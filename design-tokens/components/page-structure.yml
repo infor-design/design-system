@@ -3,6 +3,20 @@
     - "../aliases/base.yml"
 
   props:
+    ## Spacing
+    spacing-base:
+      value: "8px"
+      type: "size"
+      category: "layout"
+    container-padding-sm:
+      value: "{!SPACING_SM}"
+      type: "size"
+      category: "layout"
+    container-padding-lg:
+      value: "{!SPACING_LG}"
+      type: "size"
+      category: "layout"
+
     ## Body Colors
     body-bg-color:
       value: "{!COLOR_BG}"
@@ -34,9 +48,3 @@
       value: "1440px"
       type: "size"
       category: "responsive"
-
-    ## Spacing
-    spacing-base:
-      value: "{!SPACING_BASE}"
-      type: "size"
-      category: "spacing"

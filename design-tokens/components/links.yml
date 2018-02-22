@@ -16,4 +16,6 @@
     link-visited-color:
       value: "{!COLOR_PRIMARY_ALT}"
       type: "color"
-
+    link-decoration:
+      value: "underline"
+      type: "style"
