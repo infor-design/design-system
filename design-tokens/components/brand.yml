@@ -10,6 +10,8 @@
       value: "{!COLOR_DEFAULT}"
     color-default-alt:
       value: "{!COLOR_DEFAULT_ALT}"
+    color-default-light:
+      value: "{!COLOR_DEFAULT_LIGHT}"
     color-default-contrast:
       value: "{!COLOR_DEFAULT_CONTRAST}"
 
@@ -20,6 +22,8 @@
       value: "{!COLOR_PRIMARY_ALT}"
     color-primary-contrast:
       value: "{!COLOR_PRIMARY_CONTRAST}"
+    color-primary-light:
+      value: "{!COLOR_PRIMARY_LIGHT}"
 
     ## Status Colors
     color-success:

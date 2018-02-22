@@ -8,19 +8,22 @@
     font-family-base:
       value: "Source Sans Pro, Helvetica, Arial, san-serif"
       type: "font"
+    font-family-monospace:
+      value: "Source Code Pro, monospace"
+      type: "font"
 
     ## Font Size
     font-size-xl:
-      value: "1.8rem"
+      value: "3.6rem"
       type: "size"
     font-size-lg:
-      value: "1.6rem"
+      value: "2.4rem"
       type: "size"
     font-size-base:
-      value: "1.4rem"
+      value: "1.6rem"
       type: "size"
     font-size-sm:
-      value: "1.2rem"
+      value: "1.4rem"
       type: "size"
 
     ## Font Weight
@@ -33,5 +36,13 @@
 
     ## Height
     line-height-base:
-      value: "1.5"
+      value: "1.65"
       type: "number"
+
+    ## Text Styles
+    text-color-muted:
+      value: "{!COLOR_MUTED}"
+      type: "color"
+    text-color-danger:
+      value: "{!COLOR_DANGER}"
+      type: "color"

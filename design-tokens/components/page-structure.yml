@@ -4,6 +4,10 @@
 
   props:
     ## Spacing
+    spacing-base:
+      value: "8px"
+      type: "size"
+      category: "layout"
     container-padding-sm:
       value: "{!SPACING_SM}"
       type: "size"
