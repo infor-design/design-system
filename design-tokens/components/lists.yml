@@ -1,0 +1,10 @@
+---
+  imports:
+    - "../aliases/base.yml"
+  global:
+    category: "lists"
+  props:
+    ## List Colors
+    list-hover-color:
+      value: "{!PALETTE_GRAPHITE_1}"
+      type: "color"

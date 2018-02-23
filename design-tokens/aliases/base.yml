@@ -2,9 +2,10 @@
   imports:
     - "./color-palette.yml"
   aliases:
-    ## Body Color
-    COLOR_BG: "{!PALETTE_GRAPHITE_1}"
-    COLOR_TEXT: "{!PALETTE_GRAPHITE_10}"
+    ## Text Colors
+    TEXT_COLOR: "{!PALETTE_GRAPHITE_10}"
+    TEXT_COLOR_MUTED: "{!PALETTE_GRAPHITE_4}"
+    TEXT_COLOR_INFO: "{!PALETTE_GRAPHITE_6}"
 
     ## Default Colors
     COLOR_DEFAULT: "{!PALETTE_GRAPHITE_3}"
@@ -21,18 +22,11 @@
     COLOR_CAUTION: "{!PALETTE_STATUS_YELLOW}"
     COLOR_WARNING: "{!PALETTE_STATUS_ORANGE}"
     COLOR_DANGER: "{!PALETTE_STATUS_RED}"
-    COLOR_MUTED: "{!PALETTE_GRAPHITE_4}"
-    COLOR_DISABLED: "{!PALETTE_GRAPHITE_3}"
-    COLOR_READONLY: "{!PALETTE_GRAPHITE_2}"
-    COLOR_INFO: "{!PALETTE_GRAPHITE_6}"
 
     ## Form Fields
     DISABLED_OPACITY: "0.5"
     LINE_HEIGHT: "2.2rem"
 
-    ## Spacing
-    SPACING_SM: "16px"
-    SPACING_LG: "24px"
-
+    ## Borders
     BORDER_RADIUS: "2px"
     BORDER_COLOR: "{!PALETTE_GRAPHITE_4}"

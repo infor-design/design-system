@@ -8,7 +8,7 @@
       value: "{!COLOR_PRIMARY}"
       type: "color"
     link-disabled-color:
-      value: "{!COLOR_DISABLED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     link-hover-color:
       value: "{!COLOR_PRIMARY}"
@@ -16,4 +16,6 @@
     link-visited-color:
       value: "{!COLOR_PRIMARY_ALT}"
       type: "color"
-
+    link-decoration:
+      value: "underline"
+      type: "style"

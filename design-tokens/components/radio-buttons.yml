@@ -23,15 +23,15 @@
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     radio-disabled-border-color:
-      value: "{!COLOR_DISABLED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     radio-disabled-checked-bg-color:
-      value: "{!COLOR_DISABLED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
 
     ## Focus State
     radio-focus-shadow:
-      value: "0 0 0 1px {!COLOR_BG}, 0 0 0 2px {!COLOR_PRIMARY}"
+      value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!COLOR_PRIMARY}"
       type: "box-shadow"
 
     ## Dimensions

@@ -1,15 +1,15 @@
 ---
-  global: 
+  global:
     category: "icons"
-  imports: 
+  imports:
     - "../aliases/base.yml"
-  props: 
-    icon-height: 
+  props:
+    icon-height:
       value: "16px"
       type: "size"
-    icon-width: 
+    icon-width:
       value: "22px"
       type: "size"
-    icon-fill: 
-      value: "{!COLOR_MUTED}"
+    icon-fill:
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"

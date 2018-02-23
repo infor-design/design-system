@@ -4,23 +4,37 @@
   global:
     category: "fonts"
   props:
+    ## Text Colors
+    text-color:
+      value: "{!TEXT_COLOR}"
+      type: "color"
+    text-color-muted:
+      value: "{!TEXT_COLOR_MUTED}"
+      type: "color"
+    text-color-info:
+      value: "{!TEXT_COLOR_INFO}"
+      type: "color"
+
     ## Font Family
     font-family-base:
       value: "source sans pro, helvetica, arial, san-serif"
       type: "font"
+    font-family-monospace:
+      value: "source code pro, monospace"
+      type: "font"
 
     ## Font Size
     font-size-xl:
-      value: "1.8rem"
+      value: "3.6rem"
       type: "size"
     font-size-lg:
-      value: "1.6rem"
+      value: "2.4rem"
       type: "size"
     font-size-base:
-      value: "1.4rem"
+      value: "1.6rem"
       type: "size"
     font-size-sm:
-      value: "1.2rem"
+      value: "1.4rem"
       type: "size"
 
     ## Font Weight
@@ -33,5 +47,5 @@
 
     ## Height
     line-height-base:
-      value: "1.5"
+      value: "1.65"
       type: "number"
