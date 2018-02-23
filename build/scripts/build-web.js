@@ -19,7 +19,7 @@ const distPath = PATH.join(process.cwd(), 'platforms/web');
 const banner = `
 /**
  * ${PKG.name} - ${PKG.description}
- * 
+ *
  * @version ${PKG.version}
  * @homepage ${PKG.repository.url}
  * @license ${PKG.license}
@@ -49,7 +49,7 @@ GLOB.readdir(tokenFiles, (err, files) => {
  */
 function convertFileToFormat(srcFile, toFormat) {
   THEO
-    .convert({  
+    .convert({
       transform: {
         type: 'web',
         file: srcFile
@@ -94,7 +94,7 @@ function createDirs(path) {
 /**
  * Get the comma separated list of formats
  * to convert to
- * @param {string} formats 
+ * @param {string} formats
  * @returns {array}
  */
 function getFormats(formats = 'raw.json') {

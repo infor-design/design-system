@@ -6,7 +6,7 @@
   props:
     ## Font Family
     font-family-base:
-      value: "Source Sans Pro, Helvetica, Arial, san-serif"
+      value: "source sans pro, helvetica, arial, san-serif"
       type: "font"
 
     ## Font Size
