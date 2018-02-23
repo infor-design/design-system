@@ -8,7 +8,7 @@
     "clean": "del ./platforms/*/*",
     "lint:web": "npm run build:web && ./node_modules/stylelint-cli/bin/stylelint platforms/web/*.custom-properties.css; exit 0;",
     "lint:yaml": "yamllint ./**/*.yml",
-    "prepublishOnly": "npm run clean && && npm test && npm run build && npm lint:web-built",
+    "prepublishOnly": "npm run clean && npm test && npm run build && npm run lint:web",
     "test": "npm run lint:yaml"
   },
   "repository": {
