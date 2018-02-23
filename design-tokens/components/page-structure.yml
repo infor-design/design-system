@@ -10,8 +10,12 @@
       category: "layout"
 
     ## Body Colors
-    body-bg-color:
-      value: "{!COLOR_BG_PRIMARY}"
+    body-bg-color-primary:
+      value: "{!PALETTE_GRAPHITE_1}"
+      type: "color"
+      category: "body"
+    body-bg-color-secondary:
+      value: "{!PALETTE_WHITE}"
       type: "color"
       category: "body"
     body-text-color:

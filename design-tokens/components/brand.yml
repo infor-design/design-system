@@ -5,12 +5,6 @@
     category: "brand"
     type: "color"
   props:
-    ## Background Colors
-    color-background-primary:
-      value: "{!COLOR_BG_PRIMARY}"
-    color-background-secondary:
-      value: "{!COLOR_BG_SECONDARY}"
-
     ## Default Colors
     color-default:
       value: "{!COLOR_DEFAULT}"

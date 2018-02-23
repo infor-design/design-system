@@ -2,9 +2,7 @@
   imports:
     - "./color-palette.yml"
   aliases:
-    ## Body Color
-    COLOR_BG_PRIMARY: "{!PALETTE_GRAPHITE_1}"
-    COLOR_BG_SECONDARY: "{!PALETTE_WHITE}"
+    ## Base Color
     COLOR_TEXT: "{!PALETTE_GRAPHITE_10}"
 
     ## Default Colors
