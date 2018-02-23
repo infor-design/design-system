@@ -6,8 +6,8 @@
     type: "color"
   props:
     ## Background Colors
-    color-background:
-      value: "{!COLOR_BG}"
+    color-background-primary:
+      value: "{!COLOR_BG_PRIMARY}"
     color-background-secondary:
       value: "{!COLOR_BG_SECONDARY}"
 

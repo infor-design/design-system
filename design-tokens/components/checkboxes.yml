@@ -24,7 +24,7 @@
     checkbox-border-color:
       value: "{!BORDER_COLOR}"
       type: "color"
-    
+
     ## Checked State
     checkbox-checked-bg-color:
       value: "{!COLOR_PRIMARY}"
@@ -46,5 +46,5 @@
 
     ## Focus State
     checkbox-focus-shadow:
-      value: "0 0 0 1px {!COLOR_BG}, 0 0 0 2px {!COLOR_PRIMARY}"
+      value: "0 0 0 1px {!COLOR_BG_PRIMARY}, 0 0 0 2px {!COLOR_PRIMARY}"
       type: "box-shadow"

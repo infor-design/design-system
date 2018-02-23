@@ -8,18 +8,10 @@
       value: "8px"
       type: "size"
       category: "layout"
-    container-padding-sm:
-      value: "16px"
-      type: "size"
-      category: "layout"
-    container-padding-lg:
-      value: "24px"
-      type: "size"
-      category: "layout"
 
     ## Body Colors
     body-bg-color:
-      value: "{!COLOR_BG}"
+      value: "{!COLOR_BG_PRIMARY}"
       type: "color"
       category: "body"
     body-text-color:

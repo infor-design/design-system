@@ -6,10 +6,10 @@
   props:
     ## Font Family
     font-family-base:
-      value: "Source Sans Pro, Helvetica, Arial, san-serif"
+      value: "source sans pro, helvetica, arial, san-serif"
       type: "font"
     font-family-monospace:
-      value: "Source Code Pro, monospace"
+      value: "source code pro, monospace"
       type: "font"
 
     ## Font Size

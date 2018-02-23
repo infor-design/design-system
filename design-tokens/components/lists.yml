@@ -4,7 +4,7 @@
   global:
     category: "lists"
   props:
-    ## Font Family
+    ## List Colors
     list-hover-color:
       value: "{!COLOR_DEFAULT_ALT}"
       type: "color"

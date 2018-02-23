@@ -3,7 +3,7 @@
     - "./color-palette.yml"
   aliases:
     ## Body Color
-    COLOR_BG: "{!PALETTE_GRAPHITE_1}"
+    COLOR_BG_PRIMARY: "{!PALETTE_GRAPHITE_1}"
     COLOR_BG_SECONDARY: "{!PALETTE_WHITE}"
     COLOR_TEXT: "{!PALETTE_GRAPHITE_10}"
 
