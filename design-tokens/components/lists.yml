@@ -5,6 +5,6 @@
     category: "lists"
   props:
     ## Font Family
-    list-link-hover-color:
-      value: "{!PALETTE_AZURE_1}"
+    list-hover-color:
+      value: "{!COLOR_DEFAULT_ALT}"
       type: "color"

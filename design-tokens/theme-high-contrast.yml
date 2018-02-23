@@ -12,6 +12,7 @@
     - "./components/inputs.yml"
     - "./components/page-structure.yml"
     - "./components/links.yml"
+    - "./components/lists.yml"
     - "./components/radio-buttons.yml"
 
   global:

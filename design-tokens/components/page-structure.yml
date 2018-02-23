@@ -9,11 +9,11 @@
       type: "size"
       category: "layout"
     container-padding-sm:
-      value: "{!SPACING_SM}"
+      value: "16px"
       type: "size"
       category: "layout"
     container-padding-lg:
-      value: "{!SPACING_LG}"
+      value: "24px"
       type: "size"
       category: "layout"
 

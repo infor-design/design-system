@@ -4,18 +4,17 @@
   aliases:
     ## Body Color
     COLOR_BG: "{!PALETTE_GRAPHITE_1}"
+    COLOR_BG_SECONDARY: "{!PALETTE_WHITE}"
     COLOR_TEXT: "{!PALETTE_GRAPHITE_10}"
 
     ## Default Colors
     COLOR_DEFAULT: "{!PALETTE_GRAPHITE_3}"
-    COLOR_DEFAULT_ALT: "{!PALETTE_GRAPHITE_4}"
-    COLOR_DEFAULT_LIGHT: "{!PALETTE_GRAPHITE_1}"
+    COLOR_DEFAULT_ALT: "{!PALETTE_GRAPHITE_1}"
     COLOR_DEFAULT_CONTRAST: "{!PALETTE_GRAPHITE_8}"
 
     ## Primary Colors
     COLOR_PRIMARY: "{!PALETTE_AZURE_6}"
     COLOR_PRIMARY_ALT: "{!PALETTE_AZURE_7}"
-    COLOR_PRIMARY_LIGHT: "{!PALETTE_AZURE_1}"
     COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"
 
     ## Status Colors
@@ -31,9 +30,6 @@
     ## Form Fields
     DISABLED_OPACITY: "0.5"
     LINE_HEIGHT: "2.2rem"
-
-    ## Spacing (rhythm of 8)
-    SPACING_BASE: "8px"
 
     ## Borders
     BORDER_RADIUS: "2px"
