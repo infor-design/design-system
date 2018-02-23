@@ -19,7 +19,7 @@
       type: "color"
       category: "body"
     body-text-color:
-      value: "{!COLOR_TEXT}"
+      value: "{!TEXT_COLOR}"
       type: "color"
       category: "body"
 

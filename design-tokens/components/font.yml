@@ -4,6 +4,17 @@
   global:
     category: "fonts"
   props:
+    ## Text Colors
+    text-color:
+      value: "{!TEXT_COLOR}"
+      type: "color"
+    text-color-muted:
+      value: "{!TEXT_COLOR_MUTED}"
+      type: "color"
+    text-color-info:
+      value: "{!TEXT_COLOR_INFO}"
+      type: "color"
+
     ## Font Family
     font-family-base:
       value: "source sans pro, helvetica, arial, san-serif"
@@ -38,11 +49,3 @@
     line-height-base:
       value: "1.65"
       type: "number"
-
-    ## Text Styles
-    text-color-muted:
-      value: "{!COLOR_MUTED}"
-      type: "color"
-    text-color-danger:
-      value: "{!COLOR_DANGER}"
-      type: "color"

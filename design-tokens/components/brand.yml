@@ -30,11 +30,3 @@
       value: "{!COLOR_WARNING}"
     color-danger:
       value: "{!COLOR_DANGER}"
-    color-muted:
-      value: "{!COLOR_MUTED}"
-    color-disabled:
-      value: "{!COLOR_DISABLED}"
-    color-readonly:
-      value: "{!COLOR_READONLY}"
-    color-info:
-      value: "{!COLOR_INFO}"

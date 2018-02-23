@@ -23,10 +23,10 @@
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     radio-disabled-border-color:
-      value: "{!COLOR_DISABLED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     radio-disabled-checked-bg-color:
-      value: "{!COLOR_DISABLED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
 
     ## Focus State

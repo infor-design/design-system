@@ -38,10 +38,10 @@
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     checkbox-disabled-border-color:
-      value: "{!COLOR_DISABLED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     checkbox-disabled-checked-bg-color:
-      value: "{!COLOR_DISABLED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
 
     ## Focus State
