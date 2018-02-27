@@ -46,25 +46,20 @@
       value: "{!PALETTE_AZURE_7}"
       type: "color"
       category: "button primary"
-    
+
     ## Button Links
     button-link-bg-color:
       value: "transparent"
       type: "color"
-      category: "button links"
     button-link-text-color:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
-      category: "button links"
     button-link-focus-text-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
-      category: "button links"
     button-link-hover-text-color:
       value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
-      category: "button links"
     button-link-active-text-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
-      category: "button links"
