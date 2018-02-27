@@ -1,137 +1,111 @@
 ---
   imports:
     - "../aliases/base.yml"
+  global:
+   category: inputs
   props:
     ## Adaptive
     input-height-adaptive-touch:
       value: "4.4rem"
-      category: "adative"
+      category: "adaptive"
       type: "size"
 
     ## Sizes
     input-width-xs:
       value: "75px"
       type: "size"
-      category: "input sizes"
     input-width-sm:
       value: "150px"
       type: "size"
-      category: "input sizes"
     input-width-md:
       value: "300px"
       type: "size"
-      category: "input sizes"
     input-width-lg:
       value: "400px"
       type: "size"
-      category: "input sizes"
     input-height:
       value: "3.4rem"
       type: "size"
-      category: "inputs"
     input-line-height:
       value: "16px"
       type: "size"
-      category: "inputs"
     input-padding-x:
       value: "12px"
       type: "size"
-      category: "inputs"
     input-padding-y:
       value: "8px"
       type: "size"
-      category: "inputs"
 
     ## Borders
     input-border-radius:
       value: "{!BORDER_RADIUS}"
       type: "size"
-      category: "inputs"
     input-border-width:
       value: "1px"
       type: "size"
-      category: "inputs"
     input-box-shadow:
       value: "none"
       type: "box-shadow"
-      category: "inputs"
 
     ## Other Colors
     input-placeholder-text-color:
       value: "{!TEXT_COLOR_MUTED}"
       type: "color"
-      category: "inputs"
     input-info-block-text-color:
       value: "{!TEXT_COLOR_MUTED}"
       type: "color"
-      category: "inputs"
     input-label-text-color:
       value: "{!TEXT_COLOR_INFO}"
       type: "color"
-      category: "inputs"
 
     ## Normal State
     input-bg-color:
       value: "transparent"
       type: "color"
-      category: "input normal"
     input-border-color:
       value: "{!BORDER_COLOR}"
       type: "color"
-      category: "input normal"
     input-text-color:
       value: "{!TEXT_COLOR}"
       type: "color"
-      category: "input normal"
 
     ## Disabled State
     input-disabled-bg-color:
       value: "transparent"
       type: "color"
-      category: "input disabled"
     input-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
-      category: "input disabled"
     input-disabled-text-color:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
-      category: "input disabled"
 
     ## Hover State
     input-hover-bg-color:
       value: "transparent"
       type: "color"
-      category: "input hover"
     input-hover-border-color:
       value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
-      category: "input hover"
 
     ## Focus State
     input-focus-bg-color:
       value: "transparent"
       type: "color"
-      category: "input focus"
     input-focus-border-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
-      category: "input focus"
     input-focus-text-color:
       value: "{!TEXT_COLOR}"
       type: "color"
-      category: "input focus"
 
     ## Readonly State
     input-readonly-bg-color:
       value: "{!PALETTE_GRAPHITE_2}"
       type: "color"
-      category: "input readonly"
     input-readonly-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
-      category: "input readonly"
     input-readonly-text-color:
       value: "{!TEXT_COLOR_MUTED}"
       type: "color"
-      category: "input readonly"
