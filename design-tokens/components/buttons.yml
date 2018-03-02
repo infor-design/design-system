@@ -8,14 +8,14 @@
     button-disabled-opacity:
       value: "{!DISABLED_OPACITY}"
       type: "number"
-    button-line-height:
-      value: "{!LINE_HEIGHT}"
+    button-height:
+      value: "38px"
       type: "size"
     button-padding-x:
       value: "30px"
       type: "size"
     button-padding-y:
-      value: "9px"
+      value: "0"
       type: "size"
 
     ## Button Default
