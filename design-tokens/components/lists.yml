@@ -6,5 +6,8 @@
   props:
     ## List Colors
     list-hover-color:
+      value: "{!PALETTE_GRAPHITE_2}"
+      type: "color"
+    list-selected-color:
       value: "{!PALETTE_GRAPHITE_1}"
       type: "color"
