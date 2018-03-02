@@ -5,7 +5,7 @@
     - "../aliases/base.yml"
   props:
     icon-height:
-      value: "16px"
+      value: "17px"
       type: "size"
     icon-width:
       value: "22px"
