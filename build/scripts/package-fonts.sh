@@ -5,7 +5,7 @@ FILENAME="SourceSansPro"
 DEST="font"
 
 echo "Starting fresh..."
-rm -r $DEST
+rm -r $DEST/*.zip
 echo "Downloading Source Sans Pro..."
 mkdir -p $DEST
 wget --quiet --output-document "$DEST/$FILENAME-ALL.zip" "https://github.com/adobe-fonts/source-sans-pro/archive/$VERSION_TAG.zip"
