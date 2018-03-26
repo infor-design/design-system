@@ -15,7 +15,7 @@ if (!ARGS.files) {
 }
 
 // Variables
-const distPath = PATH.join(process.cwd(), 'platforms/web');
+const distPath = PATH.join(process.cwd(), 'dist/tokens/web');
 const banner = `
 /**
  * ${PKG.name} - ${PKG.description}
