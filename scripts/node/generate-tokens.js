@@ -10,12 +10,6 @@ const RENAME = require('rename');
 const THEO = require('theo');
 const MKDIRP = require('mkdirp');
 
-if (!ARGS.files) {
-  throw 'No files specified.';
-}
-
-// Variables
-const distPath = PATH.join(process.cwd(), 'dist/tokens/web');
 const banner = `
 /**
  * ${PKG.name} - ${PKG.description}
@@ -25,11 +19,16 @@ const banner = `
  * @license ${PKG.license}
  */
 `;
+const distPath = PATH.join(process.cwd(), './dist/tokens/web');
+const tokensPath = './design-tokens';
 
-// Actions
+let tokenFiles = `${tokensPath}/*.yml`;
+if (ARGS.files) {
+  tokenFiles = ARGS.files;
+}
+
 createDirs(distPath);
 
-const tokenFiles = ARGS.files;
 const formatArr = getFormats(ARGS.format);
 
 GLOB.readdir(tokenFiles, (err, files) => {
@@ -40,8 +39,6 @@ GLOB.readdir(tokenFiles, (err, files) => {
   });
 });
 
-
-// Helpers
 /**
  * Convert token files into a specific format
  * @param {string} srcFile - The file to convert
@@ -60,7 +57,7 @@ function convertFileToFormat(srcFile, toFormat) {
     })
     .then(res => {
       let newFile = RENAME(srcFile, {
-        dirname: 'platforms/web',
+        dirname: distPath,
         extname: `.${toFormat}`
       });
 
