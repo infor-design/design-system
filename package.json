@@ -1,5 +1,5 @@
 {
-  "name": "@infor/ids-assets",
+  "name": "@infor/ids-identity",
   "version": "1.0.0-beta.3",
   "description": "Infor Design System Design Assets",
   "scripts": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/infor-design/design-system/blob/master/README.md"
   },
   "keywords": [
-    "infor design system"
+    "infor design system identity"
   ],
   "author": "Hook & Loop",
   "license": "Apache-2.0",
