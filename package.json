@@ -1,0 +1,50 @@
+{
+  "name": "@infor/ids-identity",
+  "version": "1.0.0-beta.4",
+  "description": "Infor Design System Design Assets",
+  "scripts": {
+    "build": "npm run clean && npm run build:icons && npm run build:tokens:web && npm run build:font",
+    "build:icons": "node ./scripts/node/generate-icons.js --export=artboards --formats=svg --clean=yes  --verbose --srcfile=./sketch/ids-icons.sketch",
+    "build:tokens:web": "node ./scripts/node/generate-tokens.js --format=custom-properties.css,sass,raw.json",
+    "build:font": "node ./scripts/node/generate-font.js",
+    "clean": "del ./dist/*/*",
+    "lint:tokens:web": "./node_modules/stylelint-cli/bin/stylelint ./dist/tokens/web/*.custom-properties.css --formatter verbose; exit 0;",
+    "lint:yaml": "yamllint ./**/*.yml",
+    "prepublishOnly": "npm run clean && npm test && npm run build && npm run lint:web",
+    "test": "npm run lint:yaml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infor-design/design-system/blob/master/README.md"
+  },
+  "keywords": [
+    "infor design system identity"
+  ],
+  "author": "Hook & Loop",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chalk": "^2.3.2",
+    "copy-dir": "^0.3.0",
+    "del": "^3.0.0",
+    "del-cli": "^1.1.0",
+    "es6-promise": "^4.2.4",
+    "fs": "0.0.1-security",
+    "glob-fs": "^0.1.7",
+    "gulp-util": "^3.0.8",
+    "minimalist": "^1.0.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "npm-which": "^3.0.1",
+    "path": "^0.12.7",
+    "rename": "^1.0.4",
+    "stylelint": "^9.1.3",
+    "stylelint-cli": "^1.0.0",
+    "stylelint-order": "^0.8.1",
+    "theo": "^6.0.0",
+    "yaml-lint": "^1.2.2"
+  },
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {}
+}
