@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * @fileoverview Create svg icons from a sketch file
- * For options, see https://developer.sketchapp.com/guides/sketchtool/
- *
- * NOTE: More than likely there is a command in the package.json
- * to run this script with NPM.
+ * decaffeinate suggestions:
+ * DS101: Remove unnecessary use of Array.from
+ * DS102: Remove unnecessary code created because of implicit returns
+ * DS207: Consider shorter variations of null checks
+ * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-
 const args = require('minimist')(process.argv.slice(2));
 if (!args.srcfile) {
   throw Error('Error! No sketch source file specified.');
