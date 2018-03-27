@@ -16,11 +16,13 @@ const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
 const fs = require('fs');
 const glob = require('glob-fs')({ gitignore: true });
+const mkdirp = require('mkdirp');
 const path = require('path');
 const pkg = require(path.join(process.cwd(), 'package.json'));
 const rename = require('rename');
+const swLog = require('./utilities/stopwatch-log.js');
 const theo = require('theo');
-const mkdirp = require('mkdirp');
+
 
 // -------------------------------------
 //   Constants/Variables
@@ -48,7 +50,7 @@ if (argv.files) {
 // -------------------------------------
 //   Main
 // -------------------------------------
-logTaskStart('creating tokens');
+swLog.logTaskStart('creating tokens');
 createDirs(distPath);
 
 glob.readdir(tokenFiles, (err, files) => {
@@ -57,7 +59,7 @@ glob.readdir(tokenFiles, (err, files) => {
       convertFileToFormat(file, format);
     });
   });
-  logTaskEnd('creating tokens');
+  swLog.logTaskEnd('creating tokens');
 });
 
 // -------------------------------------
@@ -97,7 +99,7 @@ function convertFileToFormat(srcFile, toFormat) {
         if (err) {
           throw err;
         }
-        logTaskAction('Created', `${path.parse(newFile).base}.`);
+        swLog.logTaskAction('Created', `${path.parse(newFile).base}.`);
       });
     })
     .catch(error => console.log(`Something went wrong: ${error}`));
@@ -121,42 +123,4 @@ function createDirs(path) {
  */
 function getFormats(formats = 'raw.json') {
   return formats.split(',');
-}
-
-/**
- * Log an individual task's action
- * @param {string} action - the action
- * @param {string} desc - a brief description or more details
- * @param {string} [color] - one of the chalk module's color aliases
- */
-function logTaskAction(action, desc, color = 'green') {
-  console.log('-', action, chalk[color](desc));
-}
-
-/**
- * Console.log a finished action and display its run time
- * @param {string} taskName - the name of the task that matches its start time
- */
-function logTaskEnd(taskName) {
-  console.log('Finished', chalk.cyan(taskName), `after ${chalk.magenta(timeElapsed(stopwatch[taskName]))}`);
-}
-
-/**
- * Console.log a staring action and track its start time
- * @param {string} taskName - the unique name of the task
- */
-function logTaskStart(taskName) {
-  stopwatch[taskName] = Date.now();
-  console.log('Starting', chalk.cyan(taskName), '...');
-}
-
-
-/**
- * Calculate the difference in seconds
- * @param {number} t - a time in milliseconds elapsed since January 1, 1970 00:00:00 UTC.
- * @return {string}
- */
-function timeElapsed(t) {
-  const elapsed = ((Date.now() - t)/1000).toFixed(2);
-  return elapsed + 's';
 }

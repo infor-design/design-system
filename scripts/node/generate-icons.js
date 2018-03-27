@@ -9,12 +9,14 @@
  */
 
 const args = require('minimist')(process.argv.slice(2));
+
 if (!args.srcfile) {
   throw Error('Error! No sketch source file specified.');
 }
 
-const fs          = require('fs');
 const chalk       = require('chalk');
+const fs          = require('fs');
+const swLog       = require('./utilities/stopwatch-log.js');
 const which       = require('npm-which')(process.cwd());
 const {Promise}   = require('es6-promise');
 const {spawn}     = require('child_process');
@@ -24,7 +26,7 @@ const TOOL_PATH   = `${ APP_PATH }/Contents/Resources/sketchtool/bin/sketchtool`
 const OUTPUT_DIR = `${process.cwd()}/dist/icons`;
 
 const stopwatch  = {};
-logTaskStart('creating icons');
+swLog.logTaskStart('creating icons');
 
 // build a command with arguments
 const cmdArgs = [];
@@ -63,7 +65,7 @@ return checkSketchTool()
 
     program.on('close', (code) => {
       if (code === 0) {
-        logTaskEnd('creating icons');
+        swLog.logTaskEnd('creating icons');
       } else {
         console.log(`Icon generation process exited with code ${code}`);
       }
@@ -92,46 +94,6 @@ function checkSketchTool() {
       });
     });
   });
-}
-
-/**
- * Log an individual task's action
- * @param {string} action - the action
- * @param {string} desc - a brief description or more details
- * @param {string} [color] - one of the chalk module's color aliases
- */
-function logTaskAction(action, desc, color = 'green') {
-  if (argv.verbose) {
-    console.log('-', action, chalk[color](desc));
-  }
-}
-
-/**
- * Console.log a finished action and display its run time
- * @param {string} taskName - the name of the task that matches its start time
- */
-function logTaskEnd(taskName) {
-  console.log('Finished', chalk.cyan(taskName), `after ${chalk.magenta(timeElapsed(stopwatch[taskName]))}`);
-}
-
-/**
- * Console.log a staring action and track its start time
- * @param {string} taskName - the unique name of the task
- */
-function logTaskStart(taskName) {
-  stopwatch[taskName] = Date.now();
-  console.log('Starting', chalk.cyan(taskName), '...');
-}
-
-
-/**
- * Calculate the difference in seconds
- * @param {number} t - a time in milliseconds elapsed since January 1, 1970 00:00:00 UTC.
- * @return {string}
- */
-function timeElapsed(t) {
-  const elapsed = ((Date.now() - t)/1000).toFixed(2);
-  return elapsed + 's';
 }
 
 /**
