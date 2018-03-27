@@ -20,10 +20,11 @@ logTaskStart('copying font');
 const filterFiles = (stat, filepath, filename) => {
   if (stat === 'file' && path.extname(filepath) === '.md') {
     logTaskAction('Ignore', filename, 'magenta');
-    return false;
-  } else {
-    logTaskAction('Copying', filename);
+    return false;s
   }
+
+  logTaskAction('Copying', filename);
+  return true;
 }
 
 copydir(font_dir, output_dir, filterFiles, err => {
