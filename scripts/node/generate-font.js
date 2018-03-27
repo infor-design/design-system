@@ -8,90 +8,32 @@
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 const args = require('minimist')(process.argv.slice(2));
-if (!args.srcfile) {
-  throw Error('Error! No sketch source file specified.');
-}
-
-const fs          = require('fs');
-const chalk       = require('chalk');
-const which       = require('npm-which')(process.cwd());
-const {Promise}   = require('es6-promise');
-const {spawn}     = require('child_process');
-
-const APP_PATH    = '/Applications/Sketch.app';
-const TOOL_PATH   = `${ APP_PATH }/Contents/Resources/sketchtool/bin/sketchtool`;
-const OUTPUT_DIR = `${process.cwd()}/dist/icons`;
-
+const chalk = require('chalk');
+const copydir = require('copy-dir');
+const path = require('path');
+const font_dir = `${process.cwd()}/font`;
+const output_dir = `${process.cwd()}/dist/font`;
 const stopwatch  = {};
-logTaskStart('creating icons');
 
-// build a command with arguments
-const cmdArgs = [];
-if (args.export) {
-  cmdArgs.push('export');
-  cmdArgs.push(args.export);
+logTaskStart('copying font');
+
+const filterFiles = (stat, filepath, filename) => {
+  if (stat === 'file' && path.extname(filepath) === '.md') {
+    logTaskAction('Ignore', filename, 'magenta');
+    return false;
+  } else {
+    logTaskAction('Copying', filename);
+  }
 }
-if (args.trimmed) { cmdArgs.push(`--trimmed=${args.trimmed}`); }
-if (args.compression) { cmdArgs.push(`--compression=${args.compression}`); }
-if (args.scales) { cmdArgs.push(`--scales=${args.scales}`); }
-if (args.formats) { cmdArgs.push(`--formats=${args.formats}`); }
-if (args.item) { cmdArgs.push(`--item=${args.item}`); }
-if (yesOrNo(args.progressive)) { cmdArgs.push('--progressive'); }
-if (yesOrNo(args.compact)) { cmdArgs.push('--compact'); }
-if (args.background) { cmdArgs.push(`--background=${args.background}`); }
-if (yesOrNo(args.groupContentsOnly)) { cmdArgs.push('--group-contents-only'); }
-if (args.items) { cmdArgs.push(`--items=${args.items}`); }
-if (yesOrNo(args.saveForWeb)) { cmdArgs.push('--save-for-web'); }
-if (args.bounds) { cmdArgs.push(`--bounds=${args.bounds}`); }
 
-args.clean = yesOrNo(args.clean);
-
-return checkSketchTool()
-  .catch(err => {
-    console.log('Error!', err);
-  })
-  .then(cmnd => {
-    const program = spawn(cmnd, cmdArgs.concat(args.srcfile, `--output=${OUTPUT_DIR}`));
-
-    // Verbose Output
-    program.stdout.on('data', function(data) {
-      if (args.verbose) {
-        return console.log(data.toString());
-      }
-    });
-
-    program.on('close', (code) => {
-      if (code === 0) {
-        logTaskEnd('creating icons');
-      } else {
-        console.log(`Icon generation process exited with code ${code}`);
-      }
-    });
+copydir(font_dir, output_dir, filterFiles, err => {
+  if (err) {
+    logTaskAction('Error!', err, 'red');
+  } else {
+    logTaskEnd('copying font');
+  }
 });
 
-/**
- * Check to see if a sketchtool is installed and where
- */
-function checkSketchTool() {
-  return new Promise(function(resolve, reject) {
-    // Check the tool bundled with Sketch.app (>= ver 3.5)
-    return fs.access(TOOL_PATH, fs.F_OK, function(err) {
-      if (!err) {
-        resolve(TOOL_PATH);
-        return;
-      }
-      // Check the tool installed via install.sh
-      return which('sketchtool', function(err2, pathTo) {
-        if (err2) {
-          return reject('No sketchtool installed.');
-        } else {
-          cmnd = pathTo;
-          return resolve(cmnd);
-        }
-      });
-    });
-  });
-}
 
 /**
  * Log an individual task's action
@@ -100,9 +42,7 @@ function checkSketchTool() {
  * @param {string} [color] - one of the chalk module's color aliases
  */
 function logTaskAction(action, desc, color = 'green') {
-  if (argv.verbose) {
-    console.log('-', action, chalk[color](desc));
-  }
+  console.log('-', action, chalk[color](desc));
 }
 
 /**

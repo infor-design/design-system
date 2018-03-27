@@ -3,9 +3,10 @@
   "version": "1.0.0-beta.3",
   "description": "Infor Design System Design Assets",
   "scripts": {
-    "build": "npm run build:icons && npm run build:tokens:web",
+    "build": "npm run clean && npm run build:icons && npm run build:tokens:web && npm run build:font",
     "build:icons": "node ./scripts/node/generate-icons.js --export=artboards --formats=svg --clean=yes  --verbose --srcfile=./sketch/ids-icons.sketch",
     "build:tokens:web": "node ./scripts/node/generate-tokens.js --format=custom-properties.css,sass,raw.json",
+    "build:font": "node ./scripts/node/generate-font.js",
     "clean": "del ./dist/*/*",
     "lint:tokens:web": "./node_modules/stylelint-cli/bin/stylelint ./dist/tokens/web/*.custom-properties.css --formatter verbose; exit 0;",
     "lint:yaml": "yamllint ./**/*.yml",
@@ -23,6 +24,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "chalk": "^2.3.2",
+    "copy-dir": "^0.3.0",
     "del": "^3.0.0",
     "del-cli": "^1.1.0",
     "es6-promise": "^4.2.4",
