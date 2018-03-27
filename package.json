@@ -10,7 +10,7 @@
     "clean": "del ./dist/*/*",
     "lint:tokens:web": "./node_modules/stylelint-cli/bin/stylelint ./dist/tokens/web/*.custom-properties.css --formatter verbose; exit 0;",
     "lint:yaml": "yamllint ./**/*.yml",
-    "prepublishOnly": "npm run clean && npm test && npm run build && npm run lint:web",
+    "prepublishOnly": "npm run clean && npm test && npm run build && npm run lint:tokens:web",
     "test": "npm run lint:yaml"
   },
   "repository": {
