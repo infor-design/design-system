@@ -16,14 +16,16 @@ if (!args.srcfile) {
 
 const chalk       = require('chalk');
 const fs          = require('fs');
+const svgo        = require('svgo');
 const swLog       = require('./utilities/stopwatch-log.js');
 const which       = require('npm-which')(process.cwd());
 const {Promise}   = require('es6-promise');
 const {spawn}     = require('child_process');
+const glob        = require('glob-fs')({ gitignore: false });
 
 const APP_PATH    = '/Applications/Sketch.app';
 const TOOL_PATH   = `${ APP_PATH }/Contents/Resources/sketchtool/bin/sketchtool`;
-const OUTPUT_DIR = `${process.cwd()}/dist/icons`;
+const OUTPUT_DIR = `./dist/icons`;
 
 const stopwatch  = {};
 swLog.logTaskStart('creating icons');
@@ -66,11 +68,13 @@ return checkSketchTool()
     program.on('close', (code) => {
       if (code === 0) {
         swLog.logTaskEnd('creating icons');
+        optimizeSVGs();
       } else {
         console.log(`Icon generation process exited with code ${code}`);
       }
     });
 });
+
 
 /**
  * Check to see if a sketchtool is installed and where
@@ -91,6 +95,44 @@ function checkSketchTool() {
           cmnd = pathTo;
           return resolve(cmnd);
         }
+      });
+    });
+  });
+}
+
+/**
+ * Optimize the generated .svg icon files
+ */
+function optimizeSVGs() {
+  swLog.logTaskStart('optimize svgs');
+  const svgoOptimize = new svgo();
+
+  return glob.readdir(`${OUTPUT_DIR}/*.svg`, (err, files) => {
+    if (err) {
+      throw err;
+    }
+
+    let numOptimized = 0;
+
+    files.forEach(filepath => {
+      fs.readFile(filepath, 'utf8', (err, data) => {
+        if (err) {
+          throw err;
+        }
+        svgoOptimize.optimize(data)
+          .catch(err => {
+            console.log('Error!', err);
+          })
+          .then(result => {
+            fs.writeFile(filepath, result.data, 'utf-8', () => {
+              swLog.logTaskAction('Optimized', filepath);
+              numOptimized++;
+
+              if (numOptimized === files.length) {
+                swLog.logTaskEnd('optimize svgs');
+              }
+            });
+          });
       });
     });
   });
