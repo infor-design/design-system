@@ -1,6 +1,17 @@
 #!/usr/bin/env node
 
-// Dependencies
+/**
+ * @fileoverview This script uses theo to generate
+ * different types of out from design tokens.
+ * https://github.com/salesforce-ux/theo
+ *
+ * NOTE: More than likely there is a command in the package.json
+ * to run this script with NPM.
+ */
+
+// -------------------------------------
+//   Node Modules/Options
+// -------------------------------------
 const ARGS = require('minimist')(process.argv.slice(2));
 const FS = require('fs');
 const GLOB = require('glob-fs')({ gitignore: true });
@@ -10,6 +21,9 @@ const RENAME = require('rename');
 const THEO = require('theo');
 const MKDIRP = require('mkdirp');
 
+// -------------------------------------
+//   Constants/Variables
+// -------------------------------------
 const banner = `
 /**
  * ${PKG.name} - ${PKG.description}
@@ -19,17 +33,20 @@ const banner = `
  * @license ${PKG.license}
  */
 `;
+
 const distPath = PATH.join(process.cwd(), './dist/tokens/web');
 const tokensPath = './design-tokens';
+const formatArr = getFormats(ARGS.format);
 
 let tokenFiles = `${tokensPath}/*.yml`;
 if (ARGS.files) {
   tokenFiles = ARGS.files;
 }
 
+// -------------------------------------
+//   Main
+// -------------------------------------
 createDirs(distPath);
-
-const formatArr = getFormats(ARGS.format);
 
 GLOB.readdir(tokenFiles, (err, files) => {
   files.forEach(file => {
@@ -38,6 +55,10 @@ GLOB.readdir(tokenFiles, (err, files) => {
     });
   });
 });
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
 
 /**
  * Convert token files into a specific format
