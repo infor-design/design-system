@@ -2,6 +2,8 @@
 
 To read more about how to use Source Sans in IDS, see our [Typography guidelines](https://design.infor.com/guidelines/identity/typography).
 
+Mac users should install the OTF version by going into `/font/OTF/` and installing all variants into Font Book.
+
 # Source Sans Pro
 
 Source Sans Pro is a set of OpenType fonts that have been designed to work well
