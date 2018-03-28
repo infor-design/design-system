@@ -105,7 +105,11 @@ function checkSketchTool() {
  */
 function optimizeSVGs() {
   swLog.logTaskStart('optimize svgs');
-  const svgoOptimize = new svgo();
+  const svgoOptimize = new svgo({
+    plugins: [
+      { removeViewBox: false }
+    ]
+  });
 
   return glob.readdir(`${OUTPUT_DIR}/*.svg`, (err, files) => {
     if (err) {
