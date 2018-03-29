@@ -1,6 +1,6 @@
 {
-  "name": "@infor/ids-identity",
-  "version": "1.0.0",
+  "name": "ids-identity",
+  "version": "1.0.0-rc.1",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "build": "npm run clean && npm run build:icons && npm run build:tokens:web && npm run build:font",
@@ -19,7 +19,7 @@
     "url": "https://github.com/infor-design/design-system/blob/master/README.md"
   },
   "keywords": [
-    "infor design system identity"
+    "infor design system"
   ],
   "author": "Hook & Loop",
   "license": "Apache-2.0",
