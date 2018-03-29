@@ -25,7 +25,7 @@
 
     ## Font Size
     font-size-xl:
-      value: "3.6rem"
+      value: "4rem"
       type: "size"
     font-size-lg:
       value: "3.2rem"
