@@ -17,10 +17,10 @@ Part of the Infor Design System is a package of different assets that create the
 Install this into your project with:
 
 ```
-npm install --save-dev @infor/ids-identity
+npm install --save-dev ids-identity
 ```
 
-Then look in `node_modules/@infor/ids-identity` for the assets.
+Then look in `node_modules/ids-identity` for the assets.
 
 ## Building Assets Locally
 
