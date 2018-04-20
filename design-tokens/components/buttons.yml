@@ -17,6 +17,9 @@
     button-padding-y:
       value: "0"
       type: "size"
+    button-border-radius:
+      value: "44px"
+      type: "size"
 
     ## Button Default
     button-default-bg-color:
