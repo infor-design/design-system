@@ -8,7 +8,7 @@ This repository contains the fundamentals of the Infor Design System, including 
 
 To get started, :arrow_down:[download the latest release](https://github.com/infor-design/design-system/releases/latest) :arrow_down: of our IDS Design Kit. In that package, you'll find both low-fi and mid-fi Sketch templates, font files for Source Sans Pro, and our design tokens.
 
-See our [getting started page](https://design.infor.com/about/getting-started/getting-started-designers) for more information.
+See our [getting started page](https://design.infor.com/guidelines/getting-started-designers) for more information.
 
 ## Installing IDS Identity in your project
 
