@@ -30,3 +30,10 @@
     ## Borders
     BORDER_RADIUS: "2px"
     BORDER_COLOR: "{!PALETTE_GRAPHITE_4}"
+
+    ## Fonts
+    FONT_FAMILY_BASE: "source sans pro, helvetica, arial, san-serif"
+    FONT_FAMILY_MONOSPACE: "source code pro, monospace"
+    FONT_WEIGHT_NORMAL: "400"
+    FONT_WEIGHT_BOLD: "600"
+    FONT_SIZE_BASE: "1.6rem"

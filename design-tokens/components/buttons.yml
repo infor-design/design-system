@@ -5,17 +5,50 @@
     category: "buttons"
   props:
     ## Buttons
+    button-display:
+      value: "inline-block"
+      type: "display"
     button-disabled-opacity:
       value: "{!DISABLED_OPACITY}"
       type: "number"
     button-height:
       value: "38px"
       type: "size"
+    button-line-height:
+      value: "1"
+      type: "number"
     button-padding-x:
       value: "30px"
       type: "size"
     button-padding-y:
       value: "0"
+      type: "size"
+    button-position:
+      value: "relative"
+      type: "position"
+    button-border:
+      value: "0"
+      type: "number"
+    button-border-radius:
+      value: "{!BORDER_RADIUS}"
+      type: "number"
+    button-text-align:
+      value: "center"
+      type: "text-align"
+    button-text-transform:
+      value: "capitalize"
+      type: "text-transform"
+    button-text-decoration:
+      value: "none"
+      type: "text-decoration"
+    button-font-family:
+      value: "{!FONT_FAMILY_BASE}"
+      type: "font-family"
+    button-font-weight:
+      value: "{!FONT_WEIGHT_BOLD}"
+      type: "font-weight"
+    button-font-size:
+      value: "{!FONT_SIZE_BASE}"
       type: "size"
 
     ## Button Default
