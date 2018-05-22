@@ -12,7 +12,7 @@
     "afterReleaseCommand": ""
   },
   "npm": {
-    "publishPath": "package.json",
+    "publishPath": ".",
     "tag": "latest"
   },
   "github": {
