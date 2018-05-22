@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "build": "npm run clean && npm run build:icons && npm run build:tokens:web && npm run build:font",
