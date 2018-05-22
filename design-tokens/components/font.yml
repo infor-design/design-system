@@ -17,10 +17,10 @@
 
     ## Font Family
     font-family-base:
-      value: "source sans pro, helvetica, arial, san-serif"
+      value: "{!FONT_FAMILY_BASE}"
       type: "font"
     font-family-monospace:
-      value: "source code pro, monospace"
+      value: "{!FONT_FAMILY_MONOSPACE}"
       type: "font"
 
     ## Font Size
@@ -34,7 +34,7 @@
       value: "2.4rem"
       type: "size"
     font-size-base:
-      value: "1.6rem"
+      value: "{!FONT_SIZE_BASE}"
       type: "size"
     font-size-sm:
       value: "1.4rem"
@@ -42,10 +42,10 @@
 
     ## Font Weight
     font-weight-normal:
-      value: "400"
+      value: "{!FONT_WEIGHT_NORMAL}"
       type: "font-weight"
     font-weight-bold:
-      value: "600"
+      value: "{!FONT_WEIGHT_BOLD}"
       type: "font-weight"
 
     ## Height
