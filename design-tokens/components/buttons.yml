@@ -24,7 +24,7 @@
       value: "0"
       type: "number"
     button-border-radius:
-      value: "{!BORDER_RADIUS}"
+      value: "{!BORDER_RADIUS_SMALL}"
       type: "number"
     button-text-align:
       value: "center"
@@ -44,6 +44,9 @@
     button-font-size:
       value: "{!FONT_SIZE_BASE}"
       type: "size"
+    button-focus-box-shadow:
+      value: "0 0 0 2px {!PALETTE_GRAPHITE_1}, 0 0 0 3px {!COLOR_PRIMARY}"
+      type: "box-shadow"
 
     ## Button Default
     button-default-bg-color:
