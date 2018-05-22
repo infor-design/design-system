@@ -12,7 +12,6 @@
     "afterReleaseCommand": ""
   },
   "npm": {
-    "publishPath": ".",
     "tag": "latest"
   },
   "github": {
