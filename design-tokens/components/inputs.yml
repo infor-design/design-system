@@ -38,7 +38,7 @@
 
     ## Borders
     input-border-radius:
-      value: "{!BORDER_RADIUS}"
+      value: "{!BORDER_RADIUS_SMALL}"
       type: "size"
     input-border-width:
       value: "1px"
