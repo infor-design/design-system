@@ -19,6 +19,6 @@
     "release": true,
     "releaseName": "v%s",
     "tokenRef": "GITHUB_ACCESS_TOKEN",
-    "assets":"IDS-${version}.zip"
+    "assets":"IDS-*.zip"
   }
 }
