@@ -1,6 +1,7 @@
 # Compiled #
 ############
 dist/
+IDS-*.zip
 
 # Packages #
 ############

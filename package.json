@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "build": "npm run clean && npm run build:icons && npm run build:tokens:web && npm run build:font",
@@ -8,11 +8,12 @@
     "build:tokens:web": "node ./scripts/node/generate-tokens.js --format=custom-properties.css,sass,raw.json",
     "build:font": "node ./scripts/node/generate-font.js",
     "pack:release": "npm run build:tokens:web && bash ./scripts/package-release.sh",
-    "clean": "del ./dist/*/*",
+    "clean": "del ./dist/*/* && del ./IDS-*.zip",
     "lint:tokens:web": "./node_modules/stylelint-cli/bin/stylelint ./dist/tokens/web/*.custom-properties.css --formatter verbose; exit 0;",
     "lint:yaml": "yamllint ./**/*.yml",
     "prepublishOnly": "npm run clean && npm test && npm run build && npm run lint:tokens:web",
-    "test": "npm run lint:yaml"
+    "test": "npm run lint:yaml",
+    "release": "npx release-it"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "mkdirp": "^0.5.1",
     "npm-which": "^3.0.1",
     "path": "^0.12.7",
+    "release-it": "^7.4.5",
     "rename": "^1.0.4",
     "stylelint": "^9.1.3",
     "stylelint-cli": "^1.0.0",
