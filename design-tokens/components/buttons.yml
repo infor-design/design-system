@@ -103,6 +103,9 @@
     button-link-text-color:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
+    button-link-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
     button-link-focus-text-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
