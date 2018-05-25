@@ -61,6 +61,15 @@
     button-default-hover-bg-color:
       value: "{!COLOR_DEFAULT_ALT}"
       type: "color"
+    button-default-active-bg-color:
+      value: "{!COLOR_DEFAULT_ALT}"
+      type: "color"
+    button-default-disabled-bg-color:
+      value: "{!COLOR_DEFAULT_ALT}"
+      type: "color"
+    button-default-disabled-border-color:
+      value: "{!COLOR_DEFAULT}"
+      type: "color"
 
     ## Button Primary
     button-primary-bg-color:
@@ -73,9 +82,19 @@
       value: "{!COLOR_PRIMARY}"
       type: "color"
     button-primary-hover-bg-color:
-      value: "{!PALETTE_AZURE_7}"
+      value: "{!COLOR_PRIMARY_ALT}"
       type: "color"
       category: "button primary"
+    button-primary-active-bg-color:
+      value: "{!COLOR_PRIMARY_ALT}"
+      type: "color"
+    button-primary-disabled-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-primary-disabled-border-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+
 
     ## Button Links
     button-link-bg-color:
