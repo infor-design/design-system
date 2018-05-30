@@ -6,3 +6,8 @@
     ## Extend Base theme
     - "./theme-base.yml"
 
+  props:
+    ## Buttons
+    button-height:
+      value: "38px"
+      type: "size"

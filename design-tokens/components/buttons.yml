@@ -9,7 +9,7 @@
       value: "{!DISABLED_OPACITY}"
       type: "number"
     button-height:
-      value: "38px"
+      value: "34px"
       type: "size"
     button-line-height:
       value: "1"
