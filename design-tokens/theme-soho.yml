@@ -1,0 +1,4 @@
+---
+  imports:
+    ## Core Components
+    - "./core.yml"

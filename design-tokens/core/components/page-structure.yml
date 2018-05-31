@@ -1,7 +1,6 @@
 ---
   imports:
-    - "../aliases/base.yml"
-
+    - "../core.alias.yml"
   props:
     ## Spacing
     spacing-base:

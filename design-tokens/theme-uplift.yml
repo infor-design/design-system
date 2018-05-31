@@ -1,0 +1,5 @@
+---
+  imports:
+    ## Uplift Components
+    - "./theme-uplift/components/buttons.yml"
+

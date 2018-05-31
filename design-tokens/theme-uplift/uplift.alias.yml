@@ -1,6 +1,7 @@
 ---
   imports:
-    - "./base.yml"
+    ## Extend Core Aliases
+    - "../core/core.alias.yml"
   aliases:
     ## Fonts
     FONT_WEIGHT_BOLD: 600

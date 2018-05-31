@@ -1,14 +1,17 @@
 ---
   imports:
+
     ## Colors
-    - "./aliases/color-palette.yml"
+    - "../../core/color-palette.alias.yml"
 
-    ## Extend Base theme
-    - "./theme-base.yml"
+    ## Extend Core Components
+    - "../../core.yml"
 
-    ## Alias overrides
-    - "./aliases/default.yml"
+    ## Uplift Alias overrides
+    - "../uplift.alias.yml"
 
+  global:
+    category: "buttons"
   props:
     ## Buttons
     button-height:

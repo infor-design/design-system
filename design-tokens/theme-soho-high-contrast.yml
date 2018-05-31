@@ -1,10 +1,10 @@
 ---
   imports:
     ## Colors
-    - "./aliases/color-palette.yml"
+    - "./core/color-palette.alias.yml"
 
-    ## Extend Base theme
-    - "./theme-base.yml"
+    ## Extend Core Components
+    - "./core.yml"
 
   global:
     type: "color"
