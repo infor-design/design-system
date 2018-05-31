@@ -32,8 +32,8 @@
     BORDER_COLOR: "{!PALETTE_GRAPHITE_4}"
 
     ## Fonts
-    FONT_FAMILY_BASE: "source sans pro, helvetica, arial, san-serif"
-    FONT_FAMILY_MONOSPACE: "source code pro, monospace"
+    FONT_FAMILY_BASE: "helvetica, arial, san-serif"
+    FONT_FAMILY_MONOSPACE: "monospace"
     FONT_WEIGHT_NORMAL: "400"
-    FONT_WEIGHT_BOLD: "600"
-    FONT_SIZE_BASE: "1.6rem"
+    FONT_WEIGHT_BOLD: "700"
+    FONT_SIZE_BASE: "14"

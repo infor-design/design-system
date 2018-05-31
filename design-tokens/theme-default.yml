@@ -6,8 +6,14 @@
     ## Extend Base theme
     - "./theme-base.yml"
 
+    ## Alias overrides
+    - "./aliases/default.yml"
+
   props:
     ## Buttons
     button-height:
       value: "38px"
       type: "size"
+    button-font-weight:
+      value: "{!FONT_WEIGHT_BOLD}"
+      type: "font-weight"

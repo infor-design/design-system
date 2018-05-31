@@ -1,0 +1,6 @@
+---
+  imports:
+    - "./base.yml"
+  aliases:
+    ## Fonts
+    FONT_WEIGHT_BOLD: 600
