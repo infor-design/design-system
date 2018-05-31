@@ -1,8 +1,10 @@
 ---
   imports:
     - "../core.alias.yml"
+
   global:
     category: "icons"
+
   props:
     icon-height:
       value: "17px"

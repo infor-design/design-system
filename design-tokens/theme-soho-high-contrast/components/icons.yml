@@ -1,0 +1,12 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+  global:
+    category: "icons"
+
+  props:
+    icon-fill:
+      value: "{!PALETTE_SLATE_3}"
+      type: "color"

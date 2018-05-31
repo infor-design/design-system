@@ -1,75 +1,13 @@
 ---
   imports:
-    ## Colors
-    - "./core/color-palette.alias.yml"
-
     ## Extend Core Components
     - "./core.yml"
 
-  global:
-    type: "color"
+    ## Theme Dark Overrides - NOTE: need to update these to token names.
+    - "./theme-soho-dark/components/buttons.yml"
+    - "./theme-soho-dark/components/icons.yml"
+    - "./theme-soho-dark/components/inputs.yml"
+    - "./theme-soho-dark/components/links.yml"
+    - "./theme-soho-dark/components/page-structure.yml"
 
-  props:
-    body-bg:
-      value: "{!PALETTE_GRAPHITE_3}"
-      category: "body"
-    body-bg-secondary:
-      value: "{!PALETTE_GRAPHITE_2}"
-      category: "body"
-    body-color:
-      value: "{!PALETTE_BLACK}"
-      category: "body"
-    link-color:
-      value: "{!PALETTE_AZURE_9}"
-      category: "links"
-    link-color-hover:
-      value: "{!PALETTE_AZURE_9}"
-      category: "links"
-    btn-default-bg:
-      value: "{!PALETTE_GRAPHITE_7}"
-      category: "buttons"
-    btn-default-color:
-      value: "{!PALETTE_SLATE_10}"
-      category: "buttons"
-    btn-default-hover:
-      value: "{!PALETTE_SLATE_4}"
-      category: "buttons"
-    btn-primary-bg:
-      value: "{!PALETTE_AZURE_6}"
-      category: "buttons"
-    btn-primary-hover:
-      value: "{!PALETTE_AZURE_10}"
-      category: "buttons"
-    btn-link-color:
-      value: "{!PALETTE_GRAPHITE_9}"
-      category: "buttons"
-    btn-link-hover:
-      value: "{!PALETTE_BLACK}"
-      category: "buttons"
-    icon-fill:
-      value: "{!PALETTE_SLATE_3}"
-      category: "icons"
-    input-info-block-color:
-      value: "{!PALETTE_GRAPHITE_5}"
-      category: "input"
-    input-label-color:
-      value: "{!PALETTE_GRAPHITE_9}"
-      category: "input"
-    input-bg:
-      value: "{!PALETTE_WHITE}"
-      category: "input"
-    input-border-color:
-      value: "{!PALETTE_GRAPHITE_4}"
-      category: "input"
-    input-color:
-      value: "{!PALETTE_BLACK}"
-      category: "input"
-    input-border-color-disabled:
-      value: "{!PALETTE_GRAPHITE_4}"
-      category: "input"
-    input-border-color-hover:
-      value: "{!PALETTE_GRAPHITE_10}"
-      category: "input"
-    input-border-color-focus:
-      value: "{!PALETTE_AZURE_7}"
-      category: "input"
+

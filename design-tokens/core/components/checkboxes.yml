@@ -1,9 +1,12 @@
 ---
   imports:
     - "../core.alias.yml"
+
   global:
     category: "checkboxes"
+
   props:
+    ## Checkboxes
     checkbox-box-size:
       value: "17px"
       type: "size"

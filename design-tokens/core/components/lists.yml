@@ -1,8 +1,10 @@
 ---
   imports:
     - "../core.alias.yml"
+
   global:
     category: "lists"
+
   props:
     ## List Colors
     list-hover-color:

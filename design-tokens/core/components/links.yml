@@ -1,8 +1,10 @@
 ---
   imports:
     - "../core.alias.yml"
+
   global:
     category: "links"
+
   props:
     link-color:
       value: "{!COLOR_PRIMARY}"

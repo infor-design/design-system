@@ -1,0 +1,18 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+  global:
+    category: "body"
+
+  props:
+    body-bg:
+      value: "{!PALETTE_GRAPHITE_3}"
+      type: "color"
+    body-bg-secondary:
+      value: "{!PALETTE_GRAPHITE_2}"
+      type: "color"
+    body-color:
+      value: "{!PALETTE_BLACK}"
+      type: "color"

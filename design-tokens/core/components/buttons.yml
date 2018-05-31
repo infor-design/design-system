@@ -1,8 +1,10 @@
 ---
   imports:
     - "../core.alias.yml"
+
   global:
     category: "buttons"
+
   props:
     ## Buttons
     button-disabled-opacity:

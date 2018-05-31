@@ -1,6 +1,7 @@
 ---
   imports:
     - "./color-palette.alias.yml"
+
   aliases:
     ## Text Colors
     TEXT_COLOR: "{!PALETTE_GRAPHITE_10}"
