@@ -5,14 +5,13 @@
 
   global:
     category: "body"
+    type: "color"
 
   props:
-    body-bg:
-      value: "{!PALETTE_GRAPHITE_3}"
-      type: "color"
-    body-bg-secondary:
+    ## Body Colors
+    body-bg-color-primary:
+      value: "{!PALETTE_SLATE_7}"
+    body-bg-color-secondary:
       value: "{!PALETTE_GRAPHITE_2}"
-      type: "color"
-    body-color:
-      value: "{!PALETTE_BLACK}"
-      type: "color"
+    body-text-color:
+      value: "{!PALETTE_WHITE}"

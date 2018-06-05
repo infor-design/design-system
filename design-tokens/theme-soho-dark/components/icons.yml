@@ -5,8 +5,8 @@
 
   global:
     category: "icons"
+    type: "color"
 
   props:
     icon-fill:
       value: "{!PALETTE_SLATE_3}"
-      type: "color"

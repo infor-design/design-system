@@ -5,11 +5,10 @@
 
   global:
     category: "links"
+    type: "color"
 
   props:
     link-color:
-      value: "{!PALETTE_AZURE_9}"
-      type: "color"
-    link-color-hover:
-      value: "{!PALETTE_AZURE_9}"
-      type: "color"
+      value: "{!PALETTE_AZURE_4}"
+    link-hover-color:
+      value: "{!PALETTE_AZURE_4}"

@@ -7,24 +7,29 @@
     category: "buttons"
 
   props:
-    btn-default-bg:
-      value: "{!PALETTE_GRAPHITE_7}"
-      type: "colors"
-    btn-default-color:
+    ## Button Default
+    button-default-bg-color:
+      value: "{!PALETTE_SLATE_3}"
+      type: "color"
+    btn-default-text-color:
       value: "{!PALETTE_SLATE_10}"
-      type: "colors"
-    btn-default-hover:
+      type: "color"
+    button-default-hover-bg-color:
       value: "{!PALETTE_SLATE_4}"
-      type: "colors"
-    btn-primary-bg:
-      value: "{!PALETTE_AZURE_6}"
-      type: "colors"
-    btn-primary-hover:
+      type: "color"
+
+    ## Button Primary
+    button-primary-bg-color:
+      value: "{!PALETTE_AZURE_9}"
+      type: "color"
+    button-primary-hover-bg-color:
       value: "{!PALETTE_AZURE_10}"
-      type: "colors"
-    btn-link-color:
+      type: "color"
+
+    ## Button Links
+    button-link-text-color:
       value: "{!PALETTE_GRAPHITE_9}"
       type: "color"
-    btn-link-hover:
+    button-link-hover-text-color:
       value: "{!PALETTE_BLACK}"
       type: "color"

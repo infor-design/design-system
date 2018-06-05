@@ -5,29 +5,28 @@
 
   global:
     category: "inputs"
+    type: "color"
 
   props:
-    input-info-block-color:
-      value: "{!PALETTE_GRAPHITE_5}"
-      type: "color"
-    input-label-color:
-      value: "{!PALETTE_GRAPHITE_9}"
-      type: "color"
-    input-bg:
+    input-info-block-text-color:
+      value: "{!PALETTE_SLATE_4}"
+    input-label-text-color:
+      value: "{!PALETTE_SLATE_3}"
+    input-bg-color:
       value: "{!PALETTE_WHITE}"
-      type: "color"
     input-border-color:
-      value: "{!PALETTE_GRAPHITE_4}"
-      type: "color"
-    input-color:
+      value: "{!PALETTE_SLATE_4}"
+    input-text-color:
       value: "{!PALETTE_BLACK}"
-      type: "color"
-    input-border-color-disabled:
-      value: "{!PALETTE_GRAPHITE_4}"
-      type: "color"
-    input-border-color-hover:
-      value: "{!PALETTE_GRAPHITE_10}"
-      type: "color"
-    input-border-color-focus:
-      value: "{!PALETTE_AZURE_7}"
-      type: "color"
+
+    ## Disabled State
+    input-disabled-border-color:
+      value: "{!PALETTE_SLATE_5}"
+
+    ## Hover State
+    input-hover-border-color:
+      value: "{!PALETTE_SLATE_2}"
+
+    ## Focus State
+    input-focus-border-color:
+      value: "{!PALETTE_AZURE_6}"
