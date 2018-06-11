@@ -1,0 +1,14 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+  global:
+    category: "links"
+    type: "color"
+
+  props:
+    link-color:
+      value: "{!PALETTE_AZURE_9}"
+    link-hover-color:
+      value: "{!PALETTE_BLACK}"

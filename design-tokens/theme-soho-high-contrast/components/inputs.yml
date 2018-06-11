@@ -1,0 +1,32 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+  global:
+    category: "inputs"
+    type: "color"
+
+  props:
+    input-info-block-text-color:
+      value: "{!PALETTE_GRAPHITE_5}"
+    input-label-text-color:
+      value: "{!PALETTE_GRAPHITE_9}"
+    input-bg-color:
+      value: "{!PALETTE_WHITE}"
+    input-border-color:
+      value: "{!PALETTE_GRAPHITE_4}"
+    input-text-color:
+      value: "{!PALETTE_BLACK}"
+
+    ## Disabled State
+    input-disabled-border-color:
+      value: "{!PALETTE_SLATE_5}"
+
+    ## Hover State
+    input-hover-border-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+
+    ## Focus State
+    input-focus-border-color:
+      value: "{!PALETTE_AZURE_6}"

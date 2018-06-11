@@ -1,0 +1,13 @@
+---
+  imports:
+    ## Extend Core Components
+    - "./core.yml"
+
+    ## Theme Dark Overrides - NOTE: need to update these to token names.
+    - "./theme-soho-dark/components/buttons.yml"
+    - "./theme-soho-dark/components/icons.yml"
+    - "./theme-soho-dark/components/inputs.yml"
+    - "./theme-soho-dark/components/links.yml"
+    - "./theme-soho-dark/components/page-structure.yml"
+
+

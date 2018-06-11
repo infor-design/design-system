@@ -1,0 +1,19 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+    ## Uplift Alias overrides
+    - "../uplift.alias.yml"
+
+  global:
+    category: "buttons"
+
+  props:
+    ## Buttons
+    button-height:
+      value: "38px"
+      type: "size"
+    button-font-weight:
+      value: "{!FONT_WEIGHT_BOLD}"
+      type: "font-weight"

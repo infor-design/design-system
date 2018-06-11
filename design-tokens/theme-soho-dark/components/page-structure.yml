@@ -1,0 +1,17 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+  global:
+    category: "body"
+    type: "color"
+
+  props:
+    ## Body Colors
+    body-bg-color-primary:
+      value: "{!PALETTE_SLATE_7}"
+    body-bg-color-secondary:
+      value: "{!PALETTE_GRAPHITE_2}"
+    body-text-color:
+      value: "{!PALETTE_WHITE}"

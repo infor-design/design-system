@@ -1,8 +1,10 @@
 ---
+  imports:
+    - "../core.alias.yml"
+
   global:
     category: "radio buttons"
-  imports:
-    - "../aliases/base.yml"
+
   props:
     ## Normal State
     radio-bg-color:

@@ -1,9 +1,11 @@
 ---
   imports:
-    - "../aliases/base.yml"
+    - "../core.alias.yml"
+
   global:
     category: "brand"
     type: "color"
+
   props:
     ## Default Colors
     color-default:

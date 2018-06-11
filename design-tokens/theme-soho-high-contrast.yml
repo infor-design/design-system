@@ -1,0 +1,15 @@
+---
+  imports:
+    ## Extend Core Components
+    - "./core.yml"
+
+    ## Theme High Contrast Components - NOTE: need to update these to token names.
+    - "./theme-soho-high-contrast/components/buttons.yml"
+    - "./theme-soho-high-contrast/components/icons.yml"
+    - "./theme-soho-high-contrast/components/inputs.yml"
+    - "./theme-soho-high-contrast/components/links.yml"
+    - "./theme-soho-high-contrast/components/page-structure.yml"
+
+
+
+

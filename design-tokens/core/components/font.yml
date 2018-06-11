@@ -1,8 +1,10 @@
 ---
   imports:
-    - "../aliases/base.yml"
+    - "../core.alias.yml"
+
   global:
     category: "fonts"
+
   props:
     ## Text Colors
     text-color:

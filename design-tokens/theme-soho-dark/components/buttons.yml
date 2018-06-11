@@ -1,0 +1,35 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+  global:
+    category: "buttons"
+
+  props:
+    ## Button Default
+    button-default-bg-color:
+      value: "{!PALETTE_SLATE_3}"
+      type: "color"
+    btn-default-text-color:
+      value: "{!PALETTE_SLATE_10}"
+      type: "color"
+    button-default-hover-bg-color:
+      value: "{!PALETTE_SLATE_4}"
+      type: "color"
+
+    ## Button Primary
+    button-primary-bg-color:
+      value: "{!PALETTE_AZURE_6}"
+      type: "color"
+    button-primary-hover-bg-color:
+      value: "{!PALETTE_AZURE_10}"
+      type: "color"
+
+    ## Button Links
+    button-link-text-color:
+      value: "{!PALETTE_SLATE_3}"
+      type: "color"
+    button-link-hover-text-color:
+      value: "{!PALETTE_WHITE}"
+      type: "color"

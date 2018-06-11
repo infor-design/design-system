@@ -1,0 +1,8 @@
+---
+  imports:
+    ## Extend Core Components
+    - "./core.yml"
+
+    ## Theme Uplift Overrides
+    - "./theme-uplift/components/buttons.yml"
+

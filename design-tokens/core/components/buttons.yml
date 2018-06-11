@@ -1,18 +1,20 @@
 ---
   imports:
-    - "../aliases/base.yml"
+    - "../core.alias.yml"
+
   global:
     category: "buttons"
+
   props:
     ## Buttons
     button-disabled-opacity:
       value: "{!DISABLED_OPACITY}"
       type: "number"
     button-height:
-      value: "38px"
+      value: "34px"
       type: "size"
     button-line-height:
-      value: "1"
+      value: "normal"
       type: "number"
     button-padding-x:
       value: "30px"

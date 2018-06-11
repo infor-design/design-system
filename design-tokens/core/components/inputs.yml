@@ -1,8 +1,10 @@
 ---
   imports:
-    - "../aliases/base.yml"
+    - "../core.alias.yml"
+
   global:
    category: inputs
+
   props:
     ## Adaptive
     input-height-adaptive-touch:
