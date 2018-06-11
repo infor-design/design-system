@@ -6,3 +6,6 @@
   aliases:
     ## Borders
     BORDER_COLOR: "{!PALETTE_SLATE_4}"
+
+    ## Colors
+    COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"
