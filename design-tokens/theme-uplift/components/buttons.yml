@@ -3,9 +3,6 @@
     ## Colors
     - "../../core/color-palette.alias.yml"
 
-    ## Uplift Alias overrides
-    - "../uplift.alias.yml"
-
   global:
     category: "buttons"
 

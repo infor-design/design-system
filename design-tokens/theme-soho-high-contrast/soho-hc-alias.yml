@@ -1,0 +1,7 @@
+  imports:
+    ## Extend Core Aliases
+    - "../core/core.alias.yml"
+
+  aliases:
+    ## Colors
+    COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"

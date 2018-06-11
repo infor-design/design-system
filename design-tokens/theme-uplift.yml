@@ -3,6 +3,9 @@
     ## Extend Core Components
     - "./core.yml"
 
+    ## Uplift Alias overrides
+    - "./theme-uplift/uplift.alias.yml"
+
     ## Theme Uplift Overrides
     - "./theme-uplift/components/buttons.yml"
 
