@@ -79,7 +79,7 @@
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     input-disabled-text-color:
-      value: "{!TEXT_COLOR_MUTED}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
 
     ## Hover State
@@ -106,8 +106,8 @@
       value: "{!PALETTE_GRAPHITE_2}"
       type: "color"
     input-readonly-border-color:
-      value: "{!TEXT_COLOR_MUTED}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     input-readonly-text-color:
-      value: "{!PALETTE_GRAPHITE_10}"
+      value: "{!TEXT_COLOR_MUTED}"
       type: "color"
