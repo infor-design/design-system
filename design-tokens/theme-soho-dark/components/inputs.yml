@@ -8,25 +8,43 @@
     type: "color"
 
   props:
+    ## Other Colors
+    input-placeholder-text-color:
+      value: "{!PALETTE_SLATE_4}"
+      type: "color"
     input-info-block-text-color:
       value: "{!PALETTE_SLATE_4}"
+      type: "color"
     input-label-text-color:
       value: "{!PALETTE_SLATE_3}"
-    input-bg-color:
-      value: "{!PALETTE_WHITE}"
+      type: "color"
+
+    ## Normal State
     input-border-color:
       value: "{!PALETTE_SLATE_4}"
+      type: "color"
     input-text-color:
-      value: "{!PALETTE_BLACK}"
+      value: "{!PALETTE_WHITE}"
+      type: "color"
 
     ## Disabled State
     input-disabled-border-color:
+      value: "{!PALETTE_SLATE_5}"
+      type: "color"
+    input-disabled-text-color:
       value: "{!PALETTE_SLATE_5}"
 
     ## Hover State
     input-hover-border-color:
       value: "{!PALETTE_SLATE_2}"
 
-    ## Focus State
-    input-focus-border-color:
-      value: "{!PALETTE_AZURE_6}"
+    ## Readonly State
+    input-readonly-bg-color:
+      value: "{!PALETTE_SLATE_6}"
+      type: "color"
+    input-readonly-border-color:
+      value: "{!PALETTE_SLATE_4}"
+      type: "color"
+    input-readonly-text-color:
+      value: "{!PALETTE_WHITE}"
+      type: "color"

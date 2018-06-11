@@ -1,0 +1,8 @@
+---
+  imports:
+    ## Extend Core Aliases
+    - "../core/core.alias.yml"
+
+  aliases:
+    ## Borders
+    BORDER_COLOR: "{!PALETTE_SLATE_4}"
