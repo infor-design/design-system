@@ -18,11 +18,14 @@
       type: "size"
 
     ## Normal State
+    checkbox-label-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
     checkbox-arrow-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     checkbox-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "transparent"
       type: "color"
     checkbox-border-color:
       value: "{!BORDER_COLOR}"
@@ -38,13 +41,21 @@
       value: "#f4f4f4"
       type: "color"
     checkbox-disabled-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "transparent"
       type: "color"
     checkbox-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     checkbox-disabled-checked-bg-color:
       value: "{!PALETTE_GRAPHITE_3}"
+      type: "color"
+    checkbox-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_4}"
+      type: "color"
+
+    ## Hover State
+    checkbox-hover-border-color:
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
 
     ## Focus State
