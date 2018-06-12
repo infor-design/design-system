@@ -12,5 +12,6 @@
     - "./theme-soho-dark/components/inputs.yml"
     - "./theme-soho-dark/components/links.yml"
     - "./theme-soho-dark/components/page-structure.yml"
+    - "./theme-soho-dark/components/buttons.yml"
 
 
