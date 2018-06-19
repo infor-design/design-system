@@ -13,7 +13,10 @@
     "lint:yaml": "yamllint ./**/*.yml",
     "prepublishOnly": "npm run clean && npm test && npm run build && npm run lint:tokens:web",
     "test": "npm run lint:yaml",
-    "release": "npx release-it"
+    "release:dev": "release-it minor --preRelease=dev --no-src.tag --no-github.release",
+    "release:beta": "release-it minor --preRelease=beta",
+    "release:rc": "release-it minor --preRelease=rc",
+    "release:final": "release-it minor"
   },
   "repository": {
     "type": "git",
