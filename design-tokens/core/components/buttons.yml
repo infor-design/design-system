@@ -23,7 +23,7 @@
       value: "0"
       type: "size"
     button-border:
-      value: "0"
+      value: "1"
       type: "number"
     button-border-radius:
       value: "{!BORDER_RADIUS_SMALL}"
