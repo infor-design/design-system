@@ -9,7 +9,7 @@
     ## Normal State
     radio-bg-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
-      type: ""
+      type: "color"
     radio-bg-checked-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
@@ -22,13 +22,13 @@
 
     ## Disabled State
     radio-disabled-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "{!PALETTE_GRAPHITE_1}"
       type: "color"
     radio-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     radio-disabled-checked-bg-color:
-      value: "{!PALETTE_GRAPHITE_3}"
+      value: "{!PALETTE_GRAPHITE_1}"
       type: "color"
 
     ## Focus State

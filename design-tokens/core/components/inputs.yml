@@ -87,7 +87,7 @@
       value: "transparent"
       type: "color"
     input-hover-border-color:
-      value: "{!PALETTE_GRAPHITE_10}"
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
 
     ## Focus State
@@ -106,7 +106,7 @@
       value: "{!PALETTE_GRAPHITE_2}"
       type: "color"
     input-readonly-border-color:
-      value: "{!PALETTE_GRAPHITE_3}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
     input-readonly-text-color:
       value: "{!TEXT_COLOR_MUTED}"
