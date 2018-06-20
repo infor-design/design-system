@@ -22,7 +22,7 @@
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     checkbox-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "transparent"
       type: "color"
     checkbox-border-color:
       value: "{!BORDER_COLOR}"
@@ -38,7 +38,7 @@
       value: "#f4f4f4"
       type: "color"
     checkbox-disabled-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "transparent"
       type: "color"
     checkbox-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
