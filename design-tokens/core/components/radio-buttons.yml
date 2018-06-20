@@ -8,7 +8,7 @@
   props:
     ## Normal State
     radio-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "transparent"
       type: "color"
     radio-bg-checked-color:
       value: "{!COLOR_PRIMARY}"
@@ -22,7 +22,7 @@
 
     ## Disabled State
     radio-disabled-bg-color:
-      value: "{!PALETTE_GRAPHITE_1}"
+      value: "transparent"
       type: "color"
     radio-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
