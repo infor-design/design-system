@@ -72,6 +72,8 @@ glob.readdir(tokenFiles, (err, files) => {
  * @param {string} toFormat - The format to conver to
  */
 function convertFileToFormat(srcFile, toFormat) {
+  theo.registerTransform("web", ["color/hex"]);
+
   theo
     .convert({
       transform: {
