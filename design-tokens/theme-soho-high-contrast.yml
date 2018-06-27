@@ -3,9 +3,6 @@
     ## Extend Core Components
     - "./core.yml"
 
-    ## Theme High Contrast Alias overrides
-    - "./theme-soho-high-contrast/soho-hc.alias.yml"
-
     ## Theme High Contrast Components - NOTE: need to update these to token names.
     - "./theme-soho-high-contrast/components/buttons.yml"
     - "./theme-soho-high-contrast/components/icons.yml"

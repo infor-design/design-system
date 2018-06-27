@@ -3,9 +3,6 @@
     ## Extend Core Components
     - "./core.yml"
 
-    ## Theme Dark Alias overrides
-    - "./theme-soho-dark/soho-dark.alias.yml"
-
     ## Theme Dark Overrides - NOTE: need to update these to token names.
     - "./theme-soho-dark/components/buttons.yml"
     - "./theme-soho-dark/components/icons.yml"

@@ -2,6 +2,7 @@
   imports:
     ## Colors
     - "../../core/color-palette.alias.yml"
+    - "../uplift.alias.yml"
 
   global:
     category: "buttons"

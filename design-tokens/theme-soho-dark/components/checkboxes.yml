@@ -2,6 +2,7 @@
   imports:
     ## Colors
     - "../../core/color-palette.alias.yml"
+    - "../soho-dark.alias.yml"
 
   global:
     category: "checkboxes"
