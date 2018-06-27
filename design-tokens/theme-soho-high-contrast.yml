@@ -13,6 +13,8 @@
     - "./theme-soho-high-contrast/components/links.yml"
     - "./theme-soho-high-contrast/components/page-structure.yml"
     - "./theme-soho-high-contrast/components/radio-buttons.yml"
+    - "./theme-soho-high-contrast/components/lists.yml"
+
 
 
 
