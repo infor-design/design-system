@@ -1,7 +1,7 @@
 ---
   imports:
     ## Components
-    - "./core/components/brand.yml"
+    - "./core/components/colors.yml"
     - "./core/components/buttons.yml"
     - "./core/components/checkboxes.yml"
     - "./core/components/font.yml"

@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "1.1.0-dev",
+  "version": "1.1.0-dev.2",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "build": "npm run clean && npm run build:icons && npm run build:tokens:web && npm run build:font",
@@ -13,7 +13,9 @@
     "lint:yaml": "yamllint ./**/*.yml",
     "prepublishOnly": "npm run clean && npm test && npm run build && npm run lint:tokens:web",
     "test": "npm run lint:yaml",
-    "release": "npx release-it"
+    "release:beta": "npx release-it minor --preRelease=beta",
+    "release:rc": "npx release-it minor --preRelease=rc",
+    "release:final": "npx release-it minor"
   },
   "repository": {
     "type": "git",

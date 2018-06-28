@@ -10,7 +10,7 @@
     radio-bg-color:
       value: "transparent"
       type: "color"
-    radio-checked-color:
+    radio-bg-checked-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
     radio-checked-bg-color:
@@ -28,7 +28,7 @@
 
     ## Disabled State
     radio-disabled-bg-color:
-      value: "{!PALETTE_GRAPHITE_1}"
+      value: "transparent"
       type: "color"
     radio-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
