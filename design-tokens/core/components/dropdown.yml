@@ -44,7 +44,7 @@
       type: "box-shadow"
 
     # Spacing
-    drop-down-padding:
+    dropdown-padding:
       value: "8px 30px 8px 10px"
       type: "padding"
 

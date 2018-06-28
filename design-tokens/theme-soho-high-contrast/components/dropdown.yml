@@ -1,0 +1,34 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+    ## HC Aliases
+    - "../soho-hc.alias.yml"
+
+  global:
+    category: "dropdown"
+    type: "color"
+
+  props:
+    # Colors
+    dropdown-color:
+      value: "{!PALETTE_BLACK}"
+    dropdown-filter-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+    dropdown-search-color:
+      value: "{!PALETTE_GRAPHITE_5}"
+    dropdown-menu-border-color:
+      value: "{!COLOR_PRIMARY}"
+    dropdown-menu-separator-color:
+      value:  "{!PALETTE_GRAPHITE_7}"
+    dropdown-menu-separator-border-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+    dropdown-group-label-color:
+      value: "{!PALETTE_GRAPHITE_5}"
+
+    # Box Shadow
+    dropdown-box-shadow:
+      value: "0 5px 5px {!BOX_SHADOW_COLOR}"
+      type: "box-shadow"
+
