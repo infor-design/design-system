@@ -8,7 +8,7 @@
 
   global:
     category: "checkboxes"
-    global: "color"
+    type: "color"
 
   props:
     ## Normal State

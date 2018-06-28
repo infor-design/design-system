@@ -3,9 +3,12 @@
     ## Colors
     - "../../core/color-palette.alias.yml"
 
+    ## HC Aliases
+    - "../soho-hc.alias.yml"
+
   global:
     category: "checkboxes"
-    global: "color"
+    type: "color"
 
   props:
     ## Normal State
