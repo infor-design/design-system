@@ -6,13 +6,13 @@
    category: inputs
 
   props:
-    ## Adaptive
+    # Adaptive
     input-height-adaptive-touch:
       value: "4.4rem"
       category: "adaptive"
       type: "size"
 
-    ## Sizes
+    # Sizes
     input-width-xs:
       value: "75px"
       type: "size"
@@ -38,7 +38,7 @@
       value: "8px"
       type: "size"
 
-    ## Borders
+    # Borders
     input-border-radius:
       value: "{!BORDER_RADIUS_SMALL}"
       type: "size"
@@ -49,7 +49,7 @@
       value: "none"
       type: "box-shadow"
 
-    ## Other Colors
+    # Other Colors
     input-placeholder-text-color:
       value: "{!TEXT_COLOR_MUTED}"
       type: "color"
@@ -60,7 +60,7 @@
       value: "{!TEXT_COLOR_INFO}"
       type: "color"
 
-    ## Normal State
+    # Normal State
     input-bg-color:
       value: "transparent"
       type: "color"
@@ -71,7 +71,7 @@
       value: "{!TEXT_COLOR}"
       type: "color"
 
-    ## Disabled State
+    # Disabled State
     input-disabled-bg-color:
       value: "transparent"
       type: "color"
@@ -82,7 +82,7 @@
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
 
-    ## Hover State
+    # Hover State
     input-hover-bg-color:
       value: "transparent"
       type: "color"
@@ -90,7 +90,7 @@
       value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
 
-    ## Focus State
+    # Focus State
     input-focus-bg-color:
       value: "transparent"
       type: "color"
@@ -101,7 +101,7 @@
       value: "{!TEXT_COLOR}"
       type: "color"
 
-    ## Readonly State
+    # Readonly State
     input-readonly-bg-color:
       value: "{!PALETTE_GRAPHITE_2}"
       type: "color"

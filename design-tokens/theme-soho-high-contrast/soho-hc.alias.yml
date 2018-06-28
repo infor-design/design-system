@@ -1,9 +1,9 @@
   imports:
-    ## Extend Core Aliases
+    # Extend Core Aliases
     - "../core/core.alias.yml"
 
   aliases:
-    ## Colors
+    # Colors
     COLOR_PRIMARY: "{!PALETTE_AZURE_9}"
     COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"
 

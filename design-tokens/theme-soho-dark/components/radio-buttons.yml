@@ -1,9 +1,9 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
-    ## Dark Aliases
+    # Dark Aliases
     - "../soho-dark.alias.yml"
 
   global:
@@ -11,13 +11,13 @@
     type: "color"
 
   props:
-    ## Normal State
+    # Normal State
     radio-checked-bg-color:
       value: "{!PALETTE_WHITE}"
     radio-border-color:
       value: "{!PALETTE_SLATE_4}"
 
-    ## Disabled State
+    # Disabled State
     radio-disabled-bg-color:
       value: "{!PALETTE_SLATE_8}"
     radio-disabled-border-color:
@@ -25,11 +25,11 @@
     radio-disabled-checked-bg-color:
       value: "{!PALETTE_SLATE_3}"
 
-    ## Hover state
+    # Hover state
     radio-border-hover-color:
       value: "{!PALETTE_SLATE_2}"
 
-    ## Focus State
+    # Focus State
     radio-focus-shadow:
       value: "0 0 0 1px {!PALETTE_SLATE_8}, 0 0 0 2px {!COLOR_PRIMARY}, 0 0 4px 5px rgba(255, 255, 255, .3)"
       type: "box-shadow"

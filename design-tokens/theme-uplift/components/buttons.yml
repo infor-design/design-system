@@ -1,6 +1,6 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
     - "../uplift.alias.yml"
 
@@ -8,7 +8,7 @@
     category: "buttons"
 
   props:
-    ## Buttons
+    # Buttons
     button-height:
       value: "38px"
       type: "size"

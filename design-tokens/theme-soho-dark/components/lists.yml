@@ -1,13 +1,13 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
   global:
     category: "lists"
 
   props:
-    ## List Colors
+    # List Colors
     list-hover-color:
       value: "{!PALETTE_SLATE_6}"
       type: "color"

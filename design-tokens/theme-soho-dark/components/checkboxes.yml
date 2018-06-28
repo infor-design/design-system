@@ -1,9 +1,9 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
-    ## Dark Aliases
+    # Dark Aliases
     - "../soho-dark.alias.yml"
 
   global:
@@ -11,7 +11,7 @@
     type: "color"
 
   props:
-    ## Normal State
+    # Normal State
     checkbox-label-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
     checkbox-arrow-color:
@@ -19,7 +19,7 @@
     checkbox-border-color:
       value: "{!PALETTE_SLATE_4}"
 
-    ## Disabled State
+    # Disabled State
     checkbox-disabled-arrow-color:
       value: "{!PALETTE_SLATE_3}"
     checkbox-disabled-border-color:
@@ -29,11 +29,11 @@
     checkbox-disabled-text-color:
       value: "{!PALETTE_SLATE_5}"
 
-    ## Hover State
+    # Hover State
     checkbox-hover-border-color:
       value: "{!PALETTE_SLATE_2}"
 
-    ## Focus State
+    # Focus State
     checkbox-focus-shadow:
       value: "0 0 0 1px {!PALETTE_SLATE_8}, 0 0 0 2px {!COLOR_PRIMARY}"
       type: "box-shadow"

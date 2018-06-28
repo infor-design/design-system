@@ -1,23 +1,23 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
-    ## Uplift Alias overrides
+    # Uplift Alias overrides
     - "../uplift.alias.yml"
 
   global:
     category: "checkboxes"
 
   props:
-    ## Checkboxes
+    # Checkboxes
 
-    ## Normal State
+    # Normal State
     checkbox-bg-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
 
-    ## Disabled State
+    # Disabled State
     checkbox-disabled-bg-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"

@@ -1,9 +1,9 @@
 ---
   imports:
-    ## Extend Core Components
+    # Extend Core Components
     - "./core.yml"
 
-    ## Theme Uplift Overrides
+    # Theme Uplift Overrides
     - "./theme-uplift/components/buttons.yml"
     - "./theme-uplift/components/checkboxes.yml"
     - "./theme-uplift/components/radio-buttons.yml"

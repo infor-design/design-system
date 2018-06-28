@@ -1,9 +1,9 @@
 ---
   imports:
-    ## Extend Core Components
+    # Extend Core Components
     - "./core.yml"
 
-    ## Theme High Contrast Components - NOTE: need to update these to token names.
+    # Theme High Contrast Components - NOTE: need to update these to token names.
     - "./theme-soho-high-contrast/components/buttons.yml"
     - "./theme-soho-high-contrast/components/checkboxes.yml"
     - "./theme-soho-high-contrast/components/font.yml"

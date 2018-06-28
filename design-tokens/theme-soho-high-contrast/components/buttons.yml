@@ -1,13 +1,13 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
   global:
     category: "buttons"
 
   props:
-    ## Button Default
+    # Button Default
     button-default-bg-color:
       value: "{!PALETTE_SLATE_3}"
       type: "color"
@@ -18,7 +18,7 @@
       value: "{!PALETTE_SLATE_4}"
       type: "color"
 
-    ## Button Primary
+    # Button Primary
     button-primary-bg-color:
       value: "{!PALETTE_AZURE_9}"
       type: "color"
@@ -26,7 +26,7 @@
       value: "{!PALETTE_AZURE_10}"
       type: "color"
 
-    ## Button Links
+    # Button Links
     button-link-text-color:
       value: "{!PALETTE_GRAPHITE_9}"
       type: "color"

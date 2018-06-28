@@ -6,7 +6,7 @@
     category: "checkboxes"
 
   props:
-    ## Checkboxes
+    # Checkboxes
     checkbox-box-size:
       value: "17px"
       type: "size"
@@ -17,7 +17,7 @@
       value: "5px"
       type: "size"
 
-    ## Normal State
+    # Normal State
     checkbox-label-color:
       value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
@@ -31,12 +31,12 @@
       value: "{!BORDER_COLOR}"
       type: "color"
 
-    ## Checked State
+    # Checked State
     checkbox-checked-bg-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
 
-    ## Disabled State
+    # Disabled State
     checkbox-disabled-arrow-color:
       value: "#f4f4f4"
       type: "color"
@@ -53,12 +53,12 @@
       value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
 
-    ## Hover State
+    # Hover State
     checkbox-hover-border-color:
       value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
 
-    ## Focus State
+    # Focus State
     checkbox-focus-shadow:
       value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!COLOR_PRIMARY}"
       type: "box-shadow"

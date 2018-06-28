@@ -3,37 +3,37 @@
     - "./color-palette.alias.yml"
 
   aliases:
-    ## Text Colors
+    # Text Colors
     TEXT_COLOR: "{!PALETTE_GRAPHITE_10}"
     TEXT_COLOR_MUTED: "{!PALETTE_GRAPHITE_4}"
     TEXT_COLOR_INFO: "{!PALETTE_GRAPHITE_6}"
 
-    ## Default Colors
+    # Default Colors
     COLOR_DEFAULT: "{!PALETTE_GRAPHITE_3}"
     COLOR_DEFAULT_ALT: "{!PALETTE_GRAPHITE_4}"
     COLOR_DEFAULT_CONTRAST: "{!PALETTE_GRAPHITE_8}"
 
-    ## Primary Colors
+    # Primary Colors
     COLOR_PRIMARY: "{!PALETTE_AZURE_6}"
     COLOR_PRIMARY_ALT: "{!PALETTE_AZURE_7}"
     COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"
 
-    ## Status Colors
+    # Status Colors
     COLOR_SUCCESS: "{!PALETTE_STATUS_GREEN}"
     COLOR_CAUTION: "{!PALETTE_STATUS_YELLOW}"
     COLOR_WARNING: "{!PALETTE_STATUS_ORANGE}"
     COLOR_DANGER: "{!PALETTE_STATUS_RED}"
 
-    ## Form Fields
+    # Form Fields
     DISABLED_OPACITY: "0.5"
     LINE_HEIGHT: "2.2rem"
 
-    ## Borders
+    # Borders
     BORDER_RADIUS_SMALL: "2px"
     BORDER_RADIUS_MEDIUM: "3px"
     BORDER_COLOR: "{!PALETTE_GRAPHITE_4}"
 
-    ## Fonts
+    # Fonts
     FONT_FAMILY_BASE: "helvetica, arial, san-serif"
     FONT_FAMILY_MONOSPACE: "monospace"
     FONT_WEIGHT_NORMAL: "400"
