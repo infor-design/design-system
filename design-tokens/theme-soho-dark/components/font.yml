@@ -1,0 +1,18 @@
+---
+  imports:
+    ## Colors
+    - "../../core/color-palette.alias.yml"
+
+  global:
+    category: "fonts"
+    type: "color"
+
+  props:
+    ## Text Colors
+    text-color:
+      value: "{!PALETTE_WHITE}"
+    text-color-muted:
+      value: "{!PALETTE_SLATE_4}"
+    text-color-info:
+      value: "{!PALETTE_SLATE_3}"
+
