@@ -6,7 +6,7 @@
     category: "dropdown"
 
   props:
-    #Colors
+    ## Colors
     dropdown-color:
       value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
@@ -35,7 +35,7 @@
       value: "{!PALETTE_WHITE}"
       type: "color"
 
-    # Box Shadow
+    ## Box Shadow
     dropdown-box-shadow:
       value: "0 5px 5px {!BOX_SHADOW_COLOR}"
       type: 'box-shadow'
@@ -43,12 +43,12 @@
       value: "0 -5px 5px {!BOX_SHADOW_COLOR}"
       type: "box-shadow"
 
-    # Spacing
+    ## Spacing
     dropdown-padding:
       value: "8px 30px 8px 10px"
       type: "padding"
 
-    # Dropdown List
+    ## Dropdown List
     dropdown-font-size:
       value: "{!FONT_SIZE_BASE}"
       type: "font-size"

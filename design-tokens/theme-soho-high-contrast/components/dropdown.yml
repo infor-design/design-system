@@ -11,7 +11,7 @@
     type: "color"
 
   props:
-    # Colors
+    ## Colors
     dropdown-color:
       value: "{!PALETTE_BLACK}"
     dropdown-filter-color:
@@ -27,7 +27,7 @@
     dropdown-group-label-color:
       value: "{!PALETTE_GRAPHITE_5}"
 
-    # Box Shadow
+    ## Box Shadow
     dropdown-box-shadow:
       value: "0 5px 5px {!BOX_SHADOW_COLOR}"
       type: "box-shadow"
