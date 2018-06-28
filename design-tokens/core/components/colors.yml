@@ -7,7 +7,7 @@
     type: "color"
 
   props:
-    ## Default Colors
+    # Default Colors
     color-default:
       value: "{!COLOR_DEFAULT}"
       category: "colors-brand"
@@ -18,7 +18,7 @@
       value: "{!COLOR_DEFAULT_CONTRAST}"
       category: "colors-brand"
 
-    ## Primary Colors
+    # Primary Colors
     color-primary:
       value: "{!COLOR_PRIMARY}"
       category: "colors-brand"
@@ -29,7 +29,7 @@
       value: "{!COLOR_PRIMARY_CONTRAST}"
       category: "colors-brand"
 
-    ## Status Colors
+    # Status Colors
     color-success:
       value: "{!COLOR_SUCCESS}"
       category: "colors-status"

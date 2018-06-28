@@ -6,7 +6,7 @@
     category: "fonts"
 
   props:
-    ## Text Colors
+    # Text Colors
     text-color:
       value: "{!TEXT_COLOR}"
       type: "color"
@@ -17,7 +17,7 @@
       value: "{!TEXT_COLOR_INFO}"
       type: "color"
 
-    ## Font Family
+    # Font Family
     font-family-base:
       value: "{!FONT_FAMILY_BASE}"
       type: "font"
@@ -25,7 +25,7 @@
       value: "{!FONT_FAMILY_MONOSPACE}"
       type: "font"
 
-    ## Font Size
+    # Font Size
     font-size-xl:
       value: "4rem"
       type: "size"
@@ -42,7 +42,7 @@
       value: "1.4rem"
       type: "size"
 
-    ## Font Weight
+    # Font Weight
     font-weight-normal:
       value: "{!FONT_WEIGHT_NORMAL}"
       type: "font-weight"
@@ -50,7 +50,7 @@
       value: "{!FONT_WEIGHT_BOLD}"
       type: "font-weight"
 
-    ## Height
+    # Height
     line-height-base:
       value: "1.65"
       type: "number"

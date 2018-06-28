@@ -1,6 +1,6 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
   global:
@@ -8,7 +8,7 @@
     type: "color"
 
   props:
-    ## Body Colors
+    # Body Colors
     body-bg-color-primary:
       value: "{!PALETTE_SLATE_7}"
     body-bg-color-secondary:

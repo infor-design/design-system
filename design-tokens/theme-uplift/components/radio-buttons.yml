@@ -1,21 +1,21 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
-    ## Uplift Alias overrides
+    # Uplift Alias overrides
     - "../uplift.alias.yml"
 
   global:
     category: "radio buttons"
 
   props:
-    ## Normal State
+    # Normal State
     radio-bg-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
 
-    ## Disabled State
+    # Disabled State
     radio-disabled-bg-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"

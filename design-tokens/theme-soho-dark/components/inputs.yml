@@ -1,6 +1,6 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
   global:
@@ -8,7 +8,7 @@
     type: "color"
 
   props:
-    ## Other Colors
+    # Other Colors
     input-placeholder-text-color:
       value: "{!PALETTE_SLATE_4}"
     input-info-block-text-color:
@@ -16,23 +16,23 @@
     input-label-text-color:
       value: "{!PALETTE_SLATE_3}"
 
-    ## Normal State
+    # Normal State
     input-border-color:
       value: "{!PALETTE_SLATE_4}"
     input-text-color:
       value: "{!PALETTE_WHITE}"
 
-    ## Disabled State
+    # Disabled State
     input-disabled-border-color:
       value: "{!PALETTE_SLATE_5}"
     input-disabled-text-color:
       value: "{!PALETTE_SLATE_5}"
 
-    ## Hover State
+    # Hover State
     input-hover-border-color:
       value: "{!PALETTE_SLATE_2}"
 
-    ## Readonly State
+    # Readonly State
     input-readonly-bg-color:
       value: "{!PALETTE_SLATE_6}"
     input-readonly-border-color:

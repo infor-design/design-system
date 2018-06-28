@@ -6,7 +6,7 @@
     category: "buttons"
 
   props:
-    ## Buttons
+    # Buttons
     button-disabled-opacity:
       value: "{!DISABLED_OPACITY}"
       type: "number"
@@ -50,7 +50,7 @@
       value: "0 0 0 2px {!PALETTE_GRAPHITE_1}, 0 0 0 3px {!COLOR_PRIMARY}"
       type: "box-shadow"
 
-    ## Button Default
+    # Button Default
     button-default-bg-color:
       value: "{!COLOR_DEFAULT}"
       type: "color"
@@ -73,7 +73,7 @@
       value: "{!COLOR_DEFAULT}"
       type: "color"
 
-    ## Button Primary
+    # Button Primary
     button-primary-bg-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
@@ -98,7 +98,7 @@
       type: "color"
 
 
-    ## Button Links
+    # Button Links
     button-link-bg-color:
       value: "transparent"
       type: "color"

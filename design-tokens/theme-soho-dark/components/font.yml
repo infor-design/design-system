@@ -1,6 +1,6 @@
 ---
   imports:
-    ## Colors
+    # Colors
     - "../../core/color-palette.alias.yml"
 
   global:
@@ -8,7 +8,7 @@
     type: "color"
 
   props:
-    ## Text Colors
+    # Text Colors
     text-color:
       value: "{!PALETTE_WHITE}"
     text-color-muted:

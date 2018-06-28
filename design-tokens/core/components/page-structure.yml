@@ -3,13 +3,13 @@
     - "../core.alias.yml"
 
   props:
-    ## Spacing
+    # Spacing
     spacing-base:
       value: "8px"
       type: "size"
       category: "grid"
 
-    ## Body Colors
+    # Body Colors
     body-bg-color-primary:
       value: "{!PALETTE_GRAPHITE_1}"
       type: "color"
@@ -23,7 +23,7 @@
       type: "color"
       category: "layout"
 
-    ## Breakpoints
+    # Breakpoints
     breakpoint-xs:
       value: "360px"
       type: "size"
