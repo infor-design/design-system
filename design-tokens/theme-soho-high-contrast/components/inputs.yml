@@ -8,25 +8,40 @@
     type: "color"
 
   props:
+    ## Other Color
+    input-placeholder-text-color:
+      value: "{!PALETTE_GRAPHITE_5}"
     input-info-block-text-color:
       value: "{!PALETTE_GRAPHITE_5}"
     input-label-text-color:
       value: "{!PALETTE_GRAPHITE_9}"
+
+    ## Normal State
     input-bg-color:
       value: "{!PALETTE_WHITE}"
     input-border-color:
-      value: "{!PALETTE_GRAPHITE_4}"
+      value: "{!PALETTE_GRAPHITE_6}"
     input-text-color:
       value: "{!PALETTE_BLACK}"
 
     ## Disabled State
     input-disabled-border-color:
-      value: "{!PALETTE_SLATE_5}"
+      value: "{!PALETTE_GRAPHITE_4}"
+    input-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_5}"
 
     ## Hover State
     input-hover-border-color:
-      value: "{!PALETTE_GRAPHITE_10}"
+      value: "{!PALETTE_BLACK}"
 
     ## Focus State
     input-focus-border-color:
-      value: "{!PALETTE_AZURE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
+
+    ## Readonly State
+    input-readonly-bg-color:
+      value: "{!PALETTE_GRAPHITE_4}"
+    input-readonly-border-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+    input-readonly-text-color:
+      value: "{!PALETTE_BLACK}"

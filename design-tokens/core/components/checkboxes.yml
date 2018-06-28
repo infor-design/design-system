@@ -18,6 +18,9 @@
       type: "size"
 
     ## Normal State
+    checkbox-label-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
     checkbox-arrow-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
@@ -45,6 +48,14 @@
       type: "color"
     checkbox-disabled-checked-bg-color:
       value: "{!PALETTE_GRAPHITE_3}"
+      type: "color"
+    checkbox-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_4}"
+      type: "color"
+
+    ## Hover State
+    checkbox-hover-border-color:
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
 
     ## Focus State

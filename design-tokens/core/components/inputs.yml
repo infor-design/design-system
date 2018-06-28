@@ -79,7 +79,7 @@
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     input-disabled-text-color:
-      value: "{!PALETTE_GRAPHITE_3}"
+      value: "{!PALETTE_GRAPHITE_4}"
       type: "color"
 
     ## Hover State

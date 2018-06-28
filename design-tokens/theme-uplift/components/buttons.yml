@@ -2,8 +2,6 @@
   imports:
     ## Colors
     - "../../core/color-palette.alias.yml"
-
-    ## Uplift Alias overrides
     - "../uplift.alias.yml"
 
   global:
@@ -17,3 +15,6 @@
     button-font-weight:
       value: "{!FONT_WEIGHT_BOLD}"
       type: "font-weight"
+    button-line-height:
+      value: "1"
+      type: "line-height"
