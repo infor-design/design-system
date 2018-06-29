@@ -1,0 +1,37 @@
+---
+  imports:
+    # Colors
+    - "../../core/color-palette.alias.yml"
+
+    # HC Aliases
+    - "../soho-hc.alias.yml"
+
+  global:
+    # NOTE: fka Toast/Popover
+    category: "notifications"
+
+  props:
+    # Default Colors
+    notification-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    notification-border-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    notification-header-color:
+      value: "{!PALETTE_BLACK}"
+      type: "color"
+    notification-text-color:
+      value: "{!PALETTE_BLACK}"
+      type: "color"
+
+    # Popover
+    notification-arrow-border-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    notification-box-shadow:
+      value: "0 2px 5px {!BOX_SHADOW_COLOR}"
+      type: "box-shadow"
+    notification-separator-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
