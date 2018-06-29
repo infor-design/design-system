@@ -1,0 +1,55 @@
+---
+  imports:
+    # Colors
+    - "../../core/color-palette.alias.yml"
+
+    # Dark Aliases
+    - "../soho-dark.alias.yml"
+
+  global:
+    # NOTE: fka Toast/Popover
+    category: "notifications"
+
+  props:
+    # Default Colors
+    notification-bg-color:
+      value: "{!PALETTE_SLATE_7}"
+      type: "color"
+    notification-border-color:
+      value: "{!PALETTE_SLATE_5}"
+      type: "color"
+    notification-header-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    notification-text-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+
+    # Popover
+    notification-arrow-border-color:
+      value: "{!PALETTE_SLATE_5}"
+      type: "color"
+    notification-box-shadow:
+      value: "0 2px 5px {!BOX_SHADOW_COLOR}"
+      type: "box-shadow"
+    notification-separator-color:
+      value: "{!PALETTE_SLATE_5}"
+      type: "color"
+    notification-alternate-color:
+      value: "inherit"
+      type: "color"
+    notification-alternate-subheader-color:
+      value: "inherit"
+      type: "color"
+    notification-alternate-bg-color:
+      value: "{!PALETTE_SLATE_7}"
+      type: "color"
+    notification-alternate-arrow-color:
+      value: "{!PALETTE_SLATE_7}"
+      type: "color"
+    notification-alternate-title-bg-color:
+      value: "{!PALETTE_SLATE_6}"
+      type: "color"
+    notification-alternate-table-header:
+      value: "inherit"
+      type: "color"

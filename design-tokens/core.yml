@@ -12,3 +12,4 @@
     - "./core/components/lists.yml"
     - "./core/components/radio-buttons.yml"
     - "./core/components/dropdown.yml"
+    - "./core/components/notifications.yml"
