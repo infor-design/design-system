@@ -1,0 +1,40 @@
+---
+  imports:
+    # Colors
+    - "../../core/color-palette.alias.yml"
+
+    # Dark Aliases
+    - "../soho-dark.alias.yml"
+
+  global:
+    # NOTE: fka Badges/Tags
+    category: "pills"
+    type: "color"
+
+  props:
+    pill-neutral-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+    pill-neutral-bg-color:
+      value: "{!PALETTE_SLATE_6}"
+    pill-neutral-hover-bg-color:
+      value: "{!PALETTE_SLATE_5}"
+    pill-secondary-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+    pill-secondary-bg-color:
+      value: "{!PALETTE_SLATE_7}"
+    pill-secondary-border-color:
+      value: "{!PALETTE_SLATE_5}"
+    pill-error-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+    pill-alert-color:
+      value:  "{!PALETTE_GRAPHITE_10}"
+    pill-good-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+    pill-info-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+    pill-info-bg-color:
+      value:  "{!COLOR_PRIMARY}"
+    pill-neutral-icon-color:
+      value:  "{!PALETTE_SLATE_3}"
+    pill-neutral-hover-icon-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"

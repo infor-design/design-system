@@ -15,6 +15,7 @@
     - "./theme-soho-high-contrast/components/radio-buttons.yml"
     - "./theme-soho-high-contrast/components/dropdown.yml"
     - "./theme-soho-high-contrast/components/notifications.yml"
+    - "./theme-soho-high-contrast/components/pills.yml"
 
 
 
