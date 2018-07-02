@@ -63,7 +63,7 @@
     # Normal State
     input-bg-color:
       value: "transparent"
-      type: "color"
+      type: "style"
     input-border-color:
       value: "{!BORDER_COLOR}"
       type: "color"
@@ -74,7 +74,7 @@
     # Disabled State
     input-disabled-bg-color:
       value: "transparent"
-      type: "color"
+      type: "style"
     input-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
@@ -85,7 +85,7 @@
     # Hover State
     input-hover-bg-color:
       value: "transparent"
-      type: "color"
+      type: "style"
     input-hover-border-color:
       value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
@@ -93,7 +93,7 @@
     # Focus State
     input-focus-bg-color:
       value: "transparent"
-      type: "color"
+      type: "style"
     input-focus-border-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"

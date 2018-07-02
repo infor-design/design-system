@@ -29,7 +29,7 @@
     # Disabled State
     radio-disabled-bg-color:
       value: "transparent"
-      type: "color"
+      type: "style"
     radio-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
       type: "color"

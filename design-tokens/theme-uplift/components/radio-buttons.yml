@@ -1,9 +1,11 @@
 ---
   imports:
-    # Colors
+    # Core
     - "../../core/color-palette.alias.yml"
+    - "../../core/core.alias.yml"
 
-    # Uplift Alias overrides
+    # Uplift Overrides
+    - "../color-palette.alias.yml"
     - "../uplift.alias.yml"
 
   global:
@@ -12,7 +14,7 @@
   props:
     # Normal State
     radio-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "{!PALETTE_WHITE}"
       type: "color"
 
     # Disabled State

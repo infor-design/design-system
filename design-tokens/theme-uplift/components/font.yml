@@ -1,0 +1,14 @@
+---
+  imports:
+    # Core
+    - "../../core/color-palette.alias.yml"
+    - "../../core/core.alias.yml"
+
+    # Uplift
+    - "../color-palette.alias.yml"
+    - "../uplift.alias.yml"
+
+  aliases:
+    # Text Colors
+    TEXT_COLOR_MUTED: "{!PALETTE_GRAPHITE_6}"
+    TEXT_COLOR_INFO: "{!PALETTE_GRAPHITE_8}"

@@ -101,7 +101,7 @@
     # Button Links
     button-link-bg-color:
       value: "transparent"
-      type: "color"
+      type: "style"
     button-link-text-color:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
