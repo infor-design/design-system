@@ -37,7 +37,6 @@ const banner = `
  */
 `;
 
-const stopwatch = {};
 const distPath = path.join(process.cwd(), './dist/tokens/web');
 const tokensPath = './design-tokens';
 const formatArr = getFormats(argv.format);
@@ -59,7 +58,6 @@ glob.readdir(tokenFiles, (err, files) => {
       convertFileToFormat(file, format);
     });
   });
-  swLog.logTaskEnd('creating tokens');
 });
 
 // -------------------------------------
@@ -104,7 +102,9 @@ function convertFileToFormat(srcFile, toFormat) {
         swLog.logTaskAction('Created', `${path.parse(newFile).base}.`);
       });
     })
-    .catch(error => console.log(`Something went wrong: ${error}`));
+    .catch(error => {
+      swLog.logTaskAction('!', `${error} in ${srcFile}`, color = 'red')
+    });
 }
 
 /**

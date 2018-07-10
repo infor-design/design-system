@@ -6,5 +6,6 @@
     # Theme Uplift Overrides
     - "./theme-uplift/components/buttons.yml"
     - "./theme-uplift/components/checkboxes.yml"
+    - "./theme-uplift/components/font.yml"
+    - "./theme-uplift/components/inputs.yml"
     - "./theme-uplift/components/radio-buttons.yml"
-

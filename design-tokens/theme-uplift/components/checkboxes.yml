@@ -1,9 +1,11 @@
 ---
   imports:
-    # Colors
+    # Core
     - "../../core/color-palette.alias.yml"
+    - "../../core/core.alias.yml"
 
-    # Uplift Alias overrides
+    # Uplift
+    - "../color-palette.alias.yml"
     - "../uplift.alias.yml"
 
   global:
@@ -14,7 +16,10 @@
 
     # Normal State
     checkbox-bg-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "{!PALETTE_WHITE}"
+      type: "color"
+    checkbox-arrow-color:
+      value: "{!PALETTE_WHITE}"
       type: "color"
 
     # Disabled State

@@ -1,0 +1,36 @@
+---
+  imports:
+    # Core
+    - "../../core/color-palette.alias.yml"
+    - "../../core/core.alias.yml"
+
+    # Uplift
+    - "../color-palette.alias.yml"
+    - "../uplift.alias.yml"
+
+  global:
+   category: inputs
+
+  props:
+    # Other Colors
+    input-placeholder-text-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+
+    # Normal State
+    input-bg-color:
+      value: "{!PALETTE_WHITE}"
+      type: "color"
+
+    # Disabled State
+    input-disabled-bg-color:
+      value: "{!PALETTE_WHITE}"
+      type: "color"
+    input-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_4}"
+      type: "color"
+
+    # Readonly State
+    input-readonly-text-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"

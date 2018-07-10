@@ -1,8 +1,14 @@
 ---
   imports:
-    # Extend Core Aliases
-    - "../core/core.alias.yml"
+    # Colors
+    - "../core/color-palette.alias.yml"
+
+    # Uplift Color Palette overrides
+    - "./color-palette.alias.yml"
 
   aliases:
+    # Borders
+    BORDER_COLOR: "{!PALETTE_GRAPHITE_6}"
+
     # Fonts
     FONT_WEIGHT_BOLD: 600

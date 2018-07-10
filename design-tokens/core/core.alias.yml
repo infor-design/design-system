@@ -36,8 +36,8 @@
     # Fonts
     FONT_FAMILY_BASE: "helvetica, arial, san-serif"
     FONT_FAMILY_MONOSPACE: "monospace"
-    FONT_WEIGHT_NORMAL: "400"
-    FONT_WEIGHT_BOLD: "700"
+    FONT_WEIGHT_NORMAL: 400
+    FONT_WEIGHT_BOLD: 700
     FONT_SIZE_BASE: "14"
 
     # Box shadow

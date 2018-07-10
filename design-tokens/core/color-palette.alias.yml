@@ -1,5 +1,6 @@
 ---
   aliases:
+    # Azure
     PALETTE_AZURE_1: "#c8e9f4"
     PALETTE_AZURE_2: "#addbeb"
     PALETTE_AZURE_3: "#8dc9e6"
@@ -11,6 +12,7 @@
     PALETTE_AZURE_9: "#134d71"
     PALETTE_AZURE_10: "#133c59"
 
+    # Amber
     PALETTE_AMBER_1: "#fbe9bf"
     PALETTE_AMBER_2: "#f8e09c"
     PALETTE_AMBER_3: "#f7d475"
@@ -22,6 +24,7 @@
     PALETTE_AMBER_9: "#db7726"
     PALETTE_AMBER_10: "#d66221"
 
+    # Amethyst
     PALETTE_AMETHYST_1: "#ede3fc"
     PALETTE_AMETHYST_2: "#daccec"
     PALETTE_AMETHYST_3: "#c7b4db"
@@ -33,6 +36,7 @@
     PALETTE_AMETHYST_9: "#5d3e70"
     PALETTE_AMETHYST_10: "#4b2a5e"
 
+    # Turquoise
     PALETTE_TURQUOISE_1: "#c0ede3"
     PALETTE_TURQUOISE_2: "#a9e1d6"
     PALETTE_TURQUOISE_3: "#8ed1c6"
@@ -44,6 +48,7 @@
     PALETTE_TURQUOISE_9: "#206b62"
     PALETTE_TURQUOISE_10: "#0e5b52"
 
+    # Ruby
     PALETTE_RUBY_1: "#f4bcbc"
     PALETTE_RUBY_2: "#eb9d9d"
     PALETTE_RUBY_3: "#de8181"
@@ -55,6 +60,7 @@
     PALETTE_RUBY_9: "#941e1e"
     PALETTE_RUBY_10: "#880e0e"
 
+    # Emerald
     PALETTE_EMERALD_1: "#d5f6c0"
     PALETTE_EMERALD_2: "#c3e8ac"
     PALETTE_EMERALD_3: "#afdc91"
@@ -66,6 +72,7 @@
     PALETTE_EMERALD_9: "#488421"
     PALETTE_EMERALD_10: "#397514"
 
+    # Graphite
     PALETTE_GRAPHITE_1: "#f0f0f0"
     PALETTE_GRAPHITE_2: "#d8d8d8"
     PALETTE_GRAPHITE_3: "#bdbdbd"
@@ -77,6 +84,7 @@
     PALETTE_GRAPHITE_9: "#292929"
     PALETTE_GRAPHITE_10: "#1a1a1a"
 
+    # Slate
     PALETTE_SLATE_1: "#dee1e8"
     PALETTE_SLATE_2: "#c8cbd4"
     PALETTE_SLATE_3: "#abaeb7"
@@ -91,6 +99,7 @@
     PALETTE_WHITE: "#fff"
     PALETTE_BLACK: "#000"
 
+    # Alert Colors
     PALETTE_STATUS_GREEN: "#80ce4d"
     PALETTE_STATUS_ORANGE: "#ff9426"
     PALETTE_STATUS_RED: "#e84f4f"
