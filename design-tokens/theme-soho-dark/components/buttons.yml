@@ -48,6 +48,9 @@
     button-link-hover-text-color:
       value: "{!PALETTE_WHITE}"
       type: "color"
+    button-link-active-text-color:
+      value: "{!PALETTE_WHITE}"
+      type: "color"
     button-link-disabled-color:
       value: "{!PALETTE_SLATE_3}"
       type: "color"
