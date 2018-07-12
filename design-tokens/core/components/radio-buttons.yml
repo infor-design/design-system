@@ -10,7 +10,7 @@
     radio-bg-color:
       value: "transparent"
       type: "color"
-    radio-bg-checked-color:
+    radio-checked-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
     radio-checked-bg-color:
