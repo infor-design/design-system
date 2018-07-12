@@ -37,10 +37,10 @@
       type: "color"
     notification-alternate-color:
       value: "inherit"
-      type: "color"
+      type: "style"
     notification-alternate-subheader-color:
       value: "inherit"
-      type: "color"
+      type: "style"
     notification-alternate-bg-color:
       value: "{!PALETTE_SLATE_7}"
       type: "color"
@@ -52,4 +52,4 @@
       type: "color"
     notification-alternate-table-header:
       value: "inherit"
-      type: "color"
+      type: "style"

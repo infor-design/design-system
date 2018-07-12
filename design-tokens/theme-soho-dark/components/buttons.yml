@@ -17,6 +17,18 @@
     button-default-hover-bg-color:
       value: "{!PALETTE_SLATE_4}"
       type: "color"
+    button-default-active-bg-color:
+      value: "{!PALETTE_SLATE_4}"
+      type: "color"
+    button-default-disabled-bg-color:
+      value: "{!PALETTE_SLATE_3}"
+      type: "color"
+    button-default-disabled-color:
+      value: "{!PALETTE_SLATE_10}"
+      type: "color"
+    button-default-disabled-border-color:
+      value: "{!PALETTE_SLATE_3}"
+      type: "color"
 
     # Button Primary
     button-primary-bg-color:
@@ -34,6 +46,9 @@
       value: "{!PALETTE_SLATE_3}"
       type: "color"
     button-link-hover-text-color:
+      value: "{!PALETTE_WHITE}"
+      type: "color"
+    button-link-active-text-color:
       value: "{!PALETTE_WHITE}"
       type: "color"
     button-link-disabled-color:
