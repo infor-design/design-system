@@ -11,7 +11,7 @@
     button-default-bg-color:
       value: "{!PALETTE_SLATE_3}"
       type: "color"
-    btn-default-text-color:
+    button-default-text-color:
       value: "{!PALETTE_SLATE_10}"
       type: "color"
     button-default-hover-bg-color:
@@ -23,7 +23,10 @@
       value: "{!PALETTE_AZURE_6}"
       type: "color"
     button-primary-hover-bg-color:
-      value: "{!PALETTE_AZURE_10}"
+      value: "{!PALETTE_AZURE_8}"
+      type: "color"
+    button-primary-active-bg-color:
+      value: "{!PALETTE_AZURE_7}"
       type: "color"
 
     # Button Links
@@ -32,4 +35,7 @@
       type: "color"
     button-link-hover-text-color:
       value: "{!PALETTE_WHITE}"
+      type: "color"
+    button-link-disabled-color:
+      value: "{!PALETTE_SLATE_3}"
       type: "color"

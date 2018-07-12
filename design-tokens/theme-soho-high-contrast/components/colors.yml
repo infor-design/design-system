@@ -1,0 +1,15 @@
+---
+  imports:
+    # Extend Core Aliases
+    - "../../core/core.alias.yml"
+
+  global:
+    category: "brand"
+    type: "color"
+
+  props:
+
+    # Primary Colors
+    color-primary:
+      value: "{!PALETTE_AZURE_9}"
+      category: "colors-brand"

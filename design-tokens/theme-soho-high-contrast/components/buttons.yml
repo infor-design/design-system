@@ -3,19 +3,31 @@
     # Colors
     - "../../core/color-palette.alias.yml"
 
+    # HC Aliases
+    - "../soho-hc.alias.yml"
+
   global:
     category: "buttons"
 
   props:
     # Button Default
     button-default-bg-color:
-      value: "{!PALETTE_SLATE_3}"
+      value: "{!PALETTE_GRAPHITE_7}"
       type: "color"
-    btn-default-text-color:
-      value: "{!PALETTE_SLATE_10}"
+    button-default-text-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     button-default-hover-bg-color:
-      value: "{!PALETTE_SLATE_4}"
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    button-default-active-bg-color:
+      value: "{!PALETTE_GRAPHITE_5}"
+      type: "color"
+    button-default-disabled-bg-color:
+      value: "{!PALETTE_GRAPHITE_7}"
+      type: "color"
+    button-default-disabled-border-color:
+      value: "{!PALETTE_GRAPHITE_7}"
       type: "color"
 
     # Button Primary
@@ -23,7 +35,10 @@
       value: "{!PALETTE_AZURE_9}"
       type: "color"
     button-primary-hover-bg-color:
-      value: "{!PALETTE_AZURE_10}"
+      value: "{!PALETTE_AZURE_8}"
+      type: "color"
+    button-primary-active-bg-color:
+      value: "{!PALETTE_AZURE_8}"
       type: "color"
 
     # Button Links
@@ -31,5 +46,5 @@
       value: "{!PALETTE_GRAPHITE_9}"
       type: "color"
     button-link-hover-text-color:
-      value: "{!PALETTE_BLACK}"
+      value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
