@@ -14,15 +14,15 @@
     radio-checked-color:
       value: "{!PALETTE_AZURE_9}"
     radio-checked-bg-color:
-      value: "{!PALETTE_AZURE_9}}"
+      value: "{!PALETTE_WHITE}"
     radio-border-color:
       value: "{!PALETTE_GRAPHITE_6}"
 
     # Disabled State
     radio-disabled-bg-color:
-      value: "{!PALETTE_GRAPHITE_1}"
-    radio-disabled-border-color:
       value: "{!PALETTE_GRAPHITE_3}"
+    radio-disabled-border-color:
+      value: "{!PALETTE_GRAPHITE_4}"
     radio-disabled-checked-bg-color:
       value: "{!PALETTE_WHITE}"
 
