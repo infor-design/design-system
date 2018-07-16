@@ -9,7 +9,7 @@
     # Normal State
     radio-bg-color:
       value: "transparent"
-      type: "color"
+      type: "style"
     radio-checked-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
