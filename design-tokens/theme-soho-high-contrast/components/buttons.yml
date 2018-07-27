@@ -32,13 +32,22 @@
 
     # Button Primary
     button-primary-bg-color:
-      value: "{!PALETTE_AZURE_9}"
+      value: "{!COLOR_PRIMARY}"
       type: "color"
     button-primary-hover-bg-color:
       value: "{!PALETTE_AZURE_8}"
       type: "color"
+    button-primary-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
     button-primary-active-bg-color:
       value: "{!PALETTE_AZURE_8}"
+      type: "color"
+    button-primary-disabled-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    $button-primary-disabled-border-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"
 
     # Button Links
