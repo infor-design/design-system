@@ -3,6 +3,9 @@
     # Colors
     - "../../core/color-palette.alias.yml"
 
+    # Dark Aliases
+    - "../soho-dark.alias.yml"
+
   global:
     category: "buttons"
 
