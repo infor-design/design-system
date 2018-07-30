@@ -3,6 +3,9 @@
     # Colors
     - "../../core/color-palette.alias.yml"
 
+    # Dark Aliases
+    - "../soho-dark.alias.yml"
+
   global:
     category: "buttons"
 
@@ -14,6 +17,12 @@
     button-default-text-color:
       value: "{!PALETTE_SLATE_10}"
       type: "color"
+    button-default-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-default-focus-border-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
     button-default-hover-bg-color:
       value: "{!PALETTE_SLATE_4}"
       type: "color"
@@ -23,7 +32,7 @@
     button-default-disabled-bg-color:
       value: "{!PALETTE_SLATE_3}"
       type: "color"
-    button-default-disabled-color:
+    button-default-disabled-text-color:
       value: "{!PALETTE_SLATE_10}"
       type: "color"
     button-default-disabled-border-color:
@@ -51,6 +60,9 @@
     button-link-active-text-color:
       value: "{!PALETTE_WHITE}"
       type: "color"
-    button-link-disabled-color:
+    button-link-disabled-text-color:
       value: "{!PALETTE_SLATE_3}"
+      type: "color"
+    button-link-open-text-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"

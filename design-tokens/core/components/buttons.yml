@@ -60,11 +60,17 @@
     button-default-focus-bg-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
+    button-default-focus-border-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
     button-default-hover-bg-color:
       value: "{!COLOR_DEFAULT_ALT}"
       type: "color"
     button-default-active-bg-color:
       value: "{!COLOR_DEFAULT_ALT}"
+      type: "color"
+    button-default-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
     button-default-disabled-bg-color:
       value: "{!COLOR_DEFAULT_ALT}"
@@ -86,7 +92,6 @@
     button-primary-hover-bg-color:
       value: "{!COLOR_PRIMARY_ALT}"
       type: "color"
-      category: "button primary"
     button-primary-active-bg-color:
       value: "{!COLOR_PRIMARY_ALT}"
       type: "color"
@@ -96,7 +101,6 @@
     button-primary-disabled-border-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
-
 
     # Button Links
     button-link-bg-color:
@@ -115,5 +119,8 @@
       value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
     button-link-active-text-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
+    button-link-open-text-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
