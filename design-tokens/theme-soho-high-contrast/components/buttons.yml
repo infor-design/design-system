@@ -29,7 +29,7 @@
     button-default-active-bg-color:
       value: "{!PALETTE_GRAPHITE_5}"
       type: "color"
-    button-default-disabled-color:
+    button-default-disabled-text-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     button-default-disabled-bg-color:
@@ -72,6 +72,6 @@
     button-link-active-text-color:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
-    button-link-open-color:
+    button-link-open-text-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"

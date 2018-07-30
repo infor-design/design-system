@@ -32,7 +32,7 @@
     button-default-disabled-bg-color:
       value: "{!PALETTE_SLATE_3}"
       type: "color"
-    button-default-disabled-color:
+    button-default-disabled-text-color:
       value: "{!PALETTE_SLATE_10}"
       type: "color"
     button-default-disabled-border-color:
@@ -60,9 +60,9 @@
     button-link-active-text-color:
       value: "{!PALETTE_WHITE}"
       type: "color"
-    button-link-disabled-color:
+    button-link-disabled-text-color:
       value: "{!PALETTE_SLATE_3}"
       type: "color"
-    button-link-open-color:
+    button-link-open-text-color:
       value: "{!COLOR_PRIMARY}"
       type: "color"
