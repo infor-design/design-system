@@ -31,5 +31,5 @@
 
     # Focus State
     radio-focus-shadow:
-      value: "0 0 0 1px {!PALETTE_SLATE_8}, 0 0 0 2px {!COLOR_PRIMARY}, 0 0 4px 5px rgba(255, 255, 255, .3)"
+      value: "0 0 0 1px {!PALETTE_SLATE_8}, 0 0 0 2px {!COLOR_PRIMARY}, 0 0 4px 5px rgba(255, 255, 255, 0.3)"
       type: "box-shadow"

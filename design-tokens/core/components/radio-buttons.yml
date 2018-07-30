@@ -44,7 +44,7 @@
 
     # Focus State
     radio-focus-shadow:
-      value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!COLOR_PRIMARY}, 0 0 4px 5px rgba(54, 138, 192, .3)"
+      value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!COLOR_PRIMARY}, 0 0 4px 5px rgba(54, 138, 192, 0.3)"
       type: "box-shadow"
 
     # Dimensions

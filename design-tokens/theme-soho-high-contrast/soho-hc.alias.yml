@@ -8,4 +8,4 @@
     COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"
 
     # Box Shadow
-    BOX_SHADOW_COLOR: "rgba(0, 0, 0, .2)"
+    BOX_SHADOW_COLOR: "rgba(0, 0, 0, 0.2)"
