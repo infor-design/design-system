@@ -14,6 +14,12 @@
     button-default-text-color:
       value: "{!PALETTE_SLATE_10}"
       type: "color"
+    button-default-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-default-focus-border-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
     button-default-hover-bg-color:
       value: "{!PALETTE_SLATE_4}"
       type: "color"
@@ -53,4 +59,7 @@
       type: "color"
     button-link-disabled-color:
       value: "{!PALETTE_SLATE_3}"
+      type: "color"
+    button-link-open-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"

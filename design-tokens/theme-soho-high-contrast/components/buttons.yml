@@ -17,11 +17,20 @@
     button-default-text-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
+    button-default-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-default-focus-border-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
     button-default-hover-bg-color:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
     button-default-active-bg-color:
       value: "{!PALETTE_GRAPHITE_5}"
+      type: "color"
+    button-default-disabled-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     button-default-disabled-bg-color:
       value: "{!PALETTE_GRAPHITE_7}"
@@ -33,6 +42,9 @@
     # Button Primary
     button-primary-bg-color:
       value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-primary-text-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     button-primary-hover-bg-color:
       value: "{!PALETTE_AZURE_8}"
@@ -56,4 +68,10 @@
       type: "color"
     button-link-hover-text-color:
       value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    button-link-active-text-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    button-link-open-color:
+      value: "{!COLOR_PRIMARY}"
       type: "color"
