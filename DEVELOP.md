@@ -1,4 +1,4 @@
-# Building the Design System Assests
+# Building the Design System Assets
 
 ## Use NPM
 - `npm run build` to build the assets into `dist/`
