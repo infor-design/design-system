@@ -46,7 +46,7 @@
     "stylelint-cli": "^1.0.0",
     "stylelint-order": "^0.8.1",
     "svgo": "^1.0.5",
-    "theo": "^7.0.1",
+    "theo": "^6.0.0",
     "yaml-lint": "^1.2.4"
   },
   "files": [
