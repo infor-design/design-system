@@ -40,7 +40,7 @@
     "mkdirp": "^0.5.1",
     "npm-which": "^3.0.1",
     "path": "^0.12.7",
-    "release-it": "^7.4.8",
+    "release-it": "^7.5.0",
     "rename": "^1.0.4",
     "stylelint": "^9.4.0",
     "stylelint-cli": "^1.0.0",
