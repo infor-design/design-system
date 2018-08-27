@@ -8,6 +8,8 @@
     "build:tokens:web": "node ./scripts/node/generate-tokens.js --format=custom-properties.css,sass,raw.json,module.js",
     "build:font": "node ./scripts/node/generate-font.js",
     "pack:release": "npm run build:tokens:web && bash ./scripts/package-release.sh",
+    "deploy:prod": "npm run build:tokens:web && bash ./scripts/deploy-assets.sh -e prod",
+    "deploy:stage": "npm run build:tokens:web && bash ./scripts/deploy-assets.sh -e staging",
     "clean": "del ./dist/*/* && del ./IDS-*.zip",
     "lint:tokens:web": "./node_modules/stylelint-cli/bin/stylelint ./dist/tokens/web/*.custom-properties.css --formatter verbose; exit 0;",
     "lint:yaml": "yamllint ./**/*.yml",
