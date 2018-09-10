@@ -1,11 +1,5 @@
 ---
   imports:
-    # Core
-    - "../../core/color-palette.alias.yml"
-    - "../../core/core.alias.yml"
-
-    # Uplift Overrides
-    - "../color-palette.alias.yml"
     - "../uplift.alias.yml"
 
   global:
