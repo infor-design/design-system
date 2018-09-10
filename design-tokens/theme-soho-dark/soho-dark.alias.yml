@@ -7,9 +7,5 @@
     # Borders
     BORDER_COLOR: "{!PALETTE_SLATE_4}"
 
-    # Colors
-    COLOR_PRIMARY: "{!PALETTE_AZURE_6}"
-    COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"
-
     # Box shadow
     BOX_SHADOW_COLOR: "rgba(0, 0, 0, 0.4)"

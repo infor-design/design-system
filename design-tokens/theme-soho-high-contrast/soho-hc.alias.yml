@@ -6,6 +6,3 @@
     # Colors
     COLOR_PRIMARY: "{!PALETTE_AZURE_9}"
     COLOR_PRIMARY_CONTRAST: "{!PALETTE_WHITE}"
-
-    # Box Shadow
-    BOX_SHADOW_COLOR: "rgba(0, 0, 0, 0.2)"
