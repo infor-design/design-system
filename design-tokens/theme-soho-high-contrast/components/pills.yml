@@ -1,10 +1,7 @@
 ---
   imports:
-    # Colors
-    - "../../core/color-palette.alias.yml"
-
-    # Dark Aliases
     - "../soho-hc.alias.yml"
+
 
   global:
     # NOTE: fka Badges/Tags
