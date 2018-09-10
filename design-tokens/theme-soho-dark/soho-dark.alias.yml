@@ -1,6 +1,6 @@
 ---
   imports:
-    # Extend Core Aliases
+    # Extend Core Aliases (includes core color_palette)
     - "../core/core.alias.yml"
 
   aliases:
