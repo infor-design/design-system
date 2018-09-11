@@ -9,9 +9,54 @@
     # Normal State
     radio-bg-color:
       value: "{!PALETTE_WHITE}"
+      type: "style"
+    radio-checked-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    radio-checked-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    radio-border-color:
+      value: "{!BORDER_COLOR}"
+      type: "color"
+    radio-border-radius:
+      value: "50%"
+      type: "border-radius"
+    radio-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
 
     # Disabled State
     radio-disabled-bg-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "style"
+    radio-disabled-border-color:
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
+    radio-disabled-checked-bg-color:
+      value: "{!PALETTE_GRAPHITE_1}"
+      type: "color"
+
+    # Hover state
+    radio-border-hover-color:
+      value: "{!PALETTE_GRAPHITE_8}"
+      type: "color"
+
+    # Focus State
+    radio-focus-shadow:
+      value: "0 0 0 1px {!PALETTE_GRAPHITE_1}, 0 0 0 2px {!COLOR_PRIMARY}, 0 0 4px 5px rgba(54, 138, 192, 0.3)"
+      type: "box-shadow"
+
+    # Dimensions
+    radio-outer-h:
+      value: "14px"
+      type: "size"
+    radio-outer-w:
+      value: "14px"
+      type: "size"
+    radio-inner-h:
+      value: "4px"
+      type: "size"
+    radio-inner-w:
+      value: "4px"
+      type: "size"

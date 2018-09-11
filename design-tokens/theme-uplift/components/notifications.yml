@@ -1,0 +1,51 @@
+---
+  imports:
+    - "../uplift.alias.yml"
+
+  global:
+    # NOTE: fka Toast/Popover
+    category: "notifications"
+
+  props:
+    # Default Colors
+    notification-bg-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    notification-border-color:
+      value: "{!PALETTE_GRAPHITE_3}"
+      type: "color"
+    notification-header-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
+    notification-text-color:
+      value: "{!TEXT_COLOR_INFO}"
+      type: "color"
+
+    # Popover
+    notification-arrow-border-color:
+      value: "{!PALETTE_GRAPHITE_3}"
+      type: "color"
+    notification-box-shadow:
+      value: "0 2px 5px {!BOX_SHADOW_COLOR}"
+      type: "box-shadow"
+    notification-separator-color:
+      value: "{!PALETTE_GRAPHITE_3}"
+      type: "color"
+    notification-alternate-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
+    notification-alternate-subheader-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    notification-alternate-bg-color:
+      value: "{!PALETTE_GRAPHITE_1}"
+      type: "color"
+    notification-alternate-arrow-color:
+      value: "{!PALETTE_GRAPHITE_1}"
+      type: "color"
+    notification-alternate-title-bg-color:
+      value: "{!PALETTE_WHITE}"
+      type: "color"
+    notification-alternate-table-header:
+      value: "{!PALETTE_GRAPHITE_1}"
+      type: "color"

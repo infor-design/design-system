@@ -7,12 +7,120 @@
 
   props:
     # Buttons
+    button-disabled-opacity:
+      value: "{!DISABLED_OPACITY}"
+      type: "number"
     button-height:
       value: "38px"
       type: "size"
+    button-line-height:
+      value: "1"
+      type: "number"
+    button-padding-x:
+      value: "30px"
+      type: "size"
+    button-padding-y:
+      value: "0"
+      type: "size"
+    button-border:
+      value: "1"
+      type: "number"
+    button-border-radius:
+      value: "{!BORDER_RADIUS_SMALL}"
+      type: "number"
+    button-text-align:
+      value: "center"
+      type: "text-align"
+    button-text-transform:
+      value: "capitalize"
+      type: "text-transform"
+    button-text-decoration:
+      value: "none"
+      type: "text-decoration"
+    button-font-family:
+      value: "{!FONT_FAMILY_BASE}"
+      type: "font-family"
     button-font-weight:
       value: "{!FONT_WEIGHT_BOLD}"
       type: "font-weight"
-    button-line-height:
-      value: "1"
-      type: "line-height"
+    button-font-size:
+      value: "{!FONT_SIZE_BASE}"
+      type: "size"
+    button-focus-box-shadow:
+      value: "0 0 0 2px {!PALETTE_GRAPHITE_1}, 0 0 0 3px {!COLOR_PRIMARY}"
+      type: "box-shadow"
+
+    # Button Default
+    button-default-bg-color:
+      value: "{!COLOR_DEFAULT}"
+      type: "color"
+    button-default-text-color:
+      value: "{!COLOR_DEFAULT_CONTRAST}"
+      type: "color"
+    button-default-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-default-focus-border-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-default-hover-bg-color:
+      value: "{!COLOR_DEFAULT_ALT}"
+      type: "color"
+    button-default-active-bg-color:
+      value: "{!COLOR_DEFAULT_ALT}"
+      type: "color"
+    button-default-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_8}"
+      type: "color"
+    button-default-disabled-bg-color:
+      value: "{!COLOR_DEFAULT_ALT}"
+      type: "color"
+    button-default-disabled-border-color:
+      value: "{!COLOR_DEFAULT}"
+      type: "color"
+
+    # Button Primary
+    button-primary-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-primary-text-color:
+      value: "{!COLOR_PRIMARY_CONTRAST}"
+      type: "color"
+    button-primary-focus-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-primary-hover-bg-color:
+      value: "{!COLOR_PRIMARY_ALT}"
+      type: "color"
+    button-primary-active-bg-color:
+      value: "{!COLOR_PRIMARY_ALT}"
+      type: "color"
+    button-primary-disabled-bg-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-primary-disabled-border-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+
+    # Button Links
+    button-link-bg-color:
+      value: "transparent"
+      type: "style"
+    button-link-text-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    button-link-disabled-text-color:
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
+    button-link-focus-text-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    button-link-hover-text-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
+    button-link-active-text-color:
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
+    button-link-open-text-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"

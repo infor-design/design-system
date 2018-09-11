@@ -2,7 +2,57 @@
   imports:
     - "../uplift.alias.yml"
 
-  aliases:
+  global:
+    category: "fonts"
+
+  props:
     # Text Colors
-    TEXT_COLOR_MUTED: "{!PALETTE_GRAPHITE_6}"
-    TEXT_COLOR_INFO: "{!PALETTE_GRAPHITE_8}"
+    text-color:
+      value: "{!TEXT_COLOR}"
+      type: "color"
+    text-color-muted:
+      value: "{!TEXT_COLOR_MUTED}"
+      type: "color"
+    text-color-info:
+      value: "{!TEXT_COLOR_INFO}"
+      type: "color"
+
+    # Font Family
+    font-family-base:
+      value: "{!FONT_FAMILY_BASE}"
+      type: "font"
+    font-family-monospace:
+      value: "{!FONT_FAMILY_MONOSPACE}"
+      type: "font"
+
+    # Font Size
+    font-size-xl:
+      value: "4rem"
+      type: "size"
+    font-size-lg:
+      value: "3.2rem"
+      type: "size"
+    font-size-md:
+      value: "2.4rem"
+      type: "size"
+    font-size-base:
+      value: "{!FONT_SIZE_BASE}"
+      type: "size"
+    font-size-sm:
+      value: "1.4rem"
+      type: "size"
+
+    # Font Weight
+    font-weight-normal:
+      value: "{!FONT_WEIGHT_NORMAL}"
+      type: "font-weight"
+    font-weight-bold:
+      value: "{!FONT_WEIGHT_BOLD}"
+      type: "font-weight"
+
+    # Height
+    line-height-base:
+      value: "1.65"
+      type: "number"
+
+
