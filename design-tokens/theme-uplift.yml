@@ -1,5 +1,11 @@
 ---
   imports:
+    # Import the core tokens to guarentee all tokens
+    # are available and have values
+    - "./theme-soho.yml"
+
+    # Import the uplift tokens with the uplift
+    # color palette.
     - "./theme-uplift/components/colors.yml"
     - "./theme-uplift/components/buttons.yml"
     - "./theme-uplift/components/checkboxes.yml"
