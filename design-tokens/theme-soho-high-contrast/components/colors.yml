@@ -1,7 +1,6 @@
 ---
   imports:
-    # Extend Core Aliases
-    - "../../core/core.alias.yml"
+    - "../soho-hc.alias.yml"
 
   global:
     category: "brand"

@@ -1,9 +1,5 @@
 ---
   imports:
-    # Colors
-    - "../../core/color-palette.alias.yml"
-
-    # HC Aliases
     - "../soho-hc.alias.yml"
 
   global:

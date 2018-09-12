@@ -1,7 +1,6 @@
 ---
   imports:
-    # Colors
-    - "../../core/color-palette.alias.yml"
+    - "../soho-hc.alias.yml"
 
   global:
     category: "lists"

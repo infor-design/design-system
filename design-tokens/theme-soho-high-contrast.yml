@@ -1,7 +1,7 @@
 ---
   imports:
     # Extend Core Components
-    - "./core.yml"
+    - "./theme-soho.yml"
 
     # Theme High Contrast Components - NOTE: need to update these to token names.
     - "./theme-soho-high-contrast/components/colors.yml"
@@ -17,8 +17,3 @@
     - "./theme-soho-high-contrast/components/dropdown.yml"
     - "./theme-soho-high-contrast/components/notifications.yml"
     - "./theme-soho-high-contrast/components/pills.yml"
-
-
-
-
-

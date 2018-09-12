@@ -96,6 +96,9 @@
     PALETTE_SLATE_9: "#1e2129"
     PALETTE_SLATE_10: "#0f1115"
 
+    PALETTE_WHITE: "#fff"
+    PALETTE_BLACK: "#000"
+
     # Alert Colors
     PALETTE_STATUS_GREEN: "#33cc33"
     PALETTE_STATUS_ORANGE: "#f29e0d"

@@ -1,6 +1,6 @@
 ---
   imports:
-    - "../soho-dark.alias.yml"
+    - "../uplift.alias.yml"
 
   global:
     # NOTE: fka Toast/Popover
@@ -9,43 +9,43 @@
   props:
     # Default Colors
     notification-bg-color:
-      value: "{!PALETTE_SLATE_7}"
+      value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     notification-border-color:
-      value: "{!PALETTE_SLATE_5}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     notification-header-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "{!PALETTE_GRAPHITE_10}"
       type: "color"
     notification-text-color:
-      value: "{!COLOR_PRIMARY_CONTRAST}"
+      value: "{!TEXT_COLOR_INFO}"
       type: "color"
 
     # Popover
     notification-arrow-border-color:
-      value: "{!PALETTE_SLATE_5}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     notification-box-shadow:
       value: "0 2px 5px {!BOX_SHADOW_COLOR}"
       type: "box-shadow"
     notification-separator-color:
-      value: "{!PALETTE_SLATE_5}"
+      value: "{!PALETTE_GRAPHITE_3}"
       type: "color"
     notification-alternate-color:
-      value: "inherit"
-      type: "style"
+      value: "{!PALETTE_GRAPHITE_10}"
+      type: "color"
     notification-alternate-subheader-color:
-      value: "inherit"
-      type: "style"
+      value: "{!PALETTE_GRAPHITE_6}"
+      type: "color"
     notification-alternate-bg-color:
-      value: "{!PALETTE_SLATE_7}"
+      value: "{!PALETTE_GRAPHITE_1}"
       type: "color"
     notification-alternate-arrow-color:
-      value: "{!PALETTE_SLATE_7}"
+      value: "{!PALETTE_GRAPHITE_1}"
       type: "color"
     notification-alternate-title-bg-color:
-      value: "{!PALETTE_SLATE_6}"
+      value: "{!PALETTE_WHITE}"
       type: "color"
     notification-alternate-table-header:
-      value: "inherit"
-      type: "style"
+      value: "{!PALETTE_GRAPHITE_1}"
+      type: "color"
