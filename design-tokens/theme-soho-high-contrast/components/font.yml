@@ -9,8 +9,8 @@
   props:
     # Text Colors
     text-color:
-      value: "{!PALETTE_BLACK}"
+      value: "{!TEXT_COLOR}"
     text-color-muted:
-      value: "{!PALETTE_GRAPHITE_5}"
+      value: "{!TEXT_COLOR_MUTED}"
     text-color-info:
-      value: "{!PALETTE_GRAPHITE_9}"
+      value: "{!TEXT_COLOR_INFO}"

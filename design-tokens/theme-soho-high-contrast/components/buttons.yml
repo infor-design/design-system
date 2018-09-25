@@ -8,7 +8,7 @@
   props:
     # Button Default
     button-default-bg-color:
-      value: "{!PALETTE_GRAPHITE_7}"
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
     button-default-text-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
@@ -23,16 +23,16 @@
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
     button-default-active-bg-color:
-      value: "{!PALETTE_GRAPHITE_5}"
+      value: "{!PALETTE_GRAPHITE_7}"
       type: "color"
     button-default-disabled-text-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     button-default-disabled-bg-color:
-      value: "{!PALETTE_GRAPHITE_7}"
+      value: "{!PALETTE_GRAPHITE_5}"
       type: "color"
     button-default-disabled-border-color:
-      value: "{!PALETTE_GRAPHITE_7}"
+      value: "{!PALETTE_GRAPHITE_5}"
       type: "color"
 
     # Button Primary
@@ -60,13 +60,13 @@
 
     # Button Links
     button-link-text-color:
-      value: "{!PALETTE_GRAPHITE_9}"
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
     button-link-hover-text-color:
       value: "{!PALETTE_GRAPHITE_6}"
       type: "color"
     button-link-active-text-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_7}"
       type: "color"
     button-link-open-text-color:
       value: "{!COLOR_PRIMARY}"

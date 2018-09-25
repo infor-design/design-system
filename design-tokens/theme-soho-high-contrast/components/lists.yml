@@ -8,5 +8,5 @@
   props:
     # List Colors
     list-hover-color:
-      value: "{!PALETTE_GRAPHITE_4}"
+      value: "{!PALETTE_GRAPHITE_6}"
       type: "color"

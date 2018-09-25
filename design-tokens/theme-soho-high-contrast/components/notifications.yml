@@ -12,22 +12,22 @@
       value: "{!COLOR_PRIMARY_CONTRAST}"
       type: "color"
     notification-border-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
     notification-header-color:
       value: "{!PALETTE_BLACK}"
       type: "color"
     notification-text-color:
-      value: "{!PALETTE_BLACK}"
+      value: "{!TEXT_COLOR}"
       type: "color"
 
     # Popover
     notification-arrow-border-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"
     notification-box-shadow:
       value: "0 2px 5px {!BOX_SHADOW_COLOR}"
       type: "box-shadow"
     notification-separator-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
       type: "color"

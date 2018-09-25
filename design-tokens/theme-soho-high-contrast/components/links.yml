@@ -8,6 +8,6 @@
 
   props:
     link-color:
-      value: "{!PALETTE_AZURE_9}"
+      value: "{!COLOR_PRIMARY}"
     link-hover-color:
       value: "{!PALETTE_BLACK}"

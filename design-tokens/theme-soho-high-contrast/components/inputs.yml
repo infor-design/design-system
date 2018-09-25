@@ -13,19 +13,19 @@
     input-info-block-text-color:
       value: "{!PALETTE_GRAPHITE_5}"
     input-label-text-color:
-      value: "{!PALETTE_GRAPHITE_9}"
+      value: "{!TEXT_COLOR}"
 
     # Normal State
     input-bg-color:
       value: "{!PALETTE_WHITE}"
     input-border-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
     input-text-color:
-      value: "{!PALETTE_BLACK}"
+      value: "{!TEXT_COLOR}"
 
     # Disabled State
     input-disabled-border-color:
-      value: "{!PALETTE_GRAPHITE_4}"
+      value: "{!PALETTE_GRAPHITE_5}"
     input-disabled-text-color:
       value: "{!PALETTE_GRAPHITE_5}"
 
@@ -39,8 +39,8 @@
 
     # Readonly State
     input-readonly-bg-color:
-      value: "{!PALETTE_GRAPHITE_4}"
+      value: "{!PALETTE_GRAPHITE_3}"
     input-readonly-border-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
     input-readonly-text-color:
-      value: "{!PALETTE_BLACK}"
+      value: "{!TEXT_COLOR}"

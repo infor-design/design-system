@@ -10,5 +10,5 @@
 
     # Primary Colors
     color-primary:
-      value: "{!PALETTE_AZURE_9}"
+      value: "{!COLOR_PRIMARY}"
       category: "colors-brand"
