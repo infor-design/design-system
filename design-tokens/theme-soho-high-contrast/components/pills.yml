@@ -13,14 +13,16 @@
       value: "{!PALETTE_BLACK}"
     pill-neutral-bg-color:
       value: "{!PALETTE_GRAPHITE_4}"
+    pill-neutral-border-color:
+      value: "{!PALETTE_GRAPHITE_8}"
     pill-neutral-hover-bg-color:
-      value: "{!PALETTE_GRAPHITE_5}"
+      value: "{!PALETTE_GRAPHITE_6}"
     pill-secondary-color:
       value: "{!PALETTE_BLACK}"
     pill-secondary-bg-color:
       value: "{!PALETTE_GRAPHITE_2}"
     pill-secondary-border-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
     pill-error-color:
       value: "{!COLOR_PRIMARY_CONTRAST}"
     pill-alert-color:
@@ -32,6 +34,6 @@
     pill-info-bg-color:
       value:  "{!COLOR_PRIMARY}"
     pill-neutral-icon-color:
-      value:  "{!PALETTE_GRAPHITE_9}"
+      value:  "{!PALETTE_GRAPHITE_8}"
     pill-neutral-hover-icon-color:
       value: "{!PALETTE_GRAPHITE_6}"

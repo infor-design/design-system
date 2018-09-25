@@ -8,4 +8,4 @@
 
   props:
     icon-fill:
-      value: "{!PALETTE_GRAPHITE_9}"
+      value: "{!PALETTE_GRAPHITE_8}"

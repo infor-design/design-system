@@ -17,11 +17,11 @@
     dropdown-menu-border-color:
       value: "{!COLOR_PRIMARY}"
     dropdown-menu-separator-color:
-      value:  "{!PALETTE_GRAPHITE_7}"
+      value:  "{!PALETTE_GRAPHITE_8}"
     dropdown-menu-separator-border-color:
-      value: "{!PALETTE_GRAPHITE_6}"
+      value: "{!PALETTE_GRAPHITE_8}"
     dropdown-group-label-color:
-      value: "{!PALETTE_GRAPHITE_5}"
+      value: "{!PALETTE_GRAPHITE_8}"
 
     # Box Shadow
     dropdown-box-shadow:
