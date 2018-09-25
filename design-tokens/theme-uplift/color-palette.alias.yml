@@ -98,9 +98,3 @@
 
     PALETTE_WHITE: "#fff"
     PALETTE_BLACK: "#000"
-
-    # Alert Colors
-    PALETTE_STATUS_GREEN: "#33cc33"
-    PALETTE_STATUS_ORANGE: "#f29e0d"
-    PALETTE_STATUS_RED: "#d92635"
-    PALETTE_STATUS_YELLOW: "#ffd000"
