@@ -2,7 +2,7 @@
 
 /**
  * @fileoverview This script uses theo to generate
- * different types of out from design tokens.
+ * different types of output from design tokens.
  * https://github.com/salesforce-ux/theo
  *
  * NOTE: More than likely there is a command in the package.json
@@ -13,107 +13,128 @@
 //   Node Modules/Options
 // -------------------------------------
 const argv = require('minimist')(process.argv.slice(2));
-const chalk = require('chalk');
+const compareTokens = require('./compare-tokens');
 const fs = require('fs');
-const glob = require('glob-fs')({ gitignore: true });
+const glob = require('glob');
 const mkdirp = require('mkdirp');
 const path = require('path');
 const pkg = require(path.join(process.cwd(), 'package.json'));
 const rename = require('rename');
-const swLog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log.js');
 const theo = require('theo');
 
 
 // -------------------------------------
 //   Constants/Variables
 // -------------------------------------
-const banner = `
-/**
+const banner = `/**
  * ${pkg.name} - ${pkg.description}
  *
  * @version ${pkg.version}
  * @homepage ${pkg.repository.url}
  * @license ${pkg.license}
- */
-`;
+ */`;
 
 const distPath = path.join(process.cwd(), './dist/tokens/web');
-const tokensPath = './design-tokens';
 const formatArr = getFormats(argv.format);
-
-let tokenFiles = `${tokensPath}/*.yml`;
-if (argv.files) {
-  tokenFiles = argv.files;
+const tokensPath = './design-tokens';
+const tokenFiles = {
+  colors: `${tokensPath}/**/color-palette.alias.yml`,
+  themes: `${tokensPath}/*.yml`,
+  variables: `${tokensPath}/**/variables.alias.yml`
 }
+
 
 // -------------------------------------
 //   Main
 // -------------------------------------
-swLog.logTaskStart('creating tokens');
-createDirs(distPath);
 
-glob.readdir(tokenFiles, (err, files) => {
-  files.forEach(file => {
-    formatArr.forEach(format => {
-      convertFileToFormat(file, format);
-    });
-  });
-});
+Promise.all([
+  createDirs(distPath),
+  compareTokens(glob.sync(tokenFiles.colors)),
+  compareTokens(glob.sync(tokenFiles.themes)),
+  compareTokens(glob.sync(tokenFiles.variables))
+]).then(data => {
+  convertTokens();
+}).catch(err => swlog.error(err));
 
 // -------------------------------------
 //   Functions
 // -------------------------------------
 
 /**
+ * Convert the yaml tokens into different
+ * design token formats.
+ */
+function convertTokens() {
+  swlog.logTaskStart('creating formats');
+
+  const files = glob.sync(tokenFiles.themes);
+
+  const promises = files.map(file => {
+    return formatArr.map(format => {
+      return convertFileToFormat(file, format);
+    });
+  });
+
+  const flat = [].concat(...promises);
+
+  Promise.all(flat).then(() => {
+    swlog.logTaskEnd('creating formats');
+  }).catch(err => swlog.error(err));
+}
+
+/**
  * Convert token files into a specific format
  * @param {string} srcFile - The file to convert
  * @param {string} toFormat - The format to conver to
+ * @returns {Promise}
  */
 function convertFileToFormat(srcFile, toFormat) {
   theo.registerTransform("web", ["color/hex"]);
 
-  theo
-    .convert({
-      transform: {
-        type: 'web',
-        file: srcFile
-      },
-      format: {
-        type: toFormat,
-      }
-    })
-    .then(res => {
-      let newFile = rename(srcFile, {
-        dirname: distPath,
-        extname: `.${toFormat}`
-      });
-
-      let contents = res;
-
-      // Do not add comment to invalidate .json files
-      if (toFormat.substr('json') > -1) {
-        contents = banner + res;
-      }
-
-      fs.writeFile(newFile, contents, (err) => {
-        if (err) {
-          throw err;
-        }
-        swLog.logTaskAction('Created', `${path.parse(newFile).base}.`);
-      });
-    })
-    .catch(error => {
-      swLog.logTaskAction('!', `${error} in ${srcFile}`, color = 'red')
+  return theo.convert({
+    transform: {
+      type: 'web',
+      file: srcFile
+    },
+    format: {
+      type: toFormat,
+    }
+  })
+  .then(data => {
+    let newFile = rename(srcFile, {
+      dirname: distPath,
+      extname: `.${toFormat}`
     });
+
+    // Only add the comment banner to non-json files
+    const contents = (toFormat.includes('json')) ? data : banner + data;
+
+    return new Promise((resolve, reject) => {
+      fs.writeFile(newFile, contents, (err) => {
+        if (err) throw new Error(err);
+        swlog.success(path.parse(newFile).base);
+        resolve();
+      });
+    });
+  });
 }
 
 /**
  * Create directories in a string path
  * @param {string} path
+ * @returns {Promise}
  */
 function createDirs(path) {
-  mkdirp(path, function (err) {
-    if (err) console.error(err)
+  return new Promise((resolve, reject) => {
+    mkdirp(path, (err) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
   });
 }
 

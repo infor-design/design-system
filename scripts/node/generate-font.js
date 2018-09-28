@@ -3,39 +3,41 @@
 /**
  * @overview Copies the font files into the dist/ directory
  */
-const args = require('minimist')(process.argv.slice(2));
-const chalk = require('chalk');
+
+// -------------------------------------
+//   Constants/Variables
+// -------------------------------------
 const copydir = require('copy-dir');
 const font_dir = `${process.cwd()}/font`;
 const output_dir = `${process.cwd()}/dist/font`;
 const path = require('path');
-const swLog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log.js');
 
-swLog.logTaskStart('copying font');
+const cleanUri = uri => {
+  return uri.replace(`${process.cwd()}`, '.');
+};
 
 const filterFiles = (stat, filepath, filename) => {
   if (stat === 'file' && path.extname(filepath) === '.md') {
-    swLog.logTaskAction('Ignore', filename, 'magenta');
+    swlog.logTaskAction('Ignore', `${stat} ${filename}`, 'magenta');
     return false;
   }
 
-  swLog.logTaskAction('Copying', filename);
+  if (stat === "directory") {
+    swlog.logTaskAction('Copying', `${stat} ${cleanUri(filepath)}`);
+  }
   return true;
 }
 
+// -------------------------------------
+//   Main
+// -------------------------------------
+
+const startTaskName = swlog.logTaskStart('copying font');
+
 copydir(font_dir, output_dir, filterFiles, err => {
   if (err) {
-    swLog.logTaskAction('Error!', err, 'red');
-  } else {
-    swLog.logTaskEnd('copying font');
+    swlog.error(`Error! ${err}`);
   }
+  swlog.logTaskEnd(startTaskName);
 });
-
-/**
- * Translate yes/no to boolean
- * @param {string} val
- * @return {boolean}
- */
-function yesOrNo(val) {
-  return (val === true) || (val === 'Yes') || (val === 'yes') || (val === 'YES');
-}
