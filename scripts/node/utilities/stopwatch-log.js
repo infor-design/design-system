@@ -36,10 +36,12 @@ class StopwatchLog {
   /**
    * Console.log a staring action and track its start time
    * @param {string} taskName - the unique name of the task
+   * @returns {string}
    */
   logTaskStart(taskName) {
     this.stopwatch[taskName] = Date.now();
     console.log('\nStarting', chalk.cyan(taskName), '...');
+    return taskName;
   }
 
   /**
@@ -47,7 +49,7 @@ class StopwatchLog {
    * @param {string} [desc] - a brief description or more details
    */
   error(desc = '') {
-    console.log(' ', logSymbols.error, chalk['red'](desc));
+    console.error(`\n`, logSymbols.error, chalk['red'](desc), `\n`);
   }
 
   /**
@@ -55,7 +57,7 @@ class StopwatchLog {
    * @param {string} [desc] - a brief description or more details
    */
   success(desc = '') {
-    console.log(' ', logSymbols.success, chalk['green'](desc));
+    console.log(logSymbols.success, chalk['green'](desc));
   }
 
   /**

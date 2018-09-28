@@ -40,7 +40,7 @@ const stats = {
 //   Main
 // -------------------------------------
 
-swLog.logTaskStart('creating icons');
+const startTaskName = swLog.logTaskStart('exporting SVGs');
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -71,9 +71,7 @@ args.clean = yesOrNo(args.clean);
 // -------------------------------------
 
 return checkSketchTool()
-  .catch(err => {
-    throw new Error(err);
-  })
+  .catch(err => swlog.error(err))
   .then(cmnd => {
     const program = spawn(cmnd, cmdArgs.concat(args.srcfile, `--output=${OUTPUT_DIR}`));
 
@@ -86,15 +84,18 @@ return checkSketchTool()
 
       if (args.verbose) {
         return console.log(dataStr);
+      } else {
+        const msg = chalk.green(`${stats.total} SVGs`);
+        return console.log(`- Exported ${msg}`);
       }
     });
 
     program.on('close', (code) => {
       if (code === 0) {
-        swLog.logTaskEnd('creating icons');
+        swLog.logTaskEnd(startTaskName);
         optimizeSVGs();
       } else {
-        console.log(`Icon generation process exited with code ${code}`);
+        swlog.error(`Icon generation process exited with code ${code}`);
       }
     });
 });
@@ -128,7 +129,7 @@ function checkSketchTool() {
  * Optimize the generated .svg icon files
  */
 function optimizeSVGs() {
-  swLog.logTaskStart('optimize svgs');
+  const startOptimizeTaskName = swLog.logTaskStart('optimizing svgs');
 
   const svgoOptimize = new svgo({
     plugins: [
@@ -143,28 +144,25 @@ function optimizeSVGs() {
     return readFile(filepath, 'utf8')
       .then(output => {
         return svgoOptimize.optimize(output);
-        status.numRead++;
       })
       .then(output => {
         return writeFile(filepath, output.data, 'utf-8').then(() => {
-          swLog.logTaskAction('Optimized', filepath);
+          if (args.verbose) {
+            swLog.logTaskAction('Optimized', filepath);
+          }
           stats.numOptimized++;
         });
-      })
-      .catch(err => {
-        throw new Error(err);
       });
   });
 
   Promise.all(svgPromises).then(() => {
-    swLog.logTaskEnd('optimize svgs');
+    if (!args.verbose) {
+      swLog.logTaskAction('Optimized', `${stats.numOptimized} SVGs`);
+    }
+    swLog.logTaskEnd(startOptimizeTaskName);
     logStats();
-  }).catch(err => {
-    throw new Error(err);
-  });
+  }).catch(err => swlog.error(err));
 }
-
-
 
 /**
  * Translate yes/no to boolean

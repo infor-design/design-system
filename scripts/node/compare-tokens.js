@@ -52,7 +52,7 @@ const parseYml = file => {
   try {
     return yaml.load(data);
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 };
 
@@ -62,7 +62,6 @@ module.exports = (paths = []) => {
   }
 
   return new Promise((resolve, reject) => {
-    let didErr = false;
     const themesData = paths.map(p => {
       return {
         path: p,
@@ -75,24 +74,22 @@ module.exports = (paths = []) => {
     swlog.logTaskStart(`compare to "${cleanUri(compareTo.path)}"`);
 
     // Compare the other items against the control
+    let mismatch = false;
     themesData.forEach(d => {
       if (compare(compareTo.data, d.data)) {
         swlog.success(cleanUri(d.path));
       } else {
         swlog.error(cleanUri(d.path));
-        didErr = true;
+        mismatch = true;
       }
     });
-    swlog.logTaskEnd(`compare to "${compareTo.path}"`);
+    swlog.logTaskEnd(`compare to "${cleanUri(compareTo.path)}"`);
 
-    if (didErr) {
-      throw new Error('Discrepancies were found with tokens/aliases. See above for details.');
+    if (mismatch) {
+      reject(`Discrepancies were found with tokens/aliases. See above for details.`);
     } else {
-      resolve(1);
+      resolve();
     }
-  }).catch(err => {
-    console.error(err);
-    return 0;
   });
 };
 

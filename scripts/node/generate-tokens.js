@@ -48,21 +48,15 @@ const tokenFiles = {
 // -------------------------------------
 //   Main
 // -------------------------------------
-createDirs(distPath);
 
 Promise.all([
+  createDirs(distPath),
   compareTokens(glob.sync(tokenFiles.colors)),
   compareTokens(glob.sync(tokenFiles.themes)),
   compareTokens(glob.sync(tokenFiles.variables))
-]).then((data) => {
-  numRight = 0;
-  data.forEach(d => numRight += d);
-
-  if (data.length === numRight) {
-    convertTokens();
-  }
-}).catch(err => console.log(err));
-
+]).then(data => {
+  convertTokens();
+}).catch(err => swlog.error(err));
 
 // -------------------------------------
 //   Functions
@@ -87,13 +81,14 @@ function convertTokens() {
 
   Promise.all(flat).then(() => {
     swlog.logTaskEnd('creating formats');
-  }).catch(err => console.log(err));
+  }).catch(err => swlog.error(err));
 }
 
 /**
  * Convert token files into a specific format
  * @param {string} srcFile - The file to convert
  * @param {string} toFormat - The format to conver to
+ * @returns {Promise}
  */
 function convertFileToFormat(srcFile, toFormat) {
   theo.registerTransform("web", ["color/hex"]);
@@ -122,18 +117,24 @@ function convertFileToFormat(srcFile, toFormat) {
         swlog.success(path.parse(newFile).base);
         resolve();
       });
-    }).catch(err => console.error(err));
-  })
-  .catch(err => console.error(err));
+    });
+  });
 }
 
 /**
  * Create directories in a string path
  * @param {string} path
+ * @returns {Promise}
  */
 function createDirs(path) {
-  mkdirp(path, (err) => {
-    if (err) throw new Error(err);
+  return new Promise((resolve, reject) => {
+    mkdirp(path, (err) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
   });
 }
 

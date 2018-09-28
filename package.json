@@ -4,7 +4,7 @@
   "description": "Infor Design System Design Assets",
   "scripts": {
     "build": "npm run clean && npm run build:icons && npm run build:tokens:web && npm run build:font",
-    "build:icons": "node ./scripts/node/generate-icons.js --export=artboards --formats=svg --clean=yes  --verbose --srcfile=./sketch/ids-icons.sketch",
+    "build:icons": "node ./scripts/node/generate-icons.js --export=artboards --formats=svg --clean=yes --srcfile=./sketch/ids-icons.sketch",
     "build:tokens:web": "node ./scripts/node/generate-tokens.js --format=custom-properties.css,sass,raw.json,module.js",
     "build:font": "node ./scripts/node/generate-font.js",
     "pack:release": "npm run build:tokens:web && bash ./scripts/package-release.sh",
