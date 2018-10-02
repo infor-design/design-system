@@ -1,0 +1,119 @@
+{
+  "radio": {
+
+    "color": {
+
+      "unchecked": {
+
+        "base": {
+          "background": {
+            "deprecated":"radio-bg-color",
+            "component": "radio buttons",
+            "value": "transparent"
+          },
+          "border": {
+            "deprecated":"radio-border-color",
+            "component": "radio buttons",
+            "value": "{color.border.base.value}"
+          },
+          "fill": {
+            "deprecated":"radio-color",
+            "component": "radio buttons",
+            "value": "{color.brand.primary.contrast.value}"
+          }
+        },
+
+        "hover": {
+          "border": {
+            "deprecated":"radio-border-hover-color",
+            "component": "radio buttons",
+            "value": "{color.base.graphite.80.value}"
+          }
+        },
+
+        "disabled": {
+          "background": {
+            "deprecated":"radio-disabled-bg-color",
+            "component": "radio buttons",
+            "value": "transparent"
+          },
+          "border": {
+            "deprecated":"radio-disabled-border-color",
+            "component": "radio buttons",
+            "value": "{color.base.graphite.30.value}"
+          }
+        }
+      },
+
+      "checked": {
+        "base": {
+          "background": {
+            "deprecated":"radio-checked-bg-color",
+            "component": "radio buttons",
+            "value": "{color.brand.primary.contrast.value}"
+          },
+          "fill": {
+            "deprecated":"radio-checked-color",
+            "component": "radio buttons",
+            "value": "{color.brand.primary.base.value}"
+          }
+        },
+        "disabled": {
+          "background": {
+            "deprecated":"radio-disabled-checked-bg-color",
+            "component": "radio buttons",
+            "value": "{color.base.graphite.10.value}"
+          },
+          "border": {
+            "value": "{radio.color.unchecked.disabled.border.value}",
+            "component": "radio buttons"
+          }
+        }
+      }
+    },
+
+    "shadow": {
+      "focus": {
+        "box": {
+          "deprecated":"radio-focus-shadow",
+          "component": "radio buttons",
+          "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
+        }
+      }
+    },
+
+    "size": {
+      "outer": {
+        "height": {
+          "deprecated":"radio-outer-h",
+          "component": "radio buttons",
+          "value": "14px"
+        },
+        "width": {
+          "deprecated":"radio-outer-w",
+          "component": "radio buttons",
+          "value": "14px"
+        }
+      },
+      "inner": {
+        "height": {
+          "deprecated":"radio-inner-h",
+          "component": "radio buttons",
+          "value": "4px"
+        },
+        "width": {
+          "deprecated":"radio-inner-w",
+          "component": "radio buttons",
+          "value": "4px"
+        }
+      },
+      "border": {
+        "radius": {
+          "deprecated":"radio-border-radius",
+          "component": "radio buttons",
+          "value": "50%"
+        }
+      }
+    }
+  }
+}

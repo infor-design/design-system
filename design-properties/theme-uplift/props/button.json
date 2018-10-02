@@ -1,0 +1,16 @@
+{
+  "button": {
+    "size": {
+      "height": {
+        "value": "38px",
+        "component": "buttons",
+        "deprecated":"button-height"
+      },
+      "line-height": {
+        "value": "1",
+        "component": "buttons",
+        "deprecated":"button-line-height"
+      }
+    }
+  }
+}

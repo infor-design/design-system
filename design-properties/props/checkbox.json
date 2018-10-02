@@ -1,0 +1,134 @@
+{
+  "checkbox": {
+
+    "color": {
+
+      "unchecked": {
+
+        "base": {
+          "arrow": {
+            "deprecated":"checkbox-arrow-color",
+            "component": "checkboxes",
+            "value": "{color.brand.primary.contrast.value}"
+          },
+          "background": {
+            "deprecated":"checkbox-bg-color",
+            "component": "checkboxes",
+            "value": "transparent"
+          },
+          "border": {
+            "deprecated":"checkbox-border-color",
+            "component": "checkboxes",
+            "value": "{color.border.base.value}"
+          },
+          "font": {
+            "deprecated":"checkbox-label-color",
+            "component": "checkboxes",
+            "value": "{color.font.base.value}"
+          }
+        },
+        "disabled": {
+          "arrow": {
+            "deprecated":"checkbox-disabled-arrow-color",
+            "component": "checkboxes",
+            "value": "#f4f4f4"
+          },
+          "background": {
+            "deprecated":"checkbox-disabled-bg-color",
+            "component": "checkboxes",
+            "value": "transparent"
+          },
+          "border": {
+            "deprecated":"checkbox-disabled-border-color",
+            "component": "checkboxes",
+            "value": "{color.base.graphite.30.value}"
+          },
+          "font": {
+            "deprecated":"checkbox-disabled-text-color",
+            "component": "checkboxes",
+            "value": "{color.base.graphite.40.value}"
+          }
+        },
+
+        "hover": {
+          "border": {
+            "deprecated":"checkbox-hover-border-color",
+            "component": "checkboxes",
+            "value": "{color.base.graphite.80.value}"
+          }
+        }
+      },
+
+      "checked": {
+        "base": {
+          "background": {
+            "deprecated":"checkbox-checked-bg-color",
+            "component": "checkboxes",
+            "value": "{color.brand.primary.base.value}"
+          },
+          "border": {
+            "value": "{checkbox.color.unchecked.base.border.value}",
+            "component": "checkboxes"
+          }
+        },
+
+        "disabled": {
+          "background": {
+            "deprecated":"checkbox-disabled-checked-bg-color",
+            "component": "checkboxes",
+            "value": "{color.base.graphite.30.value}"
+          },
+          "border": {
+            "value": "{checkbox.color.unchecked.disabled.border.value}",
+            "component": "checkboxes"
+          },
+          "arrow": {
+            "value": "{checkbox.color.unchecked.disabled.arrow.value}",
+            "component": "checkboxes"
+          }
+        }
+      }
+    },
+
+    "size": {
+      "box": {
+        "height": {
+          "deprecated":"checkbox-box-size",
+          "component": "checkboxes",
+          "value": "17px"
+        },
+        "width": {
+          "deprecated":"checkbox-box-size",
+          "component": "checkboxes",
+          "value": "17px"
+        }
+      },
+      "check": {
+        "height": {
+          "deprecated":"checkbox-check-h",
+          "component": "checkboxes",
+          "value": "11px"
+        },
+        "width": {
+          "deprecated":"checkbox-check-w",
+          "component": "checkboxes",
+          "value": "5px"
+        }
+      },
+      "border-radius": {
+        "value": "{number.border-radius.sm.value}",
+        "component": "checkboxes"
+      }
+    },
+
+    "shadow": {
+      "focus": {
+        "box": {
+          "deprecated":"checkbox-focus-shadow",
+          "component": "checkboxes",
+          "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}"
+        }
+      }
+    }
+  }
+}

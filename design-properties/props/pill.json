@@ -1,0 +1,83 @@
+{
+  "pill": {
+    "color": {
+      "base": {
+        "alert": {
+          "deprecated":"pill-alert-color",
+          "component": "pills",
+          "value": "{color.base.graphite.10.value}"
+        },
+        "error": {
+          "deprecated":"pill-error-color",
+          "component": "pills",
+          "value": "{color.brand.primary.contrast.value}"
+        },
+        "info": {
+          "background": {
+            "deprecated":"pill-info-bg-color",
+            "component": "pills",
+            "value": "{color.brand.primary.alt.value}"
+          },
+          "font": {
+            "deprecated":"pill-info-color",
+            "component": "pills",
+            "value": "{color.brand.primary.contrast.value}"
+          }
+        },
+        "neutral": {
+          "background": {
+            "deprecated":"pill-neutral-bg-color",
+            "component": "pills",
+            "value": "{color.base.graphite.20.value}"
+          },
+          "font": {
+            "deprecated":"pill-neutral-color",
+            "component": "pills",
+            "value": "{color.base.graphite.10.value}"
+          },
+          "icon": {
+            "deprecated":"pill-neutral-icon-color",
+            "component": "pills",
+            "value": "{color.base.graphite.60.value}"
+          }
+        },
+        "secondary": {
+          "background": {
+            "deprecated":"pill-secondary-bg-color",
+            "component": "pills",
+            "value": "{color.brand.primary.contrast.value}"
+          },
+          "border": {
+            "deprecated":"pill-secondary-border-color",
+            "component": "pills",
+            "value": "{color.base.graphite.30.value}"
+          },
+          "font": {
+            "deprecated":"pill-secondary-color",
+            "component": "pills",
+            "value": "{color.base.graphite.10.value}"
+          }
+        },
+        "success": {
+          "deprecated":"pill-good-color",
+          "component": "pills",
+          "value": "{color.brand.primary.contrast.value}"
+        }
+      },
+      "hover": {
+        "netural": {
+          "background": {
+            "deprecated":"pill-neutral-hover-bg-color",
+            "component": "pills",
+            "value": "{color.base.graphite.30.value}"
+          },
+          "icon": {
+            "deprecated":"pill-neutral-hover-icon-color",
+            "component": "pills",
+            "value": "{color.base.graphite.10.value}"
+          }
+        }
+      }
+    }
+  }
+}

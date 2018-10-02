@@ -1,0 +1,69 @@
+{
+  "color": {
+    "brand": {
+      "status": {
+        "caution": { "value": "#ffd726" },
+        "danger":  { "value": "#e84f4f" },
+        "success": { "value": "#80ce4d" },
+        "warning": { "value": "#ff9426" }
+      },
+      "default": {
+        "base":     { "value": "{color.base.graphite.30.value}" },
+        "alt":      { "value": "{color.base.graphite.40.value}" },
+        "contrast": { "value": "{color.base.graphite.80.value}" }
+      },
+      "primary": {
+        "base":     { "value": "{color.base.azure.60.value}" },
+        "alt":      { "value": "{color.base.azure.70.value}" },
+        "contrast": { "value": "{color.base.white.value}" }
+      }
+    },
+    "box-shadow": {
+      "base": { "value": "rgba(0, 0, 0, 0.2)" }
+    },
+    "border": {
+      "base": { "value": "{color.base.graphite.40.value}" }
+    },
+    "font": {
+      "base":  { "value": "{color.base.graphite.100.value}" },
+      "info":  { "value": "{color.base.graphite.60.value}" },
+      "muted": { "value": "{color.base.graphite.40.value}" }
+    }
+  },
+  "font": {
+    "family": {
+      "base":      { "value": "'source sans pro', helvetica, arial, san-serif" },
+      "monospace": { "value": "monospace" }
+    }
+  },
+  "size": {
+    "font": {
+      "base": { "value": "{size.font.sm.value}" },
+      "sm":   { "value": "1.4rem" },
+      "md":   { "value": "2.4rem" },
+      "lg":   { "value": "3.2rem" },
+      "xl":   { "value": "4.0rem" }
+    },
+    "line-height": {
+      "value": "2.2rem"
+    }
+  },
+  "number": {
+    "font-weight": {
+      "normal": { "value": "400" },
+      "bold":   { "value": "700" }
+    },
+    "opacity": {
+      "disabled": { "value": "0.5" }
+    },
+    "spacing": {
+      "base": {
+        "value": "8px"
+      }
+    },
+    "border-radius": {
+      "sm": { "value": "2px" },
+      "md": { "value": "3px" }
+    }
+  }
+}

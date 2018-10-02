@@ -1,0 +1,12 @@
+{
+  "source": [
+    "design-properties/theme-soho/color-palette.json",
+    "design-properties/theme-soho/theme.json",
+
+    "design-properties/theme-soho/variants/contrast/theme.json",
+
+    "design-properties/props/*.json",
+
+    "design-properties/theme-soho/variants/contrast/**/(!.config).json"
+  ]
+}

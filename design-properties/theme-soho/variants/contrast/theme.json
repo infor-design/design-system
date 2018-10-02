@@ -1,0 +1,20 @@
+{
+  "color": {
+    "brand": {
+      "status": {
+        "caution": { "value": "#504100" },
+        "danger":  { "value": "#861111" },
+        "success": { "value": "#2A4A14" },
+        "warning": { "value": "#683500" }
+      },
+      "primary": {
+        "base":     { "value": "{color.base.azure.100.value}" },
+        "alt":      { "value": "{color.base.azure.90.value}}" }
+      }
+    },
+    "font": {
+      "info":  { "value": "{color.base.graphite.80.value}" },
+      "muted": { "value": "{color.base.graphite.50.value}" }
+    }
+  }
+}
