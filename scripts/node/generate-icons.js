@@ -11,24 +11,39 @@
 const args = require('minimist')(process.argv.slice(2));
 
 if (!args.srcfile) {
-  throw Error('Error! No sketch source file specified.');
+  throw new Error('Error! No sketch source file specified.');
 }
 
-const chalk       = require('chalk');
-const fs          = require('fs');
-const svgo        = require('svgo');
-const swLog       = require('./utilities/stopwatch-log.js');
-const which       = require('npm-which')(process.cwd());
-const {Promise}   = require('es6-promise');
-const {spawn}     = require('child_process');
-const glob        = require('glob-fs')({ gitignore: false });
+// -------------------------------------
+//   Constants/Variables
+// -------------------------------------
 
-const APP_PATH    = '/Applications/Sketch.app';
-const TOOL_PATH   = `${ APP_PATH }/Contents/Resources/sketchtool/bin/sketchtool`;
+const {spawn} = require('child_process');
+const chalk = require('chalk');
+const fs = require('fs');
+const glob = require('glob');
+const svgo = require('svgo');
+const swLog = require('./utilities/stopwatch-log.js');
+const util = require("util");
+const which = require('npm-which')(process.cwd());
+
+const APP_PATH = '/Applications/Sketch.app';
+const TOOL_PATH = `${ APP_PATH }/Contents/Resources/sketchtool/bin/sketchtool`;
 const OUTPUT_DIR = `./dist/icons`;
 
-const stopwatch  = {};
-swLog.logTaskStart('creating icons');
+const stats = {
+  numOptimized: 0,
+  total: 0
+};
+
+// -------------------------------------
+//   Main
+// -------------------------------------
+
+const startTaskName = swLog.logTaskStart('exporting SVGs');
+
+const readFile = util.promisify(fs.readFile);
+const writeFile = util.promisify(fs.writeFile);
 
 // build a command with arguments
 const cmdArgs = [];
@@ -51,26 +66,36 @@ if (args.bounds) { cmdArgs.push(`--bounds=${args.bounds}`); }
 
 args.clean = yesOrNo(args.clean);
 
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
 return checkSketchTool()
-  .catch(err => {
-    console.log('Error!', err);
-  })
+  .catch(err => swlog.error(err))
   .then(cmnd => {
     const program = spawn(cmnd, cmdArgs.concat(args.srcfile, `--output=${OUTPUT_DIR}`));
 
     // Verbose Output
     program.stdout.on('data', function(data) {
+      const dataStr = data.toString();
+
+      // Count the number of "svg" exports
+      stats.total = (dataStr.match(/.svg/g) || []).length;
+
       if (args.verbose) {
-        return console.log(data.toString());
+        return console.log(dataStr);
+      } else {
+        const msg = chalk.green(`${stats.total} SVGs`);
+        return console.log(`- Exported ${msg}`);
       }
     });
 
     program.on('close', (code) => {
       if (code === 0) {
-        swLog.logTaskEnd('creating icons');
+        swLog.logTaskEnd(startTaskName);
         optimizeSVGs();
       } else {
-        console.log(`Icon generation process exited with code ${code}`);
+        swlog.error(`Icon generation process exited with code ${code}`);
       }
     });
 });
@@ -104,42 +129,39 @@ function checkSketchTool() {
  * Optimize the generated .svg icon files
  */
 function optimizeSVGs() {
-  swLog.logTaskStart('optimize svgs');
+  const startOptimizeTaskName = swLog.logTaskStart('optimizing svgs');
+
   const svgoOptimize = new svgo({
     plugins: [
       { removeViewBox: false }
     ]
   });
 
-  return glob.readdir(`${OUTPUT_DIR}/*.svg`, (err, files) => {
-    if (err) {
-      throw err;
-    }
+  const svgFiles = glob.sync(`${OUTPUT_DIR}/*.svg`);
+  stats.total = svgFiles.length;
 
-    let numOptimized = 0;
-
-    files.forEach(filepath => {
-      fs.readFile(filepath, 'utf8', (err, data) => {
-        if (err) {
-          throw err;
-        }
-        svgoOptimize.optimize(data)
-          .catch(err => {
-            console.log('Error!', err);
-          })
-          .then(result => {
-            fs.writeFile(filepath, result.data, 'utf-8', () => {
-              swLog.logTaskAction('Optimized', filepath);
-              numOptimized++;
-
-              if (numOptimized === files.length) {
-                swLog.logTaskEnd('optimize svgs');
-              }
-            });
-          });
+  const svgPromises = svgFiles.map(filepath => {
+    return readFile(filepath, 'utf8')
+      .then(output => {
+        return svgoOptimize.optimize(output);
+      })
+      .then(output => {
+        return writeFile(filepath, output.data, 'utf-8').then(() => {
+          if (args.verbose) {
+            swLog.logTaskAction('Optimized', filepath);
+          }
+          stats.numOptimized++;
+        });
       });
-    });
   });
+
+  Promise.all(svgPromises).then(() => {
+    if (!args.verbose) {
+      swLog.logTaskAction('Optimized', `${stats.numOptimized} SVGs`);
+    }
+    swLog.logTaskEnd(startOptimizeTaskName);
+    logStats();
+  }).catch(err => swlog.error(err));
 }
 
 /**
@@ -149,4 +171,15 @@ function optimizeSVGs() {
  */
 function yesOrNo(val) {
   return (val === true) || (val === 'Yes') || (val === 'yes') || (val === 'YES');
+}
+
+/**
+ * Console.log statistics from the build
+ */
+function logStats() {
+  console.log(`
+Icons ${chalk.green('created')}:   ${stats.total}
+Icons ${chalk.green('optimized')}: ${stats.numOptimized}/${stats.total}
+Icons ${chalk.yellow('skipped')}:   ${stats.total - stats.numOptimized}
+`);
 }
