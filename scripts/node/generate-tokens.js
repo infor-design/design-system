@@ -20,7 +20,7 @@ const path = require('path');
 // -------------------------------------
 //   Constants/Variables
 // -------------------------------------
-const configGlob = './design-properties/**/*.config.json';
+const configGlob = './design-tokens/**/*.config.json';
 const configs = glob.sync(configGlob);
 
 // -------------------------------------
@@ -34,19 +34,22 @@ configs.forEach(config => {
 
   const platforms = {
     scss: {
-      transformGroup: "scss",
-      buildPath: "dist/tokens/web/",
+      transformGroup: 'scss',
+      buildPath: 'dist/tokens/web/',
       files: [{
         destination: `${themeName}.scss`,
-        format: "scss/variables"
+        format: 'scss/variables'
       },
       {
         destination: `${themeName}.json`,
-        format: "json"
+        format: 'json'
       },
       {
         destination: `${themeName}.custom-properties.css`,
-        format: "css/variables"
+        format: 'css/variables'
+      }, {
+        destination: `${themeName}.module.js`,
+        format: 'javascript/module'
       }]
     }
   };
@@ -63,3 +66,5 @@ configs.forEach(config => {
 });
 
 swlog.logTaskEnd(taskName);
+
+
