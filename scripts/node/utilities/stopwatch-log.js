@@ -1,5 +1,6 @@
 'use strict';
 const chalk = require('chalk');
+const logSymbols = require('log-symbols');
 
 /**
  * @class stopwatchLog
@@ -35,12 +36,29 @@ class StopwatchLog {
   /**
    * Console.log a staring action and track its start time
    * @param {string} taskName - the unique name of the task
+   * @returns {string}
    */
   logTaskStart(taskName) {
     this.stopwatch[taskName] = Date.now();
-    console.log('Starting', chalk.cyan(taskName), '...');
+    console.log('\nStarting', chalk.cyan(taskName), '...');
+    return taskName;
   }
 
+  /**
+   * Log a failed message
+   * @param {string} [desc] - a brief description or more details
+   */
+  error(desc = '') {
+    console.error(`\n`, logSymbols.error, chalk['red'](desc), `\n`);
+  }
+
+  /**
+   * Log a success message
+   * @param {string} [desc] - a brief description or more details
+   */
+  success(desc = '') {
+    console.log(logSymbols.success, chalk['green'](desc));
+  }
 
   /**
    * Calculate the time (in seconds) elapsed from a previous tiemstamp to now.

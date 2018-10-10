@@ -1,0 +1,29 @@
+{
+  "breakpoint": {
+    "xs": {
+      "deprecated":"breakpoint-xs",
+      "component": "grid",
+      "value": "360px"
+    },
+    "sm": {
+      "deprecated":"breakpoint-sm",
+      "component": "grid",
+      "value": "600px"
+    },
+    "md": {
+      "deprecated":"breakpoint-md",
+      "component": "grid",
+      "value": "840px"
+    },
+    "lg": {
+      "deprecated":"breakpoint-lg",
+      "component": "grid",
+      "value": "1280px"
+    },
+    "xl": {
+      "deprecated":"breakpoint-xl",
+      "component": "grid",
+      "value": "1440px"
+    }
+  }
+}

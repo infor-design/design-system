@@ -1,0 +1,25 @@
+{
+  "body": {
+    "color": {
+      "primary": {
+        "background": {
+          "value": "{color.base.graphite.10.value}",
+          "component": "layout",
+          "deprecated":"body-bg-color-primary"
+        },
+        "font": {
+          "value": "{color.font.base.value}",
+          "component": "layout",
+          "deprecated":"body-text-color"
+        }
+      },
+      "secondary": {
+        "background": {
+          "value": "{color.base.white.value}",
+          "component": "layout",
+          "deprecated":"body-bg-color-secondary"
+        }
+      }
+    }
+  }
+}
