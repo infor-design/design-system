@@ -22,10 +22,6 @@
                     "deprecated":"list-hover-color",
                     "component": "lists",
                     "value": "{color.base.graphite.20.value}"
-                },
-                "font": {
-                    "value": "{}",
-                    "component": "lists"
                 }
             },
             "selected": {
