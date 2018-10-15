@@ -248,7 +248,7 @@
                 },
                 "hover": {
                     "font": {
-                        "value": "{color.base.graphite.10.value}",
+                        "value": "{color.base.graphite.100.value}",
                         "component": "buttons",
                         "deprecated":"button-link-hover-text-color"
                     }
