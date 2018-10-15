@@ -1,100 +1,100 @@
 {
-  "dropdown": {
-    "color": {
-      "base": {
-        "font": {
-          "deprecated":"dropdown-color",
-          "component": "dropdown",
-          "value": "{color.base.graphite.10.value}"
+    "dropdown": {
+        "color": {
+            "base": {
+                "font": {
+                    "deprecated":"dropdown-color",
+                    "component": "dropdown",
+                    "value": "{color.base.graphite.100.value}"
+                },
+                "filter": {
+                    "deprecated":"dropdown-filter-color",
+                    "component": "dropdown",
+                    "value": "{color.base.graphite.100.value}"
+                },
+                "group-label": {
+                    "deprecated":"dropdown-group-label-color",
+                    "component": "dropdown",
+                    "value": "{color.base.graphite.50.value}"
+                },
+                "menu-border": {
+                    "deprecated":"dropdown-menu-border-color",
+                    "component": "dropdown",
+                    "value": "{color.brand.primary.base.value}"
+                },
+                "menu-separator-border": {
+                    "deprecated":"dropdown-menu-separator-border-color",
+                    "component": "dropdown",
+                    "value": "{color.base.graphite.30.value}"
+                },
+                "menu-separator": {
+                    "deprecated":"dropdown-menu-separator-color",
+                    "component": "dropdown",
+                    "value": "{color.base.graphite.40.value}"
+                },
+                "search": {
+                    "deprecated":"dropdown-search-color",
+                    "component": "dropdown",
+                    "value": "{color.base.graphite.50.value}"
+                }
+            },
+            "selected": {
+                "background": {
+                    "deprecated":"dropdown-selected-bg-color",
+                    "component": "dropdown",
+                    "value": "{color.brand.primary.base.value}"
+                },
+                "font": {
+                    "deprecated":"dropdown-selected-color",
+                    "component": "dropdown",
+                    "value": "{color.base.white.value}"
+                }
+            }
         },
-        "filter": {
-          "deprecated":"dropdown-filter-color",
-          "component": "dropdown",
-          "value": "{color.base.graphite.10.value}"
-        },
-        "group-label": {
-          "deprecated":"dropdown-group-label-color",
-          "component": "dropdown",
-          "value": "{color.base.graphite.50.value}"
-        },
-        "menu-border": {
-          "deprecated":"dropdown-menu-border-color",
-          "component": "dropdown",
-          "value": "{color.brand.primary.base.value}"
-        },
-        "menu-separator-border": {
-          "deprecated":"dropdown-menu-separator-border-color",
-          "component": "dropdown",
-          "value": "{color.base.graphite.30.value}"
-        },
-        "menu-separator": {
-          "deprecated":"dropdown-menu-separator-color",
-          "component": "dropdown",
-          "value": "{color.base.graphite.40.value}"
-        },
-        "search": {
-          "deprecated":"dropdown-search-color",
-          "component": "dropdown",
-          "value": "{color.base.graphite.50.value}"
-        }
-      },
-      "selected": {
-        "background": {
-          "deprecated":"dropdown-selected-bg-color",
-          "component": "dropdown",
-          "value": "{color.brand.primary.base.value}"
-        },
-        "font": {
-          "deprecated":"dropdown-selected-color",
-          "component": "dropdown",
-          "value": "{color.base.white.value}"
-        }
-      }
-    },
 
-    "size": {
-      "font": {
-        "deprecated":"dropdown-font-size",
-        "component": "dropdown",
-        "value": "{size.font.base.value}"
-      },
-      "border-radius": {
-        "deprecated":"dropdown-list-border-radius",
-        "component": "dropdown",
-        "value": "{number.border-radius.md.value}"
-      },
-      "border-width": {
-        "value": "{input.size.border.width.value}",
-        "component": "dropdown"
-      },
-      "max-height": {
-        "deprecated":"dropdown-list-max-height",
-        "component": "dropdown",
-        "value": "300px"
-      },
-      "min-height": {
-        "deprecated":"dropdown-list-min-height",
-        "component": "dropdown",
-        "value": "30px"
-      },
-      "padding": {
-        "deprecated":"dropdown-padding",
-        "component": "dropdown",
-        "value": "8px 30px 8px 10px"
-      }
-    },
+        "size": {
+            "font": {
+                "deprecated":"dropdown-font-size",
+                "component": "dropdown",
+                "value": "{size.font.base.value}"
+            },
+            "border-radius": {
+                "deprecated":"dropdown-list-border-radius",
+                "component": "dropdown",
+                "value": "{number.border-radius.md.value}"
+            },
+            "border-width": {
+                "value": "{input.size.border.width.value}",
+                "component": "dropdown"
+            },
+            "max-height": {
+                "deprecated":"dropdown-list-max-height",
+                "component": "dropdown",
+                "value": "300px"
+            },
+            "min-height": {
+                "deprecated":"dropdown-list-min-height",
+                "component": "dropdown",
+                "value": "30px"
+            },
+            "padding": {
+                "deprecated":"dropdown-padding",
+                "component": "dropdown",
+                "value": "8px 30px 8px 10px"
+            }
+        },
 
-    "shadow": {
-      "box": {
-        "deprecated":"dropdown-box-shadow",
-        "component": "dropdown",
-        "value": "0 5px 5px {color.box-shadow.base.value}"
-      },
-      "box-top": {
-        "deprecated":"dropdown-box-shadow-top",
-        "component": "dropdown",
-        "value": "0 -5px 5px {color.box-shadow.base.value}"
-      }
+        "shadow": {
+            "box": {
+                "deprecated":"dropdown-box-shadow",
+                "component": "dropdown",
+                "value": "0 5px 5px {color.box-shadow.base.value}"
+            },
+            "box-top": {
+                "deprecated":"dropdown-box-shadow-top",
+                "component": "dropdown",
+                "value": "0 -5px 5px {color.box-shadow.base.value}"
+            }
+        }
     }
-  }
 }

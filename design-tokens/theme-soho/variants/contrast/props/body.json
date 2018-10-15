@@ -1,25 +1,25 @@
 {
-  "body": {
-    "color": {
-      "primary": {
-        "background": {
-          "value": "{color.base.graphite.20.value}",
-          "component": "layout",
-          "deprecated":"body-bg-color-primary"
-        },
-        "font": {
-          "value": "{color.base.black.value}",
-          "component": "layout",
-          "deprecated":"body-text-color"
+    "body": {
+        "color": {
+            "primary": {
+                "background": {
+                    "value": "{color.base.graphite.20.value}",
+                    "component": "layout",
+                    "deprecated":"body-bg-color-primary"
+                },
+                "font": {
+                    "value": "{color.base.black.value}",
+                    "component": "layout",
+                    "deprecated":"body-text-color"
+                }
+            },
+            "secondary": {
+                "background": {
+                    "value": "{color.base.graphite.20.value}",
+                    "component": "layout",
+                    "deprecated":"body-bg-color-secondary"
+                }
+            }
         }
-      },
-      "secondary": {
-        "background": {
-          "value": "{color.base.graphite.20.value}",
-          "component": "layout",
-          "deprecated":"body-bg-color-secondary"
-        }
-      }
     }
-  }
 }

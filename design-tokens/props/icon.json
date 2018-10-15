@@ -1,17 +1,17 @@
 {
-  "icon-fill": {
-    "deprecated":"icon-fill",
-    "component": "icons",
-    "value": "{color.base.graphite.40.value}"
-  },
-  "icon-height": {
-    "deprecated":"icon-height",
-    "component": "icons",
-    "value": "17px"
-  },
-  "icon-width": {
-    "deprecated":"icon-width",
-    "component": "icons",
-    "value": "22px"
-  }
+    "icon-fill": {
+        "deprecated":"icon-fill",
+        "component": "icons",
+        "value": "{color.base.graphite.40.value}"
+    },
+    "icon-height": {
+        "deprecated":"icon-height",
+        "component": "icons",
+        "value": "17px"
+    },
+    "icon-width": {
+        "deprecated":"icon-width",
+        "component": "icons",
+        "value": "22px"
+    }
 }

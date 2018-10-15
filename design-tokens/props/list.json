@@ -1,46 +1,42 @@
 {
-  "list": {
-    "color": {
-      "font": {
-        "heading": {
-          "value": "{color.base.graphite.20.value}",
-          "component": "lists"
-        },
-        "item": {
-          "value": "{color.font.info.value}",
-          "component": "lists"
+    "list": {
+        "color": {
+            "font": {
+                "heading": {
+                    "value": "{color.base.graphite.20.value}",
+                    "component": "lists"
+                },
+                "item": {
+                    "value": "{color.font.info.value}",
+                    "component": "lists"
+                }
+            },
+            "divider": {
+                "border": {
+                    "value": "{color.border.base.value}",
+                    "component": "lists"
+                }
+            },
+            "hover": {
+                "background": {
+                    "deprecated":"list-hover-color",
+                    "component": "lists",
+                    "value": "{color.base.graphite.20.value}"
+                }
+            },
+            "selected": {
+                "background": {
+                    "deprecated":"list-selected-color",
+                    "component": "lists",
+                    "value": "{color.base.graphite.10.value}"
+                }
+            },
+            "accordion": {
+                "hover": {
+                    "value": "{color.font.base.value}",
+                    "component": "lists"
+                }
+            }
         }
-      },
-      "divider": {
-        "border": {
-          "value": "{color.border.base.value}",
-          "component": "lists"
-        }
-      },
-      "hover": {
-        "background": {
-          "deprecated":"list-hover-color",
-          "component": "lists",
-          "value": "{color.base.graphite.20.value}"
-        },
-        "font": {
-          "value": "{}",
-          "component": "lists"
-        }
-      },
-      "selected": {
-        "background": {
-          "deprecated":"list-selected-color",
-          "component": "lists",
-          "value": "{color.base.graphite.10.value}"
-        }
-      },
-      "accordion": {
-        "hover": {
-          "value": "{color.font.base.value}",
-          "component": "lists"
-        }
-      }
     }
-  }
 }
