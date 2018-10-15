@@ -5,12 +5,12 @@
                 "font": {
                     "deprecated":"dropdown-color",
                     "component": "dropdown",
-                    "value": "{color.base.graphite.10.value}"
+                    "value": "{color.base.graphite.100.value}"
                 },
                 "filter": {
                     "deprecated":"dropdown-filter-color",
                     "component": "dropdown",
-                    "value": "{color.base.graphite.10.value}"
+                    "value": "{color.base.graphite.100.value}"
                 },
                 "group-label": {
                     "deprecated":"dropdown-group-label-color",

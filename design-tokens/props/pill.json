@@ -5,7 +5,7 @@
                 "alert": {
                     "deprecated":"pill-alert-color",
                     "component": "pills",
-                    "value": "{color.base.graphite.10.value}"
+                    "value": "{color.base.graphite.100.value}"
                 },
                 "error": {
                     "deprecated":"pill-error-color",
@@ -33,7 +33,7 @@
                     "font": {
                         "deprecated":"pill-neutral-color",
                         "component": "pills",
-                        "value": "{color.base.graphite.10.value}"
+                        "value": "{color.base.graphite.100.value}"
                     },
                     "icon": {
                         "deprecated":"pill-neutral-icon-color",
@@ -55,7 +55,7 @@
                     "font": {
                         "deprecated":"pill-secondary-color",
                         "component": "pills",
-                        "value": "{color.base.graphite.10.value}"
+                        "value": "{color.base.graphite.100.value}"
                     }
                 },
                 "success": {
@@ -74,7 +74,7 @@
                     "icon": {
                         "deprecated":"pill-neutral-hover-icon-color",
                         "component": "pills",
-                        "value": "{color.base.graphite.10.value}"
+                        "value": "{color.base.graphite.100.value}"
                     }
                 }
             }

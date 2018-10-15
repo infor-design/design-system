@@ -20,7 +20,7 @@
                 "header": {
                     "deprecated":"notification-header-color",
                     "component": "notifications",
-                    "value": "{color.base.graphite.10.value}"
+                    "value": "{color.base.graphite.100.value}"
                 },
                 "separator": {
                     "deprecated":"notification-separator-color",
@@ -47,7 +47,7 @@
                 "font": {
                     "deprecated":"notification-alternate-color",
                     "component": "notifications",
-                    "value": "{color.base.graphite.10.value}"
+                    "value": "{color.base.graphite.100.value}"
                 },
                 "header": {
                     "deprecated":"notification-alternate-table-header",
