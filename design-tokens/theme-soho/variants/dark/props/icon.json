@@ -1,0 +1,18 @@
+{
+    "icon": {
+        "base": {
+            "base": {
+                "base": {
+                    "base": {
+                        "value": "22px",
+                        "deprecated": "icon-width"
+                    },
+                    "fill": {
+                        "value": "{color.base.graphite.40.value}",
+                        "deprecated": "icon-fill"
+                    }
+                }
+            }
+        }
+    }
+}

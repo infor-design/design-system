@@ -1,0 +1,20 @@
+{
+    "list": {
+        "color": {
+            "base": {
+                "hover": {
+                    "base": {
+                        "value": "{color.base.graphite.20.value}",
+                        "deprecated": "list-hover-color"
+                    }
+                },
+                "selected": {
+                    "base": {
+                        "value": "{color.base.graphite.10.value}",
+                        "deprecated": "list-selected-color"
+                    }
+                }
+            }
+        }
+    }
+}

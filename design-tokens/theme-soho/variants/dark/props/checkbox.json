@@ -1,0 +1,80 @@
+{
+    "checkbox": {
+        "size": {
+            "base": {
+                "base": {
+                    "base": {
+                        "value": "17px",
+                        "deprecated": "checkbox-box-size"
+                    }
+                }
+            }
+        },
+        "base": {
+            "base": {
+                "base": {
+                    "base": {
+                        "value": "5px",
+                        "deprecated": "checkbox-check-w"
+                    }
+                },
+                "focus": {
+                    "shadow": {
+                        "value": "{color.base.graphite.10.value}",
+                        "deprecated": "checkbox-focus-shadow"
+                    }
+                }
+            }
+        },
+        "color": {
+            "base": {
+                "base": {
+                    "base": {
+                        "value": "{COLOR_PRIMARY_CONTRAST}",
+                        "deprecated": "checkbox-arrow-color"
+                    },
+                    "background": {
+                        "value": "transparent",
+                        "deprecated": "checkbox-bg-color"
+                    },
+                    "border": {
+                        "value": "{BORDER_COLOR}",
+                        "deprecated": "checkbox-border-color"
+                    }
+                },
+                "disabled": {
+                    "base": {
+                        "value": "#f4f4f4",
+                        "deprecated": "checkbox-disabled-arrow-color"
+                    },
+                    "background": {
+                        "value": "transparent",
+                        "deprecated": "checkbox-disabled-bg-color"
+                    },
+                    "border": {
+                        "value": "{color.base.graphite.30.value}",
+                        "deprecated": "checkbox-disabled-border-color"
+                    },
+                    "text": {
+                        "value": "{color.base.graphite.40.value}",
+                        "deprecated": "checkbox-disabled-text-color"
+                    }
+                },
+                "hover": {
+                    "border": {
+                        "value": "{color.base.graphite.80.value}",
+                        "deprecated": "checkbox-hover-border-color"
+                    }
+                }
+            },
+            "checked": {
+                "checked": {
+                    "background": {
+                        "value": "{color.base.graphite.30.value}",
+                        "deprecated": "checkbox-disabled-checked-bg-color"
+                    }
+                }
+            }
+        }
+    }
+}

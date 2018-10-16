@@ -1,0 +1,42 @@
+{
+    "link": {
+        "color": {
+            "base": {
+                "base": {
+                    "base": {
+                        "value": "{COLOR_PRIMARY}",
+                        "deprecated": "link-color"
+                    }
+                },
+                "disabled": {
+                    "base": {
+                        "value": "{color.base.graphite.40.value}",
+                        "deprecated": "link-disabled-color"
+                    }
+                },
+                "hover": {
+                    "base": {
+                        "value": "{COLOR_PRIMARY_ALT}",
+                        "deprecated": "link-hover-color"
+                    }
+                },
+                "visited": {
+                    "base": {
+                        "value": "{color.base.amethyst.60.value}",
+                        "deprecated": "link-visited-color"
+                    }
+                }
+            }
+        },
+        "base": {
+            "base": {
+                "base": {
+                    "base": {
+                        "value": "underline",
+                        "deprecated": "link-decoration"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+---
+  imports:
+    - "../core.alias.yml"
+
+  global:
+    category: "links"
+
+  props:
+    link-color:
+      value: "{!COLOR_PRIMARY}"
+      type: "color"
+    link-disabled-color:
+      value: "{!PALETTE_GRAPHITE_4}"
+      type: "color"
+    link-hover-color:
+      value: "{!COLOR_PRIMARY_ALT}"
+      type: "color"
+    link-visited-color:
+      value: "{!PALETTE_AMETHYST_6}"
+      type: "color"
+    link-decoration:
+      value: "underline"
+      type: "style"

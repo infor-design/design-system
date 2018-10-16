@@ -1,0 +1,44 @@
+{
+    "pill": {
+        "color": {
+            "base": {
+                "base": {
+                    "base": {
+                        "value": "{color.base.graphite.60.value}",
+                        "deprecated": "pill-neutral-icon-color"
+                    },
+                    "background": {
+                        "value": "{COLOR_PRIMARY_ALT}",
+                        "deprecated": "pill-info-bg-color"
+                    }
+                },
+                "hover": {
+                    "background": {
+                        "value": "{color.base.graphite.30.value}",
+                        "deprecated": "pill-neutral-hover-bg-color"
+                    },
+                    "base": {
+                        "value": "{color.base.graphite.100.value}",
+                        "deprecated": "pill-neutral-hover-icon-color"
+                    }
+                }
+            },
+            "secondary": {
+                "base": {
+                    "base": {
+                        "value": "{color.base.graphite.100.value}",
+                        "deprecated": "pill-secondary-color"
+                    },
+                    "background": {
+                        "value": "{COLOR_PRIMARY_CONTRAST}",
+                        "deprecated": "pill-secondary-bg-color"
+                    },
+                    "border": {
+                        "value": "{color.base.graphite.30.value}",
+                        "deprecated": "pill-secondary-border-color"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "notification": {
+        "color": {
+            "base": {
+                "base": {
+                    "background": {
+                        "value": "{color.base.white.value}",
+                        "deprecated": "notification-alternate-title-bg-color"
+                    },
+                    "border": {
+                        "value": "{color.base.graphite.30.value}",
+                        "deprecated": "notification-arrow-border-color"
+                    },
+                    "base": {
+                        "value": "{color.base.graphite.10.value}",
+                        "deprecated": "notification-alternate-arrow-color"
+                    },
+                    "text": {
+                        "value": "{TEXT_COLOR_INFO}",
+                        "deprecated": "notification-text-color"
+                    }
+                }
+            }
+        },
+        "base": {
+            "base": {
+                "base": {
+                    "shadow": {
+                        "value": "0 2px 5px {BOX_SHADOW_COLOR}",
+                        "deprecated": "notification-box-shadow"
+                    },
+                    "base": {
+                        "value": "{color.base.graphite.10.value}",
+                        "deprecated": "notification-alternate-table-header"
+                    }
+                }
+            }
+        }
+    }
+}

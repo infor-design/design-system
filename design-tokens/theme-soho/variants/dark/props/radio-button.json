@@ -1,0 +1,70 @@
+{
+    "radio": {
+        "color": {
+            "base": {
+                "base": {
+                    "background": {
+                        "value": "transparent",
+                        "deprecated": "radio-bg-color"
+                    },
+                    "border": {
+                        "value": "{BORDER_COLOR}",
+                        "deprecated": "radio-border-color"
+                    },
+                    "base": {
+                        "value": "{COLOR_PRIMARY_CONTRAST}",
+                        "deprecated": "radio-color"
+                    }
+                },
+                "disabled": {
+                    "background": {
+                        "value": "transparent",
+                        "deprecated": "radio-disabled-bg-color"
+                    },
+                    "border": {
+                        "value": "{color.base.graphite.30.value}",
+                        "deprecated": "radio-disabled-border-color"
+                    }
+                },
+                "hover": {
+                    "border": {
+                        "value": "{color.base.graphite.80.value}",
+                        "deprecated": "radio-border-hover-color"
+                    }
+                }
+            },
+            "checked": {
+                "checked": {
+                    "base": {
+                        "value": "{COLOR_PRIMARY}",
+                        "deprecated": "radio-checked-color"
+                    },
+                    "background": {
+                        "value": "{color.base.graphite.10.value}",
+                        "deprecated": "radio-disabled-checked-bg-color"
+                    }
+                }
+            }
+        },
+        "base": {
+            "base": {
+                "base": {
+                    "border": {
+                        "value": "50%",
+                        "deprecated": "radio-border-radius"
+                    },
+                    "base": {
+                        "value": "4px",
+                        "deprecated": "radio-inner-w"
+                    }
+                },
+                "focus": {
+                    "shadow": {
+                        "value": "{color.base.graphite.10.value}",
+                        "deprecated": "radio-focus-shadow"
+                    }
+                }
+            }
+        }
+    }
+}

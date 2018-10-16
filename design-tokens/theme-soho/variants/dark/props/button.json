@@ -1,0 +1,100 @@
+{
+    "button": {
+        "color": {
+            "default": {
+                "base": {
+                    "background": {
+                        "value": "{color.base.slate.30.value}",
+                        "deprecated": "button-default-bg-color"
+                    },
+                    "text": {
+                        "value": "{color.base.slate.100.value}",
+                        "deprecated": "button-default-text-color"
+                    }
+                },
+                "focus": {
+                    "background": {
+                        "value": "{COLOR_PRIMARY}",
+                        "deprecated": "button-default-focus-bg-color"
+                    },
+                    "border": {
+                        "value": "{COLOR_PRIMARY}",
+                        "deprecated": "button-default-focus-border-color"
+                    }
+                },
+                "hover": {
+                    "background": {
+                        "value": "{color.base.slate.40.value}",
+                        "deprecated": "button-default-hover-bg-color"
+                    }
+                },
+                "active": {
+                    "background": {
+                        "value": "{color.base.slate.40.value}",
+                        "deprecated": "button-default-active-bg-color"
+                    }
+                },
+                "disabled": {
+                    "background": {
+                        "value": "{color.base.slate.30.value}",
+                        "deprecated": "button-default-disabled-bg-color"
+                    },
+                    "text": {
+                        "value": "{color.base.slate.100.value}",
+                        "deprecated": "button-default-disabled-text-color"
+                    },
+                    "border": {
+                        "value": "{color.base.slate.30.value}",
+                        "deprecated": "button-default-disabled-border-color"
+                    }
+                }
+            },
+            "primary": {
+                "base": {
+                    "background": {
+                        "value": "{color.base.azure.60.value}",
+                        "deprecated": "button-primary-bg-color"
+                    }
+                },
+                "hover": {
+                    "background": {
+                        "value": "{color.base.azure.80.value}",
+                        "deprecated": "button-primary-hover-bg-color"
+                    }
+                },
+                "active": {
+                    "background": {
+                        "value": "{color.base.azure.70.value}",
+                        "deprecated": "button-primary-active-bg-color"
+                    }
+                }
+            },
+            "base": {
+                "base": {
+                    "text": {
+                        "value": "{COLOR_PRIMARY}",
+                        "deprecated": "button-link-open-text-color"
+                    }
+                },
+                "hover": {
+                    "text": {
+                        "value": "{color.base.white.value}",
+                        "deprecated": "button-link-hover-text-color"
+                    }
+                },
+                "active": {
+                    "text": {
+                        "value": "{color.base.white.value}",
+                        "deprecated": "button-link-active-text-color"
+                    }
+                },
+                "disabled": {
+                    "text": {
+                        "value": "{color.base.slate.30.value}",
+                        "deprecated": "button-link-disabled-text-color"
+                    }
+                }
+            }
+        }
+    }
+}
