@@ -1,0 +1,9 @@
+[<% _.each(allProperties, function(prop, idx) { %>
+{
+  "name": "<%= prop.name %>",
+  "value": "<%= prop.value %>",
+  "category": "<%= prop.attributes.category %>",
+  "original": {
+    "value": "<%= prop.original.value %>"
+  }
+}<% if (idx < allProperties.length - 1) { %>,<% } %><% }); %>]
