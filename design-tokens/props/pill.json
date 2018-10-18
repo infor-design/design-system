@@ -1,18 +1,26 @@
 {
     "pill": {
         "color": {
-            "base": {
-                "alert": {
-                    "deprecated":"pill-alert-color",
-                    "component": "pills",
-                    "value": "{color.base.graphite.100.value}"
-                },
-                "error": {
-                    "deprecated":"pill-error-color",
-                    "component": "pills",
-                    "value": "{color.brand.primary.contrast.value}"
-                },
-                "info": {
+            "alert": {
+                "base": {
+                    "font": {
+                        "deprecated":"pill-alert-color",
+                        "component": "pills",
+                        "value": "{color.base.graphite.100.value}"
+                    }
+                }
+            },
+            "error": {
+                "base": {
+                    "font": {
+                        "deprecated":"pill-error-color",
+                        "component": "pills",
+                        "value": "{color.brand.primary.contrast.value}"
+                    }
+                }
+            },
+            "info": {
+                "base": {
                     "background": {
                         "deprecated":"pill-info-bg-color",
                         "component": "pills",
@@ -23,8 +31,10 @@
                         "component": "pills",
                         "value": "{color.brand.primary.contrast.value}"
                     }
-                },
-                "neutral": {
+                }
+            },
+            "neutral": {
+                "base": {
                     "background": {
                         "deprecated":"pill-neutral-bg-color",
                         "component": "pills",
@@ -41,7 +51,21 @@
                         "value": "{color.base.graphite.60.value}"
                     }
                 },
-                "secondary": {
+                "hover": {
+                    "background": {
+                        "deprecated":"pill-neutral-hover-bg-color",
+                        "component": "pills",
+                        "value": "{color.base.graphite.30.value}"
+                    },
+                    "icon": {
+                        "deprecated":"pill-neutral-hover-icon-color",
+                        "component": "pills",
+                        "value": "{color.base.graphite.100.value}"
+                    }
+                }
+            },
+            "secondary": {
+                "base": {
                     "background": {
                         "deprecated":"pill-secondary-bg-color",
                         "component": "pills",
@@ -57,24 +81,14 @@
                         "component": "pills",
                         "value": "{color.base.graphite.100.value}"
                     }
-                },
-                "success": {
-                    "deprecated":"pill-good-color",
-                    "component": "pills",
-                    "value": "{color.brand.primary.contrast.value}"
                 }
             },
-            "hover": {
-                "netural": {
-                    "background": {
-                        "deprecated":"pill-neutral-hover-bg-color",
+            "success": {
+                "base": {
+                    "font": {
+                        "deprecated":"pill-good-color",
                         "component": "pills",
-                        "value": "{color.base.graphite.30.value}"
-                    },
-                    "icon": {
-                        "deprecated":"pill-neutral-hover-icon-color",
-                        "component": "pills",
-                        "value": "{color.base.graphite.100.value}"
+                        "value": "{color.brand.primary.contrast.value}"
                     }
                 }
             }

@@ -1,117 +1,111 @@
 {
     "radio": {
-
-        "color": {
-
-            "unchecked": {
-
-                "base": {
-                    "background": {
-                        "deprecated":"radio-bg-color",
+        "shadow": {
+            "default": {
+                "focus": {
+                    "boxshadow": {
                         "component": "radio buttons",
-                        "value": "transparent"
-                    },
-                    "border": {
-                        "deprecated":"radio-border-color",
-                        "component": "radio buttons",
-                        "value": "{color.border.base.value}"
-                    },
-                    "fill": {
-                        "deprecated":"radio-color",
-                        "component": "radio buttons",
-                        "value": "{color.brand.primary.contrast.value}"
-                    }
-                },
-
-                "hover": {
-                    "border": {
-                        "deprecated":"radio-border-hover-color",
-                        "component": "radio buttons",
-                        "value": "{color.base.graphite.80.value}"
-                    }
-                },
-
-                "disabled": {
-                    "background": {
-                        "deprecated":"radio-disabled-bg-color",
-                        "component": "radio buttons",
-                        "value": "transparent"
-                    },
-                    "border": {
-                        "deprecated":"radio-disabled-border-color",
-                        "component": "radio buttons",
-                        "value": "{color.base.graphite.30.value}"
+                        "deprecated": "radio-focus-shadow",
+                        "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
                     }
                 }
-            },
-
+            }
+        },
+        "color": {
             "checked": {
                 "base": {
                     "background": {
-                        "deprecated":"radio-checked-bg-color",
                         "component": "radio buttons",
+                        "deprecated": "radio-checked-bg-color",
                         "value": "{color.brand.primary.contrast.value}"
                     },
                     "fill": {
-                        "deprecated":"radio-checked-color",
                         "component": "radio buttons",
+                        "deprecated": "radio-checked-color",
                         "value": "{color.brand.primary.base.value}"
                     }
                 },
                 "disabled": {
                     "background": {
-                        "deprecated":"radio-disabled-checked-bg-color",
                         "component": "radio buttons",
+                        "deprecated": "radio-disabled-checked-bg-color",
                         "value": "{color.base.graphite.10.value}"
                     },
                     "border": {
-                        "value": "{radio.color.unchecked.disabled.border.value}",
-                        "component": "radio buttons"
+                        "component": "radio buttons",
+                        "value": "{radio.color.unchecked.disabled.border.value}"
+                    }
+                }
+            },
+            "initial": {
+                "base": {
+                    "background": {
+                        "component": "radio buttons",
+                        "deprecated": "radio-bg-color",
+                        "value": "transparent"
+                    },
+                    "border": {
+                        "component": "radio buttons",
+                        "deprecated": "radio-border-color",
+                        "value": "{color.border.base.value}"
+                    },
+                    "fill": {
+                        "component": "radio buttons",
+                        "deprecated": "radio-color",
+                        "value": "{color.brand.primary.contrast.value}"
+                    }
+                },
+                "disabled": {
+                    "background": {
+                        "component": "radio buttons",
+                        "deprecated": "radio-disabled-bg-color",
+                        "value": "transparent"
+                    },
+                    "border": {
+                        "component": "radio buttons",
+                        "deprecated": "radio-disabled-border-color",
+                        "value": "{color.base.graphite.30.value}"
+                    }
+                },
+                "hover": {
+                    "border": {
+                        "component": "radio buttons",
+                        "deprecated": "radio-border-hover-color",
+                        "value": "{color.base.graphite.80.value}"
                     }
                 }
             }
         },
-
-        "shadow": {
-            "focus": {
-                "box": {
-                    "deprecated":"radio-focus-shadow",
-                    "component": "radio buttons",
-                    "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
-                }
-            }
-        },
-
         "size": {
-            "outer": {
-                "height": {
-                    "deprecated":"radio-outer-h",
+            "border": {
+                "radius": {
                     "component": "radio buttons",
-                    "value": "14px"
-                },
-                "width": {
-                    "deprecated":"radio-outer-w",
-                    "component": "radio buttons",
-                    "value": "14px"
+                    "deprecated": "radio-border-radius",
+                    "value": "50%"
                 }
             },
             "inner": {
                 "height": {
-                    "deprecated":"radio-inner-h",
                     "component": "radio buttons",
+                    "deprecated": "radio-inner-h",
                     "value": "4px"
                 },
                 "width": {
-                    "deprecated":"radio-inner-w",
                     "component": "radio buttons",
+                    "deprecated": "radio-inner-w",
                     "value": "4px"
                 }
             },
-            "border": {
-                "radius": {
-                    "deprecated":"radio-border-radius",
+            "outer": {
+                "height": {
                     "component": "radio buttons",
-                    "value": "50%"
+                    "deprecated": "radio-outer-h",
+                    "value": "14px"
+                },
+                "width": {
+                    "component": "radio buttons",
+                    "deprecated": "radio-outer-w",
+                    "value": "14px"
                 }
             }
         }

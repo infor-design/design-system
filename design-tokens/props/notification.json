@@ -1,7 +1,7 @@
 {
     "notification": {
         "color": {
-            "base": {
+            "default": {
                 "background": {
                     "deprecated":"notification-bg-color",
                     "component": "notifications",
@@ -45,32 +45,36 @@
                     "value": "{color.base.graphite.10.value}"
                 },
                 "font": {
-                    "deprecated":"notification-alternate-color",
-                    "component": "notifications",
-                    "value": "{color.base.graphite.100.value}"
-                },
-                "header": {
-                    "deprecated":"notification-alternate-table-header",
-                    "component": "notifications",
-                    "value": "{color.base.graphite.10.value}"
-                },
-                "subheader": {
-                    "deprecated":"notification-alternate-subheader-color",
-                    "component": "notifications",
-                    "value": "{color.base.graphite.60.value}"
-                },
-                "title-inverse": {
-                    "deprecated":"notification-alternate-title-bg-color",
-                    "component": "notifications",
-                    "value": "{color.base.white.value}"
+                    "base": {
+                        "deprecated":"notification-alternate-color",
+                        "component": "notifications",
+                        "value": "{color.base.graphite.100.value}"
+                    },
+                    "lighter": {
+                        "deprecated":"notification-alternate-subheader-color",
+                        "component": "notifications",
+                        "value": "{color.base.graphite.60.value}"
+                    },
+                    "lightest": {
+                        "deprecated":"notification-alternate-table-header",
+                        "component": "notifications",
+                        "value": "{color.base.graphite.10.value}"
+                    },
+                    "contrast": {
+                        "deprecated":"notification-alternate-title-bg-color",
+                        "component": "notifications",
+                        "value": "{color.base.white.value}"
+                    }
                 }
             }
         },
         "shadow": {
-            "box": {
-                "deprecated":"notification-box-shadow",
-                "component": "notifications",
-                "value": "0 2px 5px {color.box-shadow.base.value}"
+            "default": {
+                "boxshadow": {
+                    "deprecated":"notification-box-shadow",
+                    "component": "notifications",
+                    "value": "0 2px 5px {color.box-shadow.base.value}"
+                }
             }
         }
     }

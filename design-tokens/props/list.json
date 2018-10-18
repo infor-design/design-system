@@ -1,20 +1,22 @@
 {
     "list": {
         "color": {
-            "font": {
-                "heading": {
-                    "value": "{color.base.graphite.20.value}",
-                    "component": "lists"
+            "initial": {
+                "font": {
+                    "light": {
+                        "value": "{color.base.graphite.20.value}",
+                        "component": "lists"
+                    },
+                    "base": {
+                        "value": "{color.font.info.value}",
+                        "component": "lists"
+                    }
                 },
-                "item": {
-                    "value": "{color.font.info.value}",
-                    "component": "lists"
-                }
-            },
-            "divider": {
-                "border": {
-                    "value": "{color.border.base.value}",
-                    "component": "lists"
+                "divider": {
+                    "border": {
+                        "value": "{color.border.base.value}",
+                        "component": "lists"
+                    }
                 }
             },
             "hover": {

@@ -1,7 +1,7 @@
 {
     "dropdown": {
         "color": {
-            "base": {
+            "initial": {
                 "font": {
                     "deprecated":"dropdown-color",
                     "component": "dropdown",
@@ -85,15 +85,17 @@
         },
 
         "shadow": {
-            "box": {
-                "deprecated":"dropdown-box-shadow",
-                "component": "dropdown",
-                "value": "0 5px 5px {color.box-shadow.base.value}"
-            },
-            "box-top": {
-                "deprecated":"dropdown-box-shadow-top",
-                "component": "dropdown",
-                "value": "0 -5px 5px {color.box-shadow.base.value}"
+            "boxshadow": {
+                "base": {
+                    "deprecated":"dropdown-box-shadow",
+                    "component": "dropdown",
+                    "value": "0 5px 5px {color.box-shadow.base.value}"
+                },
+                "alt": {
+                    "deprecated":"dropdown-box-shadow-top",
+                    "component": "dropdown",
+                    "value": "0 -5px 5px {color.box-shadow.base.value}"
+                }
             }
         }
     }

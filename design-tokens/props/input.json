@@ -1,9 +1,13 @@
 {
     "input": {
         "color": {
-
-            "font": {
-                "label": {
+            "initial": {
+                "font": {
+                    "base": {
+                        "deprecated":"input-text-color",
+                        "component": "inputs",
+                        "value": "{color.font.base.value}"
+                    },
                     "light": {
                         "deprecated":"[input-info-block-text-color, input-placeholder-text-color]",
                         "component": "inputs",
@@ -14,10 +18,7 @@
                         "component": "inputs",
                         "value": "{color.font.info.value}"
                     }
-                }
-            },
-
-            "base": {
+                },
                 "background": {
                     "deprecated":"input-bg-color",
                     "component": "inputs",
@@ -27,11 +28,6 @@
                     "deprecated":"input-border-color",
                     "component": "inputs",
                     "value": "{color.border.base.value}"
-                },
-                "font": {
-                    "deprecated":"input-text-color",
-                    "component": "inputs",
-                    "value": "{color.font.base.value}"
                 }
             },
             "disabled": {
@@ -167,8 +163,8 @@
         },
 
         "shadow": {
-            "base": {
-                "box": {
+            "default": {
+                "initial": {
                     "deprecated":"input-box-shadow",
                     "component": "inputs",
                     "value": "none"

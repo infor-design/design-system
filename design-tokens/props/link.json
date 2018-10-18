@@ -1,7 +1,6 @@
 {
     "link": {
-
-        "text": {
+        "font": {
             "base": {
                 "decoration": {
                     "deprecated":"link-decoration",
@@ -12,7 +11,7 @@
         },
 
         "color": {
-            "base": {
+            "initial": {
                 "font": {
                     "deprecated":"link-color",
                     "component": "links",

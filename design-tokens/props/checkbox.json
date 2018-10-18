@@ -3,9 +3,9 @@
 
         "color": {
 
-            "unchecked": {
+            "base": {
 
-                "base": {
+                "initial": {
                     "arrow": {
                         "deprecated":"checkbox-arrow-color",
                         "component": "checkboxes",
@@ -122,11 +122,13 @@
         },
 
         "shadow": {
-            "focus": {
-                "box": {
-                    "deprecated":"checkbox-focus-shadow",
-                    "component": "checkboxes",
-                    "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}"
+            "default": {
+                "focus": {
+                    "boxshadow": {
+                        "deprecated":"checkbox-focus-shadow",
+                        "component": "checkboxes",
+                        "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}"
+                    }
                 }
             }
         }
