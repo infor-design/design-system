@@ -1,17 +1,14 @@
 {
     "icon": {
         "fill": {
-            "component": "icons",
             "deprecated": "icon-fill",
             "value": "{color.base.graphite.40.value}"
         },
         "height": {
-            "component": "icons",
             "deprecated": "icon-height",
             "value": "17px"
         },
         "width": {
-            "component": "icons",
             "deprecated": "icon-width",
             "value": "22px"
         }

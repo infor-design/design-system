@@ -8,16 +8,6 @@
                         "value": "{color.base.slate.40.value}"
                     }
                 },
-                "base": {
-                    "background": {
-                        "deprecated": "button-default-bg-color",
-                        "value": "{color.base.slate.30.value}"
-                    },
-                    "font": {
-                        "deprecated": "button-default-text-color",
-                        "value": "{color.base.slate.100.value}"
-                    }
-                },
                 "disabled": {
                     "background": {
                         "deprecated": "button-default-disabled-bg-color",
@@ -32,20 +22,20 @@
                         "value": "{color.base.slate.100.value}"
                     }
                 },
-                "focus": {
-                    "background": {
-                        "deprecated": "button-default-focus-bg-color",
-                        "value": "{color.brand.primary.base.value}"
-                    },
-                    "border": {
-                        "deprecated": "button-default-focus-border-color",
-                        "value": "{color.brand.primary.base.value}"
-                    }
-                },
                 "hover": {
                     "background": {
                         "deprecated": "button-default-hover-bg-color",
                         "value": "{color.base.slate.40.value}"
+                    }
+                },
+                "initial": {
+                    "background": {
+                        "deprecated": "button-default-bg-color",
+                        "value": "{color.base.slate.30.value}"
+                    },
+                    "font": {
+                        "deprecated": "button-default-text-color",
+                        "value": "{color.base.slate.100.value}"
                     }
                 }
             },
@@ -56,16 +46,16 @@
                         "value": "{color.base.azure.70.value}"
                     }
                 },
-                "base": {
-                    "background": {
-                        "deprecated": "button-primary-bg-color",
-                        "value": "{color.base.azure.60.value}"
-                    }
-                },
                 "hover": {
                     "background": {
                         "deprecated": "button-primary-hover-bg-color",
                         "value": "{color.base.azure.80.value}"
+                    }
+                },
+                "initial": {
+                    "background": {
+                        "deprecated": "button-primary-bg-color",
+                        "value": "{color.base.azure.60.value}"
                     }
                 }
             },
@@ -74,12 +64,6 @@
                     "font": {
                         "deprecated": "button-link-active-text-color",
                         "value": "{color.base.white.value}"
-                    }
-                },
-                "base": {
-                    "font": {
-                        "deprecated": "button-link-text-color",
-                        "value": "{color.base.slate.30.value}"
                     }
                 },
                 "disabled": {
@@ -92,6 +76,12 @@
                     "font": {
                         "deprecated": "button-link-hover-text-color",
                         "value": "{color.base.white.value}"
+                    }
+                },
+                "initial": {
+                    "font": {
+                        "deprecated": "button-link-text-color",
+                        "value": "{color.base.slate.30.value}"
                     }
                 },
                 "open": {

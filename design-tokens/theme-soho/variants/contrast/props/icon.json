@@ -2,7 +2,7 @@
     "icon": {
         "fill": {
             "deprecated": "icon-fill",
-            "value": "{color.base.slate.30.value}"
+            "value": "{color.base.graphite.80.value}"
         }
     }
 }

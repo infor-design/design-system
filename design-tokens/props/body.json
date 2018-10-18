@@ -3,21 +3,18 @@
         "color": {
             "primary": {
                 "background": {
-                    "value": "{color.base.graphite.10.value}",
-                    "component": "layout",
-                    "deprecated":"body-bg-color-primary"
+                    "deprecated": "body-bg-color-primary",
+                    "value": "{color.base.graphite.10.value}"
                 },
                 "font": {
-                    "value": "{color.font.base.value}",
-                    "component": "layout",
-                    "deprecated":"body-text-color"
+                    "deprecated": "body-text-color",
+                    "value": "{color.font.base.value}"
                 }
             },
             "secondary": {
                 "background": {
-                    "value": "{color.base.white.value}",
-                    "component": "layout",
-                    "deprecated":"body-bg-color-secondary"
+                    "deprecated": "body-bg-color-secondary",
+                    "value": "{color.base.white.value}"
                 }
             }
         }

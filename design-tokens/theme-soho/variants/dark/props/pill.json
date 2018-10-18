@@ -1,41 +1,61 @@
 {
     "pill": {
         "color": {
-            "base": {
-                "base": {
-                    "base": {
-                        "value": "{color.base.graphite.60.value}",
-                        "deprecated": "pill-neutral-icon-color"
-                    },
+            "info": {
+                "initial": {
                     "background": {
-                        "value": "{COLOR_PRIMARY_ALT}",
-                        "deprecated": "pill-info-bg-color"
+                        "deprecated": "pill-info-bg-color",
+                        "value": "{color.brand.primary.base.value}"
                     }
-                },
+                }
+            },
+            "neutral": {
                 "hover": {
                     "background": {
-                        "value": "{color.base.graphite.30.value}",
-                        "deprecated": "pill-neutral-hover-bg-color"
+                        "deprecated": "pill-neutral-hover-bg-color",
+                        "value": "{color.base.slate.50.value}"
                     },
-                    "base": {
-                        "value": "{color.base.graphite.100.value}",
-                        "deprecated": "pill-neutral-hover-icon-color"
+                    "icon": {
+                        "deprecated": "pill-neutral-hover-icon-color",
+                        "value": "{color.base.slate.30.value}"
+                    }
+                },
+                "initial": {
+                    "background": {
+                        "deprecated": "pill-neutral-bg-color",
+                        "value": "{color.base.graphite.20.value}"
+                    },
+                    "font": {
+                        "deprecated": "pill-neutral-color",
+                        "value": "{color.brand.primary.contrast}"
+                    },
+                    "icon": {
+                        "deprecated": "pill-neutral-icon-color",
+                        "value": "{color.base.slate.60.value}"
                     }
                 }
             },
             "secondary": {
-                "base": {
-                    "base": {
-                        "value": "{color.base.graphite.100.value}",
-                        "deprecated": "pill-secondary-color"
-                    },
+                "initial": {
                     "background": {
-                        "value": "{COLOR_PRIMARY_CONTRAST}",
-                        "deprecated": "pill-secondary-bg-color"
+                        "deprecated": "pill-secondary-bg-color",
+                        "value": "{color.base.slate.70.value}"
                     },
                     "border": {
-                        "value": "{color.base.graphite.30.value}",
-                        "deprecated": "pill-secondary-border-color"
+                        "deprecated": "pill-secondary-border-color",
+                        "value": "{color.base.slate.50.value}"
+                    },
+                    "font": {
+                        "deprecated": "pill-secondary-color",
+                        "value": "{color.brand.primary.contrast.value}"
+                    }
+                }
+            },
+            "success": {
+                "initial": {
+                    "font": {
+                        "deprecated": "pill-good-color",
+                        "value": "{color.brand.primary.contrast.value}"
                     }
                 }
             }

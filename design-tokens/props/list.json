@@ -1,42 +1,31 @@
 {
     "list": {
         "color": {
-            "initial": {
-                "font": {
-                    "light": {
-                        "value": "{color.base.graphite.20.value}",
-                        "component": "lists"
-                    },
-                    "base": {
-                        "value": "{color.font.info.value}",
-                        "component": "lists"
-                    }
-                },
-                "divider": {
-                    "border": {
-                        "value": "{color.border.base.value}",
-                        "component": "lists"
-                    }
-                }
-            },
             "hover": {
                 "background": {
-                    "deprecated":"list-hover-color",
-                    "component": "lists",
+                    "deprecated": "list-hover-color",
                     "value": "{color.base.graphite.20.value}"
+                }
+            },
+            "initial": {
+                "divider": {
+                    "border": {
+                        "value": "{color.border.base.value}"
+                    }
+                },
+                "font": {
+                    "base": {
+                        "value": "{color.font.info.value}"
+                    },
+                    "light": {
+                        "value": "{color.base.graphite.20.value}"
+                    }
                 }
             },
             "selected": {
                 "background": {
-                    "deprecated":"list-selected-color",
-                    "component": "lists",
+                    "deprecated": "list-selected-color",
                     "value": "{color.base.graphite.10.value}"
-                }
-            },
-            "accordion": {
-                "hover": {
-                    "value": "{color.font.base.value}",
-                    "component": "lists"
                 }
             }
         }

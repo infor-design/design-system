@@ -4,51 +4,57 @@
             "disabled": {
                 "border": {
                     "deprecated": "input-disabled-border-color",
-                    "value": "{color.base.slate.50.value}"
+                    "value": "{color.base.graphite.50.value}"
                 },
                 "font": {
                     "deprecated": "input-disabled-text-color",
-                    "value": "{color.base.slate.50.value}"
+                    "value": "{color.base.graphite.50.value}"
+                }
+            },
+            "focus": {
+                "border": {
+                    "deprecated": "input-focus-border-color",
+                    "value": "{color.brand.graphite.80.value}"
                 }
             },
             "hover": {
                 "border": {
                     "deprecated": "input-hover-border-color",
-                    "value": "{color.base.slate.20.value}"
+                    "value": "{color.base.black.value}"
                 }
             },
             "initial": {
+                "background": {
+                    "deprecated": "input-bg-color",
+                    "value": "{color.base.white.value}"
+                },
                 "border": {
                     "deprecated": "input-border-color",
-                    "value": "{color.base.slate.40.value}"
+                    "value": "{color.base.graphite.80.value}"
                 },
                 "font": {
-                    "base": {
-                        "deprecated": "input-text-color",
-                        "value": "{color.base.white.value}"
-                    },
                     "dark": {
                         "deprecated": "input-label-text-color",
-                        "value": "{color.base.slate.30.value}"
+                        "value": "{color.font.base.value}"
                     },
                     "light": {
                         "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                        "value": "{color.base.slate.40.value}"
+                        "value": "{color.base.graphite.50.value}"
                     }
                 }
             },
             "readonly": {
                 "background": {
                     "deprecated": "input-readonly-bg-color",
-                    "value": "{color.base.slate.60.value}"
+                    "value": "{color.base.graphite.30.value}"
                 },
                 "border": {
                     "deprecated": "input-readonly-border-color",
-                    "value": "{color.base.slate.40.value}"
+                    "value": "{color.base.graphite.80.value}"
                 },
                 "font": {
                     "deprecated": "input-readonly-text-color",
-                    "value": "{color.base.white.value}"
+                    "value": "{color.font.base.value}"
                 }
             }
         }

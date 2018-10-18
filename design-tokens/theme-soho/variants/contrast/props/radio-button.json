@@ -5,12 +5,6 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-checked-bg-color",
-                        "value": "{color.base.slate.30.value}"
-                    }
-                },
-                "initial": {
-                    "background": {
-                        "deprecated": "radio-checked-bg-color",
                         "value": "{color.base.white.value}"
                     }
                 }
@@ -19,23 +13,27 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-bg-color",
-                        "value": "{color.base.slate.80.value}"
+                        "value": "{color.base.graphite.20.value}"
                     },
                     "border": {
                         "deprecated": "radio-disabled-border-color",
-                        "value": "#64676f"
+                        "value": "{color.base.graphite.50.value}"
                     }
                 },
                 "hover": {
                     "border": {
                         "deprecated": "radio-border-hover-color",
-                        "value": "{color.base.slate.20.value}"
+                        "value": "{color.base.black.value}"
                     }
                 },
                 "initial": {
+                    "background": {
+                        "deprecated": "radio-bg-color",
+                        "value": "{color.base.white.value}"
+                    },
                     "border": {
                         "deprecated": "radio-border-color",
-                        "value": "{color.base.slate.40.value}"
+                        "value": "{color.base.graphite.80.value}"
                     }
                 }
             }
@@ -45,7 +43,7 @@
                 "focus": {
                     "boxshadow": {
                         "deprecated": "radio-focus-shadow",
-                        "value": "0 0 0 1px {color.base.slate.80.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(255, 255, 255, 0.3)"
+                        "value": "0 0 0 1px {color.base.graphite.30.value}, 0 0 0 2px {color.base.azure.70.value}, 0 0 4px 5px rgba(41, 41, 41, 0.3)"
                     }
                 }
             }

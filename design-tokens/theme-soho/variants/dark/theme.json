@@ -1,10 +1,17 @@
 {
-    "color": {
-        "box-shadow": {
+    "shadow": {
+        "boxshadow": {
             "base": { "value": "rgba(0, 0, 0, 0.4)" }
-        },
+        }
+    },
+    "color": {
         "border": {
             "base": { "value": "{color.base.slate.40.value}" }
+        },
+        "font": {
+            "base":  { "value": "{color.base.white.value}" },
+            "info":  { "value": "{color.base.slate.30.value}" },
+            "muted": { "value": "{color.base.slate.40.value}" }
         }
     }
 }

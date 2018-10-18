@@ -1,77 +1,53 @@
 {
     "checkbox": {
-        "size": {
-            "base": {
-                "base": {
-                    "base": {
-                        "value": "17px",
-                        "deprecated": "checkbox-box-size"
-                    }
-                }
-            }
-        },
-        "base": {
-            "base": {
-                "base": {
-                    "base": {
-                        "value": "5px",
-                        "deprecated": "checkbox-check-w"
-                    }
-                },
-                "focus": {
-                    "shadow": {
-                        "value": "{color.base.graphite.10.value}",
-                        "deprecated": "checkbox-focus-shadow"
-                    }
-                }
-            }
-        },
         "color": {
-            "base": {
-                "base": {
-                    "base": {
-                        "value": "{COLOR_PRIMARY_CONTRAST}",
-                        "deprecated": "checkbox-arrow-color"
-                    },
+            "checked": {
+                "checked": {
                     "background": {
-                        "value": "transparent",
-                        "deprecated": "checkbox-bg-color"
+                        "deprecated": "checkbox-disabled-checked-bg-color",
+                        "value": "{color.base.slate.50.value}"
+                    }
+                }
+            },
+            "initial": {
+                "base": {
+                    "arrow": {
+                        "deprecated": "checkbox-arrow-color",
+                        "value": "{color.brand.primary.contrast.value}"
                     },
                     "border": {
-                        "value": "{BORDER_COLOR}",
-                        "deprecated": "checkbox-border-color"
+                        "deprecated": "checkbox-border-color",
+                        "value": "{color.base.slate.40.value}"
                     }
                 },
                 "disabled": {
-                    "base": {
-                        "value": "#f4f4f4",
-                        "deprecated": "checkbox-disabled-arrow-color"
-                    },
-                    "background": {
-                        "value": "transparent",
-                        "deprecated": "checkbox-disabled-bg-color"
+                    "arrow": {
+                        "deprecated": "checkbox-disabled-arrow-color",
+                        "value": "{color.base.slate.30.value}"
                     },
                     "border": {
-                        "value": "{color.base.graphite.30.value}",
-                        "deprecated": "checkbox-disabled-border-color"
+                        "deprecated": "checkbox-disabled-border-color",
+                        "value": "{color.base.slate.50.value}"
                     },
-                    "text": {
-                        "value": "{color.base.graphite.40.value}",
-                        "deprecated": "checkbox-disabled-text-color"
+                    "font": {
+                        "deprecated": "checkbox-disabled-text-color",
+                        "value": "{color.base.slate.50.value}"
                     }
                 },
                 "hover": {
                     "border": {
-                        "value": "{color.base.graphite.80.value}",
-                        "deprecated": "checkbox-hover-border-color"
+                        "deprecated": "checkbox-hover-border-color",
+                        "value": "{color.base.slate.20.value}"
                     }
                 }
-            },
-            "checked": {
-                "checked": {
-                    "background": {
-                        "value": "{color.base.graphite.30.value}",
-                        "deprecated": "checkbox-disabled-checked-bg-color"
+            }
+        },
+        "shadow": {
+            "initial": {
+                "focus": {
+                    "boxshadow": {
+                        "deprecated": "checkbox-focus-shadow",
+                        "value": "0 0 0 1px {color.base.slate.80.value}, 0 0 0 2px {color.brand.primary.base.value}"
                     }
                 }
             }
