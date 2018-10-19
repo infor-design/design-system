@@ -3,6 +3,7 @@
   "name": "<%= prop.name %>",
   "value": "<%= prop.value %>",
   "category": "<%= prop.attributes.category %>",
+  "type": "<%= prop.attributes.type %>",
   "original": {
     "value": "<%= prop.original.value %>"
   }
