@@ -1,20 +1,22 @@
 {
     "checkbox": {
         "color": {
-            "disabled": {
-                "background": {
-                    "deprecated": "checkbox-disabled-bg-color",
-                    "value": "{color.brand.primary.contrast.value}"
-                }
-            },
-            "initial": {
-                "arrow": {
-                    "deprecated": "checkbox-arrow-color",
-                    "value": "{color.base.white.value}"
+            "unchecked": {
+                "disabled": {
+                    "background": {
+                        "deprecated": "checkbox-disabled-bg-color",
+                        "value": "{color.brand.primary.contrast.value}"
+                    }
                 },
-                "background": {
-                    "deprecated": "checkbox-bg-color",
-                    "value": "{color.base.white.value}"
+                "initial": {
+                    "arrow": {
+                        "deprecated": "checkbox-arrow-color",
+                        "value": "{color.base.white.value}"
+                    },
+                    "background": {
+                        "deprecated": "checkbox-bg-color",
+                        "value": "{color.base.white.value}"
+                    }
                 }
             }
         }

@@ -27,7 +27,7 @@
             }
         },
         "font": {
-            "base": {
+            "initial": {
                 "decoration": {
                     "deprecated": "link-decoration",
                     "value": "underline"

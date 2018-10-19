@@ -81,8 +81,10 @@
         "shadow": {
             "default": {
                 "initial": {
-                    "deprecated": "input-box-shadow",
-                    "value": "none"
+                    "boxshadow": {
+                        "deprecated": "input-box-shadow",
+                        "value": "none"
+                    }
                 }
             }
         },

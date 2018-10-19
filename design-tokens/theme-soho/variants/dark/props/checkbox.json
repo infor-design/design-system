@@ -2,15 +2,15 @@
     "checkbox": {
         "color": {
             "checked": {
-                "checked": {
+                "initial": {
                     "background": {
                         "deprecated": "checkbox-disabled-checked-bg-color",
                         "value": "{color.base.slate.50.value}"
                     }
                 }
             },
-            "initial": {
-                "base": {
+            "unchecked": {
+                "initial": {
                     "arrow": {
                         "deprecated": "checkbox-arrow-color",
                         "value": "{color.brand.primary.contrast.value}"

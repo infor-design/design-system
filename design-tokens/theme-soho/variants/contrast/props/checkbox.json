@@ -1,7 +1,7 @@
 {
     "checkbox": {
         "color": {
-            "base": {
+            "unchecked": {
                 "disabled": {
                     "arrow": {
                         "deprecated": "checkbox-disabled-arrow-color",

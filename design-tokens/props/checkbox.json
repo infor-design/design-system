@@ -1,7 +1,7 @@
 {
     "checkbox": {
         "color": {
-            "base": {
+            "unchecked": {
                 "disabled": {
                     "arrow": {
                         "deprecated": "checkbox-disabled-arrow-color",
@@ -48,14 +48,14 @@
             "checked": {
                 "disabled": {
                     "arrow": {
-                        "value": "{checkbox.color.base.disabled.arrow.value}"
+                        "value": "{checkbox.color.unchecked.disabled.arrow.value}"
                     },
                     "background": {
                         "deprecated": "checkbox-disabled-checked-bg-color",
                         "value": "{color.base.graphite.30.value}"
                     },
                     "border": {
-                        "value": "{checkbox.color.base.disabled.border.value}"
+                        "value": "{checkbox.color.unchecked.disabled.border.value}"
                     }
                 },
                 "initial": {
@@ -64,7 +64,7 @@
                         "value": "{color.brand.primary.base.value}"
                     },
                     "border": {
-                        "value": "{checkbox.color.base.initial.border.value}"
+                        "value": "{checkbox.color.unchecked.initial.border.value}"
                     }
                 }
             }
