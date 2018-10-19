@@ -1,6 +1,10 @@
-[<% _.each(allProperties, function(prop, idx) { %>
+[<% _.each(allProperties, (prop, idx) => { %>
 {
-  "name": "<%= prop.name %>",
+  "name": {
+    "human": "<%= prop.name.split('-').map(n => { return n.charAt(0).toUpperCase() + n.slice(1); }).join(' ') %>",
+    "sass": "$<%= prop.name %>",
+    "javascript": "<%= prop.name.replace(/\-/g,'.') %>"
+  },
   "value": "<%= prop.value %>",
   "category": "<%= prop.attributes.category %>",
   "type": "<%= prop.attributes.type %>",
