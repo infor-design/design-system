@@ -39,15 +39,32 @@ configs.forEach(config => {
       files: [{
         destination: `${themeName}.scss`,
         format: 'scss/variables'
-      },
-      {
+      }, {
         destination: `${themeName}.json`,
         format: 'json'
-      },
-      {
+      }, {
         destination: `${themeName}.custom-properties.css`,
         format: 'css/variables'
       }, {
+        destination: `${themeName}.module.js`,
+        format: 'javascript/module'
+      }]
+    },
+    json: {
+      transformGroup: 'scss',
+      buildPath: 'dist/tokens/web/',
+      files: [{
+        destination: `${themeName}.simple.json`,
+        template: 'website/simplejson'
+      }, {
+        destination: `${themeName}.json`,
+        format: 'json'
+      }]
+    },
+    javascript: {
+      transformGroup: 'scss',
+      buildPath: 'dist/tokens/web/',
+      files: [{
         destination: `${themeName}.module.js`,
         format: 'javascript/module'
       }]
@@ -57,6 +74,11 @@ configs.forEach(config => {
   themeConfig.platforms = platforms;
 
   const dict = require('style-dictionary').extend(themeConfig);
+
+  dict.registerTemplate({
+    name: 'website/simplejson',
+    template: __dirname + '/utilities/tokens/simple.json.template'
+  })
 
   try {
     dict.buildAllPlatforms();
