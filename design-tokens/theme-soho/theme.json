@@ -18,7 +18,7 @@
                 "contrast": { "value": "{color.base.white.value}" }
             }
         },
-        "box-shadow": {
+        "boxshadow": {
             "base": { "value": "rgba(0, 0, 0, 0.2)" }
         },
         "border": {

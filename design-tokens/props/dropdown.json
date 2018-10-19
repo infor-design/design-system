@@ -1,99 +1,82 @@
 {
     "dropdown": {
         "color": {
-            "base": {
-                "font": {
-                    "deprecated":"dropdown-color",
-                    "component": "dropdown",
+            "initial": {
+                "filter": {
+                    "deprecated": "dropdown-filter-color",
                     "value": "{color.base.graphite.100.value}"
                 },
-                "filter": {
-                    "deprecated":"dropdown-filter-color",
-                    "component": "dropdown",
+                "font": {
+                    "deprecated": "dropdown-color",
                     "value": "{color.base.graphite.100.value}"
                 },
                 "group-label": {
-                    "deprecated":"dropdown-group-label-color",
-                    "component": "dropdown",
+                    "deprecated": "dropdown-group-label-color",
                     "value": "{color.base.graphite.50.value}"
                 },
                 "menu-border": {
-                    "deprecated":"dropdown-menu-border-color",
-                    "component": "dropdown",
+                    "deprecated": "dropdown-menu-border-color",
                     "value": "{color.brand.primary.base.value}"
                 },
-                "menu-separator-border": {
-                    "deprecated":"dropdown-menu-separator-border-color",
-                    "component": "dropdown",
-                    "value": "{color.base.graphite.30.value}"
-                },
                 "menu-separator": {
-                    "deprecated":"dropdown-menu-separator-color",
-                    "component": "dropdown",
+                    "deprecated": "dropdown-menu-separator-color",
                     "value": "{color.base.graphite.40.value}"
                 },
+                "menu-separator-border": {
+                    "deprecated": "dropdown-menu-separator-border-color",
+                    "value": "{color.base.graphite.30.value}"
+                },
                 "search": {
-                    "deprecated":"dropdown-search-color",
-                    "component": "dropdown",
+                    "deprecated": "dropdown-search-color",
                     "value": "{color.base.graphite.50.value}"
                 }
             },
             "selected": {
                 "background": {
-                    "deprecated":"dropdown-selected-bg-color",
-                    "component": "dropdown",
+                    "deprecated": "dropdown-selected-bg-color",
                     "value": "{color.brand.primary.base.value}"
                 },
                 "font": {
-                    "deprecated":"dropdown-selected-color",
-                    "component": "dropdown",
+                    "deprecated": "dropdown-selected-color",
                     "value": "{color.base.white.value}"
                 }
             }
         },
-
+        "shadow": {
+            "boxshadow": {
+                "alt": {
+                    "deprecated": "dropdown-box-shadow-top",
+                    "value": "0 -5px 5px {color.boxshadow.base.value}"
+                },
+                "base": {
+                    "deprecated": "dropdown-box-shadow",
+                    "value": "0 5px 5px {color.boxshadow.base.value}"
+                }
+            }
+        },
         "size": {
-            "font": {
-                "deprecated":"dropdown-font-size",
-                "component": "dropdown",
-                "value": "{size.font.base.value}"
-            },
             "border-radius": {
-                "deprecated":"dropdown-list-border-radius",
-                "component": "dropdown",
+                "deprecated": "dropdown-list-border-radius",
                 "value": "{number.border-radius.md.value}"
             },
             "border-width": {
-                "value": "{input.size.border.width.value}",
-                "component": "dropdown"
+                "value": "{input.size.border.width.value}"
+            },
+            "font": {
+                "deprecated": "dropdown-font-size",
+                "value": "{size.font.base.value}"
             },
             "max-height": {
-                "deprecated":"dropdown-list-max-height",
-                "component": "dropdown",
+                "deprecated": "dropdown-list-max-height",
                 "value": "300px"
             },
             "min-height": {
-                "deprecated":"dropdown-list-min-height",
-                "component": "dropdown",
+                "deprecated": "dropdown-list-min-height",
                 "value": "30px"
             },
             "padding": {
-                "deprecated":"dropdown-padding",
-                "component": "dropdown",
+                "deprecated": "dropdown-padding",
                 "value": "8px 30px 8px 10px"
-            }
-        },
-
-        "shadow": {
-            "box": {
-                "deprecated":"dropdown-box-shadow",
-                "component": "dropdown",
-                "value": "0 5px 5px {color.box-shadow.base.value}"
-            },
-            "box-top": {
-                "deprecated":"dropdown-box-shadow-top",
-                "component": "dropdown",
-                "value": "0 -5px 5px {color.box-shadow.base.value}"
             }
         }
     }

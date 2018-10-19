@@ -1,31 +1,11 @@
 {
     "pill": {
         "color": {
-            "alert": {
-                "initial": {
-                    "font": {
-                        "deprecated": "pill-alert-color",
-                        "value": "{color.base.graphite.100.value}"
-                    }
-                }
-            },
-            "error": {
-                "initial": {
-                    "font": {
-                        "deprecated": "pill-error-color",
-                        "value": "{color.brand.primary.contrast.value}"
-                    }
-                }
-            },
             "info": {
                 "initial": {
                     "background": {
                         "deprecated": "pill-info-bg-color",
-                        "value": "{color.brand.primary.alt.value}"
-                    },
-                    "font": {
-                        "deprecated": "pill-info-color",
-                        "value": "{color.brand.primary.contrast.value}"
+                        "value": "{color.brand.primary.base.value}"
                     }
                 }
             },
@@ -33,11 +13,11 @@
                 "hover": {
                     "background": {
                         "deprecated": "pill-neutral-hover-bg-color",
-                        "value": "{color.base.graphite.30.value}"
+                        "value": "{color.base.slate.50.value}"
                     },
                     "icon": {
                         "deprecated": "pill-neutral-hover-icon-color",
-                        "value": "{color.base.graphite.100.value}"
+                        "value": "{color.base.slate.30.value}"
                     }
                 },
                 "initial": {
@@ -47,11 +27,11 @@
                     },
                     "font": {
                         "deprecated": "pill-neutral-color",
-                        "value": "{color.base.graphite.100.value}"
+                        "value": "{color.brand.primary.contrast}"
                     },
                     "icon": {
                         "deprecated": "pill-neutral-icon-color",
-                        "value": "{color.base.graphite.60.value}"
+                        "value": "{color.base.slate.60.value}"
                     }
                 }
             },
@@ -59,20 +39,20 @@
                 "initial": {
                     "background": {
                         "deprecated": "pill-secondary-bg-color",
-                        "value": "{color.brand.primary.contrast.value}"
+                        "value": "{color.base.slate.70.value}"
                     },
                     "border": {
                         "deprecated": "pill-secondary-border-color",
-                        "value": "{color.base.graphite.30.value}"
+                        "value": "{color.base.slate.50.value}"
                     },
                     "font": {
                         "deprecated": "pill-secondary-color",
-                        "value": "{color.base.graphite.100.value}"
+                        "value": "{color.brand.primary.contrast.value}"
                     }
                 }
             },
             "success": {
-                "base": {
+                "initial": {
                     "font": {
                         "deprecated": "pill-good-color",
                         "value": "{color.brand.primary.contrast.value}"

@@ -1,177 +1,142 @@
 {
     "input": {
         "color": {
-
-            "font": {
-                "label": {
-                    "light": {
-                        "deprecated":"[input-info-block-text-color, input-placeholder-text-color]",
-                        "component": "inputs",
-                        "value": "{color.font.muted.value}"
-                    },
-                    "dark": {
-                        "deprecated":"input-label-text-color",
-                        "component": "inputs",
-                        "value": "{color.font.info.value}"
-                    }
-                }
-            },
-
-            "base": {
-                "background": {
-                    "deprecated":"input-bg-color",
-                    "component": "inputs",
-                    "value": "transparent"
-                },
-                "border": {
-                    "deprecated":"input-border-color",
-                    "component": "inputs",
-                    "value": "{color.border.base.value}"
-                },
-                "font": {
-                    "deprecated":"input-text-color",
-                    "component": "inputs",
-                    "value": "{color.font.base.value}"
-                }
-            },
             "disabled": {
                 "background": {
-                    "deprecated":"input-disabled-bg-color",
-                    "component": "inputs",
+                    "deprecated": "input-disabled-bg-color",
                     "value": "transparent"
                 },
                 "border": {
-                    "deprecated":"input-disabled-border-color",
-                    "component": "inputs",
+                    "deprecated": "input-disabled-border-color",
                     "value": "{color.base.graphite.30.value}"
                 },
                 "font": {
-                    "deprecated":"input-disabled-text-color",
-                    "component": "inputs",
+                    "deprecated": "input-disabled-text-color",
                     "value": "{color.base.graphite.40.value}"
                 }
-
             },
             "focus": {
                 "background": {
-                    "deprecated":"input-focus-bg-color",
-                    "component": "inputs",
+                    "deprecated": "input-focus-bg-color",
                     "value": "transparent"
                 },
                 "border": {
-                    "deprecated":"input-focus-border-color",
-                    "component": "inputs",
+                    "deprecated": "input-focus-border-color",
                     "value": "{color.brand.primary.base.value}"
                 },
                 "font": {
-                    "deprecated":"input-focus-text-color",
-                    "component": "inputs",
+                    "deprecated": "input-focus-text-color",
                     "value": "{color.font.base.value}"
                 }
             },
             "hover": {
                 "background": {
-                    "deprecated":"input-hover-bg-color",
-                    "component": "inputs",
+                    "deprecated": "input-hover-bg-color",
                     "value": "transparent"
                 },
                 "border": {
-                    "deprecated":"input-hover-border-color",
-                    "component": "inputs",
+                    "deprecated": "input-hover-border-color",
                     "value": "{color.base.graphite.80.value}"
+                }
+            },
+            "initial": {
+                "background": {
+                    "deprecated": "input-bg-color",
+                    "value": "transparent"
+                },
+                "border": {
+                    "deprecated": "input-border-color",
+                    "value": "{color.border.base.value}"
+                },
+                "font": {
+                    "base": {
+                        "deprecated": "input-text-color",
+                        "value": "{color.font.base.value}"
+                    },
+                    "dark": {
+                        "deprecated": "input-label-text-color",
+                        "value": "{color.font.info.value}"
+                    },
+                    "light": {
+                        "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
+                        "value": "{color.font.muted.value}"
+                    }
                 }
             },
             "readonly": {
                 "background": {
-                    "deprecated":"input-readonly-bg-color",
-                    "component": "inputs",
+                    "deprecated": "input-readonly-bg-color",
                     "value": "{color.base.graphite.20.value}"
                 },
                 "border": {
-                    "deprecated":"input-readonly-border-color",
-                    "component": "inputs",
+                    "deprecated": "input-readonly-border-color",
                     "value": "{color.base.graphite.40.value}"
                 },
                 "font": {
-                    "deprecated":"input-readonly-text-color",
-                    "component": "inputs",
+                    "deprecated": "input-readonly-text-color",
                     "value": "{color.font.muted.value}"
                 }
             }
         },
-
+        "shadow": {
+            "default": {
+                "initial": {
+                    "deprecated": "input-box-shadow",
+                    "value": "none"
+                }
+            }
+        },
         "size": {
             "border": {
                 "radius": {
-                    "deprecated":"input-border-radius",
-                    "component": "inputs",
+                    "deprecated": "input-border-radius",
                     "value": "{number.border-radius.sm.value}"
                 },
                 "width": {
-                    "deprecated":"input-border-width",
-                    "component": "inputs",
+                    "deprecated": "input-border-width",
                     "value": "1px"
                 }
             },
             "height": {
-                "base": {
-                    "deprecated":"input-height",
-                    "component": "inputs",
-                    "value": "3.4rem"
-                },
                 "adaptive": {
-                    "deprecated":"input-height-adaptive-touch",
-                    "component": "adaptive",
+                    "deprecated": "input-height-adaptive-touch",
                     "value": "4.4rem"
+                },
+                "base": {
+                    "deprecated": "input-height",
+                    "value": "3.4rem"
                 }
             },
             "line-height": {
-                "deprecated":"input-line-height",
-                "component": "inputs",
+                "deprecated": "input-line-height",
                 "value": "16px"
             },
             "padding": {
                 "x": {
-                    "deprecated":"input-padding-x",
-                    "component": "inputs",
+                    "deprecated": "input-padding-x",
                     "value": "12px"
                 },
                 "y": {
-                    "deprecated":"input-padding-y",
-                    "component": "inputs",
+                    "deprecated": "input-padding-y",
                     "value": "8px"
                 }
             },
             "width": {
                 "lg": {
-                    "deprecated":"input-width-lg",
-                    "component": "inputs",
+                    "deprecated": "input-width-lg",
                     "value": "400px"
                 },
                 "md": {
-                    "deprecated":"input-width-md",
-                    "component": "inputs",
+                    "deprecated": "input-width-md",
                     "value": "300px"
                 },
                 "sm": {
-                    "deprecated":"input-width-sm",
-                    "component": "inputs",
+                    "deprecated": "input-width-sm",
                     "value": "150px"
                 },
                 "xs": {
-                    "deprecated":"input-width-xs",
-                    "component": "inputs",
+                    "deprecated": "input-width-xs",
                     "value": "75px"
-                }
-            }
-        },
-
-        "shadow": {
-            "base": {
-                "box": {
-                    "deprecated":"input-box-shadow",
-                    "component": "inputs",
-                    "value": "none"
                 }
             }
         }

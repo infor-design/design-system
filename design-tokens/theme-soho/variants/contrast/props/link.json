@@ -1,0 +1,18 @@
+{
+    "link": {
+        "color": {
+            "hover": {
+                "font": {
+                    "deprecated": "link-hover-color",
+                    "value": "{color.base.black.value}"
+                }
+            },
+            "initial": {
+                "font": {
+                    "deprecated": "link-color",
+                    "value": "{color.brand.primary.base.value}"
+                }
+            }
+        }
+    }
+}

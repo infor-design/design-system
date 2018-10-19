@@ -18,7 +18,7 @@
                 "contrast": { "value": "{color.base.white.value}" }
             }
         },
-        "box-shadow": {
+        "boxshadow": {
             "base": { "value": "rgba(0, 0, 0, 0.2)" }
         },
         "border": {
@@ -30,14 +30,12 @@
             "muted": { "value": "{color.base.graphite.60.value}" }
         }
     },
-
     "font": {
         "family": {
             "base":      { "value": "'source sans pro', helvetica, arial, san-serif" },
             "monospace": { "value": "monospace" }
         }
     },
-
     "size": {
         "font": {
             "base": { "value": "{size.font.sm.value}" },
@@ -53,7 +51,7 @@
     "number": {
         "font-weight": {
             "normal": { "value": "400" },
-            "bold":   { "value": "700" }
+            "bold":   { "value": "600" }
         },
         "opacity": {
             "disabled": { "value": "0.5" }

@@ -1,0 +1,18 @@
+{
+    "link": {
+        "color": {
+            "hover": {
+                "font": {
+                    "deprecated": "link-hover-color",
+                    "value": "{color.base.azure.40.value}"
+                }
+            },
+            "initial": {
+                "font": {
+                    "deprecated": "link-color",
+                    "value": "{color.base.azure.40.value}"
+                }
+            }
+        }
+    }
+}

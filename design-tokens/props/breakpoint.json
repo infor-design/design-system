@@ -1,29 +1,24 @@
 {
   "breakpoint": {
-    "xs": {
-      "deprecated":"breakpoint-xs",
-      "component": "grid",
-      "value": "360px"
-    },
-    "sm": {
-      "deprecated":"breakpoint-sm",
-      "component": "grid",
-      "value": "600px"
-    },
-    "md": {
-      "deprecated":"breakpoint-md",
-      "component": "grid",
-      "value": "840px"
-    },
     "lg": {
-      "deprecated":"breakpoint-lg",
-      "component": "grid",
+      "deprecated": "breakpoint-lg",
       "value": "1280px"
     },
+    "md": {
+      "deprecated": "breakpoint-md",
+      "value": "840px"
+    },
+    "sm": {
+      "deprecated": "breakpoint-sm",
+      "value": "600px"
+    },
     "xl": {
-      "deprecated":"breakpoint-xl",
-      "component": "grid",
+      "deprecated": "breakpoint-xl",
       "value": "1440px"
+    },
+    "xs": {
+      "deprecated": "breakpoint-xs",
+      "value": "360px"
     }
   }
 }

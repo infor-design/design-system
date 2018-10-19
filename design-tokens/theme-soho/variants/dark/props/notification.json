@@ -6,6 +6,10 @@
                     "deprecated": "notification-alternate-arrow-color",
                     "value": "{color.base.graphite.10.value}"
                 },
+                "arrow-border": {
+                    "deprecated": "notification-arrow-border-color",
+                    "value": "{color.base.graphite.30.value}"
+                },
                 "background": {
                     "deprecated": "notification-alternate-bg-color",
                     "value": "{color.base.graphite.10.value}"
@@ -30,26 +34,22 @@
                 }
             },
             "default": {
-                "arrow-border": {
-                    "deprecated": "notification-arrow-border-color",
-                    "value": "{color.base.graphite.30.value}"
-                },
                 "background": {
                     "deprecated": "notification-bg-color",
-                    "value": "{color.brand.primary.contrast.value}"
+                    "value": "{color.base.slate.70.value}"
                 },
                 "border": {
                     "deprecated": "notification-border-color",
-                    "value": "{color.base.graphite.30.value}"
+                    "value": "{color.base.slate.50.value}"
                 },
                 "font": {
                     "base": {
                         "deprecated": "notification-text-color",
-                        "value": "{color.font.info.value}"
+                        "value": "{color.brand.primary.contrast.value}"
                     },
                     "dark": {
                         "deprecated": "notification-header-color",
-                        "value": "{color.base.graphite.100.value}"
+                        "value": "{color.brand.primary.contrast.value}"
                     }
                 },
                 "separator": {

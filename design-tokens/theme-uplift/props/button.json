@@ -2,14 +2,12 @@
     "button": {
         "size": {
             "height": {
-                "value": "38px",
-                "component": "buttons",
-                "deprecated":"button-height"
+                "deprecated": "button-height",
+                "value": "38px"
             },
             "line-height": {
-                "value": "1",
-                "component": "buttons",
-                "deprecated":"button-line-height"
+                "deprecated": "button-line-height",
+                "value": "1"
             }
         }
     }

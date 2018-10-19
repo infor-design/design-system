@@ -1,0 +1,40 @@
+{
+    "dropdown": {
+        "color": {
+            "initial": {
+                "filter": {
+                    "deprecated": "dropdown-filter-color",
+                    "value": "{collor.base.graphite.100.value}"
+                },
+                "font": {
+                    "deprecated": "dropdown-color",
+                    "value": "{color.base.black.value}"
+                },
+                "group-label": {
+                    "deprecated": "dropdown-group-label-color",
+                    "value": "{color.base.graphite.80.value}"
+                },
+                "menu-separator": {
+                    "deprecated": "dropdown-menu-separator-color",
+                    "value": "{color.base.graphite.80.value}"
+                },
+                "menu-separator-border": {
+                    "deprecated": "dropdown-menu-separator-border-color",
+                    "value": "{color.base.graphite.80.value}"
+                },
+                "search": {
+                    "deprecated": "dropdown-search-color",
+                    "value": "{collor.base.graphite.50.value}"
+                }
+            }
+        },
+        "shadow": {
+            "base": {
+                "boxshadow": {
+                    "deprecated": "dropdown-box-shadow",
+                    "value": "0 5px 5px {color.boxshadow.base.value}"
+                }
+            }
+        }
+    }
+}
