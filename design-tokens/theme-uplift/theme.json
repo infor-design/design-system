@@ -7,15 +7,15 @@
                 "success": { "value": "#33cc33" },
                 "warning": { "value": "#f29e0d" }
             },
-            "default": {
-                "base":     { "value": "{color.base.graphite.30.value}" },
-                "alt":      { "value": "{color.base.graphite.40.value}" },
-                "contrast": { "value": "{color.base.graphite.80.value}" }
-            },
             "primary": {
                 "base":     { "value": "{color.base.azure.60.value}" },
                 "alt":      { "value": "{color.base.azure.70.value}" },
                 "contrast": { "value": "{color.base.white.value}" }
+            },
+            "secondary": {
+                "base":     { "value": "{color.base.graphite.30.value}" },
+                "alt":      { "value": "{color.base.graphite.40.value}" },
+                "contrast": { "value": "{color.base.graphite.80.value}" }
             }
         },
         "boxshadow": {

@@ -12,11 +12,9 @@
                     "deprecated": "input-bg-color",
                     "value": "{color.base.white.value}"
                 },
-                "font": {
-                    "light": {
-                        "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                        "value": "{color.base.graphite.60.value}"
-                    }
+                "placeholder": {
+                    "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
+                    "value": "{color.base.graphite.60.value}"
                 }
             },
             "readonly": {

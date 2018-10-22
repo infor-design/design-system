@@ -10,16 +10,6 @@
                 }
             },
             "unchecked": {
-                "initial": {
-                    "arrow": {
-                        "deprecated": "checkbox-arrow-color",
-                        "value": "{color.brand.primary.contrast.value}"
-                    },
-                    "border": {
-                        "deprecated": "checkbox-border-color",
-                        "value": "{color.base.slate.40.value}"
-                    }
-                },
                 "disabled": {
                     "arrow": {
                         "deprecated": "checkbox-disabled-arrow-color",
@@ -39,16 +29,24 @@
                         "deprecated": "checkbox-hover-border-color",
                         "value": "{color.base.slate.20.value}"
                     }
+                },
+                "initial": {
+                    "arrow": {
+                        "deprecated": "checkbox-arrow-color",
+                        "value": "{color.brand.primary.contrast.value}"
+                    },
+                    "border": {
+                        "deprecated": "checkbox-border-color",
+                        "value": "{color.base.slate.40.value}"
+                    }
                 }
             }
         },
         "shadow": {
-            "initial": {
-                "focus": {
-                    "boxshadow": {
-                        "deprecated": "checkbox-focus-shadow",
-                        "value": "0 0 0 1px {color.base.slate.80.value}, 0 0 0 2px {color.brand.primary.base.value}"
-                    }
+            "focus": {
+                "boxshadow": {
+                    "deprecated": "checkbox-focus-shadow",
+                    "value": "0 0 0 1px {color.base.slate.80.value}, 0 0 0 2px {color.brand.primary.base.value}"
                 }
             }
         }

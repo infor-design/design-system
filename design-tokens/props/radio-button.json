@@ -48,7 +48,7 @@
                         "deprecated": "radio-border-color",
                         "value": "{color.border.base.value}"
                     },
-                    "font": {
+                    "label": {
                         "deprecated": "radio-color",
                         "value": "{color.brand.primary.contrast.value}"
                     }
@@ -56,12 +56,10 @@
             }
         },
         "shadow": {
-            "default": {
-                "focus": {
-                    "boxshadow": {
-                        "deprecated": "radio-focus-shadow",
-                        "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
-                    }
+            "focus": {
+                "boxshadow": {
+                    "deprecated": "radio-focus-shadow",
+                    "value": "0 0 0 1px {color.base.graphite.10.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
                 }
             }
         },

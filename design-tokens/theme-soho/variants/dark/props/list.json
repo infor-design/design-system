@@ -1,10 +1,12 @@
 {
     "list": {
         "color": {
-            "hover": {
-                "background": {
-                    "deprecated": "list-hover-color",
-                    "value": "{color.base.slate.60.value}"
+            "item": {
+                "hover": {
+                    "background": {
+                        "deprecated": "list-hover-color",
+                        "value": "{color.base.slate.60.value}"
+                    }
                 }
             }
         }

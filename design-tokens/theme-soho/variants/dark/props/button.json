@@ -1,7 +1,27 @@
 {
     "button": {
         "color": {
-            "default": {
+            "primary": {
+                "active": {
+                    "background": {
+                        "deprecated": "button-primary-active-bg-color",
+                        "value": "{color.base.azure.70.value}"
+                    }
+                },
+                "base": {
+                    "background": {
+                        "deprecated": "button-primary-bg-color",
+                        "value": "{color.base.azure.60.value}"
+                    }
+                },
+                "hover": {
+                    "background": {
+                        "deprecated": "button-primary-hover-bg-color",
+                        "value": "{color.base.azure.80.value}"
+                    }
+                }
+            },
+            "secondary": {
                 "active": {
                     "background": {
                         "deprecated": "button-default-active-bg-color",
@@ -49,27 +69,7 @@
                     }
                 }
             },
-            "primary": {
-                "active": {
-                    "background": {
-                        "deprecated": "button-primary-active-bg-color",
-                        "value": "{color.base.azure.70.value}"
-                    }
-                },
-                "base": {
-                    "background": {
-                        "deprecated": "button-primary-bg-color",
-                        "value": "{color.base.azure.60.value}"
-                    }
-                },
-                "hover": {
-                    "background": {
-                        "deprecated": "button-primary-hover-bg-color",
-                        "value": "{color.base.azure.80.value}"
-                    }
-                }
-            },
-            "secondary": {
+            "tertiary": {
                 "active": {
                     "font": {
                         "deprecated": "button-link-active-text-color",

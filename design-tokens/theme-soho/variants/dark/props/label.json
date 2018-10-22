@@ -1,0 +1,12 @@
+{
+    "label": {
+        "color": {
+            "initial": {
+                "font": {
+                    "deprecated": "dropdown-group-label-color",
+                    "value": "{color.base.slate.30.value}"
+                }
+            }
+        }
+    }
+}

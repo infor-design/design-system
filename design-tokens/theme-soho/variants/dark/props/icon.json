@@ -1,8 +1,10 @@
 {
     "icon": {
-        "fill": {
-            "deprecated": "icon-fill",
-            "value": "{color.base.slate.30.value}"
+        "color": {
+            "fill": {
+                "deprecated": "icon-fill",
+                "value": "{color.base.slate.30.value}"
+            }
         }
     }
 }
