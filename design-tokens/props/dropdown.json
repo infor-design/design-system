@@ -2,33 +2,19 @@
     "dropdown": {
         "color": {
             "initial": {
-                "filter": {
-                    "deprecated": "dropdown-filter-color",
-                    "value": "{color.base.graphite.100.value}"
+                "boxshadow": {
+                    "base": {
+                        "deprecated": "dropdown-box-shadow (color only)",
+                        "value": "{color.boxshadow.base.value}"
+                    }
                 },
                 "font": {
                     "deprecated": "dropdown-color",
                     "value": "{color.base.graphite.100.value}"
                 },
-                "group-label": {
-                    "deprecated": "dropdown-group-label-color",
-                    "value": "{color.base.graphite.50.value}"
-                },
-                "menu-border": {
-                    "deprecated": "dropdown-menu-border-color",
-                    "value": "{color.brand.primary.base.value}"
-                },
-                "menu-separator": {
-                    "deprecated": "dropdown-menu-separator-color",
-                    "value": "{color.base.graphite.40.value}"
-                },
-                "menu-separator-border": {
-                    "deprecated": "dropdown-menu-separator-border-color",
-                    "value": "{color.base.graphite.30.value}"
-                },
-                "search": {
-                    "deprecated": "dropdown-search-color",
-                    "value": "{color.base.graphite.50.value}"
+                "icon": {
+                    "deprecated": "dropdown-filter-color",
+                    "value": "{color.base.graphite.100.value}"
                 }
             },
             "selected": {
@@ -43,14 +29,10 @@
             }
         },
         "shadow": {
-            "boxshadow": {
-                "alt": {
-                    "deprecated": "dropdown-box-shadow-top",
-                    "value": "0 -5px 5px {color.boxshadow.base.value}"
-                },
-                "base": {
+            "initial": {
+                "boxshadow": {
                     "deprecated": "dropdown-box-shadow",
-                    "value": "0 5px 5px {color.boxshadow.base.value}"
+                    "value": "{dropdown.size.boxshadow.x} {dropdown.size.boxshadow.y} {dropdown.size.boxshadow.blur} {color.boxshadow.base.value}"
                 }
             }
         },
@@ -62,17 +44,30 @@
             "border-width": {
                 "value": "{input.size.border.width.value}"
             },
+            "boxshadow": {
+                "blur": {
+                    "value": "5px"
+                },
+                "x": {
+                    "value": "0"
+                },
+                "y": {
+                    "value": "5px"
+                }
+            },
             "font": {
                 "deprecated": "dropdown-font-size",
                 "value": "{size.font.base.value}"
             },
-            "max-height": {
-                "deprecated": "dropdown-list-max-height",
-                "value": "300px"
-            },
-            "min-height": {
-                "deprecated": "dropdown-list-min-height",
-                "value": "30px"
+            "height": {
+                "max": {
+                    "deprecated": "dropdown-list-max-height",
+                    "value": "300px"
+                },
+                "min": {
+                    "deprecated": "dropdown-list-min-height",
+                    "value": "30px"
+                }
             },
             "padding": {
                 "deprecated": "dropdown-padding",

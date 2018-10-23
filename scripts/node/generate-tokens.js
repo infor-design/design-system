@@ -16,6 +16,7 @@ const glob = require('glob');
 const fs = require('fs');
 const swlog = require('./utilities/stopwatch-log.js');
 const path = require('path');
+const tokenCompare = require('./utilities/compare-tokens.js');
 
 // -------------------------------------
 //   Constants/Variables
@@ -26,7 +27,7 @@ const configs = glob.sync(configGlob);
 // -------------------------------------
 //   Main
 // -------------------------------------
-const taskName = swlog.logTaskStart('creating formats');
+const startTaskName = swlog.logTaskStart('creating formats');
 
 configs.forEach(config => {
   const themeName = path.basename(config, '.config.json');
@@ -85,8 +86,14 @@ configs.forEach(config => {
   } catch(e) {
     console.error(e);
   }
+
 });
 
-swlog.logTaskEnd(taskName);
+swlog.logTaskEnd(startTaskName);
+const compareTaskName = swlog.logTaskStart('lint tokens');
 
-
+tokenCompare()
+  .catch(e => console.error(e))
+  .then(() => {
+    swlog.logTaskEnd(compareTaskName)
+  });

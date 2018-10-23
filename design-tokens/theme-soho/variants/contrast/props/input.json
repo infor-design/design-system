@@ -14,7 +14,7 @@
             "focus": {
                 "border": {
                     "deprecated": "input-focus-border-color",
-                    "value": "{color.brand.graphite.80.value}"
+                    "value": "{color.base.graphite.80.value}"
                 }
             },
             "hover": {
@@ -32,15 +32,13 @@
                     "deprecated": "input-border-color",
                     "value": "{color.base.graphite.80.value}"
                 },
-                "font": {
-                    "dark": {
-                        "deprecated": "input-label-text-color",
-                        "value": "{color.font.base.value}"
-                    },
-                    "light": {
-                        "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                        "value": "{color.base.graphite.50.value}"
-                    }
+                "label": {
+                    "deprecated": "input-label-text-color",
+                    "value": "{color.font.info.value}"
+                },
+                "placeholder": {
+                    "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
+                    "value": "{color.base.graphite.50.value}"
                 }
             },
             "readonly": {

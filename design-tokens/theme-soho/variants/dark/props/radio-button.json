@@ -41,12 +41,10 @@
             }
         },
         "shadow": {
-            "default": {
-                "focus": {
-                    "boxshadow": {
-                        "deprecated": "radio-focus-shadow",
-                        "value": "0 0 0 1px {color.base.slate.80.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(255, 255, 255, 0.3)"
-                    }
+            "focus": {
+                "boxshadow": {
+                    "deprecated": "radio-focus-shadow",
+                    "value": "0 0 0 1px {color.base.slate.80.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(255, 255, 255, 0.3)"
                 }
             }
         }

@@ -7,6 +7,6 @@
 
         "design-tokens/props/*.json",
 
-        "design-tokens/theme-soho/variants/dark/**/(!.config).json"
+        "design-tokens/theme-soho/variants/dark/props/*.json"
     ]
 }

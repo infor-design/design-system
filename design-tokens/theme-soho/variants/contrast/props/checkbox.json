@@ -1,6 +1,14 @@
 {
     "checkbox": {
         "color": {
+            "checked": {
+                "disabled": {
+                    "background": {
+                        "deprecated": "checkbox-disabled-checked-bg-color",
+                        "value": "{color.base.graphite.50.value}"
+                    }
+                }
+            },
             "unchecked": {
                 "disabled": {
                     "arrow": {
@@ -13,7 +21,7 @@
                     },
                     "font": {
                         "deprecated": "checkbox-disabled-text-color",
-                        "value": "{color.brand.font.muted.value}"
+                        "value": "{color.font.muted.value}"
                     }
                 },
                 "hover": {
@@ -32,23 +40,13 @@
                         "value": "{color.base.graphite.80.value}"
                     }
                 }
-            },
-            "checked": {
-                "disabled": {
-                    "background": {
-                        "deprecated": "checkbox-disabled-checked-bg-color",
-                        "value": "{color.base.graphite.50.value}"
-                    }
-                }
             }
         },
         "shadow": {
-            "default": {
-                "focus": {
-                    "boxshadow": {
-                        "deprecated": "checkbox-focus-shadow",
-                        "value": "0 0 0 1px {color.base.graphite.30.value}, 0 0 0 2px {color.base.azure.70.value}"
-                    }
+            "focus": {
+                "boxshadow": {
+                    "deprecated": "checkbox-focus-shadow",
+                    "value": "0 0 0 1px {color.base.graphite.30.value}, 0 0 0 2px {color.base.azure.70.value}"
                 }
             }
         }

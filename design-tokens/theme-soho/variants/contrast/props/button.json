@@ -1,7 +1,27 @@
 {
     "button": {
         "color": {
-            "default": {
+            "primary": {
+                "active": {
+                    "background": {
+                        "deprecated": "button-primary-active-bg-color",
+                        "value": "{color.base.azure.70.value}"
+                    }
+                },
+                "hover": {
+                    "background": {
+                        "deprecated": "button-primary-hover-bg-color",
+                        "value": "{color.base.azure.80.value}"
+                    }
+                },
+                "initial": {
+                    "background": {
+                        "deprecated": "button-primary-bg-color",
+                        "value": "{color.base.azure.60.value}"
+                    }
+                }
+            },
+            "secondary": {
                 "active": {
                     "background": {
                         "deprecated": "button-default-active-bg-color",
@@ -39,27 +59,7 @@
                     }
                 }
             },
-            "primary": {
-                "active": {
-                    "background": {
-                        "deprecated": "button-primary-active-bg-color",
-                        "value": "{color.base.azure.70.value}"
-                    }
-                },
-                "hover": {
-                    "background": {
-                        "deprecated": "button-primary-hover-bg-color",
-                        "value": "{color.base.azure.80.value}"
-                    }
-                },
-                "initial": {
-                    "background": {
-                        "deprecated": "button-primary-bg-color",
-                        "value": "{color.base.azure.60.value}"
-                    }
-                }
-            },
-            "secondary": {
+            "tertiary": {
                 "active": {
                     "font": {
                         "deprecated": "button-link-active-text-color",
@@ -82,12 +82,6 @@
                     "font": {
                         "deprecated": "button-link-text-color",
                         "value": "{color.base.slate.30.value}"
-                    }
-                },
-                "open": {
-                    "font": {
-                        "deprecated": "button-link-open-text-color",
-                        "value": "{color.brand.primary.base.value}"
                     }
                 }
             }

@@ -49,18 +49,16 @@
                     "value": "{color.border.base.value}"
                 },
                 "font": {
-                    "base": {
-                        "deprecated": "input-text-color",
-                        "value": "{color.font.base.value}"
-                    },
-                    "dark": {
-                        "deprecated": "input-label-text-color",
-                        "value": "{color.font.info.value}"
-                    },
-                    "light": {
-                        "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                        "value": "{color.font.muted.value}"
-                    }
+                    "deprecated": "input-text-color",
+                    "value": "{color.font.base.value}"
+                },
+                "label": {
+                    "deprecated": "input-label-text-color",
+                    "value": "{color.font.info.value}"
+                },
+                "placeholder": {
+                    "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
+                    "value": "{color.font.muted.value}"
                 }
             },
             "readonly": {
@@ -74,17 +72,15 @@
                 },
                 "font": {
                     "deprecated": "input-readonly-text-color",
-                    "value": "{color.font.muted.value}"
+                    "value": "{color.base.graphite.100.value}"
                 }
             }
         },
         "shadow": {
-            "default": {
-                "initial": {
-                    "boxshadow": {
-                        "deprecated": "input-box-shadow",
-                        "value": "none"
-                    }
+            "initial": {
+                "boxshadow": {
+                    "deprecated": "input-box-shadow",
+                    "value": "none"
                 }
             }
         },
@@ -100,14 +96,8 @@
                 }
             },
             "height": {
-                "adaptive": {
-                    "deprecated": "input-height-adaptive-touch",
-                    "value": "4.4rem"
-                },
-                "base": {
-                    "deprecated": "input-height",
-                    "value": "3.4rem"
-                }
+                "deprecated": "input-height",
+                "value": "3.4rem"
             },
             "line-height": {
                 "deprecated": "input-line-height",

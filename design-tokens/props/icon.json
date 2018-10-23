@@ -1,16 +1,20 @@
 {
     "icon": {
-        "fill": {
-            "deprecated": "icon-fill",
-            "value": "{color.base.graphite.40.value}"
+        "color": {
+            "fill": {
+                "deprecated": "icon-fill",
+                "value": "{color.base.graphite.40.value}"
+            }
         },
-        "height": {
-            "deprecated": "icon-height",
-            "value": "17px"
-        },
-        "width": {
-            "deprecated": "icon-width",
-            "value": "22px"
+        "size": {
+            "height": {
+                "deprecated": "icon-height",
+                "value": "17px"
+            },
+            "width": {
+                "deprecated": "icon-width",
+                "value": "22px"
+            }
         }
     }
 }

@@ -23,18 +23,16 @@
                     "value": "{color.base.slate.40.value}"
                 },
                 "font": {
-                    "base": {
-                        "deprecated": "input-text-color",
-                        "value": "{color.base.white.value}"
-                    },
-                    "dark": {
-                        "deprecated": "input-label-text-color",
-                        "value": "{color.base.slate.30.value}"
-                    },
-                    "light": {
-                        "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                        "value": "{color.base.slate.40.value}"
-                    }
+                    "deprecated": "input-text-color",
+                    "value": "{color.base.white.value}"
+                },
+                "label": {
+                    "deprecated": "input-label-text-color",
+                    "value": "{color.base.slate.30.value}"
+                },
+                "placeholder": {
+                    "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
+                    "value": "{color.base.slate.40.value}"
                 }
             },
             "readonly": {
