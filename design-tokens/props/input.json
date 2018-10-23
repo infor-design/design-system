@@ -72,7 +72,7 @@
                 },
                 "font": {
                     "deprecated": "input-readonly-text-color",
-                    "value": "{color.font.muted.value}"
+                    "value": "{color.base.graphite.100.value}"
                 }
             }
         },
