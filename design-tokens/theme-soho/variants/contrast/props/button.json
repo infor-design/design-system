@@ -83,12 +83,6 @@
                         "deprecated": "button-link-text-color",
                         "value": "{color.base.slate.30.value}"
                     }
-                },
-                "open": {
-                    "font": {
-                        "deprecated": "button-link-open-text-color",
-                        "value": "{color.brand.primary.base.value}"
-                    }
                 }
             }
         }

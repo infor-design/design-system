@@ -14,7 +14,7 @@
             "focus": {
                 "border": {
                     "deprecated": "input-focus-border-color",
-                    "value": "{color.brand.graphite.80.value}"
+                    "value": "{color.base.graphite.80.value}"
                 }
             },
             "hover": {

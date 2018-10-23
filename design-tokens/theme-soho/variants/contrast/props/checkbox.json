@@ -21,7 +21,7 @@
                     },
                     "font": {
                         "deprecated": "checkbox-disabled-text-color",
-                        "value": "{color.brand.font.muted.value}"
+                        "value": "{color.font.muted.value}"
                     }
                 },
                 "hover": {

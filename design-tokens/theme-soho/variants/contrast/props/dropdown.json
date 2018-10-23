@@ -8,7 +8,7 @@
                 },
                 "icon": {
                     "deprecated": "dropdown-filter-color",
-                    "value": "{collor.base.graphite.100.value}"
+                    "value": "{color.base.graphite.100.value}"
                 }
             }
         }

@@ -3,6 +3,10 @@
         "color": {
             "checked": {
                 "initial": {
+                    "arrow": {
+                        "deprecated": "checkbox-arrow-color",
+                        "value": "{color.brand.primary.contrast.value}"
+                    },
                     "background": {
                         "deprecated": "checkbox-disabled-checked-bg-color",
                         "value": "{color.base.slate.50.value}"
@@ -31,10 +35,6 @@
                     }
                 },
                 "initial": {
-                    "arrow": {
-                        "deprecated": "checkbox-arrow-color",
-                        "value": "{color.brand.primary.contrast.value}"
-                    },
                     "border": {
                         "deprecated": "checkbox-border-color",
                         "value": "{color.base.slate.40.value}"

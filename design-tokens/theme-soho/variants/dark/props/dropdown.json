@@ -8,7 +8,7 @@
                 },
                 "icon": {
                     "deprecated": "dropdown-filter-color",
-                    "value": "{dropdown.color.base.font}"
+                    "value": "{dropdown.color.initial.font}"
                 }
             }
         }

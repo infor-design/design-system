@@ -8,7 +8,7 @@
                         "value": "{color.base.azure.70.value}"
                     }
                 },
-                "base": {
+                "initial": {
                     "background": {
                         "deprecated": "button-primary-bg-color",
                         "value": "{color.base.azure.60.value}"
@@ -28,7 +28,7 @@
                         "value": "{color.base.slate.40.value}"
                     }
                 },
-                "base": {
+                "initial": {
                     "background": {
                         "deprecated": "button-default-bg-color",
                         "value": "{color.base.slate.30.value}"
@@ -76,7 +76,7 @@
                         "value": "{color.base.white.value}"
                     }
                 },
-                "base": {
+                "initial": {
                     "font": {
                         "deprecated": "button-link-text-color",
                         "value": "{color.base.slate.30.value}"
@@ -92,12 +92,6 @@
                     "font": {
                         "deprecated": "button-link-hover-text-color",
                         "value": "{color.base.white.value}"
-                    }
-                },
-                "open": {
-                    "font": {
-                        "deprecated": "button-link-open-text-color",
-                        "value": "{color.brand.primary.base.value}"
                     }
                 }
             }
