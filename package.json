@@ -10,8 +10,6 @@
     "documentation": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e prod",
     "documentation:staging": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e staging",
     "clean": "del ./dist/*/* && del ./IDS-*.zip",
-    "prepublishOnly": "npm run clean && npm test && npm run build",
-    "test": "",
     "zip": "npm run build:tokens && bash ./scripts/package-release.sh",
     "release:beta": "npx release-it minor --preRelease=beta --no-github.release",
     "release:rc": "npx release-it --preRelease=rc --no-github.release",
