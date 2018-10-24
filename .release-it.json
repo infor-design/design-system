@@ -4,7 +4,7 @@
   "verbose": false,
   "pkgFiles": ["package.json"],
   "increment": "patch",
-  "buildCommand": "npm run build && npm run pack:release",
+  "buildCommand": "npm run clean && npm run build && npm run zip",
   "src": {
     "commitMessage": "Release v%s",
     "tagAnnotation": "Release v%s",

@@ -7,15 +7,13 @@
     "build:icons": "node ./scripts/node/generate-icons.js --export=artboards --formats=svg --clean=yes  --verbose --srcfile=./sketch/ids-icons.sketch",
     "build:tokens": "node ./scripts/node/generate-tokens.js --format=custom-properties.css,sass,raw.json,module.js",
     "build:font": "node ./scripts/node/generate-font.js",
-    "deploy:prod": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e prod",
-    "deploy:stage": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e staging",
+    "documentation": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e prod",
+    "documentation:staging": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e staging",
     "clean": "del ./dist/*/* && del ./IDS-*.zip",
-    "prepublishOnly": "npm run clean && npm test && npm run build",
-    "test": "",
-    "pack:release": "npm run build:tokens && bash ./scripts/package-release.sh",
-    "release:beta": "npx release-it minor --preRelease=beta",
-    "release:rc": "npx release-it --preRelease=rc",
-    "release:final": "npx release-it"
+    "zip": "bash ./scripts/package-release.sh",
+    "release:beta": "npx release-it minor --preRelease=beta --no-github.release",
+    "release:rc": "npx release-it --preRelease=rc --no-github.release",
+    "release:final": "npx release-it && npm run documentation"
   },
   "repository": {
     "type": "git",
