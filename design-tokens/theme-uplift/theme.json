@@ -1,69 +1,70 @@
 {
-    "color": {
-        "brand": {
+    "global": {
+        "color": {
             "status": {
+                "base":    { "value": "{global.color.primary.alt.value}" },
                 "caution": { "value": "#ffd000" },
                 "danger":  { "value": "#d92635" },
                 "success": { "value": "#33cc33" },
                 "warning": { "value": "#f29e0d" }
             },
             "primary": {
-                "base":     { "value": "{color.base.azure.60.value}" },
-                "alt":      { "value": "{color.base.azure.70.value}" },
-                "contrast": { "value": "{color.base.white.value}" }
+                "base":     { "value": "{palette.azure.60.value}" },
+                "alt":      { "value": "{palette.azure.70.value}" },
+                "contrast": { "value": "{palette.white.value}" }
             },
             "secondary": {
-                "base":     { "value": "{color.base.graphite.30.value}" },
-                "alt":      { "value": "{color.base.graphite.40.value}" },
-                "contrast": { "value": "{color.base.graphite.80.value}" }
+                "base":     { "value": "{palette.graphite.30.value}" },
+                "alt":      { "value": "{palette.graphite.40.value}" },
+                "contrast": { "value": "{palette.graphite.80.value}" }
+            },
+            "boxshadow": {
+                "base": { "value": "rgba(0, 0, 0, 0.2)" }
+            },
+            "border": {
+                "base": { "value": "{palette.graphite.60.value}" }
+            },
+            "font": {
+                "base":  { "value": "{palette.graphite.100.value}" },
+                "info":  { "value": "{palette.graphite.80.value}" },
+                "muted": { "value": "{palette.graphite.60.value}" }
             }
         },
-        "boxshadow": {
-            "base": { "value": "rgba(0, 0, 0, 0.2)" }
-        },
-        "border": {
-            "base": { "value": "{color.base.graphite.60.value}" }
-        },
         "font": {
-            "base":  { "value": "{color.base.graphite.100.value}" },
-            "info":  { "value": "{color.base.graphite.80.value}" },
-            "muted": { "value": "{color.base.graphite.60.value}" }
-        }
-    },
-    "font": {
-        "family": {
-            "base":      { "value": "'source sans pro', helvetica, arial, san-serif" },
-            "monospace": { "value": "monospace" }
-        }
-    },
-    "size": {
-        "font": {
-            "base": { "value": "{size.font.sm.value}" },
-            "sm":   { "value": "1.6rem" },
-            "md":   { "value": "2.4rem" },
-            "lg":   { "value": "3.2rem" },
-            "xl":   { "value": "4.0rem" }
-        },
-        "line-height": {
-            "value": "2.2rem"
-        }
-    },
-    "number": {
-        "font-weight": {
-            "normal": { "value": "400" },
-            "bold":   { "value": "600" }
-        },
-        "opacity": {
-            "disabled": { "value": "0.5" }
-        },
-        "spacing": {
-            "base": {
-                "value": "8px"
+            "family": {
+                "base":      { "value": "'source sans pro', helvetica, arial, san-serif" },
+                "monospace": { "value": "monospace" }
             }
         },
-        "border-radius": {
-            "sm": { "value": "2px" },
-            "md": { "value": "3px" }
+        "size": {
+            "font": {
+                "base": { "value": "{global.size.font.sm.value}" },
+                "sm":   { "value": "1.6rem" },
+                "md":   { "value": "2.4rem" },
+                "lg":   { "value": "3.2rem" },
+                "xl":   { "value": "4.0rem" }
+            },
+            "line-height": {
+                "base": {
+                    "value": "2.2rem"
+                }
+            }
+        },
+        "number": {
+            "font-weight": {
+                "base": { "value": "400" },
+                "bold": { "value": "600" }
+            },
+            "opacity": {
+                "disabled": { "value": "0.5" }
+            },
+            "spacing": {
+                "base": { "value": "8px" }
+            },
+            "border-radius": {
+                "sm": { "value": "2px" },
+                "md": { "value": "3px" }
+            }
         }
     }
 }

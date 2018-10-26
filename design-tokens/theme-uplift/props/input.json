@@ -4,23 +4,23 @@
             "disabled": {
                 "background": {
                     "deprecated": "input-disabled-bg-color",
-                    "value": "{color.base.white.value}"
+                    "value": "{palette.white.value}"
                 }
             },
             "initial": {
                 "background": {
                     "deprecated": "input-bg-color",
-                    "value": "{color.base.white.value}"
+                    "value": "{palette.white.value}"
                 },
                 "placeholder": {
                     "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                    "value": "{color.base.graphite.60.value}"
+                    "value": "{palette.graphite.60.value}"
                 }
             },
             "readonly": {
                 "font": {
                     "deprecated": "input-readonly-text-color",
-                    "value": "{color.base.graphite.100.value}"
+                    "value": "{palette.graphite.100.value}"
                 }
             }
         }

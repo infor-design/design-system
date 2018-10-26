@@ -4,13 +4,13 @@
             "hover": {
                 "font": {
                     "deprecated": "link-hover-color",
-                    "value": "{color.base.black.value}"
+                    "value": "{palette.black.value}"
                 }
             },
             "initial": {
                 "font": {
                     "deprecated": "link-color",
-                    "value": "{color.brand.primary.base.value}"
+                    "value": "{global.color.primary.base.value}"
                 }
             }
         }

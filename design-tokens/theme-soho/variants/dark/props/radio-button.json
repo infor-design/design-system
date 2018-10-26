@@ -5,13 +5,13 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-checked-bg-color",
-                        "value": "{color.base.slate.30.value}"
+                        "value": "{palette.slate.30.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "radio-checked-bg-color",
-                        "value": "{color.base.white.value}"
+                        "value": "{palette.white.value}"
                     }
                 }
             },
@@ -19,7 +19,7 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-bg-color",
-                        "value": "{color.base.slate.80.value}"
+                        "value": "{palette.slate.80.value}"
                     },
                     "border": {
                         "deprecated": "radio-disabled-border-color",
@@ -29,13 +29,13 @@
                 "hover": {
                     "border": {
                         "deprecated": "radio-border-hover-color",
-                        "value": "{color.base.slate.20.value}"
+                        "value": "{palette.slate.20.value}"
                     }
                 },
                 "initial": {
                     "border": {
                         "deprecated": "radio-border-color",
-                        "value": "{color.base.slate.40.value}"
+                        "value": "{palette.slate.40.value}"
                     }
                 }
             }
@@ -44,7 +44,7 @@
             "focus": {
                 "boxshadow": {
                     "deprecated": "radio-focus-shadow",
-                    "value": "0 0 0 1px {color.base.slate.80.value}, 0 0 0 2px {color.brand.primary.base.value}, 0 0 4px 5px rgba(255, 255, 255, 0.3)"
+                    "value": "0 0 0 1px {palette.slate.80.value}, 0 0 0 2px {global.color.primary.base.value}, 0 0 4px 5px rgba(255, 255, 255, 0.3)"
                 }
             }
         }

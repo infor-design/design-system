@@ -1,17 +1,19 @@
 {
-    "shadow": {
-        "boxshadow": {
-            "base": { "value": "rgba(0, 0, 0, 0.4)" }
-        }
-    },
-    "color": {
-        "border": {
-            "base": { "value": "{color.base.slate.40.value}" }
+    "global": {
+        "shadow": {
+            "boxshadow": {
+                "base": { "value": "rgba(0, 0, 0, 0.4)" }
+            }
         },
-        "font": {
-            "base":  { "value": "{color.base.white.value}" },
-            "info":  { "value": "{color.base.slate.30.value}" },
-            "muted": { "value": "{color.base.slate.40.value}" }
+        "color": {
+            "border": {
+                "base": { "value": "{palette.slate.40.value}" }
+            },
+            "font": {
+                "base":  { "value": "{palette.white.value}" },
+                "info":  { "value": "{palette.slate.30.value}" },
+                "muted": { "value": "{palette.slate.40.value}" }
+            }
         }
     }
 }

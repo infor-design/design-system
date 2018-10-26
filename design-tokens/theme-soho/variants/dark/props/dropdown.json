@@ -4,7 +4,7 @@
             "initial": {
                 "font": {
                     "deprecated": "dropdown-color",
-                    "value": "{color.base.white.value}"
+                    "value": "{palette.white.value}"
                 },
                 "icon": {
                     "deprecated": "dropdown-filter-color",

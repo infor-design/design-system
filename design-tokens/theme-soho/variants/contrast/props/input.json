@@ -4,55 +4,55 @@
             "disabled": {
                 "border": {
                     "deprecated": "input-disabled-border-color",
-                    "value": "{color.base.graphite.50.value}"
+                    "value": "{palette.graphite.50.value}"
                 },
                 "font": {
                     "deprecated": "input-disabled-text-color",
-                    "value": "{color.base.graphite.50.value}"
+                    "value": "{palette.graphite.50.value}"
                 }
             },
             "focus": {
                 "border": {
                     "deprecated": "input-focus-border-color",
-                    "value": "{color.base.graphite.80.value}"
+                    "value": "{palette.graphite.80.value}"
                 }
             },
             "hover": {
                 "border": {
                     "deprecated": "input-hover-border-color",
-                    "value": "{color.base.black.value}"
+                    "value": "{palette.black.value}"
                 }
             },
             "initial": {
                 "background": {
                     "deprecated": "input-bg-color",
-                    "value": "{color.base.white.value}"
+                    "value": "{palette.white.value}"
                 },
                 "border": {
                     "deprecated": "input-border-color",
-                    "value": "{color.base.graphite.80.value}"
+                    "value": "{palette.graphite.80.value}"
                 },
                 "label": {
                     "deprecated": "input-label-text-color",
-                    "value": "{color.font.info.value}"
+                    "value": "{global.color.font.info.value}"
                 },
                 "placeholder": {
                     "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                    "value": "{color.base.graphite.50.value}"
+                    "value": "{palette.graphite.50.value}"
                 }
             },
             "readonly": {
                 "background": {
                     "deprecated": "input-readonly-bg-color",
-                    "value": "{color.base.graphite.30.value}"
+                    "value": "{palette.graphite.30.value}"
                 },
                 "border": {
                     "deprecated": "input-readonly-border-color",
-                    "value": "{color.base.graphite.80.value}"
+                    "value": "{palette.graphite.80.value}"
                 },
                 "font": {
                     "deprecated": "input-readonly-text-color",
-                    "value": "{color.font.base.value}"
+                    "value": "{global.color.font.base.value}"
                 }
             }
         }

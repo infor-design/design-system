@@ -5,19 +5,19 @@
                 "active": {
                     "background": {
                         "deprecated": "button-primary-active-bg-color",
-                        "value": "{color.base.azure.70.value}"
+                        "value": "{palette.azure.70.value}"
                     }
                 },
                 "hover": {
                     "background": {
                         "deprecated": "button-primary-hover-bg-color",
-                        "value": "{color.base.azure.80.value}"
+                        "value": "{palette.azure.80.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "button-primary-bg-color",
-                        "value": "{color.base.azure.60.value}"
+                        "value": "{palette.azure.60.value}"
                     }
                 }
             },
@@ -25,37 +25,37 @@
                 "active": {
                     "background": {
                         "deprecated": "button-default-active-bg-color",
-                        "value": "{color.base.slate.40.value}"
+                        "value": "{palette.slate.40.value}"
                     }
                 },
                 "disabled": {
                     "background": {
                         "deprecated": "button-default-disabled-bg-color",
-                        "value": "{color.base.slate.30.value}"
+                        "value": "{palette.slate.30.value}"
                     },
                     "border": {
                         "deprecated": "button-default-disabled-border-color",
-                        "value": "{color.base.slate.30.value}"
+                        "value": "{palette.slate.30.value}"
                     },
                     "font": {
                         "deprecated": "button-default-disabled-text-color",
-                        "value": "{color.base.slate.100.value}"
+                        "value": "{palette.slate.100.value}"
                     }
                 },
                 "hover": {
                     "background": {
                         "deprecated": "button-default-hover-bg-color",
-                        "value": "{color.base.slate.40.value}"
+                        "value": "{palette.slate.40.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "button-default-bg-color",
-                        "value": "{color.base.slate.30.value}"
+                        "value": "{palette.slate.30.value}"
                     },
                     "font": {
                         "deprecated": "button-default-text-color",
-                        "value": "{color.base.slate.100.value}"
+                        "value": "{palette.slate.100.value}"
                     }
                 }
             },
@@ -63,25 +63,25 @@
                 "active": {
                     "font": {
                         "deprecated": "button-link-active-text-color",
-                        "value": "{color.base.white.value}"
+                        "value": "{palette.white.value}"
                     }
                 },
                 "disabled": {
                     "font": {
                         "deprecated": "button-link-disabled-text-color",
-                        "value": "{color.base.slate.30.value}"
+                        "value": "{palette.slate.30.value}"
                     }
                 },
                 "hover": {
                     "font": {
                         "deprecated": "button-link-hover-text-color",
-                        "value": "{color.base.white.value}"
+                        "value": "{palette.white.value}"
                     }
                 },
                 "initial": {
                     "font": {
                         "deprecated": "button-link-text-color",
-                        "value": "{color.base.slate.30.value}"
+                        "value": "{palette.slate.30.value}"
                     }
                 }
             }
