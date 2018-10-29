@@ -5,19 +5,19 @@
                 "active": {
                     "background": {
                         "deprecated": "button-primary-active-bg-color",
-                        "value": "{palette.azure.70.value}"
+                        "value": "{theme.color.palette.azure.70.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "button-primary-bg-color",
-                        "value": "{palette.azure.60.value}"
+                        "value": "{theme.color.palette.azure.60.value}"
                     }
                 },
                 "hover": {
                     "background": {
                         "deprecated": "button-primary-hover-bg-color",
-                        "value": "{palette.azure.80.value}"
+                        "value": "{theme.color.palette.azure.80.value}"
                     }
                 }
             },
@@ -25,47 +25,47 @@
                 "active": {
                     "background": {
                         "deprecated": "button-default-active-bg-color",
-                        "value": "{palette.slate.40.value}"
+                        "value": "{theme.color.palette.slate.40.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "button-default-bg-color",
-                        "value": "{palette.slate.30.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     },
                     "font": {
                         "deprecated": "button-default-text-color",
-                        "value": "{palette.slate.100.value}"
+                        "value": "{theme.color.palette.slate.100.value}"
                     }
                 },
                 "disabled": {
                     "background": {
                         "deprecated": "button-default-disabled-bg-color",
-                        "value": "{palette.slate.30.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     },
                     "border": {
                         "deprecated": "button-default-disabled-border-color",
-                        "value": "{palette.slate.30.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     },
                     "font": {
                         "deprecated": "button-default-disabled-text-color",
-                        "value": "{palette.slate.100.value}"
+                        "value": "{theme.color.palette.slate.100.value}"
                     }
                 },
                 "focus": {
                     "background": {
                         "deprecated": "button-default-focus-bg-color",
-                        "value": "{global.color.primary.base.value}"
+                        "value": "{theme.color.brand.primary.base.value}"
                     },
                     "border": {
                         "deprecated": "button-default-focus-border-color",
-                        "value": "{global.color.primary.base.value}"
+                        "value": "{theme.color.brand.primary.base.value}"
                     }
                 },
                 "hover": {
                     "background": {
                         "deprecated": "button-default-hover-bg-color",
-                        "value": "{palette.slate.40.value}"
+                        "value": "{theme.color.palette.slate.40.value}"
                     }
                 }
             },
@@ -73,25 +73,25 @@
                 "active": {
                     "font": {
                         "deprecated": "button-link-active-text-color",
-                        "value": "{palette.white.value}"
+                        "value": "{theme.color.palette.white.value}"
                     }
                 },
                 "initial": {
                     "font": {
                         "deprecated": "button-link-text-color",
-                        "value": "{palette.slate.30.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     }
                 },
                 "disabled": {
                     "font": {
                         "deprecated": "button-link-disabled-text-color",
-                        "value": "{palette.slate.30.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     }
                 },
                 "hover": {
                     "font": {
                         "deprecated": "button-link-hover-text-color",
-                        "value": "{palette.white.value}"
+                        "value": "{theme.color.palette.white.value}"
                     }
                 }
             }

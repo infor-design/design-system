@@ -1,5 +1,5 @@
 {
-    "global": {
+    "theme": {
         "color": {
             "status": {
                 "caution": { "value": "#504100" },
@@ -7,13 +7,15 @@
                 "success": { "value": "#2A4A14" },
                 "warning": { "value": "#683500" }
             },
-            "primary": {
-                "base":     { "value": "{palette.azure.100.value}" },
-                "alt":      { "value": "{palette.azure.90.value}}" }
+            "brand": {
+                "primary": {
+                    "base":     { "value": "{theme.color.palette.azure.100.value}" },
+                    "alt":      { "value": "{theme.color.palette.azure.90.value}}" }
+                }
             },
             "font": {
-                "info":  { "value": "{palette.graphite.80.value}" },
-                "muted": { "value": "{palette.graphite.50.value}" }
+                "info":  { "value": "{theme.color.palette.graphite.80.value}" },
+                "muted": { "value": "{theme.color.palette.graphite.50.value}" }
             }
         }
     }

@@ -5,7 +5,7 @@
                 "initial": {
                     "arrow": {
                         "deprecated": "checkbox-arrow-color",
-                        "value": "{palette.white.value}"
+                        "value": "{theme.color.palette.white.value}"
                     }
                 }
             },
@@ -13,13 +13,13 @@
                 "disabled": {
                     "background": {
                         "deprecated": "checkbox-disabled-bg-color",
-                        "value": "{global.color.primary.contrast.value}"
+                        "value": "{theme.color.brand.primary.contrast.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "checkbox-bg-color",
-                        "value": "{palette.white.value}"
+                        "value": "{theme.color.palette.white.value}"
                     }
                 }
             }

@@ -3,30 +3,30 @@
         "color": {
             "divider": {
                 "border": {
-                    "value": "{global.color.border.base.value}"
+                    "value": "{theme.color.border.base.value}"
                 }
             },
             "item": {
                 "hover": {
                     "background": {
                         "deprecated": "list-hover-color",
-                        "value": "{palette.graphite.20.value}"
+                        "value": "{theme.color.palette.graphite.20.value}"
                     }
                 },
                 "initial": {
-                    "font": { "value": "{global.color.font.info.value}" }
+                    "font": { "value": "{theme.color.font.info.value}" }
                 },
                 "selected": {
                     "background": {
                         "deprecated": "list-selected-color",
-                        "value": "{palette.graphite.10.value}"
+                        "value": "{theme.color.palette.graphite.10.value}"
                     }
                 }
             },
             "heading": {
                 "initial": {
                     "font": {
-                        "value": "{palette.graphite.20.value}"
+                        "value": "{theme.color.palette.graphite.20.value}"
                     }
                 }
             }

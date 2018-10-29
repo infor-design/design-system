@@ -4,11 +4,11 @@
             "initial": {
                 "font": {
                     "deprecated": "dropdown-color",
-                    "value": "{palette.black.value}"
+                    "value": "{theme.color.palette.black.value}"
                 },
                 "icon": {
                     "deprecated": "dropdown-filter-color",
-                    "value": "{palette.graphite.100.value}"
+                    "value": "{theme.color.palette.graphite.100.value}"
                 }
             }
         }

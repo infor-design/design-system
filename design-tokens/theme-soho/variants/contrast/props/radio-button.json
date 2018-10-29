@@ -5,7 +5,7 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-checked-bg-color",
-                        "value": "{palette.white.value}"
+                        "value": "{theme.color.palette.white.value}"
                     }
                 }
             },
@@ -13,27 +13,27 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-bg-color",
-                        "value": "{palette.graphite.20.value}"
+                        "value": "{theme.color.palette.graphite.20.value}"
                     },
                     "border": {
                         "deprecated": "radio-disabled-border-color",
-                        "value": "{palette.graphite.50.value}"
+                        "value": "{theme.color.palette.graphite.50.value}"
                     }
                 },
                 "hover": {
                     "border": {
                         "deprecated": "radio-border-hover-color",
-                        "value": "{palette.black.value}"
+                        "value": "{theme.color.palette.black.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "radio-bg-color",
-                        "value": "{palette.white.value}"
+                        "value": "{theme.color.palette.white.value}"
                     },
                     "border": {
                         "deprecated": "radio-border-color",
-                        "value": "{palette.graphite.80.value}"
+                        "value": "{theme.color.palette.graphite.80.value}"
                     }
                 }
             }
@@ -42,7 +42,7 @@
             "focus": {
                 "boxshadow": {
                     "deprecated": "radio-focus-shadow",
-                    "value": "0 0 0 1px {palette.graphite.30.value}, 0 0 0 2px {palette.azure.70.value}, 0 0 4px 5px rgba(41, 41, 41, 0.3)"
+                    "value": "0 0 0 1px {theme.color.palette.graphite.30.value}, 0 0 0 2px {theme.color.palette.azure.70.value}, 0 0 4px 5px rgba(41, 41, 41, 0.3)"
                 }
             }
         }

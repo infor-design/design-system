@@ -5,26 +5,26 @@
                 "boxshadow": {
                     "base": {
                         "deprecated": "dropdown-box-shadow (color only)",
-                        "value": "{global.color.boxshadow.base.value}"
+                        "value": "{theme.color.boxshadow.base.value}"
                     }
                 },
                 "font": {
                     "deprecated": "dropdown-color",
-                    "value": "{palette.graphite.100.value}"
+                    "value": "{theme.color.palette.graphite.100.value}"
                 },
                 "icon": {
                     "deprecated": "dropdown-filter-color",
-                    "value": "{palette.graphite.100.value}"
+                    "value": "{theme.color.palette.graphite.100.value}"
                 }
             },
             "selected": {
                 "background": {
                     "deprecated": "dropdown-selected-bg-color",
-                    "value": "{global.color.primary.base.value}"
+                    "value": "{theme.color.brand.primary.base.value}"
                 },
                 "font": {
                     "deprecated": "dropdown-selected-color",
-                    "value": "{palette.white.value}"
+                    "value": "{theme.color.palette.white.value}"
                 }
             }
         },
@@ -32,21 +32,21 @@
             "initial": {
                 "boxshadow": {
                     "deprecated": "dropdown-box-shadow",
-                    "value": "0 5px 5px {global.color.boxshadow.base.value}"
+                    "value": "0 5px 5px {theme.color.boxshadow.base.value}"
                 }
             }
         },
         "size": {
             "border-radius": {
                 "deprecated": "dropdown-list-border-radius",
-                "value": "{global.number.border-radius.md.value}"
+                "value": "{theme.number.border-radius.md.value}"
             },
             "border-width": {
                 "value": "{input.size.border.width.value}"
             },
             "font": {
                 "deprecated": "dropdown-font-size",
-                "value": "{global.size.font.base.value}"
+                "value": "{theme.size.font.base.value}"
             },
             "height": {
                 "max": {

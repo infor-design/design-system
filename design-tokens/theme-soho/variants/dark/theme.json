@@ -1,5 +1,5 @@
 {
-    "global": {
+    "theme": {
         "shadow": {
             "boxshadow": {
                 "base": { "value": "rgba(0, 0, 0, 0.4)" }
@@ -7,12 +7,12 @@
         },
         "color": {
             "border": {
-                "base": { "value": "{palette.slate.40.value}" }
+                "base": { "value": "{theme.color.palette.slate.40.value}" }
             },
             "font": {
-                "base":  { "value": "{palette.white.value}" },
-                "info":  { "value": "{palette.slate.30.value}" },
-                "muted": { "value": "{palette.slate.40.value}" }
+                "base":  { "value": "{theme.color.palette.white.value}" },
+                "info":  { "value": "{theme.color.palette.slate.30.value}" },
+                "muted": { "value": "{theme.color.palette.slate.40.value}" }
             }
         }
     }

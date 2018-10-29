@@ -3,7 +3,7 @@
         "color": {
             "fill": {
                 "deprecated": "icon-fill",
-                "value": "{palette.graphite.80.value}"
+                "value": "{theme.color.palette.graphite.80.value}"
             }
         }
     }
