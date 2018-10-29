@@ -4,17 +4,17 @@
             "primary": {
                 "background": {
                     "deprecated": "body-bg-color-primary",
-                    "value": "{color.base.graphite.70.value}"
+                    "value": "{palette.graphite.70.value}"
                 },
                 "font": {
                     "deprecated": "body-text-color",
-                    "value": "{color.base.white.value}"
+                    "value": "{palette.white.value}"
                 }
             },
             "secondary": {
                 "background": {
                     "deprecated": "body-bg-color-secondary",
-                    "value": "{color.base.graphite.20.value}"
+                    "value": "{palette.graphite.20.value}"
                 }
             }
         }

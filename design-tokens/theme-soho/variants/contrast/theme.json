@@ -1,6 +1,6 @@
 {
-    "color": {
-        "brand": {
+    "global": {
+        "color": {
             "status": {
                 "caution": { "value": "#504100" },
                 "danger":  { "value": "#861111" },
@@ -8,13 +8,13 @@
                 "warning": { "value": "#683500" }
             },
             "primary": {
-                "base":     { "value": "{color.base.azure.100.value}" },
-                "alt":      { "value": "{color.base.azure.90.value}}" }
+                "base":     { "value": "{palette.azure.100.value}" },
+                "alt":      { "value": "{palette.azure.90.value}}" }
+            },
+            "font": {
+                "info":  { "value": "{palette.graphite.80.value}" },
+                "muted": { "value": "{palette.graphite.50.value}" }
             }
-        },
-        "font": {
-            "info":  { "value": "{color.base.graphite.80.value}" },
-            "muted": { "value": "{color.base.graphite.50.value}" }
         }
     }
 }

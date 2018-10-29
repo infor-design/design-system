@@ -5,7 +5,7 @@
                 "disabled": {
                     "background": {
                         "deprecated": "checkbox-disabled-checked-bg-color",
-                        "value": "{color.base.graphite.50.value}"
+                        "value": "{palette.graphite.50.value}"
                     }
                 }
             },
@@ -13,31 +13,31 @@
                 "disabled": {
                     "arrow": {
                         "deprecated": "checkbox-disabled-arrow-color",
-                        "value": "{color.base.graphite.20}"
+                        "value": "{palette.graphite.20}"
                     },
                     "border": {
                         "deprecated": "checkbox-disabled-border-color",
-                        "value": "{color.base.graphite.50.value}"
+                        "value": "{palette.graphite.50.value}"
                     },
                     "font": {
                         "deprecated": "checkbox-disabled-text-color",
-                        "value": "{color.font.muted.value}"
+                        "value": "{global.color.font.muted.value}"
                     }
                 },
                 "hover": {
                     "border": {
                         "deprecated": "checkbox-hover-border-color",
-                        "value": "{color.base.graphite.10.value}"
+                        "value": "{palette.graphite.10.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "checkbox-bg-color",
-                        "value": "{color.brand.primary.contrast.value}"
+                        "value": "{global.color.primary.contrast.value}"
                     },
                     "border": {
                         "deprecated": "checkbox-border-color",
-                        "value": "{color.base.graphite.80.value}"
+                        "value": "{palette.graphite.80.value}"
                     }
                 }
             }
@@ -46,7 +46,7 @@
             "focus": {
                 "boxshadow": {
                     "deprecated": "checkbox-focus-shadow",
-                    "value": "0 0 0 1px {color.base.graphite.30.value}, 0 0 0 2px {color.base.azure.70.value}"
+                    "value": "0 0 0 1px {palette.graphite.30.value}, 0 0 0 2px {palette.azure.70.value}"
                 }
             }
         }

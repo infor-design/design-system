@@ -4,7 +4,7 @@
             "initial": {
                 "font": {
                     "deprecated": "dropdown-group-label-color",
-                    "value": "{color.base.graphite.50.value}"
+                    "value": "{palette.graphite.50.value}"
                 }
             }
         }

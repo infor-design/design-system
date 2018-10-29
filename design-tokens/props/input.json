@@ -8,11 +8,11 @@
                 },
                 "border": {
                     "deprecated": "input-disabled-border-color",
-                    "value": "{color.base.graphite.30.value}"
+                    "value": "{palette.graphite.30.value}"
                 },
                 "font": {
                     "deprecated": "input-disabled-text-color",
-                    "value": "{color.base.graphite.40.value}"
+                    "value": "{palette.graphite.40.value}"
                 }
             },
             "focus": {
@@ -22,11 +22,11 @@
                 },
                 "border": {
                     "deprecated": "input-focus-border-color",
-                    "value": "{color.brand.primary.base.value}"
+                    "value": "{global.color.primary.base.value}"
                 },
                 "font": {
                     "deprecated": "input-focus-text-color",
-                    "value": "{color.font.base.value}"
+                    "value": "{global.color.font.base.value}"
                 }
             },
             "hover": {
@@ -36,7 +36,7 @@
                 },
                 "border": {
                     "deprecated": "input-hover-border-color",
-                    "value": "{color.base.graphite.80.value}"
+                    "value": "{palette.graphite.80.value}"
                 }
             },
             "initial": {
@@ -46,33 +46,33 @@
                 },
                 "border": {
                     "deprecated": "input-border-color",
-                    "value": "{color.border.base.value}"
+                    "value": "{global.color.border.base.value}"
                 },
                 "font": {
                     "deprecated": "input-text-color",
-                    "value": "{color.font.base.value}"
+                    "value": "{global.color.font.base.value}"
                 },
                 "label": {
                     "deprecated": "input-label-text-color",
-                    "value": "{color.font.info.value}"
+                    "value": "{global.color.font.info.value}"
                 },
                 "placeholder": {
                     "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
-                    "value": "{color.font.muted.value}"
+                    "value": "{global.color.font.muted.value}"
                 }
             },
             "readonly": {
                 "background": {
                     "deprecated": "input-readonly-bg-color",
-                    "value": "{color.base.graphite.20.value}"
+                    "value": "{palette.graphite.20.value}"
                 },
                 "border": {
                     "deprecated": "input-readonly-border-color",
-                    "value": "{color.base.graphite.40.value}"
+                    "value": "{palette.graphite.40.value}"
                 },
                 "font": {
                     "deprecated": "input-readonly-text-color",
-                    "value": "{color.base.graphite.100.value}"
+                    "value": "{palette.graphite.100.value}"
                 }
             }
         },
@@ -88,7 +88,7 @@
             "border": {
                 "radius": {
                     "deprecated": "input-border-radius",
-                    "value": "{number.border-radius.sm.value}"
+                    "value": "{global.number.border-radius.sm.value}"
                 },
                 "width": {
                     "deprecated": "input-border-width",

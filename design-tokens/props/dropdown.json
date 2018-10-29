@@ -5,26 +5,26 @@
                 "boxshadow": {
                     "base": {
                         "deprecated": "dropdown-box-shadow (color only)",
-                        "value": "{color.boxshadow.base.value}"
+                        "value": "{global.color.boxshadow.base.value}"
                     }
                 },
                 "font": {
                     "deprecated": "dropdown-color",
-                    "value": "{color.base.graphite.100.value}"
+                    "value": "{palette.graphite.100.value}"
                 },
                 "icon": {
                     "deprecated": "dropdown-filter-color",
-                    "value": "{color.base.graphite.100.value}"
+                    "value": "{palette.graphite.100.value}"
                 }
             },
             "selected": {
                 "background": {
                     "deprecated": "dropdown-selected-bg-color",
-                    "value": "{color.brand.primary.base.value}"
+                    "value": "{global.color.primary.base.value}"
                 },
                 "font": {
                     "deprecated": "dropdown-selected-color",
-                    "value": "{color.base.white.value}"
+                    "value": "{palette.white.value}"
                 }
             }
         },
@@ -32,32 +32,21 @@
             "initial": {
                 "boxshadow": {
                     "deprecated": "dropdown-box-shadow",
-                    "value": "{dropdown.size.boxshadow.x} {dropdown.size.boxshadow.y} {dropdown.size.boxshadow.blur} {color.boxshadow.base.value}"
+                    "value": "0 5px 5px {global.color.boxshadow.base.value}"
                 }
             }
         },
         "size": {
             "border-radius": {
                 "deprecated": "dropdown-list-border-radius",
-                "value": "{number.border-radius.md.value}"
+                "value": "{global.number.border-radius.md.value}"
             },
             "border-width": {
                 "value": "{input.size.border.width.value}"
             },
-            "boxshadow": {
-                "blur": {
-                    "value": "5px"
-                },
-                "x": {
-                    "value": "0"
-                },
-                "y": {
-                    "value": "5px"
-                }
-            },
             "font": {
                 "deprecated": "dropdown-font-size",
-                "value": "{size.font.base.value}"
+                "value": "{global.size.font.base.value}"
             },
             "height": {
                 "max": {

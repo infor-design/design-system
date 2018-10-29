@@ -5,13 +5,13 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-bg-color",
-                        "value": "{color.brand.primary.contrast.value}"
+                        "value": "{global.color.primary.contrast.value}"
                     }
                 },
                 "initial": {
                     "background": {
                         "deprecated": "radio-bg-color",
-                        "value": "{color.base.white.value}"
+                        "value": "{palette.white.value}"
                     }
                 }
             }

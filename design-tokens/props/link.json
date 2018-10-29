@@ -4,25 +4,25 @@
             "disabled": {
                 "font": {
                     "deprecated": "link-disabled-color",
-                    "value": "{color.base.graphite.40.value}"
+                    "value": "{palette.graphite.40.value}"
                 }
             },
             "hover": {
                 "font": {
                     "deprecated": "link-hover-color",
-                    "value": "{color.brand.primary.alt.value}"
+                    "value": "{global.color.primary.alt.value}"
                 }
             },
             "initial": {
                 "font": {
                     "deprecated": "link-color",
-                    "value": "{color.brand.primary.base.value}"
+                    "value": "{global.color.primary.base.value}"
                 }
             },
             "visited": {
                 "font": {
                     "deprecated": "link-visited-color",
-                    "value": "{color.base.amethyst.60.value}"
+                    "value": "{palette.amethyst.60.value}"
                 }
             }
         },
