@@ -33,7 +33,7 @@ configs.forEach(config => {
   const themeName = path.basename(config, '.config.json');
   const themeConfig = JSON.parse(fs.readFileSync(config, 'utf8'));
 
-  const platforms = {
+  themeConfig.platforms = {
     scss: {
       transformGroup: 'scss',
       buildPath: 'dist/tokens/web/',
@@ -56,7 +56,7 @@ configs.forEach(config => {
       buildPath: 'dist/tokens/web/',
       files: [{
         destination: `${themeName}.simple.json`,
-        template: 'website/simplejson'
+        template: 'custom-simplejson'
       }, {
         destination: `${themeName}.json`,
         format: 'json'
@@ -69,16 +69,28 @@ configs.forEach(config => {
         destination: `${themeName}.module.js`,
         format: 'javascript/module'
       }]
+    },
+    xml: {
+      transformGroup: 'scss',
+      buildPath: 'dist/tokens/web/',
+      files: [{
+        destination: `${themeName}.xml`,
+        template: 'custom-xml'
+      }]
     }
   };
 
-  themeConfig.platforms = platforms;
-
   const dict = require('style-dictionary').extend(themeConfig);
 
+  dict
+    .registerTemplate({
+      name: 'custom-simplejson',
+      template: __dirname + '/utilities/tokens/simple.json.template'
+    });
+
   dict.registerTemplate({
-    name: 'website/simplejson',
-    template: __dirname + '/utilities/tokens/simple.json.template'
+    name: 'custom-xml',
+    template: __dirname + '/utilities/tokens/xml.template'
   })
 
   try {

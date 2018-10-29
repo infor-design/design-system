@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tokens>
+<% _.each(allProperties, (prop, idx) => { %>
+  <token>
+    <name><%= prop.name %></name>
+    <category><%= prop.attributes.category %></category>
+    <type><%= prop.attributes.type %></type>
+    <value><%= prop.value %></value>
+  </token>
+<% }) %>
+</tokens>
