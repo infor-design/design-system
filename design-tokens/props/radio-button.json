@@ -5,7 +5,7 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-checked-bg-color",
-                        "value": "{palette.graphite.10.value}"
+                        "value": "{theme.color.palette.graphite.10.value}"
                     },
                     "border": {
                         "value": "{radio.color.unchecked.disabled.border.value}"
@@ -14,11 +14,11 @@
                 "initial": {
                     "background": {
                         "deprecated": "radio-checked-bg-color",
-                        "value": "{global.color.primary.contrast.value}"
+                        "value": "{theme.color.brand.primary.contrast.value}"
                     },
                     "fill": {
                         "deprecated": "radio-checked-color",
-                        "value": "{global.color.primary.base.value}"
+                        "value": "{theme.color.brand.primary.base.value}"
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     },
                     "border": {
                         "deprecated": "radio-disabled-border-color",
-                        "value": "{palette.graphite.30.value}"
+                        "value": "{theme.color.palette.graphite.30.value}"
                     }
                 },
                 "hover": {
                     "border": {
                         "deprecated": "radio-border-hover-color",
-                        "value": "{palette.graphite.80.value}"
+                        "value": "{theme.color.palette.graphite.80.value}"
                     }
                 },
                 "initial": {
@@ -46,11 +46,11 @@
                     },
                     "border": {
                         "deprecated": "radio-border-color",
-                        "value": "{global.color.border.base.value}"
+                        "value": "{theme.color.border.base.value}"
                     },
                     "label": {
                         "deprecated": "radio-color",
-                        "value": "{global.color.primary.contrast.value}"
+                        "value": "{theme.color.brand.primary.contrast.value}"
                     }
                 }
             }
@@ -59,7 +59,7 @@
             "focus": {
                 "boxshadow": {
                     "deprecated": "radio-focus-shadow",
-                    "value": "0 0 0 1px {palette.graphite.10.value}, 0 0 0 2px {global.color.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
+                    "value": "0 0 0 1px {theme.color.palette.graphite.10.value}, 0 0 0 2px {theme.color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
                 }
             }
         },

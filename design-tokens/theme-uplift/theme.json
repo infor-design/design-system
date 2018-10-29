@@ -1,33 +1,35 @@
 {
-    "global": {
+    "theme": {
         "color": {
             "status": {
-                "base":    { "value": "{global.color.primary.alt.value}" },
+                "base":    { "value": "{theme.color.brand.primary.alt.value}" },
                 "caution": { "value": "#ffd000" },
                 "danger":  { "value": "#d92635" },
                 "success": { "value": "#33cc33" },
                 "warning": { "value": "#f29e0d" }
             },
-            "primary": {
-                "base":     { "value": "{palette.azure.60.value}" },
-                "alt":      { "value": "{palette.azure.70.value}" },
-                "contrast": { "value": "{palette.white.value}" }
-            },
-            "secondary": {
-                "base":     { "value": "{palette.graphite.30.value}" },
-                "alt":      { "value": "{palette.graphite.40.value}" },
-                "contrast": { "value": "{palette.graphite.80.value}" }
+            "brand": {
+                "primary": {
+                    "base":     { "value": "{theme.color.palette.azure.60.value}" },
+                    "alt":      { "value": "{theme.color.palette.azure.70.value}" },
+                    "contrast": { "value": "{theme.color.palette.white.value}" }
+                },
+                "secondary": {
+                    "base":     { "value": "{theme.color.palette.graphite.30.value}" },
+                    "alt":      { "value": "{theme.color.palette.graphite.40.value}" },
+                    "contrast": { "value": "{theme.color.palette.graphite.80.value}" }
+                }
             },
             "boxshadow": {
                 "base": { "value": "rgba(0, 0, 0, 0.2)" }
             },
             "border": {
-                "base": { "value": "{palette.graphite.60.value}" }
+                "base": { "value": "{theme.color.palette.graphite.60.value}" }
             },
             "font": {
-                "base":  { "value": "{palette.graphite.100.value}" },
-                "info":  { "value": "{palette.graphite.80.value}" },
-                "muted": { "value": "{palette.graphite.60.value}" }
+                "base":  { "value": "{theme.color.palette.graphite.100.value}" },
+                "info":  { "value": "{theme.color.palette.graphite.80.value}" },
+                "muted": { "value": "{theme.color.palette.graphite.60.value}" }
             }
         },
         "font": {
@@ -38,7 +40,7 @@
         },
         "size": {
             "font": {
-                "base": { "value": "{global.size.font.sm.value}" },
+                "base": { "value": "{theme.size.font.sm.value}" },
                 "sm":   { "value": "1.6rem" },
                 "md":   { "value": "2.4rem" },
                 "lg":   { "value": "3.2rem" },

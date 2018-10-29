@@ -5,7 +5,7 @@
                 "hover": {
                     "background": {
                         "deprecated": "list-hover-color",
-                        "value": "{palette.slate.60.value}"
+                        "value": "{theme.color.palette.slate.60.value}"
                     }
                 }
             }
