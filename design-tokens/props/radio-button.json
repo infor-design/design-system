@@ -26,11 +26,14 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-bg-color",
-                        "value": "transparent"
+                        "value": "{theme.color.palette.graphite.10.value}"
                     },
                     "border": {
                         "deprecated": "radio-disabled-border-color",
                         "value": "{theme.color.palette.graphite.30.value}"
+                    },
+                    "label": {
+                        "value": "{theme.color.font.muted.value}"
                     }
                 },
                 "hover": {
@@ -50,7 +53,7 @@
                     },
                     "label": {
                         "deprecated": "radio-color",
-                        "value": "{theme.color.brand.primary.contrast.value}"
+                        "value": "{theme.color.font.base.value}"
                     }
                 }
             }
@@ -73,11 +76,11 @@
             "inner": {
                 "height": {
                     "deprecated": "radio-inner-h",
-                    "value": "4px"
+                    "value": "6px"
                 },
                 "width": {
                     "deprecated": "radio-inner-w",
-                    "value": "4px"
+                    "value": "6px"
                 }
             },
             "outer": {

@@ -12,6 +12,10 @@
                     },
                     "border": {
                         "value": "{checkbox.color.unchecked.disabled.border.value}"
+                    },
+                    "font": {
+                        "deprecated": "checkbox-disabled-text-color",
+                        "value": "{theme.color.font.muted.value}"
                     }
                 },
                 "initial": {
@@ -36,7 +40,7 @@
                     },
                     "background": {
                         "deprecated": "checkbox-disabled-bg-color",
-                        "value": "transparent"
+                        "value": "{theme.color.palette.white.value}"
                     },
                     "border": {
                         "deprecated": "checkbox-disabled-border-color",
@@ -44,7 +48,7 @@
                     },
                     "font": {
                         "deprecated": "checkbox-disabled-text-color",
-                        "value": "{theme.color.palette.graphite.40.value}"
+                        "value": "{theme.color.font.muted.value}"
                     }
                 },
                 "hover": {
