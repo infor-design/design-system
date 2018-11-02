@@ -26,7 +26,7 @@
                 "disabled": {
                     "background": {
                         "deprecated": "radio-disabled-bg-color",
-                        "value": "{theme.color.palette.graphite.10.value}"
+                        "value": "transparent"
                     },
                     "border": {
                         "deprecated": "radio-disabled-border-color",
@@ -76,11 +76,11 @@
             "inner": {
                 "height": {
                     "deprecated": "radio-inner-h",
-                    "value": "6px"
+                    "value": "4px"
                 },
                 "width": {
                     "deprecated": "radio-inner-w",
-                    "value": "6px"
+                    "value": "4px"
                 }
             },
             "outer": {

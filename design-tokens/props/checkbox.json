@@ -40,7 +40,7 @@
                     },
                     "background": {
                         "deprecated": "checkbox-disabled-bg-color",
-                        "value": "{theme.color.palette.white.value}"
+                        "value": "transparent"
                     },
                     "border": {
                         "deprecated": "checkbox-disabled-border-color",
