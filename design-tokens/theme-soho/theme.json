@@ -21,7 +21,7 @@
                 }
             },
             "boxshadow": {
-                "base": { "value": "{theme.color.palette.graphite.10.value}" }
+                "base": { "value": "rgba(0, 0, 0, 0.2)" }
             },
             "border": {
                 "base": { "value": "{theme.color.palette.graphite.40.value}" }
