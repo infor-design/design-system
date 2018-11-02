@@ -22,6 +22,9 @@
                     "background": {
                         "deprecated": "button-primary-focus-bg-color",
                         "value": "{theme.color.brand.primary.base.value}"
+                    },
+                    "border": {
+                        "value": "{theme.color.brand.primary.base.value}"
                     }
                 },
                 "hover": {
