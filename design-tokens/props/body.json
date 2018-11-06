@@ -3,17 +3,14 @@
         "color": {
             "primary": {
                 "background": {
-                    "deprecated": "body-bg-color-primary",
                     "value": "{theme.color.palette.graphite.10.value}"
                 },
                 "font": {
-                    "deprecated": "body-text-color",
                     "value": "{theme.color.font.base.value}"
                 }
             },
             "secondary": {
                 "background": {
-                    "deprecated": "body-bg-color-secondary",
                     "value": "{theme.color.palette.white.value}"
                 }
             }

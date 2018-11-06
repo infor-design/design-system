@@ -2,7 +2,6 @@
     "icon": {
         "color": {
             "fill": {
-                "deprecated": "icon-fill",
                 "value": "{theme.color.palette.graphite.80.value}"
             }
         }

@@ -9,7 +9,6 @@
             "item": {
                 "hover": {
                     "background": {
-                        "deprecated": "list-hover-color",
                         "value": "{theme.color.palette.graphite.20.value}"
                     }
                 },
@@ -18,7 +17,6 @@
                 },
                 "selected": {
                     "background": {
-                        "deprecated": "list-selected-color",
                         "value": "{theme.color.palette.graphite.10.value}"
                     }
                 }

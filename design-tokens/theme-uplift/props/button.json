@@ -2,12 +2,10 @@
     "button": {
         "size": {
             "height": {
-                "deprecated": "button-height",
                 "value": "38px"
             },
             "border": {
                 "radius": {
-                    "deprecated": "button-border-radius",
                     "value": "{theme.number.border-radius.md.value}"
                 }
             }

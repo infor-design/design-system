@@ -4,7 +4,6 @@
             "item": {
                 "hover": {
                     "background": {
-                        "deprecated": "list-hover-color",
                         "value": "{theme.color.palette.slate.60.value}"
                     }
                 }

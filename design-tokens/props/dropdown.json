@@ -4,26 +4,21 @@
             "initial": {
                 "boxshadow": {
                     "base": {
-                        "deprecated": "dropdown-box-shadow (color only)",
                         "value": "{theme.color.boxshadow.base.value}"
                     }
                 },
                 "font": {
-                    "deprecated": "dropdown-color",
                     "value": "{theme.color.palette.graphite.100.value}"
                 },
                 "icon": {
-                    "deprecated": "dropdown-filter-color",
                     "value": "{theme.color.palette.graphite.100.value}"
                 }
             },
             "selected": {
                 "background": {
-                    "deprecated": "dropdown-selected-bg-color",
                     "value": "{theme.color.brand.primary.base.value}"
                 },
                 "font": {
-                    "deprecated": "dropdown-selected-color",
                     "value": "{theme.color.palette.white.value}"
                 }
             }
@@ -31,35 +26,29 @@
         "shadow": {
             "initial": {
                 "boxshadow": {
-                    "deprecated": "dropdown-box-shadow",
                     "value": "0 5px 5px {theme.color.boxshadow.base.value}"
                 }
             }
         },
         "size": {
             "border-radius": {
-                "deprecated": "dropdown-list-border-radius",
                 "value": "{theme.number.border-radius.md.value}"
             },
             "border-width": {
                 "value": "{input.size.border.width.value}"
             },
             "font": {
-                "deprecated": "dropdown-font-size",
                 "value": "{theme.size.font.base.value}"
             },
             "height": {
                 "max": {
-                    "deprecated": "dropdown-list-max-height",
                     "value": "300px"
                 },
                 "min": {
-                    "deprecated": "dropdown-list-min-height",
                     "value": "30px"
                 }
             },
             "padding": {
-                "deprecated": "dropdown-padding",
                 "value": "8px 30px 8px 10px"
             }
         }

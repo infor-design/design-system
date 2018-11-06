@@ -4,19 +4,16 @@
             "primary": {
                 "active": {
                     "background": {
-                        "deprecated": "button-primary-active-bg-color",
                         "value": "{theme.color.palette.azure.70.value}"
                     }
                 },
                 "hover": {
                     "background": {
-                        "deprecated": "button-primary-hover-bg-color",
                         "value": "{theme.color.palette.azure.80.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "deprecated": "button-primary-bg-color",
                         "value": "{theme.color.palette.azure.60.value}"
                     }
                 }
@@ -24,37 +21,30 @@
             "secondary": {
                 "active": {
                     "background": {
-                        "deprecated": "button-default-active-bg-color",
                         "value": "{theme.color.palette.slate.40.value}"
                     }
                 },
                 "disabled": {
                     "background": {
-                        "deprecated": "button-default-disabled-bg-color",
                         "value": "{theme.color.palette.slate.30.value}"
                     },
                     "border": {
-                        "deprecated": "button-default-disabled-border-color",
                         "value": "{theme.color.palette.slate.30.value}"
                     },
                     "font": {
-                        "deprecated": "button-default-disabled-text-color",
                         "value": "{theme.color.palette.slate.100.value}"
                     }
                 },
                 "hover": {
                     "background": {
-                        "deprecated": "button-default-hover-bg-color",
                         "value": "{theme.color.palette.slate.40.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "deprecated": "button-default-bg-color",
                         "value": "{theme.color.palette.slate.30.value}"
                     },
                     "font": {
-                        "deprecated": "button-default-text-color",
                         "value": "{theme.color.palette.slate.100.value}"
                     }
                 }
@@ -62,25 +52,21 @@
             "tertiary": {
                 "active": {
                     "font": {
-                        "deprecated": "button-link-active-text-color",
                         "value": "{theme.color.palette.white.value}"
                     }
                 },
                 "disabled": {
                     "font": {
-                        "deprecated": "button-link-disabled-text-color",
                         "value": "{theme.color.palette.slate.30.value}"
                     }
                 },
                 "hover": {
                     "font": {
-                        "deprecated": "button-link-hover-text-color",
                         "value": "{theme.color.palette.white.value}"
                     }
                 },
                 "initial": {
                     "font": {
-                        "deprecated": "button-link-text-color",
                         "value": "{theme.color.palette.slate.30.value}"
                     }
                 }

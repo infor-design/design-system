@@ -3,11 +3,9 @@
         "color": {
             "initial": {
                 "font": {
-                    "deprecated": "dropdown-color",
                     "value": "{theme.color.palette.white.value}"
                 },
                 "icon": {
-                    "deprecated": "dropdown-filter-color",
                     "value": "{dropdown.color.initial.font}"
                 }
             }

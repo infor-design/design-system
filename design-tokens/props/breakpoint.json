@@ -1,23 +1,18 @@
 {
   "breakpoint": {
     "lg": {
-      "deprecated": "breakpoint-lg",
       "value": "1280px"
     },
     "md": {
-      "deprecated": "breakpoint-md",
       "value": "840px"
     },
     "sm": {
-      "deprecated": "breakpoint-sm",
       "value": "600px"
     },
     "xl": {
-      "deprecated": "breakpoint-xl",
       "value": "1440px"
     },
     "xs": {
-      "deprecated": "breakpoint-xs",
       "value": "360px"
     }
   }

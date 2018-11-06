@@ -4,13 +4,11 @@
             "checked": {
                 "disabled": {
                     "background": {
-                        "deprecated": "radio-disabled-checked-bg-color",
                         "value": "{theme.color.palette.slate.30.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "deprecated": "radio-checked-bg-color",
                         "value": "{theme.color.palette.white.value}"
                     }
                 }
@@ -18,23 +16,19 @@
             "unchecked": {
                 "disabled": {
                     "background": {
-                        "deprecated": "radio-disabled-bg-color",
                         "value": "{theme.color.palette.slate.80.value}"
                     },
                     "border": {
-                        "deprecated": "radio-disabled-border-color",
                         "value": "#64676f"
                     }
                 },
                 "hover": {
                     "border": {
-                        "deprecated": "radio-border-hover-color",
                         "value": "{theme.color.palette.slate.20.value}"
                     }
                 },
                 "initial": {
                     "border": {
-                        "deprecated": "radio-border-color",
                         "value": "{theme.color.palette.slate.40.value}"
                     }
                 }
@@ -43,7 +37,6 @@
         "shadow": {
             "focus": {
                 "boxshadow": {
-                    "deprecated": "radio-focus-shadow",
                     "value": "0 0 0 1px {theme.color.palette.slate.80.value}, 0 0 0 2px {theme.color.brand.primary.base.value}, 0 0 4px 5px rgba(255, 255, 255, 0.3)"
                 }
             }

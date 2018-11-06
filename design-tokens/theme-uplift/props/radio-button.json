@@ -4,13 +4,11 @@
             "unchecked": {
                 "disabled": {
                     "background": {
-                        "deprecated": "radio-disabled-bg-color",
                         "value": "{theme.color.brand.primary.contrast.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "deprecated": "radio-bg-color",
                         "value": "{theme.color.palette.white.value}"
                     }
                 }
