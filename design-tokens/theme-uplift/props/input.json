@@ -23,6 +23,14 @@
                     "value": "{theme.color.palette.graphite.100.value}"
                 }
             }
+        },
+        "size": {
+            "border": {
+                "radius": {
+                    "deprecated": "input-border-radius",
+                    "value": "{theme.number.border-radius.md.value}"
+                }
+            }
         }
     }
 }

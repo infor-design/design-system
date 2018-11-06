@@ -5,9 +5,11 @@
                 "deprecated": "button-height",
                 "value": "38px"
             },
-            "line-height": {
-                "deprecated": "button-line-height",
-                "value": "1"
+            "border": {
+                "radius": {
+                    "deprecated": "button-border-radius",
+                    "value": "{theme.number.border-radius.md.value}"
+                }
             }
         }
     }
