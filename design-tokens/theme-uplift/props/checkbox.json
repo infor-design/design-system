@@ -4,7 +4,6 @@
             "checked": {
                 "initial": {
                     "arrow": {
-                        "deprecated": "checkbox-arrow-color",
                         "value": "{theme.color.palette.white.value}"
                     }
                 }
@@ -12,13 +11,11 @@
             "unchecked": {
                 "disabled": {
                     "background": {
-                        "deprecated": "checkbox-disabled-bg-color",
                         "value": "{theme.color.brand.primary.contrast.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "deprecated": "checkbox-bg-color",
                         "value": "{theme.color.palette.white.value}"
                     }
                 }

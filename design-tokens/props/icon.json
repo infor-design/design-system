@@ -2,17 +2,14 @@
     "icon": {
         "color": {
             "fill": {
-                "deprecated": "icon-fill",
                 "value": "{theme.color.palette.graphite.40.value}"
             }
         },
         "size": {
             "height": {
-                "deprecated": "icon-height",
                 "value": "17px"
             },
             "width": {
-                "deprecated": "icon-width",
                 "value": "22px"
             }
         }

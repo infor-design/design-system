@@ -3,7 +3,6 @@
         "color": {
             "initial": {
                 "font": {
-                    "deprecated": "dropdown-group-label-color",
                     "value": "{theme.color.palette.graphite.50.value}"
                 }
             }

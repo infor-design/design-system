@@ -7,24 +7,20 @@
                         "value": "{checkbox.color.unchecked.disabled.arrow.value}"
                     },
                     "background": {
-                        "deprecated": "checkbox-disabled-checked-bg-color",
                         "value": "{theme.color.palette.graphite.30.value}"
                     },
                     "border": {
                         "value": "{checkbox.color.unchecked.disabled.border.value}"
                     },
                     "font": {
-                        "deprecated": "checkbox-disabled-text-color",
                         "value": "{theme.color.font.muted.value}"
                     }
                 },
                 "initial": {
                     "arrow": {
-                        "deprecated": "checkbox-arrow-color",
                         "value": "{theme.color.brand.primary.contrast.value}"
                     },
                     "background": {
-                        "deprecated": "checkbox-checked-bg-color",
                         "value": "{theme.color.brand.primary.base.value}"
                     },
                     "border": {
@@ -35,39 +31,31 @@
             "unchecked": {
                 "disabled": {
                     "arrow": {
-                        "deprecated": "checkbox-disabled-arrow-color",
                         "value": "#f4f4f4"
                     },
                     "background": {
-                        "deprecated": "checkbox-disabled-bg-color",
                         "value": "transparent"
                     },
                     "border": {
-                        "deprecated": "checkbox-disabled-border-color",
                         "value": "{theme.color.palette.graphite.30.value}"
                     },
                     "font": {
-                        "deprecated": "checkbox-disabled-text-color",
                         "value": "{theme.color.font.muted.value}"
                     }
                 },
                 "hover": {
                     "border": {
-                        "deprecated": "checkbox-hover-border-color",
                         "value": "{theme.color.palette.graphite.80.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "deprecated": "checkbox-bg-color",
                         "value": "transparent"
                     },
                     "border": {
-                        "deprecated": "checkbox-border-color",
                         "value": "{theme.color.border.base.value}"
                     },
                     "font": {
-                        "deprecated": "checkbox-label-color",
                         "value": "{theme.color.font.base.value}"
                     }
                 }
@@ -76,7 +64,6 @@
         "shadow": {
             "focus": {
                 "boxshadow": {
-                    "deprecated": "checkbox-focus-shadow",
                     "value": "0 0 0 1px {theme.color.palette.graphite.10.value}, 0 0 0 2px {theme.color.brand.primary.base.value}"
                 }
             }
@@ -87,21 +74,17 @@
             },
             "box": {
                 "height": {
-                    "deprecated": "checkbox-box-size",
                     "value": "17px"
                 },
                 "width": {
-                    "deprecated": "checkbox-box-size",
                     "value": "17px"
                 }
             },
             "check": {
                 "height": {
-                    "deprecated": "checkbox-check-h",
                     "value": "11px"
                 },
                 "width": {
-                    "deprecated": "checkbox-check-w",
                     "value": "5px"
                 }
             }

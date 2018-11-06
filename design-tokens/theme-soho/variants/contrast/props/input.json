@@ -3,55 +3,44 @@
         "color": {
             "disabled": {
                 "border": {
-                    "deprecated": "input-disabled-border-color",
                     "value": "{theme.color.palette.graphite.50.value}"
                 },
                 "font": {
-                    "deprecated": "input-disabled-text-color",
                     "value": "{theme.color.palette.graphite.50.value}"
                 }
             },
             "focus": {
                 "border": {
-                    "deprecated": "input-focus-border-color",
                     "value": "{theme.color.palette.graphite.80.value}"
                 }
             },
             "hover": {
                 "border": {
-                    "deprecated": "input-hover-border-color",
                     "value": "{theme.color.palette.black.value}"
                 }
             },
             "initial": {
                 "background": {
-                    "deprecated": "input-bg-color",
                     "value": "{theme.color.palette.white.value}"
                 },
                 "border": {
-                    "deprecated": "input-border-color",
                     "value": "{theme.color.palette.graphite.80.value}"
                 },
                 "label": {
-                    "deprecated": "input-label-text-color",
                     "value": "{theme.color.font.info.value}"
                 },
                 "placeholder": {
-                    "deprecated": "[input-info-block-text-color, input-placeholder-text-color]",
                     "value": "{theme.color.palette.graphite.50.value}"
                 }
             },
             "readonly": {
                 "background": {
-                    "deprecated": "input-readonly-bg-color",
                     "value": "{theme.color.palette.graphite.30.value}"
                 },
                 "border": {
-                    "deprecated": "input-readonly-border-color",
                     "value": "{theme.color.palette.graphite.80.value}"
                 },
                 "font": {
-                    "deprecated": "input-readonly-text-color",
                     "value": "{theme.color.font.base.value}"
                 }
             }

@@ -3,13 +3,11 @@
         "color": {
             "hover": {
                 "font": {
-                    "deprecated": "link-hover-color",
                     "value": "{theme.color.palette.azure.40.value}"
                 }
             },
             "initial": {
                 "font": {
-                    "deprecated": "link-color",
                     "value": "{theme.color.palette.azure.40.value}"
                 }
             }

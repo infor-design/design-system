@@ -3,25 +3,21 @@
         "color": {
             "disabled": {
                 "font": {
-                    "deprecated": "link-disabled-color",
                     "value": "{theme.color.palette.graphite.40.value}"
                 }
             },
             "hover": {
                 "font": {
-                    "deprecated": "link-hover-color",
                     "value": "{theme.color.brand.primary.alt.value}"
                 }
             },
             "initial": {
                 "font": {
-                    "deprecated": "link-color",
                     "value": "{theme.color.brand.primary.base.value}"
                 }
             },
             "visited": {
                 "font": {
-                    "deprecated": "link-visited-color",
                     "value": "{theme.color.palette.amethyst.60.value}"
                 }
             }
@@ -29,7 +25,6 @@
         "font": {
             "initial": {
                 "decoration": {
-                    "deprecated": "link-decoration",
                     "value": "underline"
                 }
             }
