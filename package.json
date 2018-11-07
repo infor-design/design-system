@@ -11,6 +11,7 @@
     "documentation:staging": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e staging",
     "documentation:prod": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e prod",
     "clean": "del ./dist/*/* && del ./IDS-*.zip",
+    "mdlint": "npx markdownlint --ignore=dist **/*.md",
     "zip": "bash ./scripts/package-release.sh",
     "release:beta": "npx release-it minor --preRelease=beta --no-github.release",
     "release:rc": "npx release-it --preRelease=rc --no-github.release",
@@ -41,5 +42,8 @@
   },
   "files": [
     "dist/"
-  ]
+  ],
+  "dependencies": {
+    "markdownlint-cli": "^0.13.0"
+  }
 }
