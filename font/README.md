@@ -4,7 +4,7 @@ To read more about how to use Source Sans in IDS, see our [Typography guidelines
 
 Mac users should install the OTF version by going into `/font/OTF/` and installing all variants into Font Book.
 
-# Source Sans Pro
+## Source Sans Pro
 
 Source Sans Pro is a set of OpenType fonts that have been designed to work well
 in user interface (UI) environments. In addition to a functional OpenType font, this open
@@ -13,9 +13,9 @@ by using the AFDKO makeotf tool.
 
 ## Font installation instructions
 
-* [Mac OS X](http://support.apple.com/kb/HT2509)
-* [Windows](http://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
-* [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
+- [Mac OS X](http://support.apple.com/kb/HT2509)
+- [Windows](http://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
+- [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
 
 ## Further information
 
