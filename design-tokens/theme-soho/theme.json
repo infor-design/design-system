@@ -41,6 +41,7 @@
         "size": {
             "font": {
                 "base": { "value": "{theme.size.font.sm.value}" },
+                "xs":   { "value": "1.2rem" },
                 "sm":   { "value": "1.4rem" },
                 "md":   { "value": "2.4rem" },
                 "lg":   { "value": "3.2rem" },
