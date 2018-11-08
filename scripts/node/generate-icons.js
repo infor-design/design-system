@@ -84,7 +84,7 @@ args.clean = yesOrNo(args.clean);
 return checkSketchTool()
   .catch(err => {
     swlog.error(err);
-    process.exit(1);
+    // Note: Do not exit if there isn't a sketch tool
   })
   .then(cmnd => {
     const program = spawn(cmnd, cmdArgs.concat(args.srcfile, `--output=${OUTPUT_DIR}`));
@@ -106,7 +106,6 @@ return checkSketchTool()
 
     program.on('close', spawnCb);
 });
-
 
 /**
  * Check to see if a sketchtool is installed and where
