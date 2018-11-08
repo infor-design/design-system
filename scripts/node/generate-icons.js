@@ -23,7 +23,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const glob = require('glob');
 const svgo = require('svgo');
-const swLog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log.js');
 const util = require("util");
 const which = require('npm-which')(process.cwd());
 
@@ -40,7 +40,7 @@ const stats = {
 //   Main
 // -------------------------------------
 
-const startTaskName = swLog.logTaskStart('exporting SVGs');
+const startTaskName = swlog.logTaskStart('exporting SVGs');
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -92,7 +92,7 @@ return checkSketchTool()
 
     program.on('close', (code) => {
       if (code === 0) {
-        swLog.logTaskEnd(startTaskName);
+        swlog.logTaskEnd(startTaskName);
         optimizeSVGs();
       } else {
         swlog.error(`Icon generation process exited with code ${code}`);
@@ -129,7 +129,7 @@ function checkSketchTool() {
  * Optimize the generated .svg icon files
  */
 function optimizeSVGs() {
-  const startOptimizeTaskName = swLog.logTaskStart('optimizing svgs');
+  const startOptimizeTaskName = swlog.logTaskStart('optimizing svgs');
 
   const svgoOptimize = new svgo({
     plugins: [
@@ -148,7 +148,7 @@ function optimizeSVGs() {
       .then(output => {
         return writeFile(filepath, output.data, 'utf-8').then(() => {
           if (args.verbose) {
-            swLog.logTaskAction('Optimized', filepath);
+            swlog.logTaskAction('Optimized', filepath);
           }
           stats.numOptimized++;
         });
@@ -157,9 +157,9 @@ function optimizeSVGs() {
 
   Promise.all(svgPromises).then(() => {
     if (!args.verbose) {
-      swLog.logTaskAction('Optimized', `${stats.numOptimized} SVGs`);
+      swlog.logTaskAction('Optimized', `${stats.numOptimized} SVGs`);
     }
-    swLog.logTaskEnd(startOptimizeTaskName);
+    swlog.logTaskEnd(startOptimizeTaskName);
     logStats();
   }).catch(err => swlog.error(err));
 }
