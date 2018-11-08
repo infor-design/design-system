@@ -11,7 +11,8 @@
 const args = require('minimist')(process.argv.slice(2));
 
 if (!args.srcfile) {
-  throw new Error('Error! No sketch source file specified.');
+  swlog.error('Error! No sketch source file specified.');
+  process.exit(1);
 }
 
 // -------------------------------------
@@ -34,6 +35,16 @@ const OUTPUT_DIR = `./dist/icons`;
 const stats = {
   numOptimized: 0,
   total: 0
+};
+
+const spawnCb = code => {
+  if (code === 0) {
+    swlog.logTaskEnd(startTaskName);
+    optimizeSVGs();
+  } else {
+    swlog.error(`Icon generation process exited with code ${code}`);
+    process.exit(1);
+  }
 };
 
 // -------------------------------------
@@ -71,7 +82,10 @@ args.clean = yesOrNo(args.clean);
 // -------------------------------------
 
 return checkSketchTool()
-  .catch(err => swlog.error(err))
+  .catch(err => {
+    swlog.error(err);
+    process.exit(1);
+  })
   .then(cmnd => {
     const program = spawn(cmnd, cmdArgs.concat(args.srcfile, `--output=${OUTPUT_DIR}`));
 
@@ -90,14 +104,7 @@ return checkSketchTool()
       }
     });
 
-    program.on('close', (code) => {
-      if (code === 0) {
-        swlog.logTaskEnd(startTaskName);
-        optimizeSVGs();
-      } else {
-        swlog.error(`Icon generation process exited with code ${code}`);
-      }
-    });
+    program.on('close', spawnCb);
 });
 
 
@@ -105,7 +112,7 @@ return checkSketchTool()
  * Check to see if a sketchtool is installed and where
  */
 function checkSketchTool() {
-  return new Promise(function(resolve, reject) {
+  return new Promise((resolve, reject) => {
     // Check the tool bundled with Sketch.app (>= ver 3.5)
     return fs.access(TOOL_PATH, fs.F_OK, function(err) {
       if (!err) {
@@ -113,7 +120,7 @@ function checkSketchTool() {
         return;
       }
       // Check the tool installed via install.sh
-      return which('sketchtool', function(err2, pathTo) {
+      return which('sketchtool', (err2, pathTo) => {
         if (err2) {
           return reject('No sketchtool installed.');
         } else {
@@ -140,19 +147,19 @@ function optimizeSVGs() {
   const svgFiles = glob.sync(`${OUTPUT_DIR}/*.svg`);
   stats.total = svgFiles.length;
 
-  const svgPromises = svgFiles.map(filepath => {
-    return readFile(filepath, 'utf8')
-      .then(output => {
-        return svgoOptimize.optimize(output);
-      })
-      .then(output => {
-        return writeFile(filepath, output.data, 'utf-8').then(() => {
-          if (args.verbose) {
-            swlog.logTaskAction('Optimized', filepath);
-          }
-          stats.numOptimized++;
-        });
-      });
+  const svgPromises = svgFiles.map(async filepath => {
+    try {
+      const data = await readFile(filepath, 'utf8');
+      const dataOptimized = await svgoOptimize.optimize(data);
+      await writeFile(filepath, dataOptimized.data, 'utf-8');
+      if (args.verbose) {
+        swlog.logTaskAction('Optimized', filepath);
+      }
+      stats.numOptimized++;
+    } catch(err) {
+      swlog.error(err);
+      process.exit(1);
+    }
   });
 
   Promise.all(svgPromises).then(() => {
@@ -161,7 +168,10 @@ function optimizeSVGs() {
     }
     swlog.logTaskEnd(startOptimizeTaskName);
     logStats();
-  }).catch(err => swlog.error(err));
+  }).catch(err => {
+    swlog.error(err);
+    process.exit(1);
+  });
 }
 
 /**
