@@ -54,9 +54,11 @@
             }
         },
         "number": {
-            "font-weight": {
-                "base": { "value": "400" },
-                "bold": { "value": "600" }
+            "font": {
+                "weight": {
+                    "base": { "value": "400" },
+                    "bold": { "value": "600" }
+                }
             },
             "opacity": {
                 "disabled": { "value": "0.5" }

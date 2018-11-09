@@ -139,7 +139,7 @@
                 "value": "capitalize"
             },
             "weight": {
-                "value": "{theme.number.font-weight.bold.value}"
+                "value": "{theme.number.font.weight.bold.value}"
             }
         },
         "shadow": {
