@@ -31,11 +31,13 @@
             }
         },
         "size": {
-            "border-radius": {
-                "value": "{theme.number.border-radius.md.value}"
-            },
-            "border-width": {
-                "value": "{input.size.border.width.value}"
+            "border": {
+                "radius": {
+                    "value": "{theme.number.border.radius.md.value}"
+                },
+                "width": {
+                    "value": "{input.size.border.width.value}"
+                }
             },
             "font": {
                 "value": "{theme.size.font.base.value}"

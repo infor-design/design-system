@@ -70,7 +70,7 @@
         "size": {
             "border": {
                 "radius": {
-                    "value": "{theme.number.border-radius.sm.value}"
+                    "value": "{theme.number.border.radius.sm.value}"
                 },
                 "width": {
                     "value": "1px"
@@ -79,8 +79,12 @@
             "height": {
                 "value": "3.4rem"
             },
-            "line-height": {
-                "value": "16px"
+            "font": {
+                "line": {
+                    "height": {
+                        "value": "16px"
+                    }
+                }
             },
             "padding": {
                 "x": {

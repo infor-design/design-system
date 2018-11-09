@@ -139,7 +139,7 @@
                 "value": "capitalize"
             },
             "weight": {
-                "value": "{theme.number.font-weight.bold.value}"
+                "value": "{theme.number.font.weight.bold.value}"
             }
         },
         "shadow": {
@@ -152,7 +152,7 @@
         "size": {
             "border": {
                 "radius": {
-                    "value": "{theme.number.border-radius.sm.value}"
+                    "value": "{theme.number.border.radius.sm.value}"
                 },
                 "width": {
                     "value": "1px"
@@ -161,8 +161,12 @@
             "height": {
                 "value": "34px"
             },
-            "line-height": {
-                "value": "normal"
+            "font": {
+                "line": {
+                    "height": {
+                        "value": "normal"
+                    }
+                }
             },
             "padding": {
                 "x": {
