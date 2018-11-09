@@ -45,10 +45,12 @@
                 "sm":   { "value": "1.4rem" },
                 "md":   { "value": "2.4rem" },
                 "lg":   { "value": "3.2rem" },
-                "xl":   { "value": "4.0rem" }
-            },
-            "line-height": {
-                "base": { "value": "2.2rem" }
+                "xl":   { "value": "4.0rem" },
+                "line": {
+                    "height": {
+                        "value": "2.2rem"
+                    }
+                }
             }
         },
         "number": {

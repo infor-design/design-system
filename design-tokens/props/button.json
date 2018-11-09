@@ -161,8 +161,12 @@
             "height": {
                 "value": "34px"
             },
-            "line-height": {
-                "value": "normal"
+            "font": {
+                "line": {
+                    "height": {
+                        "value": "normal"
+                    }
+                }
             },
             "padding": {
                 "x": {
