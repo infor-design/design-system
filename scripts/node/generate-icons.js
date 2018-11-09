@@ -11,7 +11,8 @@
 const args = require('minimist')(process.argv.slice(2));
 
 if (!args.srcfile) {
-  throw new Error('Error! No sketch source file specified.');
+  swlog.error('Error! No sketch source file specified.');
+  process.exit(1);
 }
 
 // -------------------------------------
@@ -23,7 +24,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const glob = require('glob');
 const svgo = require('svgo');
-const swLog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log.js');
 const util = require("util");
 const which = require('npm-which')(process.cwd());
 
@@ -36,11 +37,21 @@ const stats = {
   total: 0
 };
 
+const spawnCb = code => {
+  if (code === 0) {
+    swlog.logTaskEnd(startTaskName);
+    optimizeSVGs();
+  } else {
+    swlog.error(`Icon generation process exited with code ${code}`);
+    process.exit(1);
+  }
+};
+
 // -------------------------------------
 //   Main
 // -------------------------------------
 
-const startTaskName = swLog.logTaskStart('exporting SVGs');
+const startTaskName = swlog.logTaskStart('exporting SVGs');
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -71,7 +82,10 @@ args.clean = yesOrNo(args.clean);
 // -------------------------------------
 
 return checkSketchTool()
-  .catch(err => swlog.error(err))
+  .catch(err => {
+    swlog.error(err);
+    // Note: Do not exit if there isn't a sketch tool
+  })
   .then(cmnd => {
     const program = spawn(cmnd, cmdArgs.concat(args.srcfile, `--output=${OUTPUT_DIR}`));
 
@@ -90,22 +104,14 @@ return checkSketchTool()
       }
     });
 
-    program.on('close', (code) => {
-      if (code === 0) {
-        swLog.logTaskEnd(startTaskName);
-        optimizeSVGs();
-      } else {
-        swlog.error(`Icon generation process exited with code ${code}`);
-      }
-    });
+    program.on('close', spawnCb);
 });
-
 
 /**
  * Check to see if a sketchtool is installed and where
  */
 function checkSketchTool() {
-  return new Promise(function(resolve, reject) {
+  return new Promise((resolve, reject) => {
     // Check the tool bundled with Sketch.app (>= ver 3.5)
     return fs.access(TOOL_PATH, fs.F_OK, function(err) {
       if (!err) {
@@ -113,7 +119,7 @@ function checkSketchTool() {
         return;
       }
       // Check the tool installed via install.sh
-      return which('sketchtool', function(err2, pathTo) {
+      return which('sketchtool', (err2, pathTo) => {
         if (err2) {
           return reject('No sketchtool installed.');
         } else {
@@ -129,7 +135,7 @@ function checkSketchTool() {
  * Optimize the generated .svg icon files
  */
 function optimizeSVGs() {
-  const startOptimizeTaskName = swLog.logTaskStart('optimizing svgs');
+  const startOptimizeTaskName = swlog.logTaskStart('optimizing svgs');
 
   const svgoOptimize = new svgo({
     plugins: [
@@ -140,28 +146,31 @@ function optimizeSVGs() {
   const svgFiles = glob.sync(`${OUTPUT_DIR}/*.svg`);
   stats.total = svgFiles.length;
 
-  const svgPromises = svgFiles.map(filepath => {
-    return readFile(filepath, 'utf8')
-      .then(output => {
-        return svgoOptimize.optimize(output);
-      })
-      .then(output => {
-        return writeFile(filepath, output.data, 'utf-8').then(() => {
-          if (args.verbose) {
-            swLog.logTaskAction('Optimized', filepath);
-          }
-          stats.numOptimized++;
-        });
-      });
+  const svgPromises = svgFiles.map(async filepath => {
+    try {
+      const data = await readFile(filepath, 'utf8');
+      const dataOptimized = await svgoOptimize.optimize(data);
+      await writeFile(filepath, dataOptimized.data, 'utf-8');
+      if (args.verbose) {
+        swlog.logTaskAction('Optimized', filepath);
+      }
+      stats.numOptimized++;
+    } catch(err) {
+      swlog.error(err);
+      process.exit(1);
+    }
   });
 
   Promise.all(svgPromises).then(() => {
     if (!args.verbose) {
-      swLog.logTaskAction('Optimized', `${stats.numOptimized} SVGs`);
+      swlog.logTaskAction('Optimized', `${stats.numOptimized} SVGs`);
     }
-    swLog.logTaskEnd(startOptimizeTaskName);
+    swlog.logTaskEnd(startOptimizeTaskName);
     logStats();
-  }).catch(err => swlog.error(err));
+  }).catch(err => {
+    swlog.error(err);
+    process.exit(1);
+  });
 }
 
 /**

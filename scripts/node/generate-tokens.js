@@ -97,15 +97,18 @@ configs.forEach(config => {
     dict.buildAllPlatforms();
   } catch(e) {
     console.error(e);
+    process.exit(1);
   }
-
 });
 
 swlog.logTaskEnd(startTaskName);
 const compareTaskName = swlog.logTaskStart('lint tokens');
 
 tokenCompare()
-  .catch(e => console.error(e))
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  })
   .then(() => {
-    swlog.logTaskEnd(compareTaskName)
+    swlog.logTaskEnd(compareTaskName);
   });
