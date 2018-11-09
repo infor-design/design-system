@@ -16,7 +16,7 @@
     "zip": "bash ./scripts/package-release.sh",
     "release:beta": "npx release-it minor --preRelease=beta --no-github.release",
     "release:rc": "npx release-it --preRelease=rc --no-github.release",
-    "release:final": "npx release-it && npm run documentation"
+    "release:final": "npx release-it"
   },
   "repository": {
     "type": "git",
