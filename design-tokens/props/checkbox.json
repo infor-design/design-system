@@ -69,8 +69,10 @@
             }
         },
         "size": {
-            "border-radius": {
-                "value": "{theme.number.border-radius.sm.value}"
+            "border": {
+                "radius": {
+                    "value": "{theme.number.border.radius.sm.value}"
+                }
             },
             "box": {
                 "height": {

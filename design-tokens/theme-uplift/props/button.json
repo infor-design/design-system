@@ -6,7 +6,7 @@
             },
             "border": {
                 "radius": {
-                    "value": "{theme.number.border-radius.md.value}"
+                    "value": "{theme.number.border.radius.md.value}"
                 }
             }
         }

@@ -70,7 +70,7 @@
         "size": {
             "border": {
                 "radius": {
-                    "value": "{theme.number.border-radius.sm.value}"
+                    "value": "{theme.number.border.radius.sm.value}"
                 },
                 "width": {
                     "value": "1px"

@@ -66,9 +66,11 @@
             "spacing": {
                 "base": { "value": "8px" }
             },
-            "border-radius": {
-                "sm": { "value": "2px" },
-                "md": { "value": "6px" }
+            "border": {
+                "radius": {
+                    "sm": { "value": "2px" },
+                    "md": { "value": "6px" }
+                }
             }
         }
     }
