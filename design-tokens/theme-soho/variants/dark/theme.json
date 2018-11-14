@@ -1,11 +1,9 @@
 {
     "theme": {
-        "shadow": {
+        "color": {
             "boxshadow": {
                 "base": { "value": "rgba(0, 0, 0, 0.4)" }
-            }
-        },
-        "color": {
+            },
             "border": {
                 "base": { "value": "{theme.color.palette.slate.40.value}" }
             },
