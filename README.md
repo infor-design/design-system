@@ -16,7 +16,7 @@ Part of the Infor Design System is a package of different assets that create the
 
 Install this into your project with:
 
-```
+```shell
 npm install --save-dev ids-identity
 ```
 
@@ -26,6 +26,6 @@ Then look in `node_modules/ids-identity` for the assets.
 
 For designers and developers wanting to build these assets locally, see our [developer guide](DEVELOP.md).
 
-## Help!
+## Help
 
 For questions and support, please [open an new Issue](https://github.com/infor-design/design-system/issues/new?template=support.md&title=[Support]).
