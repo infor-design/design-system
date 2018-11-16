@@ -1,10 +1,12 @@
 # Example
 
-This is a simple example of how to implement a design token in your code. We offer many formats of the design tokens, but this example uses SASS.
+This is a simple example of how to implement a design token in your web application code. We offer many formats of the design tokens, but this example uses [Sass](https://sass-lang.com/).
+
+The best way to integrate tokens into your project is to use [npm](https://www.npmjs.com/get-npm). See this project's [README.md](https://github.com/infor-design/design-system#installing-ids-identity-in-your-project) for details on how to install and locate the files.
 
 ## Initial files
 
-1. Our file hierarchy looks like this:
+1. In this example, let's assume our project file hierarchy looks like this:
 
     ```txt
     ├── project/
@@ -17,7 +19,7 @@ This is a simple example of how to implement a design token in your code. We off
         ├── ids-identity/
             ├──tokens/
                 ├──web/
-                    ├── theme-soho-scss
+                    ├── theme-soho.scss
                     ├── theme-soho-dark.scss
     ```
 
@@ -31,26 +33,26 @@ This is a simple example of how to implement a design token in your code. We off
         }
         ```
 
-1. We will use two theme files to import the specific token theme and `styles.scss` file in the proper order.
+1. We will use two theme files to import the specific token theme and the web application's main `styles.scss` file in the proper order.
 
     - sass/my-theme-light.scss
 
         ```css
-        @import ../../node_modules/ids-identity/tokens/web/theme-soho.scss; // Use the soho original theme (lighter)
+        @import '../../node_modules/ids-identity/tokens/web/theme-soho.scss'; // Use the soho original theme (lighter)
         @import styles.scss;
         ```
 
     - sass/my-theme-dark.scss
 
         ```css
-        @import ../../node_modules/ids-identity/tokens/web/theme-soho-dark.scss; // Use the soho dark theme
+        @import '../../node_modules/ids-identity/tokens/web/theme-soho-dark.scss'; // Use the soho dark theme
         @import styles.scss;
         ```
 
-1. There are many ways to compile SASS into CSS and we aren't sure what system you use, so we'll use our magical psuedo code function `psuedoSassToCSS()`:
+1. There are many ways to compile Sass into CSS. Since we aren't sure what system you use, in this example, we'll use a magical pseudo code function `pseudoSassToCSS()`:
 
     ```js
-    psuedoSassToCSS(['sass/my-theme-light.scss', 'sass/my-theme-dark.scss']);
+    pseudoSassToCSS(['sass/my-theme-light.scss', 'sass/my-theme-dark.scss']);
     ```
 
 1. Post-compile you'll have two CSS files that correspond with each theme:
@@ -71,4 +73,4 @@ This is a simple example of how to implement a design token in your code. We off
         }
         ```
 
-1. In your website/app, you can include either stylesheet `dist/my-theme-light.css` or `dist/my-theme-dark.css`. You could even write a javascript mechanism to allow the user to control which theme they see.
+1. In your web application, you can include either stylesheet `dist/my-theme-light.css` or `dist/my-theme-dark.css`. You could even write a JavaScript mechanism to allow the user to control which theme they see.
