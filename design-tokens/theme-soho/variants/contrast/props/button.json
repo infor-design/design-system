@@ -67,7 +67,7 @@
                 },
                 "initial": {
                     "font": {
-                        "value": "{theme.color.palette.slate.30.value}"
+                        "value": "{theme.color.palette.graphite.90.value}"
                     }
                 }
             }
