@@ -3,7 +3,7 @@
         "color": {
             "primary": {
                 "background": {
-                    "value": "{theme.color.palette.graphite.70.value}"
+                    "value": "{theme.color.palette.slate.80.value}"
                 },
                 "font": {
                     "value": "{theme.color.palette.white.value}"
@@ -11,7 +11,7 @@
             },
             "secondary": {
                 "background": {
-                    "value": "{theme.color.palette.graphite.20.value}"
+                    "value": "{theme.color.palette.slate.70.value}"
                 }
             }
         }
