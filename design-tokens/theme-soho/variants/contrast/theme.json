@@ -9,8 +9,8 @@
             },
             "brand": {
                 "primary": {
-                    "base":     { "value": "{theme.color.palette.azure.100.value}" },
-                    "alt":      { "value": "{theme.color.palette.azure.90.value}" }
+                    "base":     { "value": "{theme.color.palette.azure.90.value}" },
+                    "alt":      { "value": "{theme.color.palette.azure.100.value}" }
                 }
             },
             "font": {
