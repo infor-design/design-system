@@ -7,7 +7,10 @@
                         "value": "{theme.color.brand.primary.contrast.value}"
                     },
                     "background": {
-                        "value": "{theme.color.palette.slate.50.value}"
+                        "value": "{theme.color.brand.primary.base.value}"
+                    },
+                    "border": {
+                        "value": "{checkbox.color.checked.initial.background.value}"
                     }
                 }
             },

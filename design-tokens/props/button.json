@@ -88,7 +88,7 @@
             "tertiary": {
                 "active": {
                     "font": {
-                        "value": "{theme.color.palette.graphite.100.value}"
+                        "value": "{button.color.tertiary.hover.font.value}"
                     },
                     "icon": {
                         "value": "{button.color.tertiary.active.font.value}"
@@ -96,7 +96,7 @@
                 },
                 "disabled": {
                     "font": {
-                        "value": "{theme.color.palette.graphite.60.value}"
+                        "value": "{button.color.tertiary.initial.font.value}"
                     }
                 },
                 "focus": {

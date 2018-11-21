@@ -7,7 +7,7 @@
                         "value": "{checkbox.color.unchecked.disabled.arrow.value}"
                     },
                     "background": {
-                        "value": "{theme.color.palette.graphite.30.value}"
+                        "value": "{theme.color.palette.slate.50.value}"
                     },
                     "border": {
                         "value": "{checkbox.color.unchecked.disabled.border.value}"
