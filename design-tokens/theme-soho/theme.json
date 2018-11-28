@@ -34,7 +34,7 @@
         },
         "font": {
             "family": {
-                "base":      { "value": "'source sans pro', helvetica, arial, san-serif" },
+                "base":      { "value": "helvetica, arial, sans-serif" },
                 "monospace": { "value": "monospace" }
             }
         },
