@@ -14,9 +14,10 @@ const chalk = require('chalk');
 const fs = require('fs');
 const glob = require('glob');
 const swlog = require('./stopwatch-log.js');
+const path = require('path');
 
 const OUTPUT_DIR = `./dist/icons`;
-const OUTPUT_JSON_FILE = `${process.cwd()}/design-tokens/theme-soho/icons.json`;
+const OUTPUT_JSON_FILE = `./design-tokens/theme-soho/icons.json`;
 
 const logStats = () => {
   console.log(`
@@ -45,7 +46,7 @@ if (stats.total === 0) {
   const jsonObj = { "icons": {} };
 
   svgFiles.forEach(filePath => {
-    let filename = filePath.replace(`${OUTPUT_DIR}/`, '');
+    let filename = path.basename(filePath, '.svg');
     jsonObj.icons[filename] = { value: filename };
     stats.numListed++;
   });
