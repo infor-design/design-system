@@ -7,13 +7,13 @@
                         "value": "{checkbox.color.unchecked.disabled.arrow.value}"
                     },
                     "background": {
-                        "value": "{theme.color.palette.slate.50.value}"
+                        "value": "{checkbox.color.unchecked.disabled.border.value}"
                     },
                     "border": {
                         "value": "{checkbox.color.unchecked.disabled.border.value}"
                     },
                     "font": {
-                        "value": "{theme.color.font.muted.value}"
+                        "value": "{checkbox.color.unchecked.disabled.font.value}"
                     }
                 },
                 "initial": {
