@@ -3,9 +3,9 @@
         "color": {
             "status": {
                 "caution": { "value": "#504100" },
-                "danger":  { "value": "#861111" },
-                "success": { "value": "#2A4A14" },
-                "warning": { "value": "#683500" }
+                "danger":  { "value": "#841720" },
+                "success": { "value": "#134D13" },
+                "warning": { "value": "#5D3C05" }
             },
             "brand": {
                 "primary": {
