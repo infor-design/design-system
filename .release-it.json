@@ -5,6 +5,8 @@
   "pkgFiles": ["package.json"],
   "increment": "patch",
   "buildCommand": "npm run clean && npm run build && npm run zip",
+  "beforeChangelogCommand": "echo ${version} > /tmp/ids-identity-release-version",
+  "changelogCommand": "./scripts/github-changelog.sh",
   "src": {
     "commitMessage": "Release v%s",
     "tagAnnotation": "Release v%s",
