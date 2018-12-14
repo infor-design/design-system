@@ -6,7 +6,7 @@
                     "value": "{theme.color.palette.white.value}"
                 },
                 "icon": {
-                    "value": "{dropdown.color.initial.font}"
+                    "value": "{dropdown.color.initial.font.value}"
                 }
             }
         }

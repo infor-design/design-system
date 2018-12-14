@@ -11,7 +11,7 @@
             "unchecked": {
                 "disabled": {
                     "arrow": {
-                        "value": "{theme.color.palette.graphite.20}"
+                        "value": "{theme.color.palette.graphite.20.value}"
                     },
                     "border": {
                         "value": "{theme.color.palette.graphite.50.value}"
