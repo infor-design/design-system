@@ -3,13 +3,16 @@
 /**
  * @overview Copies the font files into the dist/ directory
  */
+const args = require('minimist')(process.argv.slice(2));
 const copydir = require('copy-dir');
 const font_dir = `${process.cwd()}/font`;
 const output_dir = `${process.cwd()}/dist/font`;
 const path = require('path');
 const swlog = require('./utilities/stopwatch-log.js');
 
-swlog.logTaskStart('copying font');
+const startTaskName = swlog.logTaskStart('copying font');
+
+let fileCount = 0;
 
 const filterFiles = (stat, filepath, filename) => {
   if (stat === 'file' && path.extname(filepath) === '.md') {
@@ -17,16 +20,20 @@ const filterFiles = (stat, filepath, filename) => {
     return false;
   }
 
-  swlog.logTaskAction('Copying', filename);
+  if (args.verbose) {
+    swlog.logTaskAction('Copying', filename);
+  }
+  fileCount += 1;
   return true;
 }
 
 copydir(font_dir, output_dir, filterFiles, err => {
   if (err) {
-    swlog.logTaskAction('Error!', err, 'red');
+    swlog.error(`Error! ${err}`);
     process.exit(1);
   } else {
-    swlog.logTaskEnd('copying font');
+    swlog.logTaskAction('Copied', `${fileCount} font files`)
+    swlog.logTaskEnd(startTaskName);
   }
 });
 
