@@ -3,39 +3,50 @@
 /**
  * @overview Copies the font files into the dist/ directory
  */
-const args = require('minimist')(process.argv.slice(2));
+
+// -------------------------------------
+//   Constants/Variables
+// -------------------------------------
 const copydir = require('copy-dir');
-const font_dir = `${process.cwd()}/font`;
-const output_dir = `${process.cwd()}/dist/font`;
 const path = require('path');
 const swlog = require('./utilities/stopwatch-log.js');
 
-const startTaskName = swlog.logTaskStart('copying font');
+// -------------------------------------
+//   Main
+// -------------------------------------
 
-let fileCount = 0;
+/**
+ * Generate fonts for a theme
+ * @param {String} src - The source path
+ * @param {String} dest - The destination path
+ * @returns {Promise}
+ */
+function generateFonts(src, dest) {
+  return new Promise((resolve, reject) => {
+    const startTaskName = swlog.logTaskStart('copying font');
+    let fileCount = 0;
 
-const filterFiles = (stat, filepath, filename) => {
-  if (stat === 'file' && path.extname(filepath) === '.md') {
-    swlog.logTaskAction('Ignore', filename, 'magenta');
-    return false;
-  }
+    const filterFiles = (stat, filepath, filename) => {
+      if (stat === 'file' && path.extname(filepath) === '.md') {
+        swlog.logTaskAction('Ignore', filename, 'magenta');
+        return false;
+      }
 
-  if (args.verbose) {
-    swlog.logTaskAction('Copying', filename);
-  }
-  fileCount += 1;
-  return true;
+      fileCount += 1;
+      return true;
+    }
+
+    copydir(src, dest, filterFiles, err => {
+      if (err) {
+        reject(`Error! ${err}`);
+        process.exit(1);
+      } else {
+        swlog.logTaskAction('Copied', `${fileCount} font files`)
+        swlog.logTaskEnd(startTaskName);
+        resolve();
+      }
+    });
+  })
 }
 
-copydir(font_dir, output_dir, filterFiles, err => {
-  if (err) {
-    swlog.error(`Error! ${err}`);
-    process.exit(1);
-  } else {
-    swlog.logTaskAction('Copied', `${fileCount} font files`)
-    swlog.logTaskEnd(startTaskName);
-  }
-});
-
-
-
+module.exports = generateFonts;
