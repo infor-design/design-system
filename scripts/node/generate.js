@@ -43,30 +43,34 @@ del.sync([rootDest]);
 createDirs([rootDest]);
 
 themesArr.forEach(theme => {
-  const themeDest = `${rootDest}/${theme}`;
-  createDirs([themeDest]);
+  // const themeDest = `${rootDest}/${theme}`; // ToDo v3.0
+  // createDirs([themeDest]); // ToDo v3.0
 
   const iconsSrc = `./sketch/${theme}/ids-icons.sketch`;
   if (args.build.includes('icons') && fs.existsSync(iconsSrc)) {
-    const dest = `${themeDest}/icons`;
+    // const dest = `${themeDest}/icons`; // ToDo v3.0
+    const dest = `${rootDest}/icons`;
     createDirs([dest]);
     gIcons(iconsSrc, dest)
   }
 
   const fontSrc = `./font/${theme}`;
   if (args.build.includes('fonts') && fs.existsSync(fontSrc)) {
-    const dest = `${themeDest}/fonts`;
+    // const dest = `${themeDest}/fonts`; // ToDo v3.0
+    const dest = `${rootDest}/font`;
     createDirs([dest]);
     gFonts(fontSrc, dest);
   }
 
   const tokensSrc = `./design-tokens/${theme}`;
   if (args.build.includes('tokens') && fs.existsSync(tokensSrc)) {
-    const dest = `${themeDest}/tokens`;
+    // const dest = `${themeDest}/tokens`; // ToDo v3.0
+    const dest = `${rootDest}/tokens`;
     createDirs([dest]);
     gTokens(tokensSrc, dest);
 
     // Verify/validate token files against eachother
-    compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error);
+    // compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error); // ToDo v3.0
+    compareTokens(`${rootDest}/tokens/web/theme-*.simple.json`).catch(console.error);
   }
 });
