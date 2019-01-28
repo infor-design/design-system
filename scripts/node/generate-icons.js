@@ -106,9 +106,9 @@ function sortByFileFormat(srcDir, format) {
           reject(err);
         }
         count++;
-        resolve();
+        resolve(`${dest}/${filename}`);
       });
-    })
+    });
   });
 
   return Promise.all(promises).then(() => {
@@ -190,7 +190,10 @@ function optimizeSVGs(src) {
     try {
       const data = await readFile(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
-      await writeFile(filepath, dataOptimized.data, 'utf-8');
+
+      // Add attribute to stroke paths to prevent unwanted scaling
+      let dataTweak = dataOptimized.data.replace('stroke=', 'vector-effect="non-scaling-stroke" stroke=');
+      await writeFile(filepath, dataTweak, 'utf-8');
     } catch(err) {
       swlog.error(err);
       process.exit(1);
