@@ -222,8 +222,8 @@ function generateIcons(sketchfile, dest) {
   const startTaskName = swlog.logTaskStart('build icons');
 
   if (!hasSketchtool()) {
-    swlog.error('No sketchtool installed. Exiting...');
-    process.exit(1);
+    swlog.error('No sketchtool installed. Skipping create icons...');
+    process.exit(0);
   }
 
   return Promise.all([
