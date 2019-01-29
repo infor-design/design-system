@@ -93,7 +93,7 @@ themesArr.forEach(theme => {
       return gTokens(tokensSrc, dest).then(() => {
         // Verify/validate token files against eachother
         // compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error); // ToDo v3.0
-        return compareTokens(`${rootDest}/tokens/web/theme-*.simple.json`).catch(console.error);
+        return compareTokens(`${dest}/web/theme-*.simple.json`).catch(console.error);
       });
     });
 

@@ -218,7 +218,7 @@ function optimizeSVGs(src) {
  * @returns {Promise}
  */
 function generateIcons(sketchfile, dest) {
-  const startTaskName = swlog.logTaskStart('build icons');
+  const startTaskName = swlog.logTaskStart(`build icons from ${sketchfile}`);
 
   if (!hasSketchtool()) {
     swlog.error('No sketchtool installed. Skipping create icons...');

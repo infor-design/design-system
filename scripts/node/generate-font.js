@@ -23,7 +23,7 @@ const swlog = require('./utilities/stopwatch-log.js');
  */
 function generateFonts(src, dest) {
   return new Promise((resolve, reject) => {
-    const startTaskName = swlog.logTaskStart(`copying ${src} font`);
+    const startTaskName = swlog.logTaskStart(`copying ${src} fonts`);
     let fileCount = 0;
 
     const filterFiles = (stat, filepath, filename) => {

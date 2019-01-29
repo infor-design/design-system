@@ -11,6 +11,8 @@ const fs = require('fs');
 const glob = require('glob');
 const chalk = require('chalk');
 const logSymbols = require('log-symbols');
+const swlog = require('./stopwatch-log.js');
+
 
 const readJSONFile = file => {
   const data = fs.readFileSync(file, 'utf8');
@@ -52,6 +54,7 @@ const showStats = (sohoTheme, otherThemes) => {
  * @returns {Promise}
  */
 function compareTokens(distTokens) {
+  const startTask = swlog.logTaskStart(`verify ${distTokens} tokens`);
   const allObjects = [];
   const files = glob.sync(distTokens);
 
@@ -71,12 +74,13 @@ function compareTokens(distTokens) {
 
   return Promise.all(promises)
     .then(() => {
+      // Use soho as a base comparison
       const sohoIdx = allObjects.findIndex((n, idx) => {
         return n.file.includes('theme-soho.simple.json');
       });
-      const soho = allObjects.splice(sohoIdx, 1)[0];
 
-      showStats(soho, allObjects);
+      // Keep from comparing soho to itself
+      const soho = allObjects.splice(sohoIdx, 1)[0];
 
       // Loop through all properties of the first theme
       for (let idx = 0; idx < allObjects[0].props.length; idx++) {
@@ -92,6 +96,8 @@ function compareTokens(distTokens) {
           }
         }
       }
+      showStats(soho, allObjects);
+      swlog.logTaskEnd(startTask);
     })
     .catch(console.error);
 };

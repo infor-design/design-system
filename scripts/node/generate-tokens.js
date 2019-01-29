@@ -88,7 +88,7 @@ const formats = [
  */
 function generateTokens(src, dest) {
   return new Promise((resolve) => {
-    const startTaskName = swlog.logTaskStart('creating formats');
+    const startTaskName = swlog.logTaskStart(`creating tokens from ${src}`);
     const configGlob = `${src}/**/*.config.json`;
     const configs = glob.sync(configGlob);
 
