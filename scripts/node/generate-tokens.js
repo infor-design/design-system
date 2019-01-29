@@ -12,6 +12,68 @@ const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 const swlog = require('./utilities/stopwatch-log.js');
+const _ = require('lodash');
+
+const getPlatforms = (dest, name) => {
+  return {
+    scss: {
+      transformGroup: 'scss',
+      buildPath: `${dest}/web/`,
+      files: [{
+        destination: `${name}.scss`,
+        format: 'scss/variables'
+      }, {
+        destination: `${name}.json`,
+        format: 'json'
+      }, {
+        destination: `${name}.custom-properties.css`,
+        format: 'css/variables'
+      }, {
+        destination: `${name}.module.js`,
+        format: 'javascript/module'
+      }]
+    },
+    json: {
+      transformGroup: 'scss',
+      buildPath: `${dest}/web/`,
+      files: [{
+        destination: `${name}.simple.json`,
+        format: 'custom-simplejson'
+      }, {
+        destination: `${name}.json`,
+        format: 'json'
+      }]
+    },
+    javascript: {
+      transformGroup: 'scss',
+      buildPath: `${dest}/web/`,
+      files: [{
+        destination: `${name}.module.js`,
+        format: 'javascript/module'
+      }]
+    },
+    xml: {
+      transformGroup: 'scss',
+      buildPath: `${dest}/web/`,
+      files: [{
+        destination: `${name}.xml`,
+        format: 'custom-xml'
+      }]
+    }
+  };
+};
+
+const formats = [
+  {
+    name: 'custom-simplejson',
+    formatter: _.template(fs.readFileSync(__dirname + '/utilities/tokens/simple.json.template' ))
+  },
+  {
+    name: 'custom-xml',
+    formatter: _.template(fs.readFileSync(__dirname + '/utilities/tokens/xml.template' ))
+  }
+];
+
 
 // -------------------------------------
 //   Main
@@ -25,82 +87,29 @@ const swlog = require('./utilities/stopwatch-log.js');
  * @returns {Promise}
  */
 function generateTokens(src, dest) {
-  const startTaskName = swlog.logTaskStart('creating formats');
+  return new Promise((resolve) => {
+    const startTaskName = swlog.logTaskStart('creating formats');
+    const configGlob = `${src}/**/*.config.json`;
+    const configs = glob.sync(configGlob);
 
-  const configGlob = `${src}/**/*.config.json`;
-  const configs = glob.sync(configGlob);
+    configs.forEach(config => {
+      const configName = path.basename(config, '.config.json');
 
-  configs.forEach(config => {
-    const configName = path.basename(config, '.config.json');
-    const themeConfig = JSON.parse(fs.readFileSync(config, 'utf8'));
+      const themeConfig = JSON.parse(fs.readFileSync(config, 'utf8'));
+      themeConfig.platforms = getPlatforms(dest, configName);
 
-    themeConfig.platforms = {
-      scss: {
-        transformGroup: 'scss',
-        buildPath: `${dest}/web/`,
-        files: [{
-          destination: `${configName}.scss`,
-          format: 'scss/variables'
-        }, {
-          destination: `${configName}.json`,
-          format: 'json'
-        }, {
-          destination: `${configName}.custom-properties.css`,
-          format: 'css/variables'
-        }, {
-          destination: `${configName}.module.js`,
-          format: 'javascript/module'
-        }]
-      },
-      json: {
-        transformGroup: 'scss',
-        buildPath: `${dest}/web/`,
-        files: [{
-          destination: `${configName}.simple.json`,
-          template: 'custom-simplejson'
-        }, {
-          destination: `${configName}.json`,
-          format: 'json'
-        }]
-      },
-      javascript: {
-        transformGroup: 'scss',
-        buildPath: `${dest}/web/`,
-        files: [{
-          destination: `${configName}.module.js`,
-          format: 'javascript/module'
-        }]
-      },
-      xml: {
-        transformGroup: 'scss',
-        buildPath: `${dest}/web/`,
-        files: [{
-          destination: `${configName}.xml`,
-          template: 'custom-xml'
-        }]
-      }
-    };
+      const dict = require('style-dictionary').extend(themeConfig);
 
-    const dict = require('style-dictionary').extend(themeConfig);
+      formats.forEach(f => {
+        dict.registerFormat(f);
+      })
 
-    dict.registerTemplate({
-      name: 'custom-simplejson',
-      template: __dirname + '/utilities/tokens/simple.json.template'
+      dict.buildAllPlatforms();
     });
 
-    dict.registerTemplate({
-      name: 'custom-xml',
-      template: __dirname + '/utilities/tokens/xml.template'
-    })
-
-    try {
-      dict.buildAllPlatforms();
-    } catch(e) {
-      swlog.error(e);
-      process.exit(1);
-    }
+    swlog.logTaskEnd(startTaskName);
+    resolve();
   });
-  swlog.logTaskEnd(startTaskName);
 }
 
 module.exports = generateTokens;

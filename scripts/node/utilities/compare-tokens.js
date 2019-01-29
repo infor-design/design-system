@@ -55,8 +55,6 @@ function compareTokens(distTokens) {
   const allObjects = [];
   const files = glob.sync(distTokens);
 
-  console.log(distTokens);
-
   const promises = files.map(f => {
     return new Promise((resolve, reject) => {
       if (obj = readJSONFile(f)) {

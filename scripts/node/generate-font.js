@@ -23,12 +23,12 @@ const swlog = require('./utilities/stopwatch-log.js');
  */
 function generateFonts(src, dest) {
   return new Promise((resolve, reject) => {
-    const startTaskName = swlog.logTaskStart('copying font');
+    const startTaskName = swlog.logTaskStart(`copying ${src} font`);
     let fileCount = 0;
 
     const filterFiles = (stat, filepath, filename) => {
       if (stat === 'file' && path.extname(filepath) === '.md') {
-        swlog.logTaskAction('Ignore', filename, 'magenta');
+        swlog.logTaskAction('Ignore', filename, 'gray');
         return false;
       }
 
@@ -39,7 +39,6 @@ function generateFonts(src, dest) {
     copydir(src, dest, filterFiles, err => {
       if (err) {
         reject(`Error! ${err}`);
-        process.exit(1);
       } else {
         swlog.logTaskAction('Copied', `${fileCount} font files`)
         swlog.logTaskEnd(startTaskName);

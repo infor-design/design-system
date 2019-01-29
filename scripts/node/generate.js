@@ -33,6 +33,19 @@ function createDirs(arrPaths) {
   });
 }
 
+/**
+ * Process promises synchronously
+ * @param {object} arr
+ */
+async function runSync(arr) {
+  let results = [];
+  for (let i = 0; i < arr.length; i++) {
+      let r = await arr[i]();
+      results.push(r);
+  }
+  return results; // will be resolved value of promise
+}
+
 // -------------------------------------
 //   Main
 // -------------------------------------
@@ -41,6 +54,8 @@ function createDirs(arrPaths) {
 const rootDest = './dist';
 del.sync([rootDest]);
 createDirs([rootDest]);
+
+let promises = [];
 
 themesArr.forEach(theme => {
   // const themeDest = `${rootDest}/${theme}`; // ToDo v3.0
@@ -51,7 +66,10 @@ themesArr.forEach(theme => {
     // const dest = `${themeDest}/icons`; // ToDo v3.0
     const dest = `${rootDest}/icons`;
     createDirs([dest]);
-    gIcons(iconsSrc, dest)
+
+    promises.push(() => {
+      return gIcons(iconsSrc, dest);
+    });
   }
 
   const fontSrc = `./font/${theme}`;
@@ -59,7 +77,10 @@ themesArr.forEach(theme => {
     // const dest = `${themeDest}/fonts`; // ToDo v3.0
     const dest = `${rootDest}/font`;
     createDirs([dest]);
-    gFonts(fontSrc, dest);
+
+    promises.push(() => {
+      return gFonts(fontSrc, dest);
+    });
   }
 
   const tokensSrc = `./design-tokens/${theme}`;
@@ -67,10 +88,16 @@ themesArr.forEach(theme => {
     // const dest = `${themeDest}/tokens`; // ToDo v3.0
     const dest = `${rootDest}/tokens`;
     createDirs([dest]);
-    gTokens(tokensSrc, dest);
 
-    // Verify/validate token files against eachother
-    // compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error); // ToDo v3.0
-    compareTokens(`${rootDest}/tokens/web/theme-*.simple.json`).catch(console.error);
+    promises.push(() => {
+      return gTokens(tokensSrc, dest).then(() => {
+        // Verify/validate token files against eachother
+        // compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error); // ToDo v3.0
+        return compareTokens(`${rootDest}/tokens/web/theme-*.simple.json`).catch(console.error);
+      });
+    });
+
   }
 });
+
+runSync(promises);

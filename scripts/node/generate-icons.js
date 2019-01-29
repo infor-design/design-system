@@ -25,6 +25,8 @@ const options = {
   iconFormats: ['svg', 'png']
 }
 
+const logs = [];
+
 // -------------------------------------
 //   Functions
 // -------------------------------------
@@ -53,9 +55,9 @@ function sketchtoolExec (command) {
  * @returns {Promise}
  */
 function createIconFiles(srcFile, dest) {
-  const thisTaskName = swlog.logTaskStart('create icon files');
+  const thisTaskName = swlog.logSubStart('create icon files');
 
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     const exportArtboardsOptions = [
       'export',
       'artboards',
@@ -76,7 +78,7 @@ function createIconFiles(srcFile, dest) {
       swlog.logTaskAction('Created', `${count} ${format.toUpperCase()} files`);
     })
 
-    swlog.logTaskEnd(thisTaskName);
+    swlog.logSubEnd(thisTaskName);
 
     if (options.iconFormats.indexOf('svg') !== -1) {
       return optimizeSVGs(dest);
@@ -125,7 +127,7 @@ function sortByFileFormat(srcDir, format) {
  */
 function createPagesMetadata(src, dest) {
   return new Promise((resolve, reject) => {
-    const thisTaskName = swlog.logTaskStart('create metadata file');
+    const thisTaskName = swlog.logSubStart('create metadata file');
     const outputStr = sketchtoolExec(`metadata ${src}`)
 
     let customObj = { pages: [] };
@@ -152,7 +154,7 @@ function createPagesMetadata(src, dest) {
       }
     }
     fs.writeFileSync(`${dest}/metadata.json`, JSON.stringify(customObj, null, 4), 'utf-8');
-    swlog.logTaskEnd(thisTaskName);
+    swlog.logSubEnd(thisTaskName);
     resolve();
   });
 }
@@ -174,7 +176,7 @@ function createDirs(arrPaths) {
  * @param {String} src - The source directory for svgs
  */
 function optimizeSVGs(src) {
-  const startOptimizeTaskName = swlog.logTaskStart('optimize SVGs');
+  const startOptimizeTaskName = swlog.logSubStart('optimize SVGs');
 
   // Optimize with svgo
   const svgoOptimize = new svgo({
@@ -196,16 +198,12 @@ function optimizeSVGs(src) {
       await writeFile(filepath, dataTweak, 'utf-8');
     } catch(err) {
       swlog.error(err);
-      process.exit(1);
     }
   });
 
   return Promise.all(svgPromises).then(() => {
-    swlog.logTaskEnd(startOptimizeTaskName);
-  }).catch(err => {
-    swlog.error(err);
-    process.exit(1);
-  });
+    swlog.logSubEnd(startOptimizeTaskName);
+  }).catch(swlog.error);
 }
 
 // -------------------------------------
@@ -231,14 +229,14 @@ function generateIcons(sketchfile, dest) {
     createIconFiles(sketchfile, dest)
   ])
   .then(res => {
-    const thisTask = swlog.logTaskStart(`organize icon files`);
+    const thisTask = swlog.logSubStart(`organize icon files`);
 
     const promises = options.iconFormats.map(format => {
       return sortByFileFormat(dest, format);
     });
 
     return Promise.all(promises).then(() => {
-      swlog.logTaskEnd(thisTask)
+      swlog.logSubEnd(thisTask)
     });
   })
   .then(res => {
