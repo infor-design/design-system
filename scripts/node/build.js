@@ -10,9 +10,9 @@
 const args = require('minimist')(process.argv.slice(2));
 const fs = require('fs');
 const del = require('del');
-const gIcons = require('./generate-icons');
-const gFonts = require('./generate-font');
-const gTokens = require('./generate-tokens');
+const gIcons = require('./build-icons');
+const gFonts = require('./build-font');
+const gTokens = require('./build-tokens');
 const compareTokens = require('./utilities/compare-tokens');
 
 const themesArr = ['theme-soho', 'theme-uplift'];
