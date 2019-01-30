@@ -181,7 +181,8 @@ function optimizeSVGs(src) {
   // Optimize with svgo
   const svgoOptimize = new svgo({
     plugins: [
-      { removeViewBox: false }
+      { removeViewBox: false },
+      { convertColors: { currentColor: '#000000' }}
     ]
   });
 
