@@ -10,6 +10,7 @@
 const args = require('minimist')(process.argv.slice(2));
 const fs = require('fs');
 const del = require('del');
+const glob = require('glob');
 const gIcons = require('./build-icons');
 const gFonts = require('./build-font');
 const gTokens = require('./build-tokens');
@@ -58,19 +59,26 @@ createDirs([rootDest]);
 let promises = [];
 
 themesArr.forEach(theme => {
-  // const themeDest = `${rootDest}/${theme}`; // ToDo v3.0
-  // createDirs([themeDest]); // ToDo v3.0
+  const themeDest = `${rootDest}/${theme}`;
+  const iconsDest = `${themeDest}/icons`;
+  createDirs([themeDest, iconsDest]);
 
-  const iconsSrc = `./sketch/${theme}/ids-icons.sketch`;
-  if (args.build.includes('icons') && fs.existsSync(iconsSrc)) {
-    // const dest = `${themeDest}/icons`; // ToDo v3.0
-    const dest = `${rootDest}/icons`;
-    createDirs([dest]);
+  const iconsSrcFiles = glob.sync(`./sketch/${theme}/ids-icons-*.sketch`);
 
-    promises.push(() => {
-      return gIcons(iconsSrc, dest);
-    });
-  }
+  iconsSrcFiles.forEach(iconsSrc => {
+    const reg = /ids-icons-(\w+)\.sketch/;
+    const match = iconsSrc.match(reg);
+    let iconType = match[1];
+
+    if (args.build.includes('icons') && fs.existsSync(iconsSrc)) {
+      const typeDest = `${iconsDest}/${iconType}`;
+      createDirs([typeDest]);
+
+      promises.push(() => {
+        return gIcons(iconsSrc, typeDest);
+      });
+    }
+  });
 
   const fontSrc = `./font/${theme}`;
   if (args.build.includes('fonts') && fs.existsSync(fontSrc)) {

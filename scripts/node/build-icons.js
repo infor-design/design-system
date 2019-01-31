@@ -92,9 +92,10 @@ function createIconFiles(srcFile, dest) {
  * @param {Array} formats - Array of file formats
  */
 function sortByFileFormat(srcDir, format) {
+  console.log(srcDir);
   const initialFiles = `${srcDir}/*.${format}`
-  const dest = `${srcDir}/${format}`;
   const files = glob.sync(initialFiles);
+  const dest = `${srcDir}/${format}`;
   let count = 0;
 
   createDirs([dest]);
@@ -103,7 +104,17 @@ function sortByFileFormat(srcDir, format) {
   const promises = files.map(f => {
     return new Promise((resolve, reject) => {
       const filename = path.basename(f);
-      fs.rename(f, `${dest}/${filename}`, err => {
+      const reg = /[\w-]+-(16|24|32)\.[\w]+/;
+      const match = filename.match(reg);
+      let thisDest = dest;
+
+      if (match) {
+        const size = match[1];
+        thisDest = `${thisDest}/${size}`;
+        createDirs([thisDest]);
+      }
+
+      fs.rename(f, `${thisDest}/${filename}`, err => {
         if (err) {
           reject(err);
         }
