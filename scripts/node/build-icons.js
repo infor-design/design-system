@@ -206,8 +206,10 @@ function optimizeSVGs(src) {
 
       // Add attribute to stroke paths to prevent unwanted scaling
       let dataTweak = dataOptimized.data.replace('stroke=', 'vector-effect="non-scaling-stroke" stroke=');
-      // remove fill="none", using `fill: transparent` in CSS
+      // remove fill="none", use `fill: transparent` in CSS
       dataTweak = dataTweak.replace('fill="none"', '');
+      // remove stroke weight, use `stroke-width: 2px;` in CSS
+      dataTweak = dataTweak.replace('stroke-weight="1"', '');
       await writeFile(filepath, dataTweak, 'utf-8');
     } catch(err) {
       swlog.error(err);
