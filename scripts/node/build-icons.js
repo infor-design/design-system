@@ -92,7 +92,6 @@ function createIconFiles(srcFile, dest) {
  * @param {Array} formats - Array of file formats
  */
 function sortByFileFormat(srcDir, format) {
-  console.log(srcDir);
   const initialFiles = `${srcDir}/*.${format}`
   const files = glob.sync(initialFiles);
   const dest = `${srcDir}/${format}`;
