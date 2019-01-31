@@ -206,10 +206,12 @@ function optimizeSVGs(src) {
 
       // Add attribute to stroke paths to prevent unwanted scaling
       let dataTweak = dataOptimized.data.replace('stroke=', 'vector-effect="non-scaling-stroke" stroke=');
-      // remove fill="none", use `fill: transparent` in CSS
+      // Remove fill="none", use `fill: transparent` in CSS
       dataTweak = dataTweak.replace('fill="none"', '');
-      // remove stroke weight, use `stroke-width: 2px;` in CSS
+      // Remove stroke weight to allow overrides
       dataTweak = dataTweak.replace('stroke-weight="1"', '');
+      // Add stroke none, use `stroke-width: 2px;` in CSS
+      dataTweak = dataTweak.replace('fill="currentColor"', 'fill="currentColor" stroke="none"');
       await writeFile(filepath, dataTweak, 'utf-8');
     } catch(err) {
       swlog.error(err);
