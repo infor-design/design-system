@@ -82,8 +82,7 @@ themesArr.forEach(theme => {
 
   const fontSrc = `./font/${theme}`;
   if (args.build.includes('fonts') && fs.existsSync(fontSrc)) {
-    // const dest = `${themeDest}/fonts`; // ToDo v3.0
-    const dest = `${rootDest}/font`;
+    const dest = `${themeDest}/fonts`;
     createDirs([dest]);
 
     promises.push(() => {
