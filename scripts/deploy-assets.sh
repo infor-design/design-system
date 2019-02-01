@@ -37,7 +37,8 @@ echo "${CYAN}Zipping assets for $PACKAGE_VERSION...${RESET}"
 
 zip -r $FNAME \
     dist/tokens/ \
-    sketch/
+    sketch/ \
+    site/
 
 
 echo "${CYAN}Uploading assets...${RESET}"
