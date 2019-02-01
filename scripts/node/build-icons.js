@@ -199,7 +199,7 @@ function createPagesMetadata(src, dest) {
       if (dataObj.pagesAndArtboards.hasOwnProperty(pageId)
         && ! ignoredPages.includes(dataObj.pagesAndArtboards[pageId].name)) {
 
-          const tempObj = {
+        const tempObj = {
           name: dataObj.pagesAndArtboards[pageId].name,
           icons: []
         };
@@ -209,7 +209,7 @@ function createPagesMetadata(src, dest) {
             tempObj.icons.push(dataObj.pagesAndArtboards[pageId].artboards[ab].name);
           }
         }
-
+        tempObj.icons.sort();
         customObj.categories.push(tempObj);
       }
     }
