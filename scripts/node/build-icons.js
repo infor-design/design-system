@@ -139,28 +139,30 @@ function createPagesMetadata(src, dest) {
   return new Promise((resolve, reject) => {
     const thisTaskName = swlog.logSubStart('create metadata file');
     const outputStr = sketchtoolExec(`metadata ${src}`)
+    const ignoredPages = ['Symbols', 'Icon Sheet', '------------']
 
-    let customObj = { pages: [] };
+    let customObj = { categories: [] };
     const dataObj = JSON.parse(outputStr);
 
     // Loop through pages, then arboards, to create a
-    // simple mapping of names (ignoring "Symbols")
+    // simple mapping of names (ignoring certain pages)
+    // and naming pages "categories" and artboards "icons"
     for (const pageId in dataObj.pagesAndArtboards) {
       if (dataObj.pagesAndArtboards.hasOwnProperty(pageId)
-        && dataObj.pagesAndArtboards[pageId].name !== 'Symbols') {
+        && ! ignoredPages.includes(dataObj.pagesAndArtboards[pageId].name)) {
 
           const tempObj = {
           name: dataObj.pagesAndArtboards[pageId].name,
-          artboards: []
+          icons: []
         };
 
         for (const ab in dataObj.pagesAndArtboards[pageId].artboards) {
           if (dataObj.pagesAndArtboards[pageId].artboards.hasOwnProperty(ab)) {
-            tempObj.artboards.push(dataObj.pagesAndArtboards[pageId].artboards[ab].name);
+            tempObj.icons.push(dataObj.pagesAndArtboards[pageId].artboards[ab].name);
           }
         }
 
-        customObj.pages.push(tempObj);
+        customObj.categories.push(tempObj);
       }
     }
     fs.writeFileSync(`${dest}/metadata.json`, JSON.stringify(customObj, null, 4), 'utf-8');
