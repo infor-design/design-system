@@ -11,6 +11,8 @@ const fs = require('fs');
 const glob = require('glob');
 const chalk = require('chalk');
 const logSymbols = require('log-symbols');
+const swlog = require('./stopwatch-log.js');
+
 
 const readJSONFile = file => {
   const data = fs.readFileSync(file, 'utf8');
@@ -47,53 +49,57 @@ const showStats = (sohoTheme, otherThemes) => {
   console.log(str);
 };
 
-module.exports = () => {
+/**
+ * @param {String} distTokens - Glob path to built tokens files
+ * @returns {Promise}
+ */
+function compareTokens(distTokens) {
+  const startTask = swlog.logTaskStart(`verify ${distTokens} tokens`);
   const allObjects = [];
+  const files = glob.sync(distTokens);
 
-  return new Promise((resolve, reject) => {
-    const files = glob.sync('./dist/tokens/web/theme-*.simple.json');
-
-    const promises = files.map(f => {
-      return new Promise((resolve, reject) => {
-        if (obj = readJSONFile(f)) {
-          allObjects.push({
-            file: f,
-            props: obj
-          });
-          resolve();
-        } else {
-          reject('Data not found in file.');
-        }
-      });
-    });
-
-    Promise.all(promises)
-      .then(res => {
-        const sohoIdx = allObjects.findIndex((n, idx) => {
-          return n.file.includes('theme-soho.simple.json');
+  const promises = files.map(f => {
+    return new Promise((resolve, reject) => {
+      if (obj = readJSONFile(f)) {
+        allObjects.push({
+          file: f,
+          props: obj
         });
-        const soho = allObjects.splice(sohoIdx, 1)[0];
-
-        showStats(soho, allObjects);
-
-        // Loop through all properties of the first theme
-        for (let idx = 0; idx < allObjects[0].props.length; idx++) {
-          const prop = allObjects[0].props[idx];
-
-          // Loop through each theme data object and compare
-          // the token in each position to make sure they match
-          for (let n = 1; n < allObjects.length; n++) {
-            let compareToProp = allObjects[n].props[idx].name.javascript;
-
-            if (compareToProp !== prop.name.javascript) {
-              return reject(msg(prop.name.javascript, allObjects[0].file, compareToProp, allObjects[n].file));
-            }
-          }
-        }
         resolve();
+      } else {
+        reject('Data not found in file.');
+      }
     });
   });
+
+  return Promise.all(promises)
+    .then(() => {
+      // Use soho as a base comparison
+      const sohoIdx = allObjects.findIndex((n, idx) => {
+        return n.file.includes('theme-soho.simple.json');
+      });
+
+      // Keep from comparing soho to itself
+      const soho = allObjects.splice(sohoIdx, 1)[0];
+
+      // Loop through all properties of the first theme
+      for (let idx = 0; idx < allObjects[0].props.length; idx++) {
+        const prop = allObjects[0].props[idx];
+
+        // Loop through each theme data object and compare
+        // the token in each position to make sure they match
+        for (let n = 1; n < allObjects.length; n++) {
+          let compareToProp = allObjects[n].props[idx].name.javascript;
+
+          if (compareToProp !== prop.name.javascript) {
+            console.error(msg(prop.name.javascript, allObjects[0].file, compareToProp, allObjects[n].file));
+          }
+        }
+      }
+      showStats(soho, allObjects);
+      swlog.logTaskEnd(startTask);
+    })
+    .catch(console.error);
 };
 
-
-
+module.exports = compareTokens;
