@@ -11,6 +11,9 @@
 
 const package = require('../../package.json');
 const rss = require('rss');
+const fs = require('fs');
+
+const localFeedFile = 'site/sketch-library.rss';
 const siteRoot = 'http://localhost/api/docs';
 const feedName = 'ids-library.rss';
 const siteDest = `${siteRoot}/${package.name}`;
@@ -35,4 +38,8 @@ feed.item({
   enclosure: {url: `${siteDest}/latest/` }
 });
 
-console.log(feed.xml());
+fs.writeFile(localFeedFile, feed.xml(), function(err) {
+    if (err) {
+        console.log(err);
+    }
+});

@@ -34,12 +34,11 @@ PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 FNAME="IDS-DEPLOY-$PACKAGE_VERSION.zip"
 
 echo "${CYAN}Zipping assets for $PACKAGE_VERSION...${RESET}"
-cd dist
-zip -r ../$FNAME \
-    ../design-tokens/ \
-    ../sketch/
 
-cd ..
+zip -r $FNAME \
+    dist/tokens/ \
+    sketch/
+
 
 echo "${CYAN}Uploading assets...${RESET}"
 
