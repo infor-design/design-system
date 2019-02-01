@@ -36,7 +36,8 @@ FNAME="IDS-DEPLOY-$PACKAGE_VERSION.zip"
 echo "${CYAN}Zipping assets for $PACKAGE_VERSION...${RESET}"
 cd dist
 zip -r ../$FNAME \
-    tokens/
+    ../design-tokens/ \
+    ../sketch/
 
 cd ..
 

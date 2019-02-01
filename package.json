@@ -45,6 +45,7 @@
     "dist/"
   ],
   "dependencies": {
-    "markdownlint-cli": "^0.13.0"
+    "markdownlint-cli": "^0.13.0",
+    "rss": "^1.2.2"
   }
 }
