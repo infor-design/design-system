@@ -25,7 +25,55 @@ const options = {
   iconFormats: ['svg', 'png']
 }
 
-const logs = [];
+
+/** @constant
+ *  @desciption Remove fill="none" for custom styling. Requires`fill: transparent` in CSS
+ *  @see https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
+*/
+const customSvgoRemoveGroupFill = {
+  type        : 'perItem',
+  fn          : item => {
+    if (item.isElem('g')) {
+      item.removeAttr('fill');
+    }
+  }
+}
+
+/** @constant
+ *  @desciption Add attribute to stroke paths to prevent unwanted scaling
+ *  @see https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
+*/
+const customSvgoNonScalingStroke = {
+  type        : 'perItem',
+  fn          : item => {
+    if (item.hasAttr('stroke')) {
+      item.addAttr({
+        name: 'vector-effect',
+        value: 'non-scaling-stroke',
+        prefix: '',
+        local: ''
+      });
+    }
+  }
+}
+
+/** @constant
+ *  @desciption Adds stroke attr to fill items to prevent overrides
+ *  @see https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
+*/
+const customSvgoFillStroke = {
+  type        : 'perItem',
+  fn          : item => {
+    if (item.hasAttr('fill')) {
+      item.addAttr({
+        name: 'stroke',
+        value: 'none',
+        prefix: '',
+        local: ''
+      });
+    }
+  }
+}
 
 // -------------------------------------
 //   Functions
@@ -191,19 +239,16 @@ function optimizeSVGs(src) {
   const startOptimizeTaskName = swlog.logSubStart('optimize SVGs');
 
   // Optimize with svgo:
-  // Add attribute to stroke paths to prevent unwanted scaling
-  // Remove fill="none", use `fill: transparent` in CSS
-  // Remove stroke weight to allow overrides
   const svgoOptimize = new svgo({
     plugins: [
       { removeViewBox: false },
       { convertColors: { currentColor: '#000000' }},
       { removeDimensions: true },
-      { addAttributesToSVGElement: { attributes: [
-        { "vector-effect":"non-scaling-stroke"},
-      ]}},
-      { removeXMLNS: true },
-      { removeUselessStrokeAndFill: true }
+      { moveGroupAttrsToElems: true },
+      { removeUselessStrokeAndFill: true },
+      { customSvgoRemoveGroupFill },
+      { customSvgoNonScalingStroke },
+      { customSvgoFillStroke }
     ]
   });
 
@@ -215,11 +260,7 @@ function optimizeSVGs(src) {
       const data = await readFile(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
 
-      // Add stroke none, use `stroke-width: 2px;` in CSS
-      // Maybe replace this with a svgo plugin?
-      dataTweak = dataOptimized.data.replace('fill="currentColor"', 'fill="currentColor" stroke="none"');
-
-      await writeFile(filepath, dataTweak, 'utf-8');
+      await writeFile(filepath, dataOptimized.data, 'utf-8');
     } catch(err) {
       swlog.error(err);
     }
