@@ -190,11 +190,20 @@ function createDirs(arrPaths) {
 function optimizeSVGs(src) {
   const startOptimizeTaskName = swlog.logSubStart('optimize SVGs');
 
-  // Optimize with svgo
+  // Optimize with svgo:
+  // Add attribute to stroke paths to prevent unwanted scaling
+  // Remove fill="none", use `fill: transparent` in CSS
+  // Remove stroke weight to allow overrides
   const svgoOptimize = new svgo({
     plugins: [
       { removeViewBox: false },
-      { convertColors: { currentColor: '#000000' }}
+      { convertColors: { currentColor: '#000000' }},
+      { removeDimensions: true },
+      { addAttributesToSVGElement: { attributes: [
+        { "vector-effect":"non-scaling-stroke"},
+      ]}},
+      { removeXMLNS: true },
+      { removeUselessStrokeAndFill: true }
     ]
   });
 
@@ -206,14 +215,10 @@ function optimizeSVGs(src) {
       const data = await readFile(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
 
-      // Add attribute to stroke paths to prevent unwanted scaling
-      let dataTweak = dataOptimized.data.replace('stroke=', 'vector-effect="non-scaling-stroke" stroke=');
-      // Remove fill="none", use `fill: transparent` in CSS
-      dataTweak = dataTweak.replace('fill="none"', '');
-      // Remove stroke weight to allow overrides
-      dataTweak = dataTweak.replace('stroke-weight="1"', '');
       // Add stroke none, use `stroke-width: 2px;` in CSS
-      dataTweak = dataTweak.replace('fill="currentColor"', 'fill="currentColor" stroke="none"');
+      // Maybe replace this with a svgo plugin?
+      dataTweak = dataOptimized.data.replace('fill="currentColor"', 'fill="currentColor" stroke="none"');
+
       await writeFile(filepath, dataTweak, 'utf-8');
     } catch(err) {
       swlog.error(err);
