@@ -22,7 +22,7 @@ class StopwatchLog {
    * @param {string} [color] - one of the chalk module's color aliases
    */
   logTaskAction(action, desc, color = 'green') {
-    console.log('-', action, chalk[color](desc));
+    console.log('  -', action, chalk[color](desc));
   }
 
   /**
@@ -30,7 +30,7 @@ class StopwatchLog {
    * @param {string} taskName - the name of the task that matches its start time
    */
   logTaskEnd(taskName) {
-    console.log('Finished', chalk.cyan(taskName), `after ${chalk.magenta(this.timeElapsed(this.stopwatch[taskName]))}`);
+    console.log('Finished', chalk.cyan(taskName), `after ${chalk.magenta(this.timeElapsed(this.stopwatch[taskName]))}\n`);
   }
 
   /**
@@ -40,8 +40,28 @@ class StopwatchLog {
    */
   logTaskStart(taskName) {
     this.stopwatch[taskName] = Date.now();
-    console.log('\nStarting', chalk.cyan(taskName), '...');
+    console.log('-----------------------------------------------')
+    console.log(`\nStarting ${chalk.cyan(taskName)}...`);
     return taskName;
+  }
+
+  /**
+   * Console.log a staring action and track its start time
+   * @param {string} taskName - the unique name of the task
+   * @returns {string}
+   */
+  logSubStart(taskName) {
+    this.stopwatch[taskName] = Date.now();
+    console.log(`  Starting ${chalk.cyan(taskName)}...`);
+    return taskName;
+  }
+
+  /**
+   * Console.log a finished action and display its run time
+   * @param {string} taskName - the name of the task that matches its start time
+   */
+  logSubEnd(taskName) {
+    console.log('  Finished', chalk.cyan(taskName), `after ${chalk.magenta(this.timeElapsed(this.stopwatch[taskName]))}`);
   }
 
   /**
