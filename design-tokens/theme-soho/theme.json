@@ -15,6 +15,7 @@
                     "contrast": { "value": "{theme.color.palette.white.value}" }
                 },
                 "secondary": {
+                    "lighter": { "value": "{theme.color.palette.graphite.20.value}" },
                     "base":     { "value": "{theme.color.palette.graphite.30.value}" },
                     "alt":      { "value": "{theme.color.palette.graphite.40.value}" },
                     "contrast": { "value": "{theme.color.palette.graphite.80.value}" }
@@ -24,12 +25,17 @@
                 "base": { "value": "rgba(0, 0, 0, 0.2)" }
             },
             "border": {
-                "base": { "value": "{theme.color.palette.graphite.40.value}" }
+                "lighter": { "value": "{theme.color.palette.graphite.30.value}" },
+                "base": { "value": "{theme.color.palette.graphite.40.value}" },
+                "darker": { "value": "{theme.color.palette.graphite.80.value}" }
             },
             "font": {
                 "base":  { "value": "{theme.color.palette.graphite.100.value}" },
                 "info":  { "value": "{theme.color.palette.graphite.60.value}" },
                 "muted": { "value": "{theme.color.palette.graphite.40.value}" }
+            },
+            "icon": {
+                "base": { "value": "theme.color.palette.graphite.40.value" }
             }
         },
         "font": {
@@ -50,6 +56,14 @@
                     "height": {
                         "value": "2.2rem"
                     }
+                }
+            },
+            "icon": {
+                "height": {
+                    "value": "17px"
+                },
+                "width": {
+                    "value": "22px"
                 }
             }
         },
