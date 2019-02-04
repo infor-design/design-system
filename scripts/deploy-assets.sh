@@ -31,14 +31,12 @@ case $DEPLOY_ENV in
 esac
 
 PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
-FNAME="IDS-DEPLOY-$PACKAGE_VERSION.zip"
+FNAME="IDS-$PACKAGE_VERSION.zip"
 
-echo "${CYAN}Zipping assets for $PACKAGE_VERSION...${RESET}"
-cd dist
-zip -r ../$FNAME \
-    tokens/
+echo "${CYAN}Preparing assets for $PACKAGE_VERSION...${RESET}"
 
-cd ..
+# Run package script to build `
+bash ./scripts/package-release.sh $FNAME
 
 echo "${CYAN}Uploading assets...${RESET}"
 
