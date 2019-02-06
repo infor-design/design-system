@@ -17,8 +17,8 @@
                 "secondary": {
                     "lighter": { "value": "{theme.color.palette.slate.lighter.value}" },
                     "base":     { "value": "{theme.color.palette.slate.base.value}" },
-                    "alt":      { "value": "{theme.color.palette.graphite.darker.value}" },
-                    "contrast": { "value": "{theme.color.palette.graphite.darkest.value}" }
+                    "alt":      { "value": "{theme.color.palette.slate.darker.value}" },
+                    "contrast": { "value": "{theme.color.palette.slate.darkest.value}" }
                 }
             },
             "boxshadow": {
