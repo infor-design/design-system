@@ -45,7 +45,7 @@
                 },
                 "hover": {
                     "border": {
-                        "value": "{theme.color.border.daker.value}"
+                        "value": "{theme.color.border.darker.value}"
                     }
                 },
                 "initial": {
