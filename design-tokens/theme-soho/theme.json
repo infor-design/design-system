@@ -36,6 +36,10 @@
             },
             "icon": {
                 "base": { "value": "theme.color.palette.graphite.40.value" }
+            },
+            "body": {
+                "base" : { "value": "{theme.color.palette.graphite.10.value}" },
+                "lightest": { "value": "{theme.color.palette.white.value}" }
             }
         },
         "font": {
