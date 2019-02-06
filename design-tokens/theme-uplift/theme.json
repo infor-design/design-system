@@ -10,7 +10,7 @@
             },
             "brand": {
                 "primary": {
-                    "base":     { "value": "{theme.color.palette.azure.value}" },
+                    "base":     { "value": "{theme.color.palette.azure.base.value}" },
                     "alt":      { "value": "{theme.color.palette.azure.darker.value}" },
                     "contrast": { "value": "{theme.color.palette.white.value}" }
                 },
@@ -32,7 +32,7 @@
             "font": {
                 "base":  { "value": "{theme.color.palette.slate.darkest.value}" },
                 "info":  { "value": "{theme.color.palette.slate.darker.value}" },
-                "muted": { "value": "{theme.color.palette.slate.value}" }
+                "muted": { "value": "{theme.color.palette.slate.base.value}" }
             },
             "icon": {
                 "base": { "value": "theme.color.palette.slate.darker.value" }
