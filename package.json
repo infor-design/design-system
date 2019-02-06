@@ -7,9 +7,9 @@
     "build:icons": "node ./scripts/node/build.js --build=icons",
     "build:tokens": "node ./scripts/node/build.js --build=tokens",
     "build:fonts": "node ./scripts/node/build.js --build=fonts",
-    "documentation": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e local",
-    "documentation:staging": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e staging",
-    "documentation:prod": "npm run build:tokens && bash ./scripts/deploy-assets.sh -e prod",
+    "assets": "npm run build && bash ./scripts/deploy-assets.sh -e local",
+    "assets:staging": "npm run build && bash ./scripts/deploy-assets.sh -e staging",
+    "assets:prod": "npm run build && bash ./scripts/deploy-assets.sh -e prod",
     "clean": "del ./dist/*/* && del ./IDS-*.zip",
     "mdlint": "npx markdownlint --ignore=dist *.md **/*.md",
     "test": "npm run mdlint",
@@ -39,7 +39,7 @@
     "minimist": "^1.2.0",
     "npm-which": "^3.0.1",
     "path": "^0.12.7",
-    "style-dictionary": "^2.6.2",
+    "style-dictionary": "^2.7.0",
     "svgo": "^1.0.5"
   },
   "files": [
