@@ -4,7 +4,7 @@
             "checked": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.10.value}"
+                        "value": "{theme.color.body.base.value}"
                     },
                     "border": {
                         "value": "{radio.color.unchecked.disabled.border.value}"
