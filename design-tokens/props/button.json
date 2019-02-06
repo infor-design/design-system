@@ -54,7 +54,7 @@
                         "value": "{theme.color.brand.secondary.base.value}"
                     },
                     "font": {
-                        "value": "{theme.color.border.daker.value}"
+                        "value": "{theme.color.border.darker.value}"
                     },
                     "opacity": {
                         "value": "{theme.number.opacity.disabled.value}"
