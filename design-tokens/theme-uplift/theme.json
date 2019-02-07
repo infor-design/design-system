@@ -53,12 +53,16 @@
                 "base": { "value": "{theme.size.font.sm.value}" },
                 "xs":   { "value": "1.4rem" },
                 "sm":   { "value": "1.6rem" },
-                "md":   { "value": "2.4rem" },
-                "lg":   { "value": "3.2rem" },
-                "xl":   { "value": "4.0rem" },
+                "md":   { "value": "2.2rem" },
+                "lg":   { "value": "2.8rem" },
+                "xl":   { "value": "4.2rem" },
                 "line": {
                     "height": {
-                        "value": "2.2rem"
+                        "xs": { "value": "1.44" },
+                        "sm": { "value": "1.5" },
+                        "md": { "value": "1.45" },
+                        "lg": { "value": "1.43" },
+                        "xl": { "value": "1.33" },
                     }
                 }
             },
@@ -74,6 +78,7 @@
         "number": {
             "font": {
                 "weight": {
+                    "light": { "value": "300" },
                     "base": { "value": "400" },
                     "bold": { "value": "600" }
                 }
