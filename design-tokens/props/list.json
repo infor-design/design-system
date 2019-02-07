@@ -17,7 +17,7 @@
                 },
                 "selected": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.10.value}"
+                        "value": "{theme.color.body.base.value}"
                     }
                 }
             },
