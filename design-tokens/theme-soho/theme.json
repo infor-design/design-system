@@ -59,7 +59,8 @@
                 "line": {
                     "height": {
                         "value": "2.2rem",
-                        "deprecated": "Use one of theme.number.font.weight options instead."
+                        "comment": "DEPRECATED: Use one of theme.number.font.weight options instead.",
+                        "deprecated": true
                     }
                 }
             },
