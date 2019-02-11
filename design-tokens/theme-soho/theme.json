@@ -48,7 +48,8 @@
                 "xl":   { "value": "4.0rem" },
                 "line": {
                     "height": {
-                        "value": "2.2rem"
+                        "value": "2.2rem",
+                        "deprecated": "Use one of theme.number.font.weight options instead."
                     }
                 }
             }
