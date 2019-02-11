@@ -57,8 +57,18 @@
         "number": {
             "font": {
                 "weight": {
+                    "light": { "value": "300" },
                     "base": { "value": "400" },
                     "bold":   { "value": "700" }
+                },
+                "line": {
+                    "height": {
+                        "xs": { "value": "2.2" },
+                        "sm": { "value": "2.2" },
+                        "md": { "value": "2.2" },
+                        "lg": { "value": "2.2" },
+                        "xl": { "value": "2.2" }
+                    }
                 }
             },
             "opacity": {

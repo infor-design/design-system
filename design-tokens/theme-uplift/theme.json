@@ -48,11 +48,8 @@
                 "xl":   { "value": "4.2rem" },
                 "line": {
                     "height": {
-                        "xs": { "value": "1.44" },
-                        "sm": { "value": "1.5" },
-                        "md": { "value": "1.45" },
-                        "lg": { "value": "1.43" },
-                        "xl": { "value": "1.33" }
+                        "value": "",
+                        "deprecated": "Use one of theme.number.font.weight options instead."
                     }
                 }
             }
@@ -63,6 +60,15 @@
                     "light": { "value": "300" },
                     "base": { "value": "400" },
                     "bold": { "value": "600" }
+                },
+                "line": {
+                    "height": {
+                        "xs": { "value": "1.44" },
+                        "sm": { "value": "1.5" },
+                        "md": { "value": "1.45" },
+                        "lg": { "value": "1.43" },
+                        "xl": { "value": "1.33" }
+                    }
                 }
             },
             "opacity": {
