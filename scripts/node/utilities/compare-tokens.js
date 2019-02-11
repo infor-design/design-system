@@ -19,7 +19,7 @@ const readJSONFile = file => {
   try {
     return JSON.parse(data);
   } catch(e) {
-    console.error(e);
+    swlog.error(e);
   }
 };
 
