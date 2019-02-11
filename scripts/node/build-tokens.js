@@ -109,7 +109,8 @@ function generateTokens(src, dest) {
 
     swlog.logTaskEnd(startTaskName);
     resolve();
-  });
+  })
+  .catch(swlog.error);
 }
 
 module.exports = generateTokens;
