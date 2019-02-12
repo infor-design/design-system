@@ -35,7 +35,7 @@
                 "muted": { "value": "{theme.color.palette.slate.60.value}" }
             },
             "icon": {
-                "base": { "value": "theme.color.palette.slate.80.value" }
+                "base": { "value": "{theme.color.palette.slate.80.value}" }
             },
             "body": {
                 "base" : { "value": "{theme.color.palette.slate.100.value}" },
