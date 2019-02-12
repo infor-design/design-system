@@ -3,6 +3,7 @@
   "version": "2.1.1",
   "description": "Infor Design System Design Assets",
   "scripts": {
+    "sketch:diff": "./scripts/skdiff -o ./.tmp/ ",
     "build": "node ./scripts/node/build.js --build=tokens,icons,fonts",
     "build:icons": "node ./scripts/node/build.js --build=icons",
     "build:tokens": "node ./scripts/node/build.js --build=tokens",
@@ -29,6 +30,7 @@
   "author": "Hook & Loop",
   "license": "Apache-2.0",
   "devDependencies": {
+    "blink-diff": "^1.0.13",
     "chalk": "^2.4.2",
     "copy-dir": "^0.3.0",
     "del": "^3.0.0",
