@@ -64,7 +64,7 @@ const customSvgoNonScalingStroke = {
 const customSvgoFillStroke = {
   type        : 'perItem',
   fn          : item => {
-    if (item.hasAttr('fill')) {
+    if (item.hasAttr('fill') && ! item.hasAttr('vector-effect')) {
       item.addAttr({
         name: 'stroke',
         value: 'none',
