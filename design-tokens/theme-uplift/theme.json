@@ -3,10 +3,10 @@
         "color": {
             "status": {
                 "base":    { "value": "{theme.color.brand.primary.alt.value}" },
-                "caution": { "value": "#ffd000" },
-                "danger":  { "value": "#d92635" },
-                "success": { "value": "#33cc33" },
-                "warning": { "value": "#f29e0d" }
+                "caution": { "value": "#FFD100" },
+                "danger":  { "value": "#DA1217" },
+                "success": { "value": "#35C274" },
+                "warning": { "value": "#F78300" }
             },
             "brand": {
                 "primary": {
@@ -15,21 +15,31 @@
                     "contrast": { "value": "{theme.color.palette.white.value}" }
                 },
                 "secondary": {
-                    "base":     { "value": "{theme.color.palette.graphite.30.value}" },
-                    "alt":      { "value": "{theme.color.palette.graphite.40.value}" },
-                    "contrast": { "value": "{theme.color.palette.graphite.80.value}" }
+                    "lighter": { "value": "{theme.color.palette.slate.40.value}" },
+                    "base":     { "value": "{theme.color.palette.slate.60.value}" },
+                    "alt":      { "value": "{theme.color.palette.slate.80.value}" },
+                    "contrast": { "value": "{theme.color.palette.slate.90.value}" }
                 }
             },
             "boxshadow": {
-                "base": { "value": "{theme.color.palette.graphite.10.value}" }
+                "base": { "value": "{theme.color.palette.slate.10.value}" }
             },
             "border": {
-                "base": { "value": "{theme.color.palette.graphite.60.value}" }
+                "lighter": { "value": "{theme.color.palette.slate.60.value}" },
+                "base": { "value": "{theme.color.palette.slate.80.value}" },
+                "darker": { "value": "{theme.color.palette.slate.90.value}" }
             },
             "font": {
-                "base":  { "value": "{theme.color.palette.graphite.100.value}" },
-                "info":  { "value": "{theme.color.palette.graphite.80.value}" },
-                "muted": { "value": "{theme.color.palette.graphite.60.value}" }
+                "base":  { "value": "{theme.color.palette.slate.100.value}" },
+                "info":  { "value": "{theme.color.palette.slate.80.value}" },
+                "muted": { "value": "{theme.color.palette.slate.60.value}" }
+            },
+            "icon": {
+                "base": { "value": "{theme.color.palette.slate.80.value}" }
+            },
+            "body": {
+                "base" : { "value": "{theme.color.palette.slate.10.value}" },
+                "lightest": { "value": "{theme.color.palette.white.value}" }
             }
         },
         "font": {
@@ -54,6 +64,14 @@
                             "deprecated": true
                         }
                     }
+                }
+            },
+            "icon": {
+                "height": {
+                    "value": "17px"
+                },
+                "width": {
+                    "value": "22px"
                 }
             }
         },

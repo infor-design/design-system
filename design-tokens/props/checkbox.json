@@ -37,7 +37,7 @@
                         "value": "transparent"
                     },
                     "border": {
-                        "value": "{theme.color.palette.graphite.30.value}"
+                        "value": "{theme.color.border.lighter.value}"
                     },
                     "font": {
                         "value": "{theme.color.font.muted.value}"
@@ -45,7 +45,7 @@
                 },
                 "hover": {
                     "border": {
-                        "value": "{theme.color.palette.graphite.80.value}"
+                        "value": "{theme.color.border.darker.value}"
                     }
                 },
                 "initial": {
@@ -64,7 +64,7 @@
         "shadow": {
             "focus": {
                 "boxshadow": {
-                    "value": "0 0 0 1px {theme.color.palette.graphite.10.value}, 0 0 0 2px {theme.color.brand.primary.base.value}"
+                    "value": "0 0 0 1px {theme.color.boxshadow.base.value}, 0 0 0 2px {theme.color.brand.primary.base.value}"
                 }
             }
         },

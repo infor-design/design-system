@@ -3,7 +3,7 @@
         "color": {
             "disabled": {
                 "font": {
-                    "value": "{theme.color.palette.graphite.40.value}"
+                    "value": "{theme.color.font.muted.value}"
                 }
             },
             "hover": {

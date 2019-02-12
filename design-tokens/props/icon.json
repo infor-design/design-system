@@ -2,15 +2,15 @@
     "icon": {
         "color": {
             "fill": {
-                "value": "{theme.color.palette.graphite.40.value}"
+                "value": "{theme.color.icon.base.value}"
             }
         },
         "size": {
             "height": {
-                "value": "17px"
+                "value": "{theme.size.icon.height.value}"
             },
             "width": {
-                "value": "22px"
+                "value": "{theme.size.icon.width.value}"
             }
         }
     }

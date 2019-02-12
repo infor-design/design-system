@@ -3,13 +3,13 @@
         "color": {
             "divider": {
                 "border": {
-                    "value": "{theme.color.palette.graphite.20.value}"
+                    "value": "{theme.color.brand.secondary.lighter.value}"
                 }
             },
             "item": {
                 "hover": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.20.value}"
+                        "value": "{theme.color.brand.secondary.lighter.value}"
                     }
                 },
                 "initial": {
@@ -17,14 +17,14 @@
                 },
                 "selected": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.10.value}"
+                        "value": "{theme.color.body.base.value}"
                     }
                 }
             },
             "heading": {
                 "initial": {
                     "font": {
-                        "value": "{theme.color.palette.graphite.20.value}"
+                        "value": "{theme.color.brand.secondary.lighter.value}"
                     }
                 }
             }

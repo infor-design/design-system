@@ -64,7 +64,7 @@ const customSvgoNonScalingStroke = {
 const customSvgoFillStroke = {
   type        : 'perItem',
   fn          : item => {
-    if (item.hasAttr('fill')) {
+    if (item.hasAttr('fill') && ! item.hasAttr('vector-effect')) {
       item.addAttr({
         name: 'stroke',
         value: 'none',
@@ -150,7 +150,7 @@ function sortByFileFormat(srcDir, format) {
   // Loop through and move each file
   const promises = files.map(f => {
     return new Promise((resolve, reject) => {
-      const filename = path.basename(f);
+      const filename = path.basename(f).toLowerCase();
       const reg = /[\w-]+-(16|24|32)\.[\w]+/;
       const match = filename.match(reg);
       let thisDest = dest;

@@ -8,10 +8,10 @@
                     }
                 },
                 "font": {
-                    "value": "{theme.color.palette.graphite.100.value}"
+                    "value": "{theme.color.font.base.value}"
                 },
                 "icon": {
-                    "value": "{theme.color.palette.graphite.100.value}"
+                    "value": "{dropdown.color.initial.font.value}"
                 }
             },
             "selected": {
