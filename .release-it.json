@@ -1,25 +1,26 @@
 {
-  "non-interactive": false,
-  "dry-run": false,
-  "verbose": false,
-  "pkgFiles": ["package.json"],
-  "increment": "patch",
-  "buildCommand": "npm run clean && npm run build && npm run zip",
-  "beforeChangelogCommand": "echo ${version} > /tmp/ids-identity-release-version",
-  "changelogCommand": "./scripts/github-changelog.sh",
-  "src": {
-    "commitMessage": "Release v%s",
-    "tagAnnotation": "Release v%s",
-    "beforeStartCommand": "npm run test",
-    "afterReleaseCommand": "./scripts/after-release.sh ${npm.tag} ${version}"
-  },
-  "npm": {
-    "tag": "latest"
-  },
-  "github": {
-    "release": true,
-    "releaseName": "v%s",
-    "tokenRef": "GITHUB_ACCESS_TOKEN",
-    "assets":"IDS-*.zip"
-  }
+    "non-interactive": false,
+    "dry-run": false,
+    "verbose": false,
+    "pkgFiles": [
+        "package.json"
+    ],
+    "scripts": {
+        "beforeStart": "npm run clean && npm run build && npm run test && npm run zip",
+        "changelog": "./scripts/github-changelog.sh ${version}",
+        "afterRelease": "./scripts/after-release.sh ${npm.tag} ${version}"
+    },
+    "git": {
+        "commitMessage": "Release v%s",
+        "tagAnnotation": "Release v%s"
+    },
+    "npm": {
+        "tag": "latest"
+    },
+    "github": {
+        "release": true,
+        "releaseName": "v%s",
+        "tokenRef": "GITHUB_ACCESS_TOKEN",
+        "assets": "IDS-*.zip"
+    }
 }
