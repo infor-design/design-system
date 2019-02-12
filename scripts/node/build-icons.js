@@ -282,30 +282,33 @@ function optimizeSVGs(src) {
  * @returns {Promise}
  */
 function generateIcons(sketchfile, dest) {
-  const startTaskName = swlog.logTaskStart(`build icons from ${sketchfile}`);
+  return new Promise((resolve, reject) => {
 
-  if (!hasSketchtool()) {
-    swlog.error('No sketchtool installed. Skipping create icons...');
-    process.exit(0);
-  }
+    const startTaskName = swlog.logTaskStart(`build icons from ${sketchfile}`);
 
-  return Promise.all([
-    createPagesMetadata(sketchfile, dest),
-    createIconFiles(sketchfile, dest)
-  ])
-  .then(res => {
-    const thisTask = swlog.logSubStart(`organize icon files`);
+    if (!hasSketchtool()) {
+      return reject('No sketchtool installed. Skipping create icons...');
+    }
 
-    const promises = options.iconFormats.map(format => {
-      return sortByFileFormat(dest, format);
+    Promise.all([
+      createPagesMetadata(sketchfile, dest),
+      createIconFiles(sketchfile, dest)
+    ])
+    .then(res => {
+      const thisTask = swlog.logSubStart(`organize icon files`);
+
+      const promises = options.iconFormats.map(format => {
+        return sortByFileFormat(dest, format);
+      });
+
+      return Promise.all(promises).then(() => {
+        swlog.logSubEnd(thisTask)
+      });
+    })
+    .then(res => {
+      resolve();
+      swlog.logTaskEnd(startTaskName);
     });
-
-    return Promise.all(promises).then(() => {
-      swlog.logSubEnd(thisTask)
-    });
-  })
-  .then(res => {
-    swlog.logTaskEnd(startTaskName);
   })
   .catch(swlog.error);
 }
