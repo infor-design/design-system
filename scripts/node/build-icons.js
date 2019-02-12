@@ -150,7 +150,7 @@ function sortByFileFormat(srcDir, format) {
   // Loop through and move each file
   const promises = files.map(f => {
     return new Promise((resolve, reject) => {
-      const filename = path.basename(f);
+      const filename = path.basename(f).toLowerCase();
       const reg = /[\w-]+-(16|24|32)\.[\w]+/;
       const match = filename.match(reg);
       let thisDest = dest;
