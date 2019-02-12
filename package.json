@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "sketch:diff": "./scripts/skdiff -o ./.tmp/ ",
