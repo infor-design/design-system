@@ -3,7 +3,7 @@
         "color": {
             "initial": {
                 "font": {
-                    "value": "{theme.color.palette.graphite.50.value}"
+                    "value": "{theme.color.font.info.value}"
                 }
             }
         }

@@ -11,12 +11,12 @@
                     "value": "{theme.color.palette.white.value}"
                 },
                 "placeholder": {
-                    "value": "{theme.color.palette.slate.darker.value}"
+                    "value": "{theme.color.palette.slate.80.value}"
                 }
             },
             "readonly": {
                 "font": {
-                    "value": "{theme.color.palette.slate.darkest.value}"
+                    "value": "{theme.color.palette.slate.80.value}"
                 }
             }
         },
