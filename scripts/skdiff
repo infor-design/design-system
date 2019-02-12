@@ -1,0 +1,326 @@
+#!/usr/bin/env bash
+# @file skdiff.sh
+# Show artboard changes between two Sketch files
+# @author Alister Lewis-Bowen <alister@lewis-bowen.org>
+
+[[ "$OSTYPE" == "darwin"* ]] || {
+    echo "This will only run on macOS"
+    exit 1
+}
+
+[[ -e /Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool ]] || {
+    echo "Unable to find sketchtool under your Sketch application directory"
+    exit 1
+}
+sketch=/Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool
+
+export PATH="$PATH:/usr/local/bin"
+
+QUIET='no'
+OUTPUT='yes'
+RAW='no'
+SYMBOLS='NO'
+# shellcheck disable=SC2164
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+RESULTS_DIR='/tmp/changes'
+OPEN_RESULTS='yes'
+WORKING_DIR=~/.skdiff
+FILE_A=''
+FILE_B=''
+NUM_DIFFS=0
+DIFF_VERSION='no'
+
+RESET=`tput sgr0`
+
+BLACK=`tput setaf 0`
+RED=`tput setaf 1`
+GREEN=`tput setaf 2`
+YELLOW=`tput setaf 3`
+BLUE=`tput setaf 4`
+MAGENTA=`tput setaf 5`
+CYAN=`tput setaf 6`
+WHITE=`tput setaf 7`
+
+# shellcheck disable=SC2128
+[[ "$0" = "$BASH_SOURCE" ]] && SOURCED='no' || SOURCED='yes';
+
+_help() {
+    echo "Show visual differences between Sketch files."
+    echo "Artbards added, deleted and visual changes are generated"
+    echo "Usage: "
+    echo "  skdiff FILE_A.sketch FILE_B.sketch [options]"
+    echo "  skdiff FILE_A.sketch [options]"
+    echo "When involed with one Sketch file, it is assumed the file exists"
+    echo "within a git repository and will be diff'ed against a previous"
+    echo "version."
+    echo "Options:"
+    echo "  -h, --help, help ... display this help information"
+    echo "  -q, --quiet ........ supress progress messages"
+    echo "  -C, --no-color ..... suppres colored output"
+    echo "  -O, --no-output .... supress generating images"
+    echo "  -F, --no-finder .... supress opening Finder to show generated images"
+    echo "  -I, --symbols ...... include symbols when checking for differences"
+    echo "  -o, --output ....... the directory for generated images"
+    echo "                       Defaults to directory name: $RESULTS_DIR"
+    return 0
+}
+
+err()   {
+    # - Echo string as an error
+    # @param message string
+    if [[ "$RAW" == "no" ]]; then
+        # shellcheck disable=SC2145
+        echo -e "\e[0;31m${@}\e[0m" 1>&2
+    else
+        echo -e "${@}" 1>&2
+    fi
+}
+
+msg()   {
+    # - Echo string as a message
+    # @param message string
+    [[ "$QUIET" == 'no' ]] && {
+        if [[ "$RAW" == "no" ]]; then
+            # shellcheck disable=SC2145
+            echo -en "${@}"
+        else
+            echo -en "${@}"
+        fi
+    }
+}
+
+fileExists() {
+    # - Check if file exists and has sketch extension
+    # @param location of the Sketch file
+
+    [[ ! -f "$1" ]] && {
+        err "Unable to find file, $1"
+        return 1
+    }
+    [[ "$1" != *.sketch ]] && {
+        err "The file, $1, does not appear to be a sketch file"
+        return 1
+    }
+    return 0
+}
+
+diffAgainstPreviousVersion () {
+    # - find previous git commit of FILE_A
+    # - set FILE_A to this previous version
+    # - set FILE_B to the current version
+
+    type git &> /dev/null || {
+        err "This command assumes you have git installed. However, I can't find git."
+        exit 1
+    }
+    [[ $(git ls-files "$FILE_A") == "$FILE_A" ]] || {
+        err "$FILE_A is not tracked by git."
+        exit 1
+    }
+    repoDir=$(git rev-parse --show-toplevel)
+
+    sha="$(git log -1 --follow "$FILE_A" | grep -e '^commit' | awk '{print $2}')"
+
+    currentVersion=$(basename "$FILE_A")
+    lastVersion=".${currentVersion%.sketch}-${sha}.sketch"
+
+    fileRelative=$(find "$repoDir" -name "$currentVersion" | sed -e "s#${repoDir}/##g")
+    git show "$sha":"$fileRelative" > "$lastVersion"
+
+    FILE_B="$FILE_A"
+    FILE_A="$lastVersion"
+    DIFF_VERSION='yes'
+
+    return 0
+}
+
+diffTwoFiles () {
+    # - export artboards for both FILE_A & B
+    # - diff the artboards and show summary
+
+    msg "Exporting artboards ..."
+    # shellcheck disable=SC2046
+    exportSketchArtboards "$FILE_A" $([[ "$DIFF_VERSION" == 'yes' ]] && echo 'no')
+    exportSketchArtboards "$FILE_B"
+
+    msg " done\nLooking for differences...\n"
+    diffSketchArtboards "$WORKING_DIR/${FILE_A%.sketch}_artboards" \
+        "$WORKING_DIR/${FILE_B%.sketch}_artboards" \
+        "$RESULTS_DIR"
+
+    rm -f .*.sketch > /dev/null
+    if [[ "$NUM_DIFFS" -gt 0 ]]; then
+        if [[ "$OUTPUT" == 'yes' ]]; then
+            msg "$NUM_DIFFS differences found and stored in directory, '$RESULTS_DIR'\n"
+            [[ "$OPEN_RESULTS" == 'yes' ]] && open "$RESULTS_DIR"
+        else
+            msg "$NUM_DIFFS differences found\n"
+        fi
+    else
+        rm -fR "$RESULTS_DIR"
+        msg "No differences found\n"
+        exit 0
+    fi
+
+    return 0
+}
+
+exportSketchArtboards () {
+    # - export the artboards from a Sketch file
+    # - reduce all artboard PNG filepaths to a file
+    # - cache resulting artboards in a working dir
+    # @param location of the Sketch file
+    # @param (optionai) [yes|no] clearing any cached artboard export
+    #        default to yes
+
+    local filepath="$1"
+    # shellcheck disable=SC2155
+    local filename=$(basename "$1")
+    local clearCache="${2:-yes}"
+
+    fileExists "$filepath" || exit 1
+
+    local dir="$WORKING_DIR/${filename%.sketch}_artboards"
+    if [[ -d "$dir" && "$clearCache" != 'yes' ]]; then return 0; fi
+    [[ -d "$dir" ]] && rm -fR "$dir"
+
+    "$sketch" export artboards "$filepath" \
+        --overwriting="YES" \
+        --include-symbols="$SYMBOLS" \
+        --output="$dir" > /dev/null
+
+    while IFS= read -r _filename; do
+        _file="${_filename#*/}" # strip containing dir
+        _file="${_file// /_}"   # underscore all spaces
+        _file="${_file//\//_}"  # underscore directory delimitor
+        mv "$WORKING_DIR/$_filename" "$dir/$_file"
+    done < <(find "$dir" -name "*.png" | sed -En "s#${WORKING_DIR}/##p")
+
+    find "$dir" -type d -empty -delete
+
+    return 0
+}
+
+diffSketchArtboards () {
+    # - diff two directories of exported Sketch artboards
+    # - echo summary
+    # - generate directory of added, removed and changes artboard images
+    # @param name of first Sketch file
+    # @param name of second Sketch file
+    # @param (optional) output directory path
+
+    local pathnameA="$1"
+    # shellcheck disable=SC2155
+    local dirnameA=$(basename "$pathnameA")
+    local pathnameB="$2"
+    # shellcheck disable=SC2155
+    local dirnameB=$(basename "$pathnameB")
+    local odir="${3:-$RESULTS_DIR}"
+
+    [ -d "$odir" ] && rm -fR "$odir"
+    [ "$OUTPUT" == 'yes' ] && mkdir -p  "$odir/changed" "$odir/added" "$odir/deleted"
+
+    while IFS= read -r _line; do
+        _differ=$(echo "$_line" | sed -En 's#^Files (.*) and /(.*) differ$#\1#p')
+        _added=$(echo "$_line" | sed -En "s#^Only in .*${dirnameB}: (.*\.png)\$#\1#p")
+        _removed=$(echo "$_line" | sed -En "s#^Only in .*${dirnameA}: (.*\.png)\$#\1#p")
+        if [[ -n "$_differ" ]]; then
+            _file=$(basename "$_differ")
+            [ "$OUTPUT" == 'yes' ] && npx blink-diff --compose-ltr --output "$odir/changed/$_file" \
+                "$WORKING_DIR/$dirnameA/$_file" \
+                "$WORKING_DIR/$dirnameB/$_file" >/dev/null
+            output="<> $_file has changed\n"
+            [[ "$RAW" == "no" ]] && output="${CYAN}${output}${RESET}"
+            (( NUM_DIFFS++ ))
+        elif [[ -n "$_added" ]]; then
+            [ "$OUTPUT" == 'yes' ] && cp "$WORKING_DIR/$dirnameB/$_added" "$odir/added/$_added"
+            output="++ $_added was added\n"
+            [[ "$RAW" == "no" ]] && output="${GREEN}${output}${RESET}"
+            (( NUM_DIFFS++ ))
+        elif [[ -n "$_removed" ]]; then
+            [ "$OUTPUT" == 'yes' ] && cp "$WORKING_DIR/$dirnameA/$_removed" "$odir/deleted/$_removed"
+            output="-- $_removed was removed\n"
+            [[ "$RAW" == "no" ]] && output="${RED}${output}${RESET}"
+            (( NUM_DIFFS++ ))
+        fi
+        msg "$output"
+    done < <(diff -rq "$WORKING_DIR/$dirnameA" "$WORKING_DIR/$dirnameB" | grep .png)
+
+    return 0
+}
+
+genGitHook () {
+    # WORK IN PROGRESS
+    # generate a git post-commit hook to export artboards from any Sketch
+    # files in the commit
+
+    local git_root
+    git_root=$(git rev-parse --show-toplevel)
+    [[ -e "$git_root" ]] || {
+        echo "You don't appear to be in a git repository"
+        exit 1
+    }
+    _hookFile="$git_root/.git/hooks/post-commit"
+
+    [[ -e "$_hookFile" ]] || {
+        echo "\
+#!/usr/bin/env
+# @file post-commit githook
+# Export artboards for any sketch files commited
+# Generate directory of images showing differences between HEAD and last
+# sketch file version
+# (Generated by skdiff)
+# @author Alister Lewis-Bowen <alister@lewis-bowen.org>
+"
+    }
+    # shellcheck disable=SC2028
+    echo "\
+set -e
+# Diagnostic info
+#echo \"Running \$BASH_SOURCE\"
+#echo \"PWD is \$PWD\"
+#echo -e \"Git environment vars:\\n\$(set | egrep GIT)\"
+source \"$SCRIPTPATH/../skdiff.sh\"
+# Export sketch artboards for any Sketch files added/changed in this commit
+thisCommitSha=\"\$(git log -1 | grep -e '^commit' | awk '{print \$2}')\"
+thisCommitFiles=\"\$(git log -1 --name-status | grep .sketch | egrep -v '^D' | awk '{print \$2}')\"
+for file in \$thisCommitFiles; do
+    exportSketchArtboards \"\$file\"
+    exportDir=\"\${file%.sketch}_artboards\"
+    commitDir=\"\$(dirname \$file)/.\$thisCommitSha/\$file\"
+    mkdir -p \"\$commitDir\"
+    mv \"\$exportDir\"/* \"\$commitDir\"
+done
+"
+    return 0
+}
+
+[[ "$SOURCED" == 'yes' ]] && return 0
+
+[[ $# == 0 ]] && { _help; exit 1; }
+while [[ $# -gt 0 ]]; do
+    arg="$1"
+    case $arg in
+        -o|--output)    RESULTS_DIR=$2; shift;;
+        -O|--no-output) OUTPUT='no';;
+        -C|--no-color)  RAW='yes';;
+        -F|--no-finder) OPEN_RESULTS='no';;
+        -I|--symbols)   SYMBOLS='YES';;
+        -q|--quiet)     QUIET='yes';;
+        -d)             set -x;;
+        -h|--help|help) _help; exit 1;;
+        *)  # positional args
+            if [ -z "$FILE_A" ]; then FILE_A=$1;
+            elif [ -z "$FILE_B" ]; then FILE_B=$1;fi
+            ;;
+    esac
+    shift
+done
+
+[[ -z "$FILE_A" ]] || { fileExists "$FILE_A" || exit 1; }
+[[ -z "$FILE_B" ]] || { fileExists "$FILE_B" || exit 1; }
+
+[[ -z "$FILE_B" ]] && diffAgainstPreviousVersion
+diffTwoFiles
+
+exit 0

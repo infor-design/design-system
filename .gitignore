@@ -2,6 +2,7 @@
 ############
 dist/
 IDS-*.zip
+.tmp
 
 # Packages #
 ############
