@@ -33,10 +33,12 @@ esac
 PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 FNAME="IDS-$PACKAGE_VERSION.zip"
 
-echo "${CYAN}Preparing assets for $PACKAGE_VERSION...${RESET}"
+echo "${CYAN}Getting assets for $PACKAGE_VERSION...${RESET}"
 
-# Run package script to build `
-bash ./scripts/package-release.sh $FNAME
+if [ ! -f $FNAME ]; then
+    echo "${RED}ERROR: $FNAME not found!${RESET}"
+    exit 1
+fi
 
 echo "${CYAN}Uploading assets...${RESET}"
 

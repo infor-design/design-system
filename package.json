@@ -11,7 +11,7 @@
     "assets": "npm run build && bash ./scripts/deploy-assets.sh -e local",
     "assets:staging": "npm run build && bash ./scripts/deploy-assets.sh -e staging",
     "assets:prod": "npm run build && bash ./scripts/deploy-assets.sh -e prod",
-    "clean": "del ./dist/*/* && del ./IDS-*.zip",
+    "clean": "rm -rf dist/* && rm -rf IDS-*.zip",
     "lint:json": "npx eslint design-tokens/**/*.json",
     "lint:md": "npx markdownlint --ignore=dist *.md **/*.md",
     "test": "npm run lint:md && npm run lint:json",
