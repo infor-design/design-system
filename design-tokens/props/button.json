@@ -114,7 +114,7 @@
                         "value": "transparent"
                     },
                     "font": {
-                        "value": "{theme.color.font.muted.value}"
+                        "value": "{theme.color.font.info.value}"
                     },
                     "icon": {
                         "value": "{button.color.secondary.initial.font.value}"
