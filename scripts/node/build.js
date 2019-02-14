@@ -92,15 +92,13 @@ themesArr.forEach(theme => {
 
   const tokensSrc = `./design-tokens/${theme}`;
   if (args.build.includes('tokens') && fs.existsSync(tokensSrc)) {
-    // const dest = `${themeDest}/tokens`; // ToDo v3.0
-    const dest = `${rootDest}/tokens`;
+    const dest = `${themeDest}/tokens`;
     createDirs([dest]);
 
     promises.push(() => {
       return gTokens(tokensSrc, dest).then(() => {
         // Verify/validate token files against eachother
-        // compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error); // ToDo v3.0
-        return compareTokens(`${dest}/web/theme-*.simple.json`).catch(console.error);
+        return compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error);
       });
     });
 
