@@ -1,0 +1,11 @@
+{
+    "header": {
+        "color": {
+            "primary": {
+                "background": {
+                    "value": "{theme.color.palette.slate.90.value}"
+                }
+            }
+        }
+    }
+}
