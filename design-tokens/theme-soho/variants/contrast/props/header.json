@@ -1,0 +1,11 @@
+{
+    "header": {
+        "color": {
+            "primary": {
+                "background": {
+                    "value": "{theme.color.palette.azure.90.value}"
+                }
+            }
+        }
+    }
+}
