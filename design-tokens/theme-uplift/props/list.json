@@ -1,6 +1,11 @@
 {
     "list": {
         "color": {
+            "divider": {
+                "border": {
+                    "value": "{theme.color.brand.secondary.lighter.value}"
+                }
+            },
             "item": {
                 "hover": {
                     "background": {
