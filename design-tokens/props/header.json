@@ -1,0 +1,11 @@
+{
+    "header": {
+        "color": {
+            "primary": {
+                "background": {
+                    "value": "{theme.color.brand.primary.alt.value}"
+                }
+            }
+        }
+    }
+}
