@@ -135,6 +135,14 @@ function createIconFiles(srcFile, dest) {
 }
 
 /**
+ * Replace whitespace and underscores with dashes, then lowercase
+ * @param {String} str
+ */
+function sanitize(str) {
+  return str.replace(/\s+|_+/g, '-').toLowerCase();
+}
+
+/**
  * Move icon types into proper directory
  * @param {String} srcDir - Directory of files
  * @param {Array} formats - Array of file formats
@@ -150,7 +158,7 @@ function sortByFileFormat(srcDir, format) {
   // Loop through and move each file
   const promises = files.map(f => {
     return new Promise((resolve, reject) => {
-      const filename = path.basename(f).toLowerCase();
+      const filename = sanitize(path.basename(f));
       const reg = /[\w-]+-(16|24|32)\.[\w]+/;
       const match = filename.match(reg);
       let thisDest = dest;
