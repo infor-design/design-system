@@ -6,8 +6,9 @@
         "package.json"
     ],
     "scripts": {
-        "beforeStart": "npm run clean && npm run build && npm run test && npm run zip",
+        "beforeStart": "npm run clean && npm run build && npm run test",
         "changelog": "./scripts/github-changelog.sh ${version}",
+        "afterBump": "npm run zip",
         "afterRelease": "./scripts/after-release.sh ${npm.tag} ${version}"
     },
     "git": {
