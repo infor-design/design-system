@@ -3,7 +3,7 @@
         "color": {
             "divider": {
                 "border": {
-                    "value": "{theme.color.brand.secondary.lighter.value}"
+                    "value": "{theme.color.brand.secondary.base.value}"
                 }
             },
             "item": {

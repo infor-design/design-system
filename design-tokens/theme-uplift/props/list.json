@@ -1,0 +1,18 @@
+{
+    "list": {
+        "color": {
+            "item": {
+                "hover": {
+                    "background": {
+                        "value": "{theme.color.palette.azure.10.value}"
+                    }
+                },
+                "selected": {
+                    "background": {
+                        "value": "transparent"
+                    }
+                }
+            }
+        }
+    }
+}

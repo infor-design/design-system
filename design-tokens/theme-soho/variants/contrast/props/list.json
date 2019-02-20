@@ -1,6 +1,11 @@
 {
     "list": {
         "color": {
+            "divider": {
+                "border": {
+                    "value": "{theme.color.palette.graphite.60.value}"
+                }
+            },
             "item": {
                 "hover": {
                     "background": {
