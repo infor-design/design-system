@@ -18,10 +18,10 @@ This is to explain the different methods and tools used to maintain the icons.
         - Good: `icon-a-name`
     - Separate words with dashes `-`.
         - Bad: `icon_double_rightArrow`
-        - Good: `icon-arrow-double-right
+        - Good: `icon-arrow-double-right`
     - Get more descriptive from left to right. This groups icons automatically when sorting alphabeticaly.
         - Bad: `icon-double-right-arrow`
-        - Good: `icon-arrow-double-right
+        - Good: `icon-arrow-double-right`
 
 ## Icon Requirements
 
