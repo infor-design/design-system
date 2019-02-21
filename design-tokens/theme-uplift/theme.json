@@ -81,7 +81,7 @@
                     "light":  { "value": "300" },
                     "base":   { "value": "400" },
                     "medium": { "value": "600" },
-                    "bold":   { "value": "800" }
+                    "bold":   { "value": "700" }
                 },
                 "line": {
                     "height": {
