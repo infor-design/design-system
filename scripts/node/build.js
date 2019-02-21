@@ -15,6 +15,7 @@ const gIcons = require('./build-icons');
 const gFonts = require('./build-font');
 const gTokens = require('./build-tokens');
 const compareTokens = require('./utilities/compare-tokens');
+const pkgjson = require('../../package.json');
 
 const themesArr = ['theme-soho', 'theme-uplift'];
 
@@ -51,7 +52,9 @@ async function runSync(arr) {
 //   Main
 // -------------------------------------
 
-// CLean up dist
+const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0)) > 2;
+
+// Clean up dist
 const rootDest = './dist';
 del.sync([rootDest]);
 createDirs([rootDest]);
@@ -92,13 +95,23 @@ themesArr.forEach(theme => {
 
   const tokensSrc = `./design-tokens/${theme}`;
   if (args.build.includes('tokens') && fs.existsSync(tokensSrc)) {
-    const dest = `${themeDest}/tokens`;
+    let dest = `${rootDest}/tokens`;
+
+    if (isVersionThreeOrNewer) {
+      dest = `${themeDest}/tokens`;
+    }
     createDirs([dest]);
 
     promises.push(() => {
       return gTokens(tokensSrc, dest).then(() => {
+        let tokensToCompare = `${dest}/web/theme-*.simple.json`;
+
+        if (isVersionThreeOrNewer) {
+          tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
+        }
+
         // Verify/validate token files against eachother
-        return compareTokens(`${rootDest}/*/tokens/web/theme-*.simple.json`).catch(console.error);
+        return compareTokens(tokensToCompare).catch(console.error);
       });
     });
 
