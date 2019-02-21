@@ -78,9 +78,10 @@
         "number": {
             "font": {
                 "weight": {
-                    "light": { "value": "300" },
-                    "base": { "value": "400" },
-                    "bold": { "value": "600" }
+                    "light":  { "value": "300" },
+                    "base":   { "value": "400" },
+                    "medium": { "value": "600" },
+                    "bold":   { "value": "700" }
                 },
                 "line": {
                     "height": {
