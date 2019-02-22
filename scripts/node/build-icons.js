@@ -248,6 +248,7 @@ function optimizeSVGs(src) {
 
   // Optimize with svgo:
   const svgoOptimize = new svgo({
+    js2svg: { useShortTags: false },
     plugins: [
       { removeViewBox: false },
       { convertColors: { currentColor: '#000000' }},
