@@ -3,6 +3,7 @@
   "version": "2.3.0-dev",
   "description": "Infor Design System Design Assets",
   "scripts": {
+    "postinstall": "node ./scripts/node/postinstall.js",
     "sketch:diff": "./scripts/skdiff -o ./.tmp/ ",
     "build": "node ./scripts/node/build.js --build=tokens,icons,fonts",
     "build:icons": "node ./scripts/node/build.js --build=icons",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "blink-diff": "^1.0.13",
     "chalk": "^2.4.2",
+    "compare-versions": "^3.4.0",
     "copy-dir": "^0.3.0",
     "del": "^3.0.0",
     "del-cli": "^1.1.0",
@@ -49,7 +51,9 @@
     "svgo": "^1.0.5"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "scripts/node/postinstall.js",
+    "announcements/announcements.json"
   ],
   "dependencies": {
     "markdownlint-cli": "^0.13.0"
