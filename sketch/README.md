@@ -1,6 +1,6 @@
 # Using the Sketch Files
 
-## System Icons:
+## System Icons
 
 This is to explain the different methods and tools used to maintain `ids-icons-system.sketch` in the Uplift theme. (Please note that no changes to the icons Sketch files in `theme-soho` are permitted at this time unless requested otherwise).
 
@@ -53,12 +53,12 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
 
 ### Sketch Plugin
 
-- Sort Me "https://github.com/romashamin/sort-me-sketch".
+- [Sort Me](https://github.com/romashamin/sort-me-sketch)
 
-## App Icons:
+## App Icons
 
 This is to explain the different methods and tools used to maintain `ids-icons-apps.sketch`, in the Uplift theme, which contains Application/Product Icons for Infor Ming.le.
 
-## Fancy Icons:
+## Fancy Icons
 
 `ids-icons-fancy.sketch` contains accent icons, empty state icons, each in their own page respectively. Fancy icons should be black at varying opacity.
