@@ -67,15 +67,17 @@ const parseMessage = obj => {
     }
   });
 
-  console.log(`\n${chalk['cyan']('Package "ids-identity" announcements...')}\n`);
+  if (warnings.length + alerts.length > 0) {
+    console.log(`\n${chalk['cyan']('Package "ids-identity" announcements...')}\n`);
 
-  warnings.forEach(msg => {
-    console.error(msg, '\n');
-  });
+    warnings.forEach(msg => {
+      console.error(msg, '\n');
+    });
 
-  alerts.forEach(msg => {
-    console.error(msg, '\n');
-  });
+    alerts.forEach(msg => {
+      console.error(msg, '\n');
+    });
+  }
 };
 
 // -------------------------------------
