@@ -1,20 +1,22 @@
-# Using the Sketch File: System Icons
+# Using the Sketch Files
+
+## System Icons:
 
 This is to explain the different methods and tools used to maintain `ids-icons-system.sketch` in the Uplift theme. (Please note that no changes to the icons Sketch files in `theme-soho` are permitted at this time unless requested otherwise).
 
-## Design Guidelines
+### Design Guidelines
 
 - Icons are designed at 32px, 24px, and 16px.
 - Icons are designed with 1px stroke and various radiuses based on the three sizes.
 - Icons should be black at 100% opacity.
 - Please refer to the `Visual Guidelines` page within `ids-icons-system.sketch` for more details.
 
-## Categories
+### Categories
 
 - Each icon lives in one category only.
 - Each icon should have a unique name and cannot be shared with another icon in the same or different category.
 - Categories are organized by Pages in `ids-icons-system.sketch`.
-- Category definition as the following: 
+- Category definition as the following:
     - Document: Any document related icons, such as reports, spreadsheets, etc.
     - Editor: Icons that represent the functions in HTML editor.
     - File: Any file types, such as excel, mp3, etc.
@@ -29,7 +31,7 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
     - Universal: Icons that are universally known and can be identified within 3 seconds, such as save, delete, edit, etc.
     - Visualization: Icons related to visualization, such as charts, etc.
 
-## Naming Convention for Layers in Categories
+### Naming Convention for Layers in Categories
 
 - Separate words with dashes `-`.
     - Good: `icon-arrow-double-right`
@@ -39,7 +41,7 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
     - Bad: `icon-double-right-arrow`
 - Keep the artboards/layers in an alphabetical order. If adding a new icon, select all artboards/layers and run the `sort me` plugin.
 
-## Naming Convention for Layers in Symbols
+### Naming Convention for Layers in Symbols
 
 - Separate words with dashes `/`.
     - Good: `Icons/Universal/Add/32`
@@ -49,16 +51,14 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
     - Bad: `Icon/Add/32`
 - Keep the artboards/layers in an alphabetical order. If adding a new icon, select all artboards/layers and run the `sort me` plugin.
 
-## Sketch Plugin
+### Sketch Plugin
 
-- Sort Me (https://github.com/romashamin/sort-me-sketch).
+- Sort Me "https://github.com/romashamin/sort-me-sketch".
 
-
-# Using the Sketch File: App Icons
+## App Icons:
 
 This is to explain the different methods and tools used to maintain `ids-icons-apps.sketch`, in the Uplift theme, which contains Application/Product Icons for Infor Ming.le.
 
-
-# Using the Sketch File: Fancy Icons
+## Fancy Icons:
 
 `ids-icons-fancy.sketch` contains accent icons, empty state icons, each in their own page respectively. Fancy icons should be black at varying opacity.
