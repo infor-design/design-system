@@ -8,7 +8,6 @@
     },
     {
         "title": "Token dist path has changed",
-        "semverRange": ">=2.3.0-dev <3.0.0",
         "versionNotifyStart": "2.3.0-dev",
         "versionNotifyEnd": "3.0.0",
         "message": "As of v{versionNotifyStart}, token paths in the dist directory have changed from From \"/dist/tokens/\" to \"/dist/theme-*/tokens/\". The old path will be removed in v{versionNotifyEnd}.",
