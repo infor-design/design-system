@@ -81,5 +81,5 @@ const parseMessage = obj => {
 // -------------------------------------
 //   Main
 // -------------------------------------
-const announcementsObj = JSON.parse(fs.readFileSync('announcements/announcements.json', 'utf-8'));
+const announcementsObj = JSON.parse(fs.readFileSync('./announcements.json', 'utf-8'));
 showAnnouncements(announcementsObj);

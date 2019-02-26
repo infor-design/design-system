@@ -53,7 +53,7 @@
   "files": [
     "dist/",
     "scripts/node/postinstall.js",
-    "announcements/announcements.json"
+    "announcements.json"
   ],
   "dependencies": {
     "markdownlint-cli": "^0.13.0"
