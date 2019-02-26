@@ -9,21 +9,30 @@
 // -------------------------------------
 const fs = require('fs');
 const pkgjson = require('../../package.json');
-const compareVersions = require('compare-versions');
 const chalk = require('chalk');
 const logSymbols = require('log-symbols');
+const semver = require('semver');
 
 /**
  * Whether or not the current version is
  * within the announcement's specified versions
+ * @link https://github.com/npm/node-semver#coercion
  * @param {object} obj - An announcement object
  * @returns {boolean}
  */
 const versionInRange = obj => {
-  return compareVersions(pkgjson.version, obj.versionNotifyStart) !== -1
-    && (obj.versionNotifyEnd === ''
-      || compareVersions(pkgjson.version, obj.versionNotifyEnd)
-    );
+  // Clean off any pre-release chracters
+  // to get a better comparison range
+  const cleanStart = semver.coerce(obj.versionNotifyStart);
+  const cleanEnd = semver.coerce(obj.versionNotifyEnd);
+  const cleanVer = semver.coerce(pkgjson.version);
+
+  // Set the range and compare
+  let range = `>=${cleanStart}`;
+  if (semver.valid(obj.versionNotifyEnd)) {
+    range += ` <${cleanEnd}`
+  }
+  return semver.satisfies(cleanVer, range);
 };
 
 /**
@@ -47,8 +56,8 @@ const parseMessage = obj => {
  * @param {array[]} announcements
  * @param {string} announcements[].title - Title of the announcement
  * @param {string} announcements[].message - Message
- * @param {string} announcements[].versionNotifyStart - Valid semver string
- * @param {string} announcements[].versionNotifyEnd - Valid semver string
+ * @param {semver} announcements[].versionNotifyStart - Valid semver string
+ * @param {semver} announcements[].versionNotifyEnd - Valid semver string
  * @param {boolean} announcements[].isCritical - Whether it is critical or not
  * @returns {string}
  */
