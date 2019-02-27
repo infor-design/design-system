@@ -18,7 +18,6 @@ const gTokens = require('./build-tokens');
 const glob = require('glob');
 const swlog = require('./utilities/stopwatch-log.js');
 
-const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0)) > 2;
 const pkgjson = require('../../package.json');
 const themesArr = ['theme-soho', 'theme-uplift'];
 
@@ -51,7 +50,6 @@ const runSync = async arr => {
   return results; // will be resolved value of promise
 }
 
-
 /**
  * Copy one path to another
  * @param {string} from - path to directory
@@ -66,6 +64,8 @@ const copyDirExists = (from, to) => {
 // -------------------------------------
 //   Main
 // -------------------------------------
+const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0)) > 2;
+
 
 // Clean up dist
 const rootDest = './dist';
