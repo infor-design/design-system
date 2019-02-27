@@ -8,14 +8,16 @@
 //   Constants/Variables
 // -------------------------------------
 const args = require('minimist')(process.argv.slice(2));
-const fs = require('fs');
-const del = require('del');
-const glob = require('glob');
-const gIcons = require('./build-icons');
-const gFonts = require('./build-font');
-const gTokens = require('./build-tokens');
 const compareTokens = require('./utilities/compare-tokens');
-const pkgjson = require('../../package.json');
+const copydir = require('copy-dir');
+const del = require('del');
+const fs = require('fs');
+const gFonts = require('./build-font');
+const gIcons = require('./build-icons');
+const gTokens = require('./build-tokens');
+const glob = require('glob');
+const swlog = require('./utilities/stopwatch-log.js');
+
 
 const themesArr = ['theme-soho', 'theme-uplift'];
 
@@ -27,19 +29,19 @@ const themesArr = ['theme-soho', 'theme-uplift'];
  * Create directories if they don't exist
  * @param  {array} arrPaths - the directory path(s)
  */
-function createDirs(arrPaths) {
+const createDirs = arrPaths => {
   arrPaths.forEach(path => {
     if (!fs.existsSync(path)) {
       fs.mkdirSync(path);
     }
   });
-}
+};
 
 /**
  * Process promises synchronously
  * @param {object} arr
  */
-async function runSync(arr) {
+const runSync = async arr => {
   let results = [];
   for (let i = 0; i < arr.length; i++) {
       let r = await arr[i]();
@@ -51,8 +53,6 @@ async function runSync(arr) {
 // -------------------------------------
 //   Main
 // -------------------------------------
-
-const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0)) > 2;
 
 // Clean up dist
 const rootDest = './dist';
@@ -95,21 +95,12 @@ themesArr.forEach(theme => {
 
   const tokensSrc = `./design-tokens/${theme}`;
   if (args.build.includes('tokens') && fs.existsSync(tokensSrc)) {
-    let dest = `${rootDest}/tokens`;
-
-    if (isVersionThreeOrNewer) {
-      dest = `${themeDest}/tokens`;
-    }
+    const dest = `${themeDest}/tokens`;
     createDirs([dest]);
 
     promises.push(() => {
       return gTokens(tokensSrc, dest).then(() => {
-        let tokensToCompare = `${dest}/web/theme-*.simple.json`;
-
-        if (isVersionThreeOrNewer) {
-          tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
-        }
-
+        const tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
         // Verify/validate token files against eachother
         return compareTokens(tokensToCompare).catch(console.error);
       });
@@ -118,4 +109,13 @@ themesArr.forEach(theme => {
   }
 });
 
-runSync(promises);
+runSync(promises).then(() => {
+  // Adapt version 2 to 3 by supporting old token paths in dist
+  const newPath = `./dist/theme-soho/tokens`;
+  if (fs.existsSync(newPath)) {
+    const startTaskName = swlog.logTaskStart(`Support deprecated token path`);
+    const deprecatedPath = `./dist/tokens`
+    copydir.sync(newPath, deprecatedPath);
+    swlog.logTaskEnd(startTaskName);
+  }
+});
