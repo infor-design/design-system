@@ -18,7 +18,8 @@ const gTokens = require('./build-tokens');
 const glob = require('glob');
 const swlog = require('./utilities/stopwatch-log.js');
 
-
+const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0)) > 2;
+const pkgjson = require('../../package.json');
 const themesArr = ['theme-soho', 'theme-uplift'];
 
 // -------------------------------------
@@ -49,6 +50,18 @@ const runSync = async arr => {
   }
   return results; // will be resolved value of promise
 }
+
+
+/**
+ * Copy one path to another
+ * @param {string} from - path to directory
+ * @param {string} to - path to directory
+ */
+const copyDirExists = (from, to) => {
+  if (fs.existsSync(to)) {
+    copydir.sync(to, from);
+  }
+};
 
 // -------------------------------------
 //   Main
@@ -111,11 +124,12 @@ themesArr.forEach(theme => {
 
 runSync(promises).then(() => {
   // Adapt version 2 to 3 by supporting old token paths in dist
-  const newPath = `./dist/theme-soho/tokens`;
-  if (fs.existsSync(newPath)) {
-    const startTaskName = swlog.logTaskStart(`Support deprecated token path`);
-    const deprecatedPath = `./dist/tokens`
-    copydir.sync(newPath, deprecatedPath);
-    swlog.logTaskEnd(startTaskName);
+  const startTaskName = swlog.logTaskStart(`Support deprecated tokens`);
+  copyDirExists(`./dist/tokens`, `./dist/theme-soho/tokens`);
+  copyDirExists(`./dist/tokens`, `./dist/theme-uplift/tokens`);
+  swlog.logTaskEnd(startTaskName);
+
+  if (isVersionThreeOrNewer) {
+    swlog.error('DEPRECATON TODO: Remove v2 Token path support!!!');
   }
 });
