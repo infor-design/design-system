@@ -222,8 +222,8 @@ diffSketchArtboards () {
 
     while IFS= read -r _line; do
         _differ=$(echo "$_line" | sed -En 's#^Files (.*) and /(.*) differ$#\1#p')
-        _added=$(echo "$_line" | sed -En "s#^Only in .*${dirnameB}: (.*\.png)\$#\1#p")
-        _removed=$(echo "$_line" | sed -En "s#^Only in .*${dirnameA}: (.*\.png)\$#\1#p")
+        _added=$(echo "$_line" | sed -En 's#^Only in .*${dirnameB}: (.*\.png)\$#\1#p')
+        _removed=$(echo "$_line" | sed -En 's#^Only in .*${dirnameA}: (.*\.png)\$#\1#p')
         if [[ -n "$_differ" ]]; then
             _file=$(basename "$_differ")
             [ "$OUTPUT" == 'yes' ] && npx blink-diff --compose-ltr --output "$odir/changed/$_file" \
