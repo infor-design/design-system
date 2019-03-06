@@ -50,12 +50,12 @@
         },
         "size": {
             "font": {
-                "base": { "value": "{theme.size.font.sm.value}" },
-                "xs":   { "value": "1.2rem" },
-                "sm":   { "value": "1.4rem" },
-                "md":   { "value": "2.4rem" },
-                "lg":   { "value": "3.2rem" },
-                "xl":   { "value": "4.0rem" },
+                "base": { "value": "{theme.size.font.md.value}" },
+                "xs":   { "value": "1.0rem" },
+                "sm":   { "value": "1.2rem" },
+                "md":   { "value": "1.4rem" },
+                "lg":   { "value": "1.8rem" },
+                "xl":   { "value": "2.4rem" },
                 "line": {
                     "height": {
                         "value": "2.2rem",
