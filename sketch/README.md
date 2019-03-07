@@ -36,17 +36,17 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
 - Separate words with dashes `-`.
     - Good: `icon-arrow-double-right`
     - Bad: `icon_double_rightArrow`
-- Get more descriptive from left to right. This convention groups icons automatically when sorting alphabeticaly.
+- Get more descriptive from left to right. This convention groups icons automatically when sorting alphabetically.
     - Good: `icon-arrow-double-right`
     - Bad: `icon-double-right-arrow`
 - Keep the artboards/layers in an alphabetical order. If adding a new icon, select all artboards/layers and run the `sort me` plugin.
 
 ### Naming Convention for Layers in Symbols
 
-- Separate words with dashes `/`.
+- Separate words with slashes `/`.
     - Good: `Icons/Universal/Add/32`
     - Bad: `Icons-Universal-Add-32`
-- Prefix each layer with "Icons/", followed by category name, icon name, and size.
+- Prefix each layer with "Icons", followed by category name, icon name, and size.
     - Good: `Icons/Universal/Add/32`
     - Bad: `Icon/Add/32`
 - Keep the artboards/layers in an alphabetical order. If adding a new icon, select all artboards/layers and run the `sort me` plugin.
@@ -58,6 +58,28 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
 ## App Icons
 
 This is to explain the different methods and tools used to maintain `ids-icons-apps.sketch`, in the Uplift theme, which contains Application/Product Icons for Infor Ming.le.
+
+### Design Guidelines
+
+- Icons are designed at 40px by 40px.
+- Icons are designed with a 9px radius on one corner of the shape.
+- Five colors and 3 shades per color can be used for the icons. White can be used to create contrast but should only be used internally where it does not touch the edges of the icon, which may cause an open area when the icon is placed on a white background.
+- Keep the design minimal by only include shapes that are necessary to identify its purpose.
+- Please refer to the `Visual Guidelines` page within `ids-icons-apps.sketch` for more visual details.
+
+### Naming Convention for Layers in Symbols
+
+- Separate words with slashes `/` with object first and color second.
+    - Good: `Calendar/Azure`
+    - Bad: `Azure-Calendar`
+- Get more descriptive from left to right. This convention groups icons automatically when sorting alphabetically.
+    - Good: `Chart/Bar/Azure`
+    - Bad: `Azure/Bar-Chart`
+- Keep the artboards/layers in an alphabetical order. If adding a new icon, select all artboards/layers and run the `sort me` plugin.
+
+### Sketch Plugin
+
+- [Sort Me](https://github.com/romashamin/sort-me-sketch)
 
 ## Fancy Icons
 
