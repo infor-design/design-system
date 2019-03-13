@@ -11,10 +11,22 @@ MAGENTA=`tput setaf 5`
 CYAN=`tput setaf 6`
 WHITE=`tput setaf 7`
 
-while getopts "v:e:f:" opt; do
+# Set param defaults
+PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+PACKAGE_LIBRARY="ids-identity"
+FNAME="IDS-$PACKAGE_VERSION.zip"
+
+# Set params and override defaults if param exists
+while getopts "e:f:l:" opt; do
     case $opt in
         e)
             DEPLOY_ENV="${OPTARG}"
+            ;;
+        f)
+            FNAME="${OPTARG}"
+            ;;
+        l)
+            PACKAGE_LIBRARY="${OPTARG}"
             ;;
         *)
             exit 1
@@ -30,9 +42,6 @@ case $DEPLOY_ENV in
    *) echo "Invalid option for deploy environment";;
 esac
 
-PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
-FNAME="IDS-$PACKAGE_VERSION.zip"
-
 echo "${CYAN}Getting assets for $PACKAGE_VERSION...${RESET}"
 
 if [ ! -f $FNAME ]; then
@@ -45,12 +54,12 @@ echo "${CYAN}Uploading assets...${RESET}"
 RESPONSE=$(curl \
   -s -o /dev/null -w "%{http_code}" \
   --form "file=@$FNAME" \
-  --form root_path="ids-identity/$PACKAGE_VERSION"\
+  --form root_path="$PACKAGE_LIBRARY/$PACKAGE_VERSION"\
   --form post_auth_key=$DOCS_API_KEY \
   $DEPLOY_URL
 )
 
-if [ $RESPONSE == 200 ]; then
+if [[ "$RESPONSE" == "200" ]]; then
   echo "${CYAN}Success!${RESET}"
 else
   echo "${RED}ERROR: deploy returned http code $RESPONSE!${RESET}"
