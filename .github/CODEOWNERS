@@ -1,4 +1,7 @@
 # Each line is a file pattern followed by one or more owners.
 
 # Default owners for the repo:
-*       @clepore @nickwynja
+*         @nickwynja @clepore
+
+# Sketch file owners:
+*.sketch  @nickwynja @kayiuho
