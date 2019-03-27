@@ -12,5 +12,12 @@
         "versionNotifyEnd": "3.0.0",
         "message": "As of v{versionNotifyStart}, token paths in the dist directory have changed from From \"/dist/tokens/\" to \"/dist/theme-*/tokens/\". The old path will be removed in v{versionNotifyEnd}.",
         "isCritical": false
+    },
+    {
+        "title": "The original dist theme-*.xml files will be removed",
+        "versionNotifyStart": "2.5.0-dev",
+        "versionNotifyEnd": "3.0.0",
+        "message": "As of v{versionNotifyStart}, all \"/dist/theme-*/tokens/web/theme-*.xml\" token files will be deprecated. Use the \"/dist/theme-*/tokens/web/theme-*.mongoose.xml\" files instead.",
+        "isCritical": false
     }
 ]
