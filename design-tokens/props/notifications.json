@@ -1,0 +1,46 @@
+{
+    "notification": {
+        "color": {
+            "alert": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.amber.10.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            },
+            "error": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.ruby.10.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            },
+            "info": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.azure.10.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            },
+            "success": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.emerald.10.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            }
+        }
+    }
+}
