@@ -22,7 +22,7 @@ module.exports = [
    * ```
    */
   {
-    name: 'mongoose:color/hex8',
+    name: 'mongoose:color/hex8android',
     type: 'value',
     matcher: prop => {
       return prop.attributes.type === 'color';
