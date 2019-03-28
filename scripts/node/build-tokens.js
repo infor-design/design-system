@@ -69,8 +69,8 @@ const getPlatforms = (dest, name) => {
         'name/cti/kebab',
         'time/seconds',
         'content/icon',
-        'mongoose:size/remToPx',
-        'mongoose:color/hex8'
+        'mongoose:size/remToInt',
+        'mongoose:color/hex8android'
       ],
       buildPath: `${dest}/web/`,
       files: [{

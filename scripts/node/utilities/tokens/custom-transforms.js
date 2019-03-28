@@ -34,23 +34,23 @@ module.exports = [
   },
 
   /**
-   * Convers our base 10 rem to pixels
+   * Convers our base 10 rem to an integer
    *
    * ```js
    * // Given:
    * "1.6rem"
    * // Returns:
-   * "16px"
+   * "16"
    * ```
    */
   {
-    name: 'mongoose:size/remToPx',
+    name: 'mongoose:size/remToInt',
     type: 'value',
     matcher: isFontSize,
     transformer: prop => {
       if (prop.value.endsWith('rem')) {
         const res = parseFloat(prop.value, 10) * 10;
-        return res === 'NaN' ? prop.value : `${res}px`;
+        return res === 'NaN' ? prop.value : `${res}`;
       }
       return prop.value;
     }
