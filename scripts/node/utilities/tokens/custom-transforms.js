@@ -14,10 +14,11 @@ module.exports = [
 
   /**
    * Transforms the value into an 8-digit hex string
+   * with the alpha channel at the begging
    *
    * ```js
    * // Returns:
-   * "#009688ff"
+   * "#ff009688"
    * ```
    */
   {
@@ -27,7 +28,8 @@ module.exports = [
       return prop.attributes.type === 'color';
     },
     transformer: prop => {
-      return tinyColor(prop.value).toHex8String();
+      var str = tinyColor(prop.value).toHex8();
+      return '#' + str.slice(6) + str.slice(0,6);
     }
   },
 
