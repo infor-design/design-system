@@ -14,15 +14,15 @@ module.exports = [
    * [
    *   {
    *    "name": {
-   *       "human": "Theme Color Palette Amber 10",
-   *       "sass": "$theme-color-palette-amber-10",
-   *       "javascript": "theme.color.palette.amber.10"
+   *       "human": "",
+   *       "sass": "",
+   *       "javascript": ""
    *     },
-   *     "value": "#fbe9bf",
-   *     "category": "theme",
-   *     "type": "color",
+   *     "value": "",
+   *     "category": "",
+   *     "type": "",
    *     "original": {
-   *       "value": "#fbe9bf"
+   *       "value": ""
    *     }
    *   }
    * ]
@@ -41,10 +41,10 @@ module.exports = [
    * <?xml version="1.0" encoding="UTF-8"?>
    * <tokens>
    *  <token>
-   *   <name>theme-color-palette-amber-10</name>
-   *    <category>theme</category>
-   *    <type>color</type>
-   *    <value>#fbe9bfff</value>
+   *   <name></name>
+   *    <category></category>
+   *    <type></type>
+   *    <value></value>
    *  </token>
    * ```
    */
