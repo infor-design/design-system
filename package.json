@@ -51,7 +51,8 @@
     "path": "^0.12.7",
     "release-it": "^10.1.0",
     "style-dictionary": "^2.7.0",
-    "svgo": "^1.0.5"
+    "svgo": "^1.0.5",
+    "tinycolor2": "^1.4.1"
   },
   "files": [
     "dist/",
