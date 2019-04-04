@@ -48,16 +48,16 @@
                 },
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.brand.secondary.alt.value}"
+                        "value": "{theme.color.brand.secondary.lighter.value}"
                     },
                     "border": {
-                        "value": "{theme.color.brand.secondary.base.value}"
+                        "value": "{theme.color.brand.secondary.lighter.value}"
                     },
                     "font": {
-                        "value": "{theme.color.border.darker.value}"
+                        "value": "{theme.color.brand.secondary.alt.value}"
                     },
-                    "opacity": {
-                        "value": "{theme.number.opacity.disabled.value}"
+                    "icon": {
+                        "value": "{theme.color.brand.secondary.alt.value}"
                     }
                 },
                 "focus": {
