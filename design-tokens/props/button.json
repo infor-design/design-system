@@ -9,10 +9,16 @@
                 },
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.brand.primary.base.value}"
+                        "value": "{theme.color.palette.azure.30.value}"
                     },
                     "border": {
-                        "value": "{theme.color.brand.primary.base.value}"
+                        "value": "{theme.color.palette.azure.30.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.palette.white.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.palette.white.value}"
                     }
                 },
                 "focus": {
@@ -58,6 +64,13 @@
                     },
                     "icon": {
                         "value": "{theme.color.brand.secondary.alt.value}"
+                    },
+                    "opacity": {
+                        "value": "{theme.number.opacity.disabled.value}",
+                        "comment": "DEPRECATED: Use theme.number.opacity.disabled.value instead.",
+                        "attributes": {
+                            "deprecated": true
+                        }
                     }
                 },
                 "focus": {
@@ -96,8 +109,12 @@
                 },
                 "disabled": {
                     "font": {
-                        "value": "{button.color.tertiary.initial.font.value}"
+                        "value": "{theme.color.brand.secondary.alt.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.brand.secondary.alt.value}"
                     }
+
                 },
                 "focus": {
                     "font": {
