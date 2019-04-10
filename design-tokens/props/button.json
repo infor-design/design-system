@@ -15,10 +15,10 @@
                         "value": "{theme.color.palette.azure.30.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.white.value}"
+                        "value": "{theme.color.palette.graphite.10.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.white.value}"
+                        "value": "{theme.color.palette.graphite.10.value}"
                     }
                 },
                 "focus": {
