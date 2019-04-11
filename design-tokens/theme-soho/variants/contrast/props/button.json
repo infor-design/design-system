@@ -15,10 +15,10 @@
                         "value": "{theme.color.palette.azure.70.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.slate.30.value}"
+                        "value": "{theme.color.palette.slate.20.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.slate.30.value}"
+                        "value": "{theme.color.palette.slate.20.value}"
                     }
                 },
                 "hover": {
@@ -40,16 +40,16 @@
                 },
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.30.value}"
+                        "value": "{theme.color.palette.graphite.50.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.graphite.30.value}"
+                        "value": "{theme.color.palette.graphite.50.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{theme.color.palette.graphite.20.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{theme.color.palette.graphite.20.value}"
                     }
                 },
                 "hover": {
