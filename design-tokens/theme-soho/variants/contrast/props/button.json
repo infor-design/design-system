@@ -7,6 +7,20 @@
                         "value": "{theme.color.palette.azure.80.value}"
                     }
                 },
+                "disabled": {
+                    "background": {
+                        "value": "{theme.color.palette.azure.70.value}"
+                    },
+                    "border": {
+                        "value": "{theme.color.palette.azure.70.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.palette.slate.30.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.palette.slate.30.value}"
+                    }
+                },
                 "hover": {
                     "background": {
                         "value": "{theme.color.palette.azure.80.value}"
@@ -26,13 +40,16 @@
                 },
                 "disabled": {
                     "background": {
-                        "value": "{button.color.secondary.initial.background.value}"
+                        "value": "{theme.color.palette.graphite.30.value}"
                     },
                     "border": {
-                        "value": "{button.color.secondary.initial.background.value}"
+                        "value": "{theme.color.palette.graphite.30.value}"
                     },
                     "font": {
-                        "value": "{theme.color.brand.primary.contrast.value}"
+                        "value": "{theme.color.palette.graphite.50.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.palette.graphite.50.value}"
                     }
                 },
                 "hover": {
@@ -55,11 +72,6 @@
                         "value": "{button.color.tertiary.hover.font.value}"
                     }
                 },
-                "disabled": {
-                    "font": {
-                        "value": "{button.color.tertiary.hover.font.value}"
-                    }
-                },
                 "hover": {
                     "font": {
                         "value": "{theme.color.palette.graphite.60.value}"
@@ -68,6 +80,14 @@
                 "initial": {
                     "font": {
                         "value": "{theme.color.palette.graphite.90.value}"
+                    }
+                },
+                "disabled": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.50.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.palette.graphite.50.value}"
                     }
                 }
             }
