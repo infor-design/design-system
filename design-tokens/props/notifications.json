@@ -9,6 +9,11 @@
                     "font": {
                         "value": "{theme.color.font.info.value}"
                     }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
                 }
             },
             "error": {
@@ -16,6 +21,11 @@
                     "background": {
                         "value": "{theme.color.palette.ruby.10.value}"
                     },
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                },
+                "hover": {
                     "font": {
                         "value": "{theme.color.font.info.value}"
                     }
@@ -29,6 +39,11 @@
                     "font": {
                         "value": "{theme.color.font.info.value}"
                     }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
                 }
             },
             "success": {
@@ -36,6 +51,11 @@
                     "background": {
                         "value": "{theme.color.palette.emerald.10.value}"
                     },
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                },
+                "hover": {
                     "font": {
                         "value": "{theme.color.font.info.value}"
                     }
