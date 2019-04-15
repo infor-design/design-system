@@ -12,7 +12,7 @@
                 },
                 "hover": {
                     "font": {
-                        "value": "{theme.color.font.info.value}"
+                        "value": "{theme.color.font.base.value}"
                     }
                 }
             },
@@ -27,7 +27,7 @@
                 },
                 "hover": {
                     "font": {
-                        "value": "{theme.color.font.info.value}"
+                        "value": "{theme.color.font.base.value}"
                     }
                 }
             },
@@ -42,7 +42,7 @@
                 },
                 "hover": {
                     "font": {
-                        "value": "{theme.color.font.info.value}"
+                        "value": "{theme.color.font.base.value}"
                     }
                 }
             },
@@ -57,7 +57,7 @@
                 },
                 "hover": {
                     "font": {
-                        "value": "{theme.color.font.info.value}"
+                        "value": "{theme.color.font.base.value}"
                     }
                 }
             }

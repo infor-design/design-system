@@ -1,5 +1,66 @@
 {
     "notification": {
-
+        "color": {
+            "alert": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.amber.100.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.base.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            },
+            "error": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.ruby.100.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.base.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            },
+            "info": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.azure.100.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.base.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            },
+            "success": {
+                "initial": {
+                    "background": {
+                        "value": "{theme.color.palette.emerald.100.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.base.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            }
+        }
     }
 }
