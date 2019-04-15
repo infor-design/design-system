@@ -1,0 +1,54 @@
+{
+    "notification": {
+        "color": {
+            "alert": {
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.100.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.70.value}"
+                    }
+                }
+            },
+            "error": {
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.100.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.70.value}"
+                    }
+                }
+            },
+            "info": {
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.100.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.70.value}"
+                    }
+                }
+            },
+            "success": {
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.100.value}"
+                    }
+                },
+                "hover": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.70.value}"
+                    }
+                }
+            }
+        }
+    }
+}
