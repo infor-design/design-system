@@ -8,12 +8,12 @@
     "scripts": {
         "beforeStart": "npm run clean && npm run build && npm run test",
         "changelog": "./scripts/github-changelog.sh ${version}",
-        "afterBump": "npm run zip",
+        "beforeStage": "npm run zip",
         "afterRelease": "./scripts/after-release.sh ${npm.tag} ${version}"
     },
     "git": {
-        "commitMessage": "Release v%s",
-        "tagAnnotation": "Release v%s"
+        "commitMessage": "Release v${version}",
+        "tagAnnotation": "Release v${version}"
     },
     "npm": {
         "tag": "latest"
