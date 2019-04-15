@@ -20,9 +20,9 @@
     "lint:md": "npx markdownlint --ignore=dist *.md **/*.md",
     "test": "npm run lint:md && npm run lint:json",
     "zip": "bash ./scripts/package-release.sh",
-    "release:beta": "release-it minor --preRelease=beta --no-github.release",
+    "release:beta": "release-it --preRelease=beta --no-github.release",
     "release:rc": "release-it --preRelease=rc --no-github.release",
-    "release:final": "release-it minor"
+    "release:final": "release-it"
   },
   "repository": {
     "type": "git",
