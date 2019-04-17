@@ -1,0 +1,36 @@
+{
+    "theme": {
+        "color": {
+            "status": {
+                "base":    { "value": "{theme.color.brand.primary.base.value}" }
+            },
+            "brand": {
+                "primary": {
+                    "alt":      { "value": "{theme.color.palette.azure.80.value}" }
+                },
+                "secondary": {
+                    "base":     { "value": "{theme.color.palette.slate.50.value}" }
+                }
+            },
+            "boxshadow": {
+                "base": { "value": "{theme.color.palette.slate.10.value}" }
+            },
+            "border": {
+                "base": { "value": "{theme.color.palette.slate.30.value}" },
+                "darker": { "value": "{theme.color.palette.slate.10.value}" }
+            },
+            "font": {
+                "base":  { "value": "{theme.color.palette.slate.10.value}" },
+                "info":  { "value": "{theme.color.palette.slate.40.value}" },
+                "muted": { "value": "{theme.color.palette.slate.80.value}" }
+            },
+            "icon": {
+                "base": { "value": "{theme.color.palette.slate.40.value}" }
+            },
+            "body": {
+                "base" : { "value": "{theme.color.palette.slate.90.value}" },
+                "lightest": { "value": "{theme.color.palette.slate.80.value}" }
+            }
+        }
+    }
+}

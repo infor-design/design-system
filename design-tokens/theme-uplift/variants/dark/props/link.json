@@ -1,0 +1,18 @@
+{
+    "link": {
+        "color": {
+            "hover": {
+                "font": {
+                    "value": "{theme.color.palette.azure.50.value}"
+                }
+            }
+        },
+        "font": {
+            "initial": {
+                "decoration": {
+                    "value": "underline"
+                }
+            }
+        }
+    }
+}

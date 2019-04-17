@@ -1,0 +1,25 @@
+{
+    "list": {
+        "color": {
+            "item": {
+                "hover": {
+                    "background": {
+                        "value": "{theme.color.brand.secondary.contrast.value}"
+                    }
+                },
+                "selected": {
+                    "background": {
+                        "value": "{theme.color.brand.secondary.alt.value}"
+                    }
+                }
+            },
+            "heading": {
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.brand.secondary.alt.value}"
+                    }
+                }
+            }
+        }
+    }
+}

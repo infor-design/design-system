@@ -1,0 +1,11 @@
+{
+    "body": {
+        "color": {
+            "primary": {
+                "font": {
+                    "value": "{theme.color.font.base.value}"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "checkbox": {
+        "color": {
+            "unchecked": {
+                "disabled": {
+                    "arrow": {
+                        "value": "{theme.color.brand.secondary.base.value}"
+                    }
+                },
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            }
+        }
+    }
+}
