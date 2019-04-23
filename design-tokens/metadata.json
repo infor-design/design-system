@@ -1,0 +1,38 @@
+{
+    "themes": [
+        {
+            "name": "soho",
+            "title": "Soho",
+            "status": "stable",
+            "base": {
+                "name": "light",
+                "title": "Light"
+            },
+            "variants": [
+                {
+                    "name": "dark",
+                    "title": "Dark"
+                },
+                {
+                    "name": "high-contrast",
+                    "title": "High Contrast"
+                }
+            ]
+        },
+        {
+            "name": "uplift",
+            "title": "Uplift",
+            "status": "beta",
+            "base": {
+                "name": "light",
+                "title": "Light"
+            },
+            "variants": [
+                {
+                    "name": "dark",
+                    "title": "Dark"
+                }
+            ]
+        }
+    ]
+}
