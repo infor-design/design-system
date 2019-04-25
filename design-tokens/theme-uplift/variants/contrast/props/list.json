@@ -1,0 +1,23 @@
+{
+    "list": {
+        "color": {
+            "item": {
+                "hover": {
+                    "background": {
+                        "value": "{theme.color.brand.secondary.alt.value}"
+                    }
+                },
+                "initial": {
+                    "font": { 
+                        "value": "{theme.color.font.info.value}"
+                    }
+                },
+                "selected": {
+                    "background": {
+                        "value": "{theme.color.brand.secondary.base.value}"
+                    }
+                }
+            }
+        }
+    }
+}

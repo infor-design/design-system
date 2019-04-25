@@ -1,0 +1,23 @@
+{
+    "radio": {
+        "color": {
+            "unchecked": {
+                "disabled": {
+                    "border": {
+                        "value": "{theme.color.border.lighter.value}"
+                    }
+                },
+                "hover": {
+                    "border": {
+                        "value": "{theme.color.border.darker.value}"
+                    }
+                },
+                "initial": {
+                    "border": {
+                        "value": "{theme.color.border.base.value}"
+                    }
+                }
+            }
+        }
+    }
+}

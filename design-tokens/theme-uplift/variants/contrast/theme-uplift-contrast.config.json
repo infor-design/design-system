@@ -1,0 +1,12 @@
+{
+    "include": [
+        "design-tokens/theme-uplift/color-palette.json",
+        "design-tokens/theme-uplift/theme.json",
+        "design-tokens/props/*.json"
+    ],
+    "source": [
+        "design-tokens/theme-uplift/variants/contrast/theme.json",
+        "design-tokens/theme-uplift/variants/contrast/props/*.json"
+
+    ]
+}
