@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "2.5.0-dev",
+  "version": "2.6.0-dev",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "postinstall": "node ./scripts/node/postinstall.js",
@@ -20,9 +20,9 @@
     "lint:md": "npx markdownlint --ignore=dist *.md **/*.md",
     "test": "npm run lint:md && npm run lint:json",
     "zip": "bash ./scripts/package-release.sh",
-    "release:beta": "release-it minor --preRelease=beta --no-github.release",
+    "release:beta": "release-it --preRelease=beta --no-github.release",
     "release:rc": "release-it --preRelease=rc --no-github.release",
-    "release:final": "release-it minor"
+    "release:final": "release-it"
   },
   "repository": {
     "type": "git",
@@ -49,9 +49,10 @@
     "minimist": "^1.2.0",
     "npm-which": "^3.0.1",
     "path": "^0.12.7",
-    "release-it": "^10.1.0",
+    "release-it": "^10.4.2",
     "style-dictionary": "^2.7.0",
-    "svgo": "^1.0.5"
+    "svgo": "^1.0.5",
+    "tinycolor2": "^1.4.1"
   },
   "files": [
     "dist/",

@@ -14,6 +14,9 @@ const path = require('path');
 const swlog = require('./utilities/stopwatch-log.js');
 const _ = require('lodash');
 
+const customTransforms = require('./utilities/tokens/custom-transforms');
+const customFormats = require('./utilities/tokens/custom-formats');
+
 const getPlatforms = (dest, name) => {
   return {
     scss: {
@@ -38,7 +41,7 @@ const getPlatforms = (dest, name) => {
       buildPath: `${dest}/web/`,
       files: [{
         destination: `${name}.simple.json`,
-        format: 'custom-simplejson'
+        format: 'simple-json'
       }, {
         destination: `${name}.json`,
         format: 'json'
@@ -57,23 +60,26 @@ const getPlatforms = (dest, name) => {
       buildPath: `${dest}/web/`,
       files: [{
         destination: `${name}.xml`,
-        format: 'custom-xml'
+        format: 'mongoose-xml'
+      }]
+    },
+    mongooseXml: {
+      transforms: [
+        'attribute/cti',
+        'name/cti/kebab',
+        'time/seconds',
+        'content/icon',
+        'mongoose:size/remToInt',
+        'mongoose:color/hex8android'
+      ],
+      buildPath: `${dest}/web/`,
+      files: [{
+        destination: `${name}.mongoose.xml`,
+        format: 'mongoose-xml'
       }]
     }
   };
 };
-
-const formats = [
-  {
-    name: 'custom-simplejson',
-    formatter: _.template(fs.readFileSync(__dirname + '/utilities/tokens/simple.json.template' ))
-  },
-  {
-    name: 'custom-xml',
-    formatter: _.template(fs.readFileSync(__dirname + '/utilities/tokens/xml.template' ))
-  }
-];
-
 
 // -------------------------------------
 //   Main
@@ -100,9 +106,13 @@ function generateTokens(src, dest) {
 
       const dict = require('style-dictionary').extend(themeConfig);
 
-      formats.forEach(f => {
+      customTransforms.forEach(t => {
+        dict.registerTransform(t);
+      });
+
+      customFormats.forEach(f => {
         dict.registerFormat(f);
-      })
+      });
 
       dict.buildAllPlatforms();
     });

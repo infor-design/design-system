@@ -1,0 +1,48 @@
+{
+    "button": {
+        "color": {
+            "primary": {
+                "disabled": {
+                    "background": {
+                        "value": "{theme.color.palette.azure.90.value}"
+                    },
+                    "border": {
+                        "value": "{theme.color.palette.azure.90.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.palette.slate.60.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.palette.slate.60.value}"
+                    }
+                }
+            },
+            "secondary": {
+                "disabled": {
+                    "background": {
+                        "value": "{theme.color.palette.slate.80.value}"
+                    },
+                    "border": {
+                        "value": "{theme.color.palette.slate.80.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.palette.slate.90.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.palette.slate.90.value}"
+                    }
+                }
+            },
+            "tertiary": {
+                "disabled": {
+                    "font": {
+                        "value": "{theme.color.font.muted.value}"
+                    },
+                    "icon": {
+                        "value": "{theme.color.font.muted.value}"
+                    }
+                }
+            }
+        }
+    }
+}

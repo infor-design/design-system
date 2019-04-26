@@ -1,0 +1,19 @@
+{
+    "radio": {
+        "color": {
+            "unchecked": {
+                "initial": {
+                    "background": {
+                        "value": "transparent"
+                    },
+                    "border": {
+                        "value": "{theme.color.border.base.value}"
+                    },
+                    "label": {
+                        "value": "{theme.color.font.info.value}"
+                    }
+                }
+            }
+        }
+    }
+}

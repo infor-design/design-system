@@ -1,0 +1,12 @@
+{
+    "input": {
+        "color": {
+            "readonly": {
+                "background": {
+                    "value": "{theme.color.brand.secondary.alt.value}"
+                }
+            }
+        }
+        
+    }
+}
