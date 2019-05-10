@@ -1,0 +1,11 @@
+{
+    "link": {
+        "color": {
+            "visited": {
+                "font": {
+                    "value": "{theme.color.palette.amethyst.80.value}"
+                }
+            }
+        }
+    }
+}

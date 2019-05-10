@@ -14,7 +14,14 @@
                 },
                 "selected": {
                     "background": {
-                        "value": "transparent"
+                        "value": "{theme.color.brand.secondary.lighter.value}"
+                    }
+                }
+            },
+            "heading": {
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.brand.secondary.base.value}"
                     }
                 }
             }

@@ -1,0 +1,14 @@
+{
+    "input": {
+        "color": {
+            "readonly": {
+                "background": {
+                    "value": "{theme.color.brand.secondary.base.value}"
+                },
+                "font": {
+                    "value": "{theme.color.brand.primary.contrast.value}"
+                }
+            }
+        }
+    }
+}

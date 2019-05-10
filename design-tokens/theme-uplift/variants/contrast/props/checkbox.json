@@ -1,0 +1,29 @@
+{
+    "checkbox": {
+        "color": {
+            "checked": {
+                "disabled": {
+                    "arrow": {
+                        "value": "{checkbox.color.unchecked.disabled.arrow.value}"
+                    },
+                    "background": {
+                        "value": "{theme.color.brand.secondary.lighter.value}"
+                    },
+                    "border": {
+                        "value": "{theme.color.brand.secondary.lighter.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.font.muted.value}"
+                    }
+                }
+            },
+            "unchecked": {
+                "disabled": {
+                    "arrow": {
+                        "value": "{theme.color.palette.slate.40.value}"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "dropdown": {
+        "color": {
+            "selected": {
+                "background": {
+                    "value": "{theme.color.brand.primary.alt.value}"
+                }
+            }
+        }
+    }
+}
