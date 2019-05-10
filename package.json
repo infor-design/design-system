@@ -5,10 +5,11 @@
   "scripts": {
     "postinstall": "node ./scripts/node/postinstall.js",
     "sketch:diff": "./scripts/skdiff -o ./.tmp/ ",
-    "build": "node ./scripts/node/build.js --build=tokens,icons,fonts",
+    "build": "node ./scripts/node/build.js --build=meta,tokens,icons,fonts",
     "build:icons": "node ./scripts/node/build.js --build=icons",
     "build:tokens": "node ./scripts/node/build.js --build=tokens",
     "build:fonts": "node ./scripts/node/build.js --build=fonts",
+    "build:meta": "node ./scripts/node/build.js --build=meta",
     "assets": "npm run build && npm run zip && bash ./scripts/deploy-assets.sh -e local",
     "assets:staging": "npm run build && npm run zip && bash ./scripts/deploy-assets.sh -e staging",
     "assets:prod": "npm run build && npm run zip && bash ./scripts/deploy-assets.sh -e prod",
