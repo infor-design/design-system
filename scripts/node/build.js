@@ -14,6 +14,7 @@ const del = require('del');
 const fs = require('fs');
 const gFonts = require('./build-font');
 const gIcons = require('./build-icons');
+const gMeta = require('./build-meta.js');
 const gTokens = require('./build-tokens');
 const glob = require('glob');
 const swlog = require('./utilities/stopwatch-log.js');
@@ -66,13 +67,19 @@ const copyDirExists = (from, to) => {
 // -------------------------------------
 const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0)) > 2;
 
-
 // Clean up dist
 const rootDest = './dist';
 del.sync([rootDest]);
 createDirs([rootDest]);
 
 let promises = [];
+
+if (args.build.includes('meta')) {
+  promises.push(() => {
+    const filename = 'metadata.json';
+    return gMeta(`design-tokens/${filename}`, `dist/${filename}`, pkgjson.version);
+  });
+}
 
 themesArr.forEach(theme => {
   const themeDest = `${rootDest}/${theme}`;
