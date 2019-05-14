@@ -9,6 +9,7 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
 - Icons are designed at 32px, 24px, and 16px.
 - Icons are designed with 1px stroke and various radiuses based on the three sizes.
 - Icons should be black at 100% opacity.
+- Icons need to be placed on an artboard, not only be a standalone symbol
 - Please refer to the `Visual Guidelines` page within `ids-icons-system.sketch` for more details.
 
 ### Categories
