@@ -6,8 +6,7 @@
         "package.json"
     ],
     "scripts": {
-        "beforeStart": "npm test",
-        "beforeStage": "./scripts/before-stage.sh",
+        "beforeStart": "./scripts/before-stage.sh",
         "changelog": "./scripts/github-changelog.sh ${version}",
         "beforeStage": "npm run zip",
         "afterRelease": "./scripts/after-release.sh ${npm.tag} ${version}"
