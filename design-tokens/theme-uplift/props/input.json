@@ -11,7 +11,7 @@
                     "value": "{theme.color.palette.white.value}"
                 },
                 "placeholder": {
-                    "value": "{theme.color.palette.slate.80.value}"
+                    "value": "{theme.color.palette.slate.60.value}"
                 }
             },
             "readonly": {
