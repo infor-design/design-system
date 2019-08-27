@@ -24,7 +24,7 @@ Then look in `node_modules/ids-identity` for the assets.
 
 ## Building Assets Locally
 
-For designers and developers wanting to build these assets locally, see our [developer guide](DEVELOP.md).
+For designers and developers wanting to build these assets locally, see our [developer guide](docs/DEVELOP.md).
 
 ## Help
 
