@@ -20,7 +20,7 @@
     },
     "github": {
         "release": true,
-        "releaseName": "v%s",
+        "releaseName": "v${version}",
         "tokenRef": "GITHUB_ACCESS_TOKEN",
         "assets": "IDS-*.zip"
     }
