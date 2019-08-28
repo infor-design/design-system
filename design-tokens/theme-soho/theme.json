@@ -10,6 +10,7 @@
             },
             "brand": {
                 "primary": {
+                    "lighter":  { "value": "{theme.color.palette.azure.40.value}" },
                     "base":     { "value": "{theme.color.palette.azure.60.value}" },
                     "alt":      { "value": "{theme.color.palette.azure.70.value}" },
                     "contrast": { "value": "{theme.color.palette.white.value}" }
