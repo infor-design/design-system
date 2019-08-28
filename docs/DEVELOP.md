@@ -8,4 +8,4 @@
     - `npm run build:font` copies the font
 - `npm run clean` deletes the 3rd level dist files
 - `npm test` to run YML lint
-- `npm run lint:web` To build and then lint the built custom-properties (since we have no way of linting the yaml for css rules)
+- `npm run lint:json && npm run lint:md` To lint the JSON and MD.
