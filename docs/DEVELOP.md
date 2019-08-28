@@ -7,5 +7,4 @@
     - `npm run build:icons` to build the icons svgs from a sketch file
     - `npm run build:font` copies the font
 - `npm run clean` deletes the 3rd level dist files
-- `npm test` to run YML lint
-- `npm run lint:json && npm run lint:md` To lint the JSON and MD.
+- `npm test` to run a lint check
