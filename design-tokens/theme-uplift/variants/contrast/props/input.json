@@ -1,6 +1,11 @@
 {
     "input": {
         "color": {
+            "initial": {
+                "background": {
+                    "value": "{theme.color.palette.white}"
+                }
+            },
             "readonly": {
                 "background": {
                     "value": "{theme.color.brand.secondary.base.value}"
