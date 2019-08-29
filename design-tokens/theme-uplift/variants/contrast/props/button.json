@@ -4,32 +4,32 @@
             "primary": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.azure.70.value}"
+                        "value": "{theme.color.palette.azure.50.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.azure.70.value}"
+                        "value": "{theme.color.palette.azure.50.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.slate.40.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.slate.40.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     }
                 }
             },
             "secondary": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.slate.70.value}"
+                        "value": "{theme.color.palette.slate.50.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.slate.70.value}"
+                        "value": "{theme.color.palette.slate.50.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.slate.40.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.slate.40.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
                     }
                 },
                 "initial": {

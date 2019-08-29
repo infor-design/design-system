@@ -1,12 +1,25 @@
 {
     "input": {
         "color": {
-            "readonly": {
-                "background": {
-                    "value": "{theme.color.brand.secondary.base.value}"
+            "disabled": {
+                "border": {
+                    "value": "{theme.color.palette.slate.50.value}"
                 },
                 "font": {
-                    "value": "{theme.color.brand.primary.contrast.value}"
+                    "value": "{theme.color.palette.slate.50.value}"
+                }
+            },
+            "initial": {
+                "background": {
+                    "value": "{theme.color.palette.white.value}"
+                }
+            },
+            "readonly": {
+                "background": {
+                    "value": "{theme.color.palette.slate.40.value}"
+                },
+                "font": {
+                    "value": "{theme.color.palette.slate.100.value}"
                 }
             }
         }
