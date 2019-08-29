@@ -2,6 +2,9 @@
     "input": {
         "color": {
             "disabled": {
+                "border": {
+                    "value": "{theme.color.palette.slate.40.value}"
+                },
                 "background": {
                     "value": "{theme.color.palette.white.value}"
                 }

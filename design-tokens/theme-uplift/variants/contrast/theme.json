@@ -11,12 +11,12 @@
             "brand": {
                 "primary": {
                     "base":     { "value": "{theme.color.palette.azure.90.value}" },
-                    "alt":      { "value": "{theme.color.palette.azure.100.value}" }                
+                    "alt":      { "value": "{theme.color.palette.azure.100.value}" }
                 },
                 "secondary": {
                     "lighter": { "value": "{theme.color.palette.slate.80.value}" },
                     "base":     { "value": "{theme.color.palette.slate.90.value}" },
-                    "alt":      { "value": "{theme.color.palette.slate.100.value}" }                
+                    "alt":      { "value": "{theme.color.palette.slate.100.value}" }
                 }
             },
             "border": {
