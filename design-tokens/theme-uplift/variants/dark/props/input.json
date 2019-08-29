@@ -1,12 +1,20 @@
 {
     "input": {
         "color": {
+            "disabled": {
+                "border": {
+                    "value": "{theme.color.palette.slate.70.value}"
+                },
+                "font": {
+                    "value": "{theme.color.palette.slate.70.value}"
+                }
+            },
             "readonly": {
                 "background": {
                     "value": "{theme.color.brand.secondary.alt.value}"
                 }
             }
         }
-        
+
     }
 }
