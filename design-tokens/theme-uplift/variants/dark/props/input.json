@@ -9,6 +9,11 @@
                     "value": "{theme.color.palette.slate.70.value}"
                 }
             },
+            "initial": {
+                "placeholder": {
+                    "value": "{theme.color.palette.slate.60.value}"
+                }
+            },
             "readonly": {
                 "background": {
                     "value": "{theme.color.brand.secondary.alt.value}"
