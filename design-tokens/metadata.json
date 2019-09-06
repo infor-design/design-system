@@ -2,7 +2,7 @@
     "themes": [
         {
             "name": "soho",
-            "title": "Soho",
+            "title": "Subtle",
             "status": "stable",
             "base": {
                 "name": "light",
@@ -21,8 +21,8 @@
         },
         {
             "name": "uplift",
-            "title": "Uplift",
-            "status": "beta",
+            "title": "Vibrant",
+            "status": "stable",
             "base": {
                 "name": "light",
                 "title": "Light"
