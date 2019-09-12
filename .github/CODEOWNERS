@@ -1,7 +1,7 @@
 # Each line is a file pattern followed by one or more owners.
 
 # Default owners for the repo:
-*         @jmacaluso711
+*         @infor-design/eng-ids
 
 # Sketch file owners:
-*.sketch  @jmacaluso711
+*.sketch  @infor-design/eng-ids @infor-design/design
