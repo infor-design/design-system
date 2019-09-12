@@ -36,7 +36,6 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "blink-diff": "^1.0.13",
-    "chalk": "^2.4.2",
     "copy-dir": "^0.3.0",
     "del": "^3.0.0",
     "del-cli": "^1.1.0",
@@ -45,7 +44,6 @@
     "glob": "^7.1.4",
     "handlebars": "^4.1.2",
     "lodash": "^4.17.14",
-    "log-symbols": "^2.2.0",
     "markdownlint-cli": "^0.17.0",
     "minimist": "^1.2.0",
     "npm-which": "^3.0.1",
@@ -61,6 +59,8 @@
     "announcements.json"
   ],
   "dependencies": {
+    "chalk": "^2.4.2",
+    "log-symbols": "^2.2.0",
     "semver": "^5.7.0"
   }
 }
