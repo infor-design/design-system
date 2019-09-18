@@ -46,10 +46,15 @@
             "tertiary": {
                 "disabled": {
                     "font": {
-                        "value": "{theme.color.palette.slate.60.value}"
+                        "value": "{theme.color.palette.graphite.40.value}"
                     },
                     "icon": {
                         "value": "{theme.color.palette.slate.60.value}"
+                    }
+                },
+                "initial": {
+                    "font": {
+                        "value": "{theme.color.palette.graphite.70.value}"
                     }
                 }
             }
