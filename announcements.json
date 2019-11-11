@@ -24,7 +24,7 @@
         "title": "Token names for type sizes have changed",
         "versionNotifyStart": "3.0.0",
         "versionNotifyEnd": "4.0.0",
-        "message": "As of v{versionNotifyStart}, all font size token names have changed. Use $theme-size-font-px{size} instead of $theme-size-font-{size}",
+        "message": "As of v{versionNotifyStart} additional font size tokens have been added. The old tokens ($theme-size-font-xm, $theme-size-font-sm, $theme-size-font-md, $theme-size-font-lg, $theme-size-font-xl) will eventually be deprecated. Please begin using $theme-size-font-px{size} instead of $theme-size-font-{size}",
         "isCritical": false
     }
 ]
