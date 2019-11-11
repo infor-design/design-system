@@ -52,11 +52,11 @@
         "size": {
             "font": {
                 "base": { "value": "{theme.size.font.px16.value}" },
-                "xs":   { "value": "1.4rem" },
-                "sm":   { "value": "1.6rem" },
-                "md":   { "value": "2.0rem" },
-                "lg":   { "value": "2.8rem" },
-                "xl":   { "value": "4.0rem" },
+                "xs":   { "value": "{theme.size.font.px14.value}" },
+                "sm":   { "value": "{theme.size.font.px16.value}" },
+                "md":   { "value": "{theme.size.font.px20.value}" },
+                "lg":   { "value": "{theme.size.font.px28.value}" },
+                "xl":   { "value": "{theme.size.font.px40.value}" },
                 "px10":   { "value": "1rem" },
                 "px12":   { "value": "1.2rem" },
                 "px14":   { "value": "1.4rem" },
