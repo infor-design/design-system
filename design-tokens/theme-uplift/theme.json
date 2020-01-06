@@ -3,10 +3,10 @@
         "color": {
             "status": {
                 "base":    { "value": "{theme.color.brand.primary.alt.value}" },
-                "caution": { "value": "#FFD100" },
+                "caution": { "value": "#FFD726" },
                 "danger":  { "value": "#DA1217" },
-                "success": { "value": "#35C274" },
-                "warning": { "value": "#F78300" }
+                "success": { "value": "#2AC371" },
+                "warning": { "value": "#F98300" }
             },
             "brand": {
                 "primary": {
