@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.8.0
+
+### v2.8.0 Features
+
+- `[Tokens]` Revised the color in all 3 variants of the uplift/vibrant theme. This impacts many components and charts in color only. ([#3007](https://github.com/infor-design/ids-enterprise/issues/3007))
+
 ## v2.7.0
 
 ### v2.7.0 Features
