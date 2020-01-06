@@ -30,7 +30,7 @@
                     "value": "{theme.color.font.info.value}"
                 },
                 "placeholder": {
-                    "value": "{theme.color.palette.graphite.50.value}"
+                    "value": "{theme.color.palette.graphite.40.value}"
                 }
             },
             "readonly": {

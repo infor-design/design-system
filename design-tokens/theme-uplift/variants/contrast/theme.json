@@ -1,13 +1,6 @@
 {
     "theme": {
         "color": {
-            "status": {
-                "base":    { "value": "{theme.color.brand.primary.base.value}" },
-                "caution": { "value": "#5D4C00" },
-                "danger":  { "value": "#7B0F11" },
-                "success": { "value": "#065531" },
-                "warning": { "value": "#802B00" }
-            },
             "brand": {
                 "primary": {
                     "base":     { "value": "{theme.color.palette.azure.90.value}" },
@@ -26,15 +19,15 @@
             },
             "font": {
                 "base":  { "value": "{theme.color.palette.slate.90.value}" },
-                "info":  { "value": "{theme.color.palette.slate.90.value}" },
-                "muted": { "value": "{theme.color.palette.slate.80.value}" }
+                "info":  { "value": "{theme.color.palette.graphite.90.value}" },
+                "muted": { "value": "{theme.color.palette.graphite.80.value}" }
             },
             "icon": {
                 "base": { "value": "{theme.color.palette.slate.90.value}" }
             },
             "body": {
-                "base" : { "value": "{theme.color.palette.graphite.20.value}" },
-                "lightest": { "value": "{theme.color.palette.graphite.20.value}" }
+                "base" : { "value": "{theme.color.palette.graphite.10.value}" },
+                "lightest": { "value": "{theme.color.palette.white.value}" }
             }
         }
     }

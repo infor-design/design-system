@@ -23,7 +23,8 @@
     "zip": "bash ./scripts/package-release.sh",
     "release:beta": "release-it --preRelease=beta --no-github.release",
     "release:rc": "release-it --preRelease=rc --no-github.release",
-    "release:final": "release-it"
+    "release:final": "release-it",
+    "watch": "watch 'npm run build && touch ../master/src/components/typography/_typography-uplift.scss' ./design-tokens"
   },
   "repository": {
     "type": "git",
@@ -51,7 +52,8 @@
     "release-it": "^10.4.5",
     "style-dictionary": "^2.8.1",
     "svgo": "^1.3.0",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "watch": "^1.0.2"
   },
   "files": [
     "dist/",
