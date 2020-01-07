@@ -24,7 +24,7 @@
     "release:beta": "release-it --preRelease=beta --no-github.release",
     "release:rc": "release-it --preRelease=rc --no-github.release",
     "release:final": "release-it",
-    "watch": "watch 'npm run build && touch ../master/src/components/typography/_typography-uplift.scss' ./design-tokens"
+    "watch": "watch 'npm run build && touch ../master3/src/components/typography/_typography-uplift.scss' ./design-tokens"
   },
   "repository": {
     "type": "git",

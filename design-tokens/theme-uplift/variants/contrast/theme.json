@@ -19,8 +19,8 @@
             },
             "font": {
                 "base":  { "value": "{theme.color.palette.slate.90.value}" },
-                "info":  { "value": "{theme.color.palette.graphite.90.value}" },
-                "muted": { "value": "{theme.color.palette.graphite.80.value}" }
+                "info":  { "value": "{theme.color.palette.graphite.100.value}" },
+                "muted": { "value": "{theme.color.palette.graphite.90.value}" }
             },
             "icon": {
                 "base": { "value": "{theme.color.palette.slate.90.value}" }
