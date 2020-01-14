@@ -1,0 +1,16 @@
+{
+    "textarea": {
+        "size": {
+            "regular": {
+                "height": {
+                    "value": "120px"
+                }
+            },
+            "compact": {
+                "height": {
+                    "value": "80px"
+                }
+            }
+        }
+    }
+}

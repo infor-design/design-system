@@ -6,6 +6,24 @@
                     "value": "{theme.color.font.info.value}"
                 }
             }
+        },
+        "size": {
+            "regular": {
+                "margin": {
+                    "value": "0 0 8px 0"
+                },
+                "font-size": {
+                    "value": "1.2rem"
+                }
+            },
+            "compact": {
+                "margin": {
+                    "value": "0 0 6px 0"
+                },
+                "font-size": {
+                    "value": "1.2rem"
+                }
+            }
         }
     }
 }

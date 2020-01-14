@@ -8,6 +8,16 @@
                 "radius": {
                     "value": "{theme.number.border.radius.md.value}"
                 }
+            },
+            "regular": {
+                "height": {
+                    "value": "38px"
+                }
+            },
+            "compact": {
+                "height": {
+                    "value": "28px"
+                }
             }
         },
         "color": {

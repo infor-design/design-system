@@ -1,0 +1,16 @@
+{
+    "dropdown": {
+        "size": {
+            "regular": {
+                "padding": {
+                    "value": "8px 30px 8px 10px"
+                }
+            },
+            "compact": {
+                "padding": {
+                    "value": "4px 16px 4px 5px"
+                }
+            }
+        }
+    }
+}
