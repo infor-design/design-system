@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.0
+
+### v2.9.0 Features
+
+- `[Tokens]` Added new tokes for sizes for fields and input labels for example `input-size-regular-height` and `input-size-compact-height`. ([#3249](https://github.com/infor-design/enterprise/issues/3249))
+
 ## v2.8.0
 
 ### v2.8.0 Features
