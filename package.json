@@ -8,6 +8,7 @@
     "build": "node ./scripts/node/build.js --build=meta,tokens,icons,fonts",
     "build:icons": "node ./scripts/node/build.js --build=icons",
     "build:tokens": "node ./scripts/node/build.js --build=tokens",
+    "build:watch": "node ./scripts/node/build.js --build=meta,tokens,icons",
     "build:fonts": "node ./scripts/node/build.js --build=fonts",
     "build:meta": "node ./scripts/node/build.js --build=meta",
     "assets": "npm run build && npm run zip && bash ./scripts/deploy-assets.sh -e local",
@@ -24,7 +25,7 @@
     "release:beta": "release-it --preRelease=beta --no-github.release",
     "release:rc": "release-it --preRelease=rc --no-github.release",
     "release:final": "release-it",
-    "watch": "watch 'npm run build && touch ../master3/src/components/typography/_typography-uplift.scss' ./design-tokens"
+    "watch": "watch 'npm run build:watch && touch ../master3/src/components/typography/_typography-uplift.scss' ./design-tokens"
   },
   "repository": {
     "type": "git",

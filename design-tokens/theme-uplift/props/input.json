@@ -40,6 +40,28 @@
                 "radius": {
                     "value": "{theme.number.border.radius.md.value}"
                 }
+            },
+            "regular": {
+                "height": {
+                    "value": "3.8rem"
+                },
+                "padding": {
+                    "value": "0 10px"
+                },
+                "font-size": {
+                    "value": "1.6rem"
+                }
+            },
+            "compact": {
+                "height": {
+                    "value": "2.8rem"
+                },
+                "padding": {
+                    "value": "0 5px"
+                },
+                "font-size": {
+                    "value": "1.4rem"
+                }
             }
         }
     }

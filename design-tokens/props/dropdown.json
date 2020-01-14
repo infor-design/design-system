@@ -50,6 +50,16 @@
                     "value": "30px"
                 }
             },
+            "regular": {
+                "padding": {
+                    "value": "8px 30px 8px 10px"
+                }
+            },
+            "compact": {
+                "padding": {
+                    "value": "5px 16px 5px 5px"
+                }
+            },
             "padding": {
                 "value": "8px 30px 8px 10px"
             }
