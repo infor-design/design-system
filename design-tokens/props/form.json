@@ -1,0 +1,22 @@
+{
+    "form": {
+        "size": {
+            "field": {
+                "regular": {
+                    "margin": {
+                        "bottom": {
+                            "value": "20px"
+                        }
+                    }
+                },
+                "compact": {
+                    "margin": {
+                        "bottom": {
+                            "value": "12px"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
