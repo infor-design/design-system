@@ -3,10 +3,10 @@
         "color": {
             "disabled": {
                 "border": {
-                    "value": "{theme.color.palette.slate.40.value}"
+                    "value": "{theme.color.palette.slate.30.value}"
                 },
                 "font": {
-                    "value": "{theme.color.palette.slate.50.value}"
+                    "value": "{theme.color.palette.slate.30.value}"
                 }
             },
             "initial": {

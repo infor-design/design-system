@@ -22,7 +22,7 @@
                 },
                 "hover": {
                     "border": {
-                        "value": "{theme.color.palette.graphite.10.value}"
+                        "value": "{theme.color.palette.graphite.100.value}"
                     }
                 },
                 "initial": {

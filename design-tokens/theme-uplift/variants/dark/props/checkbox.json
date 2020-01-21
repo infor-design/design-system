@@ -1,13 +1,38 @@
 {
     "checkbox": {
         "color": {
-            "unchecked": {
+            "checked": {
                 "disabled": {
                     "arrow": {
-                        "value": "{theme.color.brand.secondary.base.value}"
+                        "value": "{theme.color.palette.slate.30.value}"
+                    },
+                    "background": {
+                        "value": "{theme.color.palette.slate.50.value}"
+                    },
+                    "border": {
+                        "value": "{theme.color.palette.slate.50.value}"
+                    }
+                }
+            },
+            "unchecked": {
+                "disabled": {
+                    "background": {
+                        "value": "{theme.color.palette.slate.60.value}"
+                    },
+                    "font": {
+                        "value": "{theme.color.palette.slate.40.value}"
+                    },
+                    "border": {
+                        "value": "{theme.color.palette.slate.50.value}"
                     }
                 },
                 "initial": {
+                    "background": {
+                        "value": "transparent"
+                    },
+                    "border": {
+                        "value": "{theme.color.palette.slate.40.value}"
+                    },
                     "font": {
                         "value": "{theme.color.font.info.value}"
                     }

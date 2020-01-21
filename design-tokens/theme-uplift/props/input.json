@@ -20,7 +20,7 @@
                     "value": "{theme.color.palette.black.value}"
                 },
                 "placeholder": {
-                    "value": "{theme.color.palette.slate.50.value}"
+                    "value": "{theme.color.palette.slate.40.value}"
                 }
             },
             "readonly": {
