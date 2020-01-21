@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.1
+
+### v2.9.1 Features
+
+- `[Tokens]` Added minor QA fixes for the color changes in 2.8.0 / 2.9.0 ([#3007](https://github.com/infor-design/enterprise/issues/3249))
+
 ## v2.9.0
 
 ### v2.9.0 Features
