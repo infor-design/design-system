@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.3
+
+### v2.9.3 Features
+
+- `[Input]` Fixed the disabled input border and colors in uplift. ([#3007](https://github.com/infor-design/enterprise/issues/3007))
+
 ## v2.9.2
 
 ### v2.9.2 Features
