@@ -3,10 +3,13 @@
         "color": {
             "disabled": {
                 "border": {
-                    "value": "{theme.color.palette.slate.40.value}"
+                    "value": "{theme.color.palette.slate.30.value}"
                 },
                 "background": {
                     "value": "{theme.color.palette.white.value}"
+                },
+                "font": {
+                    "value": "{theme.color.palette.slate.30.value}"
                 }
             },
             "initial": {
