@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.4
+
+### v2.9.4 Features
+
+- `[Colors]` Ruby 06 had the wrong color, so fixed this. ([#3448](https://github.com/infor-design/enterprise/issues/3448))
+
 ## v2.9.3
 
 ### v2.9.3 Features
