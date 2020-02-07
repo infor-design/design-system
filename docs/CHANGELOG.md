@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.5
+
+### v2.9.5 Features
+
+- `[Icons]` Added icons for playing videos `icon-security-on`, `icon-security-on`. ([#442](https://github.com/infor-design/design-system/pull/442))
+
 ## v2.9.4
 
 ### v2.9.4 Features
