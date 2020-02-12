@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.6
+
+### v2.9.6 Fixes
+
+- `[Icons]` Fixed the muted color in uplift dark mode to be more visible. ([#2754](https://github.com/infor-design/enterprise/issues/2754))
+
 ## v2.9.5
 
 ### v2.9.5 Features
