@@ -12,6 +12,11 @@
                     "label": {
                         "value": "{theme.color.font.info.value}"
                     }
+                },
+                "disabled": {
+                    "background": {
+                        "value": "transparent"
+                    }
                 }
             }
         }

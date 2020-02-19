@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.7
+
+### v2.9.7 Fixes
+
+- `[Icons]` Fixed the disabled color in uplift dark mode of checkboxes. ([#3511](https://github.com/infor-design/enterprise/issues/3511))
+
 ## v2.9.6
 
 ### v2.9.6 Fixes
