@@ -4,7 +4,7 @@
 
 ### v2.9.8 Fixes
 
-- `[Icons] Added new locked/unlocked icons to uplift and soho themes.`
+- `[Icons]` Added new locked/unlocked icons to uplift and soho themes.
 
 ## v2.9.7
 
