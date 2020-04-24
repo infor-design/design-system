@@ -1,5 +1,17 @@
 # What's New with Infor Design System
 
+## v2.9.9
+
+### v2.9.9 Fixes
+
+- `[Tokens]` The `$theme-size-font-px-46` should be `48`.
+
+## v2.9.8
+
+### v2.9.8 Fixes
+
+- `[Icons]` Added new locked/unlocked icons to uplift and soho themes.
+
 ## v2.9.8
 
 ### v2.9.8 Fixes
