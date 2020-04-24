@@ -5,7 +5,7 @@
     "hooks": {
         "before:init": "./scripts/before-stage.sh",
         "after:bump": "npm run zip",
-        "after:release": "./scripts/after-release.sh ${npm.tag} ${version"
+        "after:release": "./scripts/after-release.sh ${npm.tag} ${version}"
     },
     "git": {
         "changelog": "./scripts/github-changelog.sh ${version}",
