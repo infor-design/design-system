@@ -2,16 +2,13 @@
     "non-interactive": false,
     "dry-run": false,
     "verbose": false,
-    "pkgFiles": [
-        "package.json"
-    ],
-    "scripts": {
-        "beforeStart": "./scripts/before-stage.sh",
-        "changelog": "./scripts/github-changelog.sh ${version}",
-        "beforeStage": "npm run zip",
-        "afterRelease": "./scripts/after-release.sh ${npm.tag} ${version}"
+    "hooks": {
+        "before:init": "./scripts/before-stage.sh",
+        "after:bump": "npm run zip",
+        "after:release": "./scripts/after-release.sh ${npm.tag} ${version"
     },
     "git": {
+        "changelog": "./scripts/github-changelog.sh ${version}",
         "commitMessage": "Release v${version}",
         "tagAnnotation": "Release v${version}"
     },
