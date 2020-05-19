@@ -9,21 +9,21 @@
 //   Constants/Variables
 // -------------------------------------
 
-const execSync = require('child_process').execSync;
+const { execSync } = require('child_process');
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 const svgo = require('svgo');
+const util = require('util');
 const swlog = require('./utilities/stopwatch-log.js');
-const util = require("util");
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
 const options = {
-  binaryPath: `/Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool`,
+  binaryPath: '/Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool',
   iconFormats: ['svg', 'png']
-}
+};
 
 
 /** @constant
@@ -31,21 +31,21 @@ const options = {
  *  @see https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
 */
 const customSvgoRemoveGroupFill = {
-  type        : 'perItem',
-  fn          : item => {
+  type: 'perItem',
+  fn: (item) => {
     if (item.isElem('g')) {
       item.removeAttr('fill');
     }
   }
-}
+};
 
 /** @constant
  *  @desciption Add attribute to stroke paths to prevent unwanted scaling
  *  @see https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
 */
 const customSvgoNonScalingStroke = {
-  type        : 'perItem',
-  fn          : item => {
+  type: 'perItem',
+  fn: (item) => {
     if (item.hasAttr('stroke')) {
       item.addAttr({
         name: 'vector-effect',
@@ -55,16 +55,16 @@ const customSvgoNonScalingStroke = {
       });
     }
   }
-}
+};
 
 /** @constant
  *  @desciption Adds stroke attr to fill items to prevent overrides
  *  @see https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
 */
 const customSvgoFillStroke = {
-  type        : 'perItem',
-  fn          : item => {
-    if (item.hasAttr('fill') && ! item.hasAttr('vector-effect')) {
+  type: 'perItem',
+  fn: (item) => {
+    if (item.hasAttr('fill') && !item.hasAttr('vector-effect')) {
       item.addAttr({
         name: 'stroke',
         value: 'none',
@@ -73,7 +73,7 @@ const customSvgoFillStroke = {
       });
     }
   }
-}
+};
 
 // -------------------------------------
 //   Functions
@@ -91,8 +91,60 @@ function hasSketchtool() {
  * @param  {string} command
  * @return {string}
  */
-function sketchtoolExec (command) {
+function sketchtoolExec(command) {
   return execSync(`${options.binaryPath} ${command}`).toString();
+}
+
+
+/**
+ * Optimize the generated .svg icon files
+ * @param {String} src - The source directory for svgs
+ */
+function optimizeSVGs(src) {
+  const startOptimizeTaskName = swlog.logSubStart('optimize SVGs');
+
+  // Optimize with svgo:
+  const svgoOptimize = new svgo({ //eslint-disable-line
+    js2svg: { useShortTags: false },
+    plugins: [
+      { removeViewBox: false },
+      { convertColors: { currentColor: '#000000' } },
+      { removeDimensions: true },
+      { moveGroupAttrsToElems: true },
+      { removeUselessStrokeAndFill: true },
+      { mergePaths: true },
+      { customSvgoRemoveGroupFill },
+      { customSvgoNonScalingStroke },
+      { customSvgoFillStroke }
+    ]
+  });
+
+  const svgFiles = glob.sync(`${src}/*.svg`);
+  let iconJSON = '{\n';
+
+  // Divide each optimization into a promise
+  const svgPromises = svgFiles.map(async filepath => { //eslint-disable-line
+    try {
+      const data = await readFile(filepath, 'utf8');
+      const dataOptimized = await svgoOptimize.optimize(data);
+
+      const svgDData = /d="(.*?)"/g;
+      const count = /<path/g;
+      iconJSON += `"${path.basename(filepath, '.svg')}": "${svgDData.exec(dataOptimized.data)[1]}"\n`;
+      if (count.exec(dataOptimized.data).length !== 1) {
+        swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
+      }
+
+      await writeFile(filepath, dataOptimized.data, 'utf-8');
+    } catch (err) {
+      swlog.error(err);
+    }
+  });
+
+  return Promise.all(svgPromises).then(() => {
+    writeFile(`${src}/path-data.json`, `${iconJSON}}`, 'utf-8');
+    swlog.logSubEnd(startOptimizeTaskName);
+  }).catch(swlog.error);
 }
 
 /**
@@ -105,7 +157,7 @@ function sketchtoolExec (command) {
 function createIconFiles(srcFile, dest) {
   const thisTaskName = swlog.logSubStart('create icon files');
 
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     const exportArtboardsOptions = [
       'export',
       'artboards',
@@ -119,19 +171,19 @@ function createIconFiles(srcFile, dest) {
     const outputStr = sketchtoolExec(exportArtboardsOptions.join(' '));
     resolve(outputStr);
   })
-  .then(output => {
-    options.iconFormats.forEach(format => {
-      const regex = new RegExp(`\\.${format}`, 'g');
-      const count = (output.match(regex) || []).length;
-      swlog.logTaskAction('Created', `${count} ${format.toUpperCase()} files`);
-    })
+    .then((output) => { //eslint-disable-line
+      options.iconFormats.forEach((format) => {
+        const regex = new RegExp(`\\.${format}`, 'g');
+        const count = (output.match(regex) || []).length;
+        swlog.logTaskAction('Created', `${count} ${format.toUpperCase()} files`);
+      });
 
-    swlog.logSubEnd(thisTaskName);
+      swlog.logSubEnd(thisTaskName);
 
-    if (options.iconFormats.indexOf('svg') !== -1) {
-      return optimizeSVGs(dest);
-    }
-  });
+      if (options.iconFormats.indexOf('svg') !== -1) {
+        return optimizeSVGs(dest);
+      }
+    });
 }
 
 /**
@@ -143,12 +195,24 @@ function sanitize(str) {
 }
 
 /**
+ * Create directories if they don't exist
+ * @param  {array} arrPaths - the directory path(s)
+ */
+function createDirs(arrPaths) {
+  arrPaths.forEach((dirPath) => {
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath);
+    }
+  });
+}
+
+/**
  * Move icon types into proper directory
  * @param {String} srcDir - Directory of files
  * @param {Array} formats - Array of file formats
  */
 function sortByFileFormat(srcDir, format) {
-  const initialFiles = `${srcDir}/*.${format}`
+  const initialFiles = `${srcDir}/*.${format}`;
   const files = glob.sync(initialFiles);
   const dest = `${srcDir}/${format}`;
   let count = 0;
@@ -156,7 +220,7 @@ function sortByFileFormat(srcDir, format) {
   createDirs([dest]);
 
   // Loop through and move each file
-  const promises = files.map(f => {
+  const promises = files.map((f) => { //eslint-disable-line
     return new Promise((resolve, reject) => {
       const filename = sanitize(path.basename(f));
       const reg = /[\w-]+-(16|24|32)\.[\w]+/;
@@ -169,11 +233,11 @@ function sortByFileFormat(srcDir, format) {
         createDirs([thisDest]);
       }
 
-      fs.rename(f, `${thisDest}/${filename}`, err => {
+      fs.rename(f, `${thisDest}/${filename}`, (err) => {
         if (err) {
           reject(err);
         }
-        count++;
+        count += 1;
         resolve(`${dest}/${filename}`);
       });
     });
@@ -192,28 +256,27 @@ function sortByFileFormat(srcDir, format) {
  * @returns {Promise}
  */
 function createPagesMetadata(src, dest) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const thisTaskName = swlog.logSubStart('create metadata file');
-    const outputStr = sketchtoolExec(`metadata ${src}`)
-    const ignoredPages = ['Symbols', 'Icon Sheet', '------------']
+    const outputStr = sketchtoolExec(`metadata ${src}`);
+    const ignoredPages = ['Symbols', 'Icon Sheet', '------------'];
 
-    let customObj = { categories: [] };
+    const customObj = { categories: [] };
     const dataObj = JSON.parse(outputStr);
 
     // Loop through pages, then arboards, to create a
     // simple mapping of names (ignoring certain pages)
     // and naming pages "categories" and artboards "icons"
-    for (const pageId in dataObj.pagesAndArtboards) {
-      if (dataObj.pagesAndArtboards.hasOwnProperty(pageId)
-        && ! ignoredPages.includes(dataObj.pagesAndArtboards[pageId].name)) {
-
+    for (const pageId in dataObj.pagesAndArtboards) { //eslint-disable-line
+      if (dataObj.pagesAndArtboards.hasOwnProperty(pageId) //eslint-disable-line
+        && !ignoredPages.includes(dataObj.pagesAndArtboards[pageId].name)) {
         const tempObj = {
           name: dataObj.pagesAndArtboards[pageId].name,
           icons: []
         };
 
-        for (const ab in dataObj.pagesAndArtboards[pageId].artboards) {
-          if (dataObj.pagesAndArtboards[pageId].artboards.hasOwnProperty(ab)) {
+        for (const ab in dataObj.pagesAndArtboards[pageId].artboards) { //eslint-disable-line
+          if (dataObj.pagesAndArtboards[pageId].artboards.hasOwnProperty(ab)) { //eslint-disable-line
             tempObj.icons.push(dataObj.pagesAndArtboards[pageId].artboards[ab].name);
           }
         }
@@ -227,58 +290,6 @@ function createPagesMetadata(src, dest) {
   });
 }
 
-/**
- * Create directories if they don't exist
- * @param  {array} arrPaths - the directory path(s)
- */
-function createDirs(arrPaths) {
-  arrPaths.forEach(path => {
-    if (!fs.existsSync(path)) {
-      fs.mkdirSync(path);
-    }
-  });
-}
-
-/**
- * Optimize the generated .svg icon files
- * @param {String} src - The source directory for svgs
- */
-function optimizeSVGs(src) {
-  const startOptimizeTaskName = swlog.logSubStart('optimize SVGs');
-
-  // Optimize with svgo:
-  const svgoOptimize = new svgo({
-    js2svg: { useShortTags: false },
-    plugins: [
-      { removeViewBox: false },
-      { convertColors: { currentColor: '#000000' }},
-      { removeDimensions: true },
-      { moveGroupAttrsToElems: true },
-      { removeUselessStrokeAndFill: true },
-      { customSvgoRemoveGroupFill },
-      { customSvgoNonScalingStroke },
-      { customSvgoFillStroke }
-    ]
-  });
-
-  const svgFiles = glob.sync(`${src}/*.svg`);
-
-  // Divide each optimization into a promise
-  const svgPromises = svgFiles.map(async filepath => {
-    try {
-      const data = await readFile(filepath, 'utf8');
-      const dataOptimized = await svgoOptimize.optimize(data);
-
-      await writeFile(filepath, dataOptimized.data, 'utf-8');
-    } catch(err) {
-      swlog.error(err);
-    }
-  });
-
-  return Promise.all(svgPromises).then(() => {
-    swlog.logSubEnd(startOptimizeTaskName);
-  }).catch(swlog.error);
-}
 
 // -------------------------------------
 //   Main
@@ -291,35 +302,35 @@ function optimizeSVGs(src) {
  * @returns {Promise}
  */
 function generateIcons(sketchfile, dest) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => { //eslint-disable-line
 
     const startTaskName = swlog.logTaskStart(`build icons from ${sketchfile}`);
 
     if (!hasSketchtool()) {
-      return reject('No sketchtool installed. Skipping create icons...');
+      return reject('No sketchtool installed. Skipping create icons...'); //eslint-disable-line
     }
 
     Promise.all([
       createPagesMetadata(sketchfile, dest),
       createIconFiles(sketchfile, dest)
     ])
-    .then(res => {
-      const thisTask = swlog.logSubStart(`organize icon files`);
+      .then(() => {
+        const thisTask = swlog.logSubStart('organize icon files');
 
-      const promises = options.iconFormats.map(format => {
-        return sortByFileFormat(dest, format);
-      });
+        const promises = options.iconFormats.map((format) => { //eslint-disable-line
+          return sortByFileFormat(dest, format);
+        });
 
-      return Promise.all(promises).then(() => {
-        swlog.logSubEnd(thisTask)
+        return Promise.all(promises).then(() => {
+          swlog.logSubEnd(thisTask);
+        });
+      })
+      .then(() => {
+        resolve();
+        swlog.logTaskEnd(startTaskName);
       });
-    })
-    .then(res => {
-      resolve();
-      swlog.logTaskEnd(startTaskName);
-    });
   })
-  .catch(swlog.error);
+    .catch(swlog.error);
 }
 
 module.exports = generateIcons;

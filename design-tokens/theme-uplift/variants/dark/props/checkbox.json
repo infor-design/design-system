@@ -4,26 +4,26 @@
             "checked": {
                 "disabled": {
                     "arrow": {
-                        "value": "{theme.color.palette.slate.30.value}"
+                        "value": "{ids.color.palette.slate.30.value}"
                     },
                     "background": {
-                        "value": "{theme.color.palette.slate.50.value}"
+                        "value": "{ids.color.palette.slate.50.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.slate.50.value}"
+                        "value": "{ids.color.palette.slate.50.value}"
                     }
                 }
             },
             "unchecked": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.slate.60.value}"
+                        "value": "{ids.color.palette.slate.60.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.slate.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.slate.50.value}"
+                        "value": "{ids.color.palette.slate.50.value}"
                     }
                 },
                 "initial": {
@@ -31,10 +31,10 @@
                         "value": "transparent"
                     },
                     "border": {
-                        "value": "{theme.color.palette.slate.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     },
                     "font": {
-                        "value": "{theme.color.font.info.value}"
+                        "value": "{ids.color.font.info.value}"
                     }
                 }
             }

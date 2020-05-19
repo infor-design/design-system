@@ -1,15 +1,15 @@
 {
-    "theme": {
+    "ids": {
         "color": {
             "brand": {
                 "primary": {
-                    "base":     { "value": "{theme.color.palette.azure.90.value}" },
-                    "alt":      { "value": "{theme.color.palette.azure.100.value}" }
+                    "base":     { "value": "{ids.color.palette.azure.90.value}" },
+                    "alt":      { "value": "{ids.color.palette.azure.100.value}" }
                 }
             },
             "font": {
-                "info":  { "value": "{theme.color.palette.graphite.80.value}" },
-                "muted": { "value": "{theme.color.palette.graphite.50.value}" }
+                "info":  { "value": "{ids.color.palette.graphite.80.value}" },
+                "muted": { "value": "{ids.color.palette.graphite.50.value}" }
             }
         }
     }

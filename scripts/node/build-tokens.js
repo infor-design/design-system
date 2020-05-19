@@ -12,7 +12,6 @@ const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 const swlog = require('./utilities/stopwatch-log.js');
-const _ = require('lodash');
 
 const customTransforms = require('./utilities/tokens/custom-transforms');
 const customFormats = require('./utilities/tokens/custom-formats');
@@ -29,7 +28,7 @@ const getPlatforms = (dest, name) => {
         destination: `${name}.json`,
         format: 'json'
       }, {
-        destination: `${name}.custom-properties.css`,
+        destination: `${name}.variables.css`,
         format: 'css/variables'
       }, {
         destination: `${name}.module.js`,

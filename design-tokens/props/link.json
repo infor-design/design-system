@@ -3,22 +3,22 @@
         "color": {
             "disabled": {
                 "font": {
-                    "value": "{theme.color.font.muted.value}"
+                    "value": "{ids.color.font.muted.value}"
                 }
             },
             "hover": {
                 "font": {
-                    "value": "{theme.color.brand.primary.alt.value}"
+                    "value": "{ids.color.brand.primary.alt.value}"
                 }
             },
             "initial": {
                 "font": {
-                    "value": "{theme.color.brand.primary.base.value}"
+                    "value": "{ids.color.brand.primary.base.value}"
                 }
             },
             "visited": {
                 "font": {
-                    "value": "{theme.color.palette.amethyst.60.value}"
+                    "value": "{ids.color.palette.amethyst.60.value}"
                 }
             }
         },

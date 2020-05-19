@@ -3,7 +3,7 @@
  */
 
 const fs = require('fs');
-const _  = require('lodash');
+const _ = require('lodash');
 
 module.exports = [
 /**
@@ -30,10 +30,10 @@ module.exports = [
    */
   {
     name: 'simple-json',
-    formatter: _.template(fs.readFileSync(__dirname + '/simple.json.template' ))
+    formatter: _.template(fs.readFileSync(`${__dirname}/simple.json.template`))
   },
 
-/**
+  /**
    * Creates a Mongoose-specific xml file
    *
    * @example
@@ -50,6 +50,6 @@ module.exports = [
    */
   {
     name: 'mongoose-xml',
-    formatter: _.template(fs.readFileSync(__dirname + '/mongoose.xml.template' ))
+    formatter: _.template(fs.readFileSync(`${__dirname}/mongoose.xml.template`))
   }
 ];

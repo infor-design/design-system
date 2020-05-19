@@ -3,25 +3,25 @@
         "color": {
             "divider": {
                 "border": {
-                    "value": "{theme.color.brand.secondary.lighter.value}"
+                    "value": "{ids.color.brand.secondary.lighter.value}"
                 }
             },
             "item": {
                 "hover": {
                     "background": {
-                        "value": "{theme.color.palette.azure.10.value}"
+                        "value": "{ids.color.palette.azure.10.value}"
                     }
                 },
                 "selected": {
                     "background": {
-                        "value": "{theme.color.brand.secondary.lighter.value}"
+                        "value": "{ids.color.brand.secondary.lighter.value}"
                     }
                 }
             },
             "heading": {
                 "initial": {
                     "font": {
-                        "value": "{theme.color.brand.secondary.base.value}"
+                        "value": "{ids.color.brand.secondary.base.value}"
                     }
                 }
             }

@@ -3,15 +3,15 @@
         "color": {
             "primary": {
                 "background": {
-                    "value": "{theme.color.palette.slate.80.value}"
+                    "value": "{ids.color.palette.slate.80.value}"
                 },
                 "font": {
-                    "value": "{theme.color.palette.white.value}"
+                    "value": "{ids.color.palette.white.value}"
                 }
             },
             "secondary": {
                 "background": {
-                    "value": "{theme.color.palette.slate.70.value}"
+                    "value": "{ids.color.palette.slate.70.value}"
                 }
             }
         }

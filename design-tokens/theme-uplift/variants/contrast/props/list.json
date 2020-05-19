@@ -4,17 +4,17 @@
             "item": {
                 "hover": {
                     "background": {
-                        "value": "{theme.color.brand.secondary.alt.value}"
+                        "value": "{ids.color.brand.secondary.alt.value}"
                     }
                 },
                 "initial": {
                     "font": { 
-                        "value": "{theme.color.font.info.value}"
+                        "value": "{ids.color.font.info.value}"
                     }
                 },
                 "selected": {
                     "background": {
-                        "value": "{theme.color.brand.secondary.base.value}"
+                        "value": "{ids.color.brand.secondary.base.value}"
                     }
                 }
             }

@@ -3,28 +3,28 @@
         "color": {
             "divider": {
                 "border": {
-                    "value": "{theme.color.brand.secondary.base.value}"
+                    "value": "{ids.color.brand.secondary.base.value}"
                 }
             },
             "item": {
                 "hover": {
                     "background": {
-                        "value": "{theme.color.brand.secondary.lighter.value}"
+                        "value": "{ids.color.brand.secondary.lighter.value}"
                     }
                 },
                 "initial": {
-                    "font": { "value": "{theme.color.font.info.value}" }
+                    "font": { "value": "{ids.color.font.info.value}" }
                 },
                 "selected": {
                     "background": {
-                        "value": "{theme.color.body.base.value}"
+                        "value": "{ids.color.body.base.value}"
                     }
                 }
             },
             "heading": {
                 "initial": {
                     "font": {
-                        "value": "{theme.color.brand.secondary.lighter.value}"
+                        "value": "{ids.color.brand.secondary.lighter.value}"
                     }
                 }
             }

@@ -3,7 +3,7 @@
         "color": {
             "primary": {
                 "background": {
-                    "value": "{theme.color.palette.slate.90.value}"
+                    "value": "{ids.color.palette.slate.90.value}"
                 }
             }
         }

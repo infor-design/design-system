@@ -4,30 +4,30 @@
             "checked": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.white.value}"
+                        "value": "{ids.color.palette.white.value}"
                     }
                 }
             },
             "unchecked": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.20.value}"
+                        "value": "{ids.color.palette.graphite.20.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{ids.color.palette.graphite.50.value}"
                     }
                 },
                 "hover": {
                     "border": {
-                        "value": "{theme.color.palette.black.value}"
+                        "value": "{ids.color.palette.black.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "value": "{theme.color.palette.white.value}"
+                        "value": "{ids.color.palette.white.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.graphite.80.value}"
+                        "value": "{ids.color.palette.graphite.80.value}"
                     }
                 }
             }
@@ -35,7 +35,7 @@
         "shadow": {
             "focus": {
                 "boxshadow": {
-                    "value": "0 0 0 1px {theme.color.palette.graphite.30.value}, 0 0 0 2px {theme.color.palette.azure.70.value}, 0 0 4px 5px rgba(41, 41, 41, 0.3)"
+                    "value": "0 0 0 1px {ids.color.palette.graphite.30.value}, 0 0 0 2px {ids.color.palette.azure.70.value}, 0 0 4px 5px rgba(41, 41, 41, 0.3)"
                 }
             }
         }

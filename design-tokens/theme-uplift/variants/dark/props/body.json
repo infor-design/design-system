@@ -3,7 +3,7 @@
         "color": {
             "primary": {
                 "font": {
-                    "value": "{theme.color.font.base.value}"
+                    "value": "{ids.color.font.base.value}"
                 }
             }
         }

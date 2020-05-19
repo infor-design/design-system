@@ -1,33 +1,33 @@
 {
-    "theme": {
+    "ids": {
         "color": {
             "brand": {
                 "primary": {
-                    "base":     { "value": "{theme.color.palette.azure.90.value}" },
-                    "alt":      { "value": "{theme.color.palette.azure.100.value}" }
+                    "base":     { "value": "{ids.color.palette.azure.90.value}" },
+                    "alt":      { "value": "{ids.color.palette.azure.100.value}" }
                 },
                 "secondary": {
-                    "lighter": { "value": "{theme.color.palette.slate.80.value}" },
-                    "base":     { "value": "{theme.color.palette.slate.90.value}" },
-                    "alt":      { "value": "{theme.color.palette.slate.100.value}" }
+                    "lighter": { "value": "{ids.color.palette.slate.80.value}" },
+                    "base":     { "value": "{ids.color.palette.slate.90.value}" },
+                    "alt":      { "value": "{ids.color.palette.slate.100.value}" }
                 }
             },
             "border": {
-                "lighter": { "value": "{theme.color.palette.slate.80.value}" },
-                "base": { "value": "{theme.color.palette.slate.90.value}" },
-                "darker": { "value": "{theme.color.palette.slate.100.value}" }
+                "lighter": { "value": "{ids.color.palette.slate.80.value}" },
+                "base": { "value": "{ids.color.palette.slate.90.value}" },
+                "darker": { "value": "{ids.color.palette.slate.100.value}" }
             },
             "font": {
-                "base":  { "value": "{theme.color.palette.slate.90.value}" },
-                "info":  { "value": "{theme.color.palette.graphite.100.value}" },
-                "muted": { "value": "{theme.color.palette.graphite.90.value}" }
+                "base":  { "value": "{ids.color.palette.slate.90.value}" },
+                "info":  { "value": "{ids.color.palette.graphite.100.value}" },
+                "muted": { "value": "{ids.color.palette.graphite.90.value}" }
             },
             "icon": {
-                "base": { "value": "{theme.color.palette.slate.90.value}" }
+                "base": { "value": "{ids.color.palette.slate.90.value}" }
             },
             "body": {
-                "base" : { "value": "{theme.color.palette.graphite.10.value}" },
-                "lightest": { "value": "{theme.color.palette.white.value}" }
+                "base" : { "value": "{ids.color.palette.graphite.10.value}" },
+                "lightest": { "value": "{ids.color.palette.white.value}" }
             }
         }
     }

@@ -4,12 +4,12 @@
             "unchecked": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.brand.primary.contrast.value}"
+                        "value": "{ids.color.brand.primary.contrast.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "value": "{theme.color.palette.white.value}"
+                        "value": "{ids.color.palette.white.value}"
                     }
                 }
             }

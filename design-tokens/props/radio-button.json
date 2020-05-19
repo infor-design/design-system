@@ -4,7 +4,7 @@
             "checked": {
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.body.base.value}"
+                        "value": "{ids.color.body.base.value}"
                     },
                     "border": {
                         "value": "{radio.color.unchecked.disabled.border.value}"
@@ -12,10 +12,10 @@
                 },
                 "initial": {
                     "background": {
-                        "value": "{theme.color.brand.primary.contrast.value}"
+                        "value": "{ids.color.brand.primary.contrast.value}"
                     },
                     "fill": {
-                        "value": "{theme.color.brand.primary.base.value}"
+                        "value": "{ids.color.brand.primary.base.value}"
                     }
                 }
             },
@@ -25,15 +25,15 @@
                         "value": "transparent"
                     },
                     "border": {
-                        "value": "{theme.color.border.lighter.value}"
+                        "value": "{ids.color.border.lighter.value}"
                     },
                     "label": {
-                        "value": "{theme.color.font.muted.value}"
+                        "value": "{ids.color.font.muted.value}"
                     }
                 },
                 "hover": {
                     "border": {
-                        "value": "{theme.color.border.darker.value}"
+                        "value": "{ids.color.border.darker.value}"
                     }
                 },
                 "initial": {
@@ -41,10 +41,10 @@
                         "value": "transparent"
                     },
                     "border": {
-                        "value": "{theme.color.border.base.value}"
+                        "value": "{ids.color.border.base.value}"
                     },
                     "label": {
-                        "value": "{theme.color.font.base.value}"
+                        "value": "{ids.color.font.base.value}"
                     }
                 }
             }
@@ -52,7 +52,7 @@
         "shadow": {
             "focus": {
                 "boxshadow": {
-                    "value": "0 0 0 1px {theme.color.boxshadow.base.value}, 0 0 0 2px {theme.color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
+                    "value": "0 0 0 1px {ids.color.boxshadow.base.value}, 0 0 0 2px {ids.color.brand.primary.base.value}, 0 0 4px 5px rgba(54, 138, 192, 0.03)"
                 }
             }
         },

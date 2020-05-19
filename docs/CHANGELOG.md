@@ -1,5 +1,20 @@
 # What's New with Infor Design System
 
+## v3.0.0
+
+### v3.0.0 Fixes and Breaking Changes
+
+- `[General]` Removed extra copy of token from the v2 name. Please use `/dist/theme-*/tokens`.
+- `[General]` All tokens renamed from The `theme` to `ids`. This was needed as the theme is redundant and the variables had to be name spaced.
+- '[Tokens]' - Removed `ids.number.opacity.disabled.value` please use `theme.number.opacity.disabled.value` instead.
+- '[Tokens]' - Removed `ids.size.font.line.height` please use `theme.number.font.line.height` options instead.
+- '[Tokens]' - Removed `ids.size.font.line.height` please use `theme.number.font.line.height` options instead.
+- '[Tokens]' - Removed `dist/*custom-properties.css` please use `dist/*.variables.css`instead if using css variables.
+- '[General]' - Added eslint but didnt fix everything yet.
+- '[Icons]' - Added a path-data.json for each set of icons so they can be imported as JSON.
+- '[Icons]' - Made all icons compress to single paths.
+- '[Tokens]' - Additional font size tokens have been added. The old tokens ($theme-size-font-xm, $theme-size-font-sm, $theme-size-font-md, $theme-size-font-lg, $theme-size-font-xl) will eventually be removed. Please begin using $theme-size-font-px{size} instead of $theme-size-font-{size}.
+
 ## v2.9.9
 
 ### v2.9.9 Fixes

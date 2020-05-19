@@ -3,13 +3,13 @@
         "color": {
             "divider": {
                 "border": {
-                    "value": "{theme.color.palette.graphite.60.value}"
+                    "value": "{ids.color.palette.graphite.60.value}"
                 }
             },
             "item": {
                 "hover": {
                     "background": {
-                        "value": "{theme.color.palette.slate.60.value}"
+                        "value": "{ids.color.palette.slate.60.value}"
                     }
                 }
             }
