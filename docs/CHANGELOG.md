@@ -15,6 +15,12 @@
 - '[Icons]' - Made all icons compress to single paths.
 - '[Tokens]' - Additional font size tokens have been added. The old tokens ($theme-size-font-xm, $theme-size-font-sm, $theme-size-font-md, $theme-size-font-lg, $theme-size-font-xl) will eventually be removed. Please begin using $theme-size-font-px{size} instead of $theme-size-font-{size}.
 
+## v2.9.10
+
+### v2.9.10 Fixes
+
+- `[Icons]` Changed the uplift amend icon to be more meaningful.
+
 ## v2.9.9
 
 ### v2.9.9 Fixes
