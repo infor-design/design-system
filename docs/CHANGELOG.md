@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v2.9.10
+
+### v2.9.10 Fixes
+
+- `[Icons]` Changed the uplift amend icon to be more meaningful.
+
 ## v2.9.9
 
 ### v2.9.9 Fixes
