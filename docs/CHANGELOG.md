@@ -14,6 +14,7 @@
 - '[Icons]' - Added a path-data.json for each set of icons so they can be imported as JSON.
 - '[Icons]' - Made all icons compress to single paths.
 - '[Tokens]' - Additional font size tokens have been added. The old tokens ($theme-size-font-xm, $theme-size-font-sm, $theme-size-font-md, $theme-size-font-lg, $theme-size-font-xl) will eventually be removed. Please begin using $theme-size-font-px{size} instead of $theme-size-font-{size}.
+- '[Font]' - The included source-sans font was updated to version 3.006R.
 
 ## v2.9.10
 
