@@ -123,14 +123,17 @@ function optimizeSVGs(src) {
   let iconJSON = '{\n';
 
   // Divide each optimization into a promise
-  const svgPromises = svgFiles.map(async filepath => { //eslint-disable-line
+  const last = svgFiles.length;
+  svgFiles.sort();
+  const svgPromises = svgFiles.map(async (filepath, mapIndex)=> { //eslint-disable-line
     try {
       const data = await readFile(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
 
       const svgDData = /d="(.*?)"/g;
       const count = /<path/g;
-      iconJSON += `"${path.basename(filepath, '.svg')}": "${svgDData.exec(dataOptimized.data)[1]}"\n`;
+
+      iconJSON += `"${path.basename(filepath, '.svg')}": "${svgDData.exec(dataOptimized.data)[1]}"${mapIndex + 1 === (last) ? '' : ','}\n`;
       if (count.exec(dataOptimized.data).length !== 1) {
         swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
       }
