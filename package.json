@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "3.0.0-beta.0",
+  "version": "3.0.0-beta.1",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "postinstall": "node ./scripts/node/postinstall.js",
