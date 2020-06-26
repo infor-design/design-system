@@ -16,6 +16,13 @@
 - '[Tokens]' - Additional font size tokens have been added. The old tokens ($theme-size-font-xm, $theme-size-font-sm, $theme-size-font-md, $theme-size-font-lg, $theme-size-font-xl) will eventually be removed. Please begin using $theme-size-font-px{size} instead of $theme-size-font-{size}.
 - '[Font]' - The included source-sans font was updated to version 3.006R.
 
+## v2.9.11
+
+### v2.9.11 Fixes
+
+- `[Icons]` Changed the tree node icon to be more meaningful in uplift theme.
+- `[Icons]` Added a print-preview icon. This replaces the update-preview icon which has confusing meaning but was not removed.
+
 ## v2.9.10
 
 ### v2.9.10 Fixes
