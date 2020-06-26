@@ -1,5 +1,12 @@
 # What's New with Infor Design System
 
+## v2.9.11
+
+### v2.9.11 Fixes
+
+- `[Icons]` Changed the tree node icon to be more meaningful in uplift theme.
+- `[Icons]` Added a print-preview icon. This replaces the update-preview icon which has confusing meaning but was not removed.
+
 ## v2.9.10
 
 ### v2.9.10 Fixes
