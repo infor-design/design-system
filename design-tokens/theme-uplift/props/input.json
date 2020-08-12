@@ -28,10 +28,10 @@
             },
             "readonly": {
                 "background": {
-                    "value": "{ids.color.palette.graphite.20.value}"
+                    "value": "{ids.color.palette.slate.20.value}"
                 },
                 "border": {
-                    "value": "{ids.color.palette.graphite.40.value}"
+                    "value": "{ids.color.palette.slate.40.value}"
                 },
                 "font": {
                     "value": "{ids.color.palette.black.value}"

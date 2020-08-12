@@ -16,6 +16,7 @@ const compareTokens = require('./utilities/compare-tokens');
 const gFonts = require('./build-font');
 const gIcons = require('./build-icons');
 const gMeta = require('./build-meta.js');
+const gMixins = require('./build-mixins.js');
 const gTokens = require('./build-tokens');
 const swlog = require('./utilities/stopwatch-log.js');
 
@@ -79,6 +80,18 @@ if (args.build.includes('meta')) {
   promises.push(() => {
     const filename = 'metadata.json';
     return gMeta(`design-tokens/${filename}`, `dist/${filename}`, pkgjson.version);
+  });
+}
+
+if (args.build.includes('mixin')) {
+  promises.push(() => {
+    const filename = 'dist/theme-uplift/tokens/web/theme-uplift-mixins.scss';
+    return gMixins(filename);
+  });
+
+  promises.push(() => {
+    const filename = 'dist/theme-soho/tokens/web/theme-soho-mixins.scss';
+    return gMixins(filename);
   });
 }
 

@@ -19,14 +19,14 @@
             },
             "font": {
                 "base":  { "value": "{ids.color.palette.slate.90.value}" },
-                "info":  { "value": "{ids.color.palette.graphite.100.value}" },
-                "muted": { "value": "{ids.color.palette.graphite.90.value}" }
+                "info":  { "value": "{ids.color.palette.slate.100.value}" },
+                "muted": { "value": "{ids.color.palette.slate.90.value}" }
             },
             "icon": {
                 "base": { "value": "{ids.color.palette.slate.90.value}" }
             },
             "body": {
-                "base" : { "value": "{ids.color.palette.graphite.10.value}" },
+                "base" : { "value": "{ids.color.palette.slate.10.value}" },
                 "lightest": { "value": "{ids.color.palette.white.value}" }
             }
         }

@@ -40,23 +40,23 @@
             "secondary": {
                 "active": {
                     "background": {
-                        "value": "{ids.color.palette.graphite.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     }
                 },
                 "hover": {
                     "background": {
-                        "value": "{ids.color.palette.graphite.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "value": "{ids.color.palette.graphite.30.value}"
+                        "value": "{ids.color.palette.slate.30.value}"
                     },
                     "font": {
-                        "value": "{ids.color.palette.graphite.80.value}"
+                        "value": "{ids.color.palette.slate.80.value}"
                     },
                     "icon": {
-                        "value": "{ids.color.palette.graphite.80.value}"
+                        "value": "{ids.color.palette.slate.80.value}"
                     }
                 },
                 "disabled": {
@@ -87,7 +87,7 @@
                 },
                 "disabled": {
                     "font": {
-                        "value": "{ids.color.palette.graphite.30.value}"
+                        "value": "{ids.color.palette.slate.30.value}"
                     },
                     "icon": {
                         "value": "{ids.color.palette.slate.30.value}"
@@ -95,7 +95,7 @@
                 },
                 "initial": {
                     "font": {
-                        "value": "{ids.color.palette.graphite.70.value}"
+                        "value": "{ids.color.palette.slate.70.value}"
                     },
                     "icon": {
                         "value": "{ids.color.palette.slate.70.value}"

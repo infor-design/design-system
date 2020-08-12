@@ -4,29 +4,29 @@
             "checked": {
                 "disabled": {
                     "arrow": {
-                        "value": "{ids.color.palette.graphite.20.value}"
+                        "value": "{ids.color.palette.slate.20.value}"
                     },
                     "background": {
-                        "value": "{ids.color.palette.graphite.60.value}"
+                        "value": "{ids.color.palette.slate.60.value}"
                     },
                     "border": {
-                        "value": "{ids.color.palette.graphite.60.value}"
+                        "value": "{ids.color.palette.slate.60.value}"
                     },
                     "font": {
-                        "value": "{ids.color.palette.graphite.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     }
                 }
             },
             "unchecked": {
                 "disabled": {
                     "background": {
-                        "value": "{ids.color.palette.graphite.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     },
                     "border": {
-                        "value": "{ids.color.palette.graphite.60.value}"
+                        "value": "{ids.color.palette.slate.60.value}"
                     },
                     "font": {
-                        "value": "{ids.color.palette.graphite.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     }
                 }
             }
