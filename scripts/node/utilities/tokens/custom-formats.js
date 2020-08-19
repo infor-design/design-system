@@ -30,7 +30,7 @@ module.exports = [
    */
   {
     name: 'simple-json',
-    formatter: _.template(fs.readFileSync(`${__dirname}/simple.json.template`))
+    formatter: _.template(fs.readFileSync(`${__dirname}/simple.json.template`)),
   },
 
   /**
@@ -50,6 +50,6 @@ module.exports = [
    */
   {
     name: 'mongoose-xml',
-    formatter: _.template(fs.readFileSync(`${__dirname}/mongoose.xml.template`))
-  }
+    formatter: _.template(fs.readFileSync(`${__dirname}/mongoose.xml.template`)),
+  },
 ];

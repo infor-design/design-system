@@ -14,13 +14,6 @@
         "isCritical": false
     },
     {
-        "title": "The original dist theme-*.xml files will be removed",
-        "versionNotifyStart": "2.5.0-dev",
-        "versionNotifyEnd": "3.0.0",
-        "message": "As of v{versionNotifyStart}, all \"/dist/theme-*/tokens/web/theme-*.xml\" token files will be deprecated. Use the \"/dist/theme-*/tokens/web/theme-*.mongoose.xml\" files instead.",
-        "isCritical": false
-    },
-    {
         "title": "Token names for type sizes will change",
         "versionNotifyStart": "2.0.0",
         "versionNotifyEnd": "3.0.0",

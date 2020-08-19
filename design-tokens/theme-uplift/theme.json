@@ -33,7 +33,7 @@
             "font": {
                 "base":  { "value": "{ids.color.palette.slate.100.value}" },
                 "info":  { "value": "{ids.color.palette.slate.80.value}" },
-                "muted": { "value": "{ids.color.palette.slate.70.value}" }
+                "muted": { "value": "{ids.color.palette.slate.60.value}" }
             },
             "icon": {
                 "base": { "value": "{ids.color.palette.slate.80.value}" }

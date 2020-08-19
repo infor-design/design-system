@@ -120,7 +120,7 @@ module.exports = {
         danger: '--ids-color-status-danger',
         success: '--ids-color-status-success',
         warning: '--ids-color-status-warning',
-      }
+      },
     },
     spacing: {
       '0': '0',
