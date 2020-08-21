@@ -22,9 +22,8 @@ const writeFile = util.promisify(fs.writeFile);
 
 const options = {
   binaryPath: '/Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool',
-  iconFormats: ['svg', 'png']
+  iconFormats: ['svg', 'png'],
 };
-
 
 /** @constant
  *  @desciption Remove fill="none" for custom styling. Requires`fill: transparent` in CSS
@@ -36,7 +35,7 @@ const customSvgoRemoveGroupFill = {
     if (item.isElem('g')) {
       item.removeAttr('fill');
     }
-  }
+  },
 };
 
 /** @constant
@@ -51,10 +50,10 @@ const customSvgoNonScalingStroke = {
         name: 'vector-effect',
         value: 'non-scaling-stroke',
         prefix: '',
-        local: ''
+        local: '',
       });
     }
-  }
+  },
 };
 
 /** @constant
@@ -69,10 +68,10 @@ const customSvgoFillStroke = {
         name: 'stroke',
         value: 'none',
         prefix: '',
-        local: ''
+        local: '',
       });
     }
-  }
+  },
 };
 
 // -------------------------------------
@@ -95,7 +94,6 @@ function sketchtoolExec(command) {
   return execSync(`${options.binaryPath} ${command}`).toString();
 }
 
-
 /**
  * Optimize the generated .svg icon files
  * @param {String} src - The source directory for svgs
@@ -115,19 +113,20 @@ function optimizeSVGs(src) {
       { mergePaths: true },
       { customSvgoRemoveGroupFill },
       { customSvgoNonScalingStroke },
-      { customSvgoFillStroke }
-    ]
+      { customSvgoFillStroke },
+    ],
   });
 
   const svgFiles = glob.sync(`${src}/*.svg`);
   let iconJSON = '{\n';
 
   // Divide each optimization into a promise
-  const last = svgFiles.length;
   svgFiles.sort();
+  const last = svgFiles.length;
+
   const svgPromises = svgFiles.map(async (filepath, mapIndex)=> { //eslint-disable-line
     try {
-      const data = await readFile(filepath, 'utf8');
+      const data = fs.readFileSync(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
 
       const svgDData = /d="(.*?)"/g;
@@ -138,14 +137,15 @@ function optimizeSVGs(src) {
         swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
       }
 
-      await writeFile(filepath, dataOptimized.data, 'utf-8');
+      await fs.writeFileSync(filepath, dataOptimized.data, 'utf-8');
     } catch (err) {
       swlog.error(err);
     }
   });
 
   return Promise.all(svgPromises).then(() => {
-    writeFile(`${src}/path-data.json`, `${iconJSON}}`, 'utf-8');
+    iconJSON = iconJSON.replace(',\n}', '\n}');
+    fs.writeFileSync(`${src}/path-data.json`, `${iconJSON}}`, 'utf-8');
     swlog.logSubEnd(startOptimizeTaskName);
   }).catch(swlog.error);
 }
@@ -168,7 +168,7 @@ function createIconFiles(srcFile, dest) {
       `--formats=${options.iconFormats.join(',')}`,
       '--include-symbols=NO',
       '--save-for-web=YES',
-      `--output=${dest}`
+      `--output=${dest}`,
     ];
 
     const outputStr = sketchtoolExec(exportArtboardsOptions.join(' '));
@@ -275,7 +275,7 @@ function createPagesMetadata(src, dest) {
         && !ignoredPages.includes(dataObj.pagesAndArtboards[pageId].name)) {
         const tempObj = {
           name: dataObj.pagesAndArtboards[pageId].name,
-          icons: []
+          icons: [],
         };
 
         for (const ab in dataObj.pagesAndArtboards[pageId].artboards) { //eslint-disable-line
@@ -292,7 +292,6 @@ function createPagesMetadata(src, dest) {
     resolve();
   });
 }
-
 
 // -------------------------------------
 //   Main
@@ -315,7 +314,7 @@ function generateIcons(sketchfile, dest) {
 
     Promise.all([
       createPagesMetadata(sketchfile, dest),
-      createIconFiles(sketchfile, dest)
+      createIconFiles(sketchfile, dest),
     ])
       .then(() => {
         const thisTask = swlog.logSubStart('organize icon files');
