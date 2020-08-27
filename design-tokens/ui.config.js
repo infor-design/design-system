@@ -139,15 +139,12 @@ module.exports = {
     },
     backgroundColor: theme => theme('colors'),
     backgroundOpacity: theme => theme('opacity'),
-    borderColor: theme => ({
-      ...theme('colors'),
-      default: theme('colors.slate.40', 'currentColor'),
-    }),
+    borderColor: theme => theme('colors'),
     borderRadius: {
       none: '0',
-      sm: '1px',
       default: '2px',
-      md: '5px',
+      md: '4px',
+      lg: '15px',
       round: '50%',
     },
     borderWidth: {
@@ -299,6 +296,6 @@ module.exports = {
       '9000': '9000',
       '10000': '10000',
       '10020': '10020',
-    }
-  }
-}
+    },
+  },
+};

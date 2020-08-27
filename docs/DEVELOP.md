@@ -12,7 +12,7 @@
 ## Use NPM Link
 
 - Go to infor-design folder and type `npm link` that sets up the symbolic link
-- Go to the ids-enterprise folder and type `npm link ids-identity`
+- Go to the ids-enterprise or enterprise-wc folder and type `npm link ids-identity`
 - If you make a change to the tokens:
     - in infor design folder change to a token
     - run `npm run build`

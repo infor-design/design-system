@@ -13,5 +13,11 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': ['off'],
+    'no-plusplus': ['off'],
+    'no-continue': ['off'],
+    'no-restricted-syntax': ['off'],
+    'quote-props': ['off'],
+    'arrow-parens': ['off'],
+    'comma-dangle': ['off'],
   },
 };

@@ -90,16 +90,21 @@ const makeHostCss = (_src, dest) => {
   files.forEach((file) => {
     let fileContents = fs.readFileSync(file, 'utf8');
     let destFileContents = '';
-    const destFile = file.replace('variables.css', 'host.variables.css');
+    const destFile = file.replace('variables.css', 'host.variables.scss');
 
     fileContents = fileContents.replace(':root {', ':host {');
     fileContents.split(/\r?\n/).forEach((line) => {
-      if (line.indexOf('--ids-color') > -1
-         || line.indexOf('--ids-size') > -1
-         || line.indexOf('--ids-number') > -1
-         || line.indexOf('{') > -1
-         || line.indexOf('}') > -1) {
-        destFileContents += `${line}\n`;
+      let fileLine = line;
+      if (fileLine.indexOf('--ids-color') > -1
+         || fileLine.indexOf('--ids-size') > -1
+         || fileLine.indexOf('--ids-number') > -1
+         || fileLine.indexOf('--ids-font') > -1
+         || fileLine.indexOf('{') > -1
+         || fileLine.indexOf('}') > -1) {
+        if (line.indexOf('rem') > -1) {
+          fileLine = fileLine.replace('rem', 'px').replace('.', '');
+        }
+        destFileContents += `${fileLine}\n`;
       }
     });
 
