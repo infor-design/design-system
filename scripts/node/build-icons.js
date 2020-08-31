@@ -270,7 +270,7 @@ function createPagesMetadata(src, dest) {
     // Loop through pages, then arboards, to create a
     // simple mapping of names (ignoring certain pages)
     // and naming pages "categories" and artboards "icons"
-    for (const pageId in dataObj.pagesAndArtboards) { //eslint-disable-line
+    for (const pageId in dataObj.pagesAndArtboards) {
       if (dataObj.pagesAndArtboards.hasOwnProperty(pageId) //eslint-disable-line
         && !ignoredPages.includes(dataObj.pagesAndArtboards[pageId].name)) {
         const tempObj = {
