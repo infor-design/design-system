@@ -28,6 +28,9 @@
             "body": {
                 "base" : { "value": "{ids.color.palette.slate.10.value}" },
                 "lightest": { "value": "{ids.color.palette.white.value}" }
+            },
+            "status": {
+                "danger" : { "value": "#7B0F11" }
             }
         }
     }

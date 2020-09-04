@@ -154,8 +154,9 @@ module.exports = {
       '4': '4px',
     },
     boxShadow: {
-      input: '0 0 4px 3px rgba(54, 138, 192, 0.3)',
-      error: '0 0 4px 3px rgba(218, 18, 23, 0.3)'
+      '': '0 0 3px 2px rgba(54, 138, 192, 0.3)',
+      error: '0 0 3px 2px rgba(218, 18, 23, 0.3)',
+      none: 'none'
     },
     cursor: {
       auto: 'auto',

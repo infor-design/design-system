@@ -67,7 +67,7 @@ const cssKeys = {
   'min-h': 'min-height',
   'min-w': 'min-width',
   p: 'padding',
-  stroke: 'stroke-width',
+  stroke: 'stroke-width'
 };
 
 const mapCssName = (key, prop) => {
@@ -198,6 +198,9 @@ const staticProps = `@mixin align-baseline {
 @mixin inline-flex {
   display: inline-flex;
 }
+@mixin outline-none {
+  outline: 0;
+}
 `;
 
 /**
@@ -241,7 +244,7 @@ function generateMixins(dest) {
           continue;
         }
 
-        mixinData += `@mixin ${mapPropName(entries[i][0])}-${mapPropName(key)} {
+        mixinData += `@mixin ${mapPropName(entries[i][0])}${mapPropName(key) ? `-${mapPropName(key)}` : ''} {
   ${mapCssName(name, entries[i][0])}: ${mapKeyValue(entries[i][1][key])};
 }
 `;
