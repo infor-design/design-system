@@ -153,6 +153,12 @@ module.exports = {
       '2': '2px',
       '4': '4px',
     },
+    bottom: {
+      '8': '8px',
+      '16': '16px',
+      '24': '24px',
+      '32': '32px',
+    },
     boxShadow: {
       '': '0 0 3px 2px rgba(54, 138, 192, 0.3)',
       error: '0 0 3px 2px rgba(218, 18, 23, 0.3)',
@@ -202,6 +208,12 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
     }),
+    left: {
+      '8': '8px',
+      '16': '16px',
+      '24': '24px',
+      '32': '32px',
+    },
     letterSpacing: {
       normal: '0',
       wide: '0.2px'
@@ -238,6 +250,18 @@ module.exports = {
       '100': '1',
     },
     padding: theme => theme('spacing'),
+    position: {
+      relative: 'relative',
+      absolute: 'absolute',
+      static: 'static',
+      fixed: 'fixed'
+    },
+    right: {
+      '8': '8px',
+      '16': '16px',
+      '24': '24px',
+      '32': '32px',
+    },
     stroke: {
       current: 'currentColor',
     },
@@ -247,6 +271,12 @@ module.exports = {
       '2': '2',
     },
     textColor: theme => theme('colors'),
+    top: {
+      '8': '8px',
+      '16': '16px',
+      '24': '24px',
+      '32': '32px',
+    },
     width: theme => ({
       auto: 'auto',
       ...theme('spacing'),
@@ -297,6 +327,6 @@ module.exports = {
       '9000': '9000',
       '10000': '10000',
       '10020': '10020',
-    },
+    }
   },
 };
