@@ -45,7 +45,7 @@ const propKeys = {
   padding: 'p',
   placeholderOpacity: 'placeholder-opacity',
   position: 'position',
-  rigth: 'right',
+  right: 'right',
   spacing: 'm',
   strokeWidth: 'stroke',
   textColor: 'text',
