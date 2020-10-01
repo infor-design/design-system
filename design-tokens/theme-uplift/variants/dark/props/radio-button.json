@@ -7,10 +7,10 @@
                         "value": "transparent"
                     },
                     "border": {
-                        "value": "{theme.color.border.base.value}"
+                        "value": "{ids.color.border.base.value}"
                     },
                     "label": {
-                        "value": "{theme.color.font.info.value}"
+                        "value": "{ids.color.font.info.value}"
                     }
                 },
                 "disabled": {

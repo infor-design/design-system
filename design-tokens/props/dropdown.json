@@ -4,11 +4,11 @@
             "initial": {
                 "boxshadow": {
                     "base": {
-                        "value": "{theme.color.boxshadow.base.value}"
+                        "value": "{ids.color.boxshadow.base.value}"
                     }
                 },
                 "font": {
-                    "value": "{theme.color.font.base.value}"
+                    "value": "{ids.color.font.base.value}"
                 },
                 "icon": {
                     "value": "{dropdown.color.initial.font.value}"
@@ -16,31 +16,31 @@
             },
             "selected": {
                 "background": {
-                    "value": "{theme.color.brand.primary.base.value}"
+                    "value": "{ids.color.brand.primary.base.value}"
                 },
                 "font": {
-                    "value": "{theme.color.palette.white.value}"
+                    "value": "{ids.color.palette.white.value}"
                 }
             }
         },
         "shadow": {
             "initial": {
                 "boxshadow": {
-                    "value": "0 5px 5px {theme.color.boxshadow.base.value}"
+                    "value": "0 5px 5px {ids.color.boxshadow.base.value}"
                 }
             }
         },
         "size": {
             "border": {
                 "radius": {
-                    "value": "{theme.number.border.radius.md.value}"
+                    "value": "{ids.number.border.radius.md.value}"
                 },
                 "width": {
                     "value": "{input.size.border.width.value}"
                 }
             },
             "font": {
-                "value": "{theme.size.font.base.value}"
+                "value": "{ids.size.font.base.value}"
             },
             "height": {
                 "max": {

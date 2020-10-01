@@ -11,10 +11,9 @@ function isFontSize(prop) {
 }
 
 module.exports = [
-
   /**
    * Transforms the value into an 8-digit hex string
-   * with the alpha channel at the begging
+   * with the alpha channel at the beginning
    *
    * ```js
    * // Returns:
@@ -24,13 +23,11 @@ module.exports = [
   {
     name: 'mongoose:color/hex8android',
     type: 'value',
-    matcher: prop => {
-      return prop.attributes.type === 'color';
+    matcher: (prop) => prop.attributes.type === 'color',
+    transformer: (prop) => {
+      const str = tinyColor(prop.value).toHex8();
+      return `#${str.slice(6)}${str.slice(0, 6)}`;
     },
-    transformer: prop => {
-      var str = tinyColor(prop.value).toHex8();
-      return '#' + str.slice(6) + str.slice(0,6);
-    }
   },
 
   /**
@@ -47,12 +44,12 @@ module.exports = [
     name: 'mongoose:size/remToInt',
     type: 'value',
     matcher: isFontSize,
-    transformer: prop => {
+    transformer: (prop) => {
       if (prop.value.endsWith('rem')) {
         const res = parseFloat(prop.value, 10) * 10;
         return res === 'NaN' ? prop.value : `${res}`;
       }
       return prop.value;
-    }
-  }
+    },
+  },
 ];

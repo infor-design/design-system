@@ -3,7 +3,7 @@
         "color": {
             "initial": {
                 "font": {
-                    "value": "{theme.color.palette.white.value}"
+                    "value": "{ids.color.palette.white.value}"
                 },
                 "icon": {
                     "value": "{dropdown.color.initial.font.value}"

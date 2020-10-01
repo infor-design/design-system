@@ -1,8 +1,8 @@
 {
-    "theme": {
+    "ids": {
         "color": {
             "status": {
-                "base":    { "value": "{theme.color.brand.primary.alt.value}" },
+                "base":    { "value": "{ids.color.brand.primary.alt.value}" },
                 "caution": { "value": "#FFD726" },
                 "danger":  { "value": "#DA1217" },
                 "success": { "value": "#2AC371" },
@@ -10,37 +10,37 @@
             },
             "brand": {
                 "primary": {
-                    "lighter":  { "value": "{theme.color.palette.azure.40.value}" },
-                    "base":     { "value": "{theme.color.palette.azure.60.value}" },
-                    "alt":      { "value": "{theme.color.palette.azure.70.value}" },
-                    "contrast": { "value": "{theme.color.palette.white.value}" }
+                    "lighter":  { "value": "{ids.color.palette.azure.40.value}" },
+                    "base":     { "value": "{ids.color.palette.azure.60.value}" },
+                    "alt":      { "value": "{ids.color.palette.azure.70.value}" },
+                    "contrast": { "value": "{ids.color.palette.white.value}" }
                 },
                 "secondary": {
-                    "lighter": { "value": "{theme.color.palette.slate.40.value}" },
-                    "base":     { "value": "{theme.color.palette.slate.60.value}" },
-                    "alt":      { "value": "{theme.color.palette.slate.70.value}" },
-                    "contrast": { "value": "{theme.color.palette.slate.90.value}" }
+                    "lighter": { "value": "{ids.color.palette.slate.40.value}" },
+                    "base":     { "value": "{ids.color.palette.slate.60.value}" },
+                    "alt":      { "value": "{ids.color.palette.slate.70.value}" },
+                    "contrast": { "value": "{ids.color.palette.slate.90.value}" }
                 }
             },
             "boxshadow": {
-                "base": { "value": "{theme.color.palette.slate.10.value}" }
+                "base": { "value": "{ids.color.palette.slate.10.value}" }
             },
             "border": {
-                "lighter": { "value": "{theme.color.palette.slate.60.value}" },
-                "base": { "value": "{theme.color.palette.slate.80.value}" },
-                "darker": { "value": "{theme.color.palette.slate.90.value}" }
+                "lighter": { "value": "{ids.color.palette.slate.60.value}" },
+                "base": { "value": "{ids.color.palette.slate.80.value}" },
+                "darker": { "value": "{ids.color.palette.slate.90.value}" }
             },
             "font": {
-                "base":  { "value": "{theme.color.palette.slate.100.value}" },
-                "info":  { "value": "{theme.color.palette.slate.80.value}" },
-                "muted": { "value": "{theme.color.palette.slate.70.value}" }
+                "base":  { "value": "{ids.color.palette.slate.100.value}" },
+                "info":  { "value": "{ids.color.palette.slate.80.value}" },
+                "muted": { "value": "{ids.color.palette.slate.60.value}" }
             },
             "icon": {
-                "base": { "value": "{theme.color.palette.slate.80.value}" }
+                "base": { "value": "{ids.color.palette.slate.80.value}" }
             },
             "body": {
-                "base" : { "value": "{theme.color.palette.slate.10.value}" },
-                "lightest": { "value": "{theme.color.palette.white.value}" }
+                "base" : { "value": "{ids.color.palette.slate.10.value}" },
+                "lightest": { "value": "{ids.color.palette.white.value}" }
             }
         },
         "font": {
@@ -51,7 +51,7 @@
         },
         "size": {
             "font": {
-                "base": { "value": "{theme.size.font.sm.value}" },
+                "base": { "value": "{ids.size.font.sm.value}" },
                 "xs":   { "value": "1.4rem" },
                 "sm":   { "value": "1.6rem" },
                 "md":   { "value": "2.2rem" },
@@ -68,16 +68,7 @@
                 "px40":   { "value": "4.0rem" },
                 "px48":   { "value": "4.8rem" },
                 "px60":   { "value": "6.0rem" },
-                "px72":   { "value": "7.2rem" },
-                "line": {
-                    "height": {
-                        "value": "2.2rem",
-                        "comment": "DEPRECATED: Use one of theme.number.font.line.height options instead.",
-                        "attributes": {
-                            "deprecated": true
-                        }
-                    }
-                }
+                "px72":   { "value": "7.2rem" }
             },
             "icon": {
                 "height": {

@@ -6,10 +6,16 @@ Mac users should install the OTF version by going into `/font/OTF/` and installi
 
 ## Source Sans Pro
 
-Source Sans Pro is a set of OpenType fonts that have been designed to work well
-in user interface (UI) environments. In addition to a functional OpenType font, this open
-source project provides all of the source files that were used to build this OpenType font
-by using the AFDKO makeotf tool.
+[Source Sans Pro](http://adobe-fonts.github.io/source-sans-pro/)
+is a set of OpenType fonts that have been designed to work well in user interface (UI) environments.
+
+## Including Source Sans Pro in your Web App
+
+The easiest way to include the font in your app is just insert the google font api link in the head of your page.
+
+```html
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet">
+```
 
 ## Font installation instructions
 

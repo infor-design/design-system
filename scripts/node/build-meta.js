@@ -24,21 +24,21 @@ const swlog = require('./utilities/stopwatch-log.js');
  */
 function generateMeta(src, dest, version) {
   return new Promise((resolve, reject) => {
-    const startTaskName = swlog.logTaskStart(`creating themes metadata file}`);
+    const startTaskName = swlog.logTaskStart('creating themes metadata file}');
 
     const metaObj = JSON.parse(fs.readFileSync(src, 'utf8'));
     metaObj.version = version;
 
-    fs.writeFile(dest, JSON.stringify(metaObj, null, 4), err => {
+    fs.writeFile(dest, JSON.stringify(metaObj, null, 4), (err) => {
       if (err) {
-        reject(`Error! ${err}`);
+        reject(new Error(`Error during metadata creation ${err}`));
       } else {
         swlog.logTaskAction('Generated', `'${dest}'`);
         swlog.logTaskEnd(startTaskName);
         resolve();
       }
     });
-  })
+  });
 }
 
 module.exports = generateMeta;

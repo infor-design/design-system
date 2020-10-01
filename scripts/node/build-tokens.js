@@ -11,74 +11,111 @@
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
-const swlog = require('./utilities/stopwatch-log.js');
-const _ = require('lodash');
+const styleDict = require('style-dictionary');
 
+const swlog = require('./utilities/stopwatch-log.js');
 const customTransforms = require('./utilities/tokens/custom-transforms');
 const customFormats = require('./utilities/tokens/custom-formats');
 
-const getPlatforms = (dest, name) => {
-  return {
-    scss: {
-      transformGroup: 'scss',
-      buildPath: `${dest}/web/`,
-      files: [{
-        destination: `${name}.scss`,
-        format: 'scss/variables'
-      }, {
-        destination: `${name}.json`,
-        format: 'json'
-      }, {
-        destination: `${name}.custom-properties.css`,
-        format: 'css/variables'
-      }, {
-        destination: `${name}.module.js`,
-        format: 'javascript/module'
-      }]
-    },
-    json: {
-      transformGroup: 'scss',
-      buildPath: `${dest}/web/`,
-      files: [{
-        destination: `${name}.simple.json`,
-        format: 'simple-json'
-      }, {
-        destination: `${name}.json`,
-        format: 'json'
-      }]
-    },
-    javascript: {
-      transformGroup: 'scss',
-      buildPath: `${dest}/web/`,
-      files: [{
-        destination: `${name}.module.js`,
-        format: 'javascript/module'
-      }]
-    },
-    xml: {
-      transformGroup: 'scss',
-      buildPath: `${dest}/web/`,
-      files: [{
-        destination: `${name}.xml`,
-        format: 'mongoose-xml'
-      }]
-    },
-    mongooseXml: {
-      transforms: [
-        'attribute/cti',
-        'name/cti/kebab',
-        'time/seconds',
-        'content/icon',
-        'mongoose:size/remToInt',
-        'mongoose:color/hex8android'
-      ],
-      buildPath: `${dest}/web/`,
-      files: [{
-        destination: `${name}.mongoose.xml`,
-        format: 'mongoose-xml'
-      }]
-    }
-  };
+const getPlatforms = (dest, name) => ({
+  scss: {
+    transformGroup: 'scss',
+    buildPath: `${dest}/web/`,
+    files: [{
+      destination: `${name}.scss`,
+      format: 'scss/variables',
+    }, {
+      destination: `${name}.json`,
+      format: 'json',
+    }, {
+      destination: `${name}.variables.css`,
+      format: 'css/variables',
+    }, {
+      destination: `${name}.module.js`,
+      format: 'javascript/module',
+    }],
+  },
+  json: {
+    transformGroup: 'scss',
+    buildPath: `${dest}/web/`,
+    files: [{
+      destination: `${name}.simple.json`,
+      format: 'simple-json',
+    }, {
+      destination: `${name}.json`,
+      format: 'json',
+    }],
+  },
+  javascript: {
+    transformGroup: 'scss',
+    buildPath: `${dest}/web/`,
+    files: [{
+      destination: `${name}.module.js`,
+      format: 'javascript/module',
+    }],
+  },
+  xml: {
+    transformGroup: 'scss',
+    buildPath: `${dest}/web/`,
+    files: [{
+      destination: `${name}.xml`,
+      format: 'mongoose-xml',
+    }],
+  },
+  mongooseXml: {
+    transforms: [
+      'attribute/cti',
+      'name/cti/kebab',
+      'time/seconds',
+      'content/icon',
+      'mongoose:size/remToInt',
+      'mongoose:color/hex8android',
+    ],
+    buildPath: `${dest}/web/`,
+    files: [{
+      destination: `${name}.mongoose.xml`,
+      format: 'mongoose-xml',
+    }],
+  },
+});
+
+const makeHostCss = (_src, dest) => {
+  const theme = dest.indexOf('soho') > -1 ? 'soho' : 'uplift';
+  const files = [
+    `${dest}/web/theme-${theme}-dark.variables.css`,
+    `${dest}/web/theme-${theme}-contrast.variables.css`,
+    `${dest}/web/theme-${theme}.variables.css`,
+  ];
+
+  files.forEach((file) => {
+    let fileContents = fs.readFileSync(file, 'utf8');
+    let destFileContents = '';
+    const destFile = file.replace('variables.css', 'host.variables.scss');
+
+    fileContents = fileContents.replace(':root {', ':host {');
+    fileContents.split(/\r?\n/).forEach((line) => {
+      let fileLine = line;
+      if (fileLine.indexOf('--ids-color') > -1
+         || fileLine.indexOf('--ids-size') > -1
+         || fileLine.indexOf('--ids-number') > -1
+         || fileLine.indexOf('--ids-font') > -1
+         || fileLine.indexOf('{') > -1
+         || fileLine.indexOf('}') > -1) {
+        if (line.indexOf('rem') > -1) {
+          fileLine = fileLine.replace('rem', 'px').replace('.', '');
+        }
+        destFileContents += `${fileLine}\n`;
+      }
+    });
+
+    fs.writeFile(destFile, destFileContents, (err) => {
+      if (err) {
+        swlog.logTaskAction(`Error during host variable creation ${err}`);
+      } else {
+      //  swlog.logTaskAction('Generated', destFile);
+      }
+    });
+  });
 };
 
 // -------------------------------------
@@ -98,29 +135,30 @@ function generateTokens(src, dest) {
     const configGlob = `${src}/**/*.config.json`;
     const configs = glob.sync(configGlob);
 
-    configs.forEach(config => {
+    configs.forEach((config) => {
       const configName = path.basename(config, '.config.json');
 
       const themeConfig = JSON.parse(fs.readFileSync(config, 'utf8'));
       themeConfig.platforms = getPlatforms(dest, configName);
 
-      const dict = require('style-dictionary').extend(themeConfig);
+      const dict = styleDict.extend(themeConfig);
 
-      customTransforms.forEach(t => {
+      customTransforms.forEach((t) => {
         dict.registerTransform(t);
       });
 
-      customFormats.forEach(f => {
+      customFormats.forEach((f) => {
         dict.registerFormat(f);
       });
 
       dict.buildAllPlatforms();
     });
 
+    makeHostCss(src, dest);
     swlog.logTaskEnd(startTaskName);
     resolve();
   })
-  .catch(swlog.error);
+    .catch(swlog.error);
 }
 
 module.exports = generateTokens;

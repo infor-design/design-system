@@ -6,10 +6,10 @@
                     "value": "transparent"
                 },
                 "border": {
-                    "value": "{theme.color.border.lighter.value}"
+                    "value": "{ids.color.border.lighter.value}"
                 },
                 "font": {
-                    "value": "{theme.color.font.muted.value}"
+                    "value": "{ids.color.font.muted.value}"
                 }
             },
             "focus": {
@@ -17,10 +17,10 @@
                     "value": "transparent"
                 },
                 "border": {
-                    "value": "{theme.color.brand.primary.base.value}"
+                    "value": "{ids.color.brand.primary.base.value}"
                 },
                 "font": {
-                    "value": "{theme.color.font.base.value}"
+                    "value": "{ids.color.font.base.value}"
                 }
             },
             "hover": {
@@ -28,7 +28,7 @@
                     "value": "transparent"
                 },
                 "border": {
-                    "value": "{theme.color.border.darker.value}"
+                    "value": "{ids.color.border.darker.value}"
                 }
             },
             "initial": {
@@ -36,27 +36,27 @@
                     "value": "transparent"
                 },
                 "border": {
-                    "value": "{theme.color.border.base.value}"
+                    "value": "{ids.color.border.base.value}"
                 },
                 "font": {
-                    "value": "{theme.color.font.base.value}"
+                    "value": "{ids.color.font.base.value}"
                 },
                 "label": {
-                    "value": "{theme.color.font.info.value}"
+                    "value": "{ids.color.font.info.value}"
                 },
                 "placeholder": {
-                    "value": "{theme.color.font.muted.value}"
+                    "value": "{ids.color.font.muted.value}"
                 }
             },
             "readonly": {
                 "background": {
-                    "value": "{theme.color.brand.secondary.lighter.value}"
+                    "value": "{ids.color.brand.secondary.lighter.value}"
                 },
                 "border": {
-                    "value": "{theme.color.border.base.value}"
+                    "value": "{ids.color.border.base.value}"
                 },
                 "font": {
-                    "value": "{theme.color.font.base.value}"
+                    "value": "{ids.color.font.base.value}"
                 }
             }
         },
@@ -70,7 +70,7 @@
         "size": {
             "border": {
                 "radius": {
-                    "value": "{theme.number.border.radius.sm.value}"
+                    "value": "{ids.number.border.radius.sm.value}"
                 },
                 "width": {
                     "value": "1px"

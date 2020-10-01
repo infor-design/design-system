@@ -3,12 +3,12 @@
         "color": {
             "hover": {
                 "font": {
-                    "value": "{theme.color.palette.black.value}"
+                    "value": "{ids.color.palette.black.value}"
                 }
             },
             "initial": {
                 "font": {
-                    "value": "{theme.color.brand.primary.base.value}"
+                    "value": "{ids.color.brand.primary.base.value}"
                 }
             }
         }

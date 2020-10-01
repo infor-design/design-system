@@ -2,7 +2,6 @@
     "source": [
         "design-tokens/theme-soho/color-palette.json",
         "design-tokens/theme-soho/theme.json",
-
         "design-tokens/props/*.json"
     ]
 }

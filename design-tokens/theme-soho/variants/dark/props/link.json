@@ -3,12 +3,12 @@
         "color": {
             "hover": {
                 "font": {
-                    "value": "{theme.color.palette.azure.40.value}"
+                    "value": "{ids.color.palette.azure.40.value}"
                 }
             },
             "initial": {
                 "font": {
-                    "value": "{theme.color.palette.azure.40.value}"
+                    "value": "{ids.color.palette.azure.40.value}"
                 }
             }
         }

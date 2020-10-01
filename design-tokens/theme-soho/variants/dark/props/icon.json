@@ -2,7 +2,7 @@
     "icon": {
         "color": {
             "fill": {
-                "value": "{theme.color.palette.slate.30.value}"
+                "value": "{ids.color.palette.slate.30.value}"
             }
         }
     }

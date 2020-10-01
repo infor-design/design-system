@@ -8,18 +8,20 @@
 //   Constants/Variables
 // -------------------------------------
 const args = require('minimist')(process.argv.slice(2));
-const compareTokens = require('./utilities/compare-tokens');
+const glob = require('glob');
 const copydir = require('copy-dir');
 const del = require('del');
 const fs = require('fs');
+const compareTokens = require('./utilities/compare-tokens');
 const gFonts = require('./build-font');
 const gIcons = require('./build-icons');
 const gMeta = require('./build-meta.js');
+const gMixins = require('./build-mixins.js');
 const gTokens = require('./build-tokens');
-const glob = require('glob');
 const swlog = require('./utilities/stopwatch-log.js');
 
 const pkgjson = require('../../package.json');
+
 const themesArr = ['theme-soho', 'theme-uplift'];
 
 // -------------------------------------
@@ -30,8 +32,8 @@ const themesArr = ['theme-soho', 'theme-uplift'];
  * Create directories if they don't exist
  * @param  {array} arrPaths - the directory path(s)
  */
-const createDirs = arrPaths => {
-  arrPaths.forEach(path => {
+const createDirs = (arrPaths) => {
+  arrPaths.forEach((path) => {
     if (!fs.existsSync(path)) {
       fs.mkdirSync(path);
     }
@@ -42,14 +44,14 @@ const createDirs = arrPaths => {
  * Process promises synchronously
  * @param {object} arr
  */
-const runSync = async arr => {
-  let results = [];
+const runSync = async (arr) => {
+  const results = [];
   for (let i = 0; i < arr.length; i++) {
-      let r = await arr[i]();
-      results.push(r);
+    let r = await arr[i](); //eslint-disable-line
+    results.push(r);
   }
   return results; // will be resolved value of promise
-}
+};
 
 /**
  * Copy one path to another
@@ -65,14 +67,14 @@ const copyDirExists = (from, to) => {
 // -------------------------------------
 //   Main
 // -------------------------------------
-const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0)) > 2;
+const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0), 10) > 2;
 
 // Clean up dist
 const rootDest = './dist';
 del.sync([rootDest]);
 createDirs([rootDest]);
 
-let promises = [];
+const promises = [];
 
 if (args.build.includes('meta')) {
   promises.push(() => {
@@ -81,25 +83,35 @@ if (args.build.includes('meta')) {
   });
 }
 
-themesArr.forEach(theme => {
+if (args.build.includes('mixin')) {
+  promises.push(() => {
+    const filename = 'dist/theme-uplift/tokens/web/theme-uplift-mixins.scss';
+    return gMixins(filename);
+  });
+
+  promises.push(() => {
+    const filename = 'dist/theme-soho/tokens/web/theme-soho-mixins.scss';
+    return gMixins(filename);
+  });
+}
+
+themesArr.forEach((theme) => {
   const themeDest = `${rootDest}/${theme}`;
   const iconsDest = `${themeDest}/icons`;
   createDirs([themeDest, iconsDest]);
 
   const iconsSrcFiles = glob.sync(`./sketch/${theme}/ids-icons-*.sketch`);
 
-  iconsSrcFiles.forEach(iconsSrc => {
+  iconsSrcFiles.forEach((iconsSrc) => {
     const reg = /ids-icons-(\w+)\.sketch/;
     const match = iconsSrc.match(reg);
-    let iconType = match[1];
+    const iconType = match[1];
 
     if (args.build.includes('icons') && fs.existsSync(iconsSrc)) {
       const typeDest = `${iconsDest}/${iconType}`;
       createDirs([typeDest]);
 
-      promises.push(() => {
-        return gIcons(iconsSrc, typeDest);
-      });
+      promises.push(() => gIcons(iconsSrc, typeDest));
     }
   });
 
@@ -108,9 +120,7 @@ themesArr.forEach(theme => {
     const dest = `${themeDest}/fonts`;
     createDirs([dest]);
 
-    promises.push(() => {
-      return gFonts(fontSrc, dest);
-    });
+    promises.push(() => gFonts(fontSrc, dest));
   }
 
   const tokensSrc = `./design-tokens/${theme}`;
@@ -118,25 +128,16 @@ themesArr.forEach(theme => {
     const dest = `${themeDest}/tokens`;
     createDirs([dest]);
 
-    promises.push(() => {
+    promises.push(() => { //eslint-disable-line
       return gTokens(tokensSrc, dest).then(() => {
         const tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
         // Verify/validate token files against eachother
-        return compareTokens(tokensToCompare).catch(console.error);
+        return compareTokens(tokensToCompare).catch(console.error); //eslint-disable-line
       });
     });
-
   }
 });
 
 runSync(promises).then(() => {
-  // Adapt version 2 to 3 by supporting old token paths in dist
-  const startTaskName = swlog.logTaskStart(`Support deprecated tokens`);
-  copyDirExists(`./dist/tokens`, `./dist/theme-soho/tokens`);
-  copyDirExists(`./dist/tokens`, `./dist/theme-uplift/tokens`);
-  swlog.logTaskEnd(startTaskName);
-
-  if (isVersionThreeOrNewer) {
-    swlog.error('DEPRECATON TODO: Remove v2 Token path support!!!');
-  }
+  // Any thing we do last goes here
 });

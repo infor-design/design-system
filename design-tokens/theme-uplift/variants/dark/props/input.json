@@ -6,10 +6,10 @@
                     "value": "transparent"
                 },
                 "border": {
-                    "value": "{theme.color.palette.slate.60.value}"
+                    "value": "{ids.color.palette.slate.60.value}"
                 },
                 "font": {
-                    "value": "{theme.color.palette.slate.60.value}"
+                    "value": "{ids.color.palette.slate.60.value}"
                 }
             },
             "initial": {
@@ -17,24 +17,24 @@
                     "value": "transparent"
                 },
                 "border": {
-                    "value": "{theme.color.palette.slate.40.value}"
+                    "value": "{ids.color.palette.slate.40.value}"
                 },
                 "placeholder": {
-                    "value": "{theme.color.palette.slate.50.value}"
+                    "value": "{ids.color.palette.slate.50.value}"
                 },
                 "font": {
-                    "value": "{theme.color.palette.white.value}"
+                    "value": "{ids.color.palette.white.value}"
                 }
             },
             "readonly": {
                 "border": {
-                    "value": "{theme.color.palette.slate.40.value}"
+                    "value": "{ids.color.palette.slate.40.value}"
                 },
                 "background": {
-                    "value": "{theme.color.palette.slate.70.value}"
+                    "value": "{ids.color.palette.slate.70.value}"
                 },
                 "font": {
-                    "value": "{theme.color.palette.slate.10.value}"
+                    "value": "{ids.color.palette.slate.10.value}"
                 }
             }
         }

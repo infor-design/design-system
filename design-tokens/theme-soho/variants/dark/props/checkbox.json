@@ -4,10 +4,10 @@
             "checked": {
                 "initial": {
                     "arrow": {
-                        "value": "{theme.color.brand.primary.contrast.value}"
+                        "value": "{ids.color.brand.primary.contrast.value}"
                     },
                     "background": {
-                        "value": "{theme.color.brand.primary.base.value}"
+                        "value": "{ids.color.brand.primary.base.value}"
                     },
                     "border": {
                         "value": "{checkbox.color.checked.initial.background.value}"
@@ -17,23 +17,23 @@
             "unchecked": {
                 "disabled": {
                     "arrow": {
-                        "value": "{theme.color.palette.slate.30.value}"
+                        "value": "{ids.color.palette.slate.30.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.slate.50.value}"
+                        "value": "{ids.color.palette.slate.50.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.slate.50.value}"
+                        "value": "{ids.color.palette.slate.50.value}"
                     }
                 },
                 "hover": {
                     "border": {
-                        "value": "{theme.color.palette.slate.20.value}"
+                        "value": "{ids.color.palette.slate.20.value}"
                     }
                 },
                 "initial": {
                     "border": {
-                        "value": "{theme.color.palette.slate.40.value}"
+                        "value": "{ids.color.palette.slate.40.value}"
                     }
                 }
             }
@@ -41,7 +41,7 @@
         "shadow": {
             "focus": {
                 "boxshadow": {
-                    "value": "0 0 0 1px {theme.color.palette.slate.80.value}, 0 0 0 2px {theme.color.brand.primary.base.value}"
+                    "value": "0 0 0 1px {ids.color.palette.slate.80.value}, 0 0 0 2px {ids.color.brand.primary.base.value}"
                 }
             }
         }

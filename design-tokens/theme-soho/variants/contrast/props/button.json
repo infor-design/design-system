@@ -4,65 +4,65 @@
             "primary": {
                 "active": {
                     "background": {
-                        "value": "{theme.color.palette.azure.80.value}"
+                        "value": "{ids.color.palette.azure.80.value}"
                     }
                 },
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.azure.70.value}"
+                        "value": "{ids.color.palette.azure.70.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.azure.70.value}"
+                        "value": "{ids.color.palette.azure.70.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.slate.20.value}"
+                        "value": "{ids.color.palette.slate.20.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.slate.20.value}"
+                        "value": "{ids.color.palette.slate.20.value}"
                     }
                 },
                 "hover": {
                     "background": {
-                        "value": "{theme.color.palette.azure.80.value}"
+                        "value": "{ids.color.palette.azure.80.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "value": "{theme.color.brand.primary.base.value}"
+                        "value": "{ids.color.brand.primary.base.value}"
                     }
                 }
             },
             "secondary": {
                 "active": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{ids.color.palette.graphite.50.value}"
                     }
                 },
                 "disabled": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{ids.color.palette.graphite.50.value}"
                     },
                     "border": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{ids.color.palette.graphite.50.value}"
                     },
                     "font": {
-                        "value": "{theme.color.palette.graphite.20.value}"
+                        "value": "{ids.color.palette.graphite.20.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.graphite.20.value}"
+                        "value": "{ids.color.palette.graphite.20.value}"
                     }
                 },
                 "hover": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.60.value}"
+                        "value": "{ids.color.palette.graphite.60.value}"
                     }
                 },
                 "initial": {
                     "background": {
-                        "value": "{theme.color.palette.graphite.70.value}"
+                        "value": "{ids.color.palette.graphite.70.value}"
                     },
                     "font": {
-                        "value": "{theme.color.brand.primary.contrast.value}"
+                        "value": "{ids.color.brand.primary.contrast.value}"
                     }
                 }
             },
@@ -74,20 +74,20 @@
                 },
                 "hover": {
                     "font": {
-                        "value": "{theme.color.palette.graphite.60.value}"
+                        "value": "{ids.color.palette.graphite.60.value}"
                     }
                 },
                 "initial": {
                     "font": {
-                        "value": "{theme.color.palette.graphite.90.value}"
+                        "value": "{ids.color.palette.graphite.90.value}"
                     }
                 },
                 "disabled": {
                     "font": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{ids.color.palette.graphite.50.value}"
                     },
                     "icon": {
-                        "value": "{theme.color.palette.graphite.50.value}"
+                        "value": "{ids.color.palette.graphite.50.value}"
                     }
                 }
             }

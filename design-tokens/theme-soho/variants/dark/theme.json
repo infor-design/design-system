@@ -1,16 +1,16 @@
 {
-    "theme": {
+    "ids": {
         "color": {
             "boxshadow": {
                 "base": { "value": "rgba(0, 0, 0, 0.4)" }
             },
             "border": {
-                "base": { "value": "{theme.color.palette.slate.40.value}" }
+                "base": { "value": "{ids.color.palette.slate.40.value}" }
             },
             "font": {
-                "base":  { "value": "{theme.color.palette.white.value}" },
-                "info":  { "value": "{theme.color.palette.slate.30.value}" },
-                "muted": { "value": "{theme.color.palette.slate.40.value}" }
+                "base":  { "value": "{ids.color.palette.white.value}" },
+                "info":  { "value": "{ids.color.palette.slate.30.value}" },
+                "muted": { "value": "{ids.color.palette.slate.40.value}" }
             }
         }
     }

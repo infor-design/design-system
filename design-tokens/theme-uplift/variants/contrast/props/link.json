@@ -3,7 +3,7 @@
         "color": {
             "visited": {
                 "font": {
-                    "value": "{theme.color.palette.amethyst.80.value}"
+                    "value": "{ids.color.palette.amethyst.80.value}"
                 }
             }
         }

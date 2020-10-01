@@ -1,8 +1,33 @@
 # Using the Sketch Files
 
+## Process for Updating/Adding Icons
+
+- clone this repo with git for example `git clone https://github.com/infor-design/design-system.git`
+- go into the design-system folder you just cloned and open the files in the sketch folder in the sketch tool
+- make a branch for the pull request - for example:
+```sh
+git checkout master
+git checkout -b issueno-short-description
+```
+- make updates to the icons or add new icons in the same format as it is now
+- if you add new icons make sure to add a soho icon and an uplift icon as we do need the icons to exist in both themes
+- commit the change
+```sh
+git commit -a
+```
+- type a brief comment
+- push the the change
+```sh
+git push
+```
+- on screen it will tell you a command to run next to push he branch, run it
+- go to https://github.com/infor-design/design-system
+- you will see a popup to make a pull request, click make pull request, to master and follow the template explaining the changes and submit
+- dev will review it and take it from there
+
 ## System Icons
 
-This is to explain the different methods and tools used to maintain `ids-icons-system.sketch` in the Uplift theme. (Please note that no changes to the icons Sketch files in `theme-soho` are permitted at this time unless requested otherwise).
+This is to explain the different methods and tools used to maintain `ids-icons-system.sketch` in the Uplift theme. Please note that while we are not changed icons `theme-soho` as a rule, we need to ensure that there is the same icons in both themes. So if you make a new icon please make one for both themes.
 
 ### Design Guidelines for System Icons
 

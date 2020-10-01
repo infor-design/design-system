@@ -3,10 +3,10 @@
         "color": {
             "initial": {
                 "font": {
-                    "value": "{theme.color.palette.black.value}"
+                    "value": "{ids.color.palette.black.value}"
                 },
                 "icon": {
-                    "value": "{theme.color.palette.graphite.100.value}"
+                    "value": "{ids.color.palette.graphite.100.value}"
                 }
             }
         }

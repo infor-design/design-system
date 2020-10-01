@@ -18,10 +18,10 @@
                 },
                 "initial": {
                     "arrow": {
-                        "value": "{theme.color.brand.primary.contrast.value}"
+                        "value": "{ids.color.brand.primary.contrast.value}"
                     },
                     "background": {
-                        "value": "{theme.color.brand.primary.base.value}"
+                        "value": "{ids.color.brand.primary.base.value}"
                     },
                     "border": {
                         "value": "{checkbox.color.unchecked.initial.border.value}"
@@ -37,15 +37,15 @@
                         "value": "transparent"
                     },
                     "border": {
-                        "value": "{theme.color.border.lighter.value}"
+                        "value": "{ids.color.border.lighter.value}"
                     },
                     "font": {
-                        "value": "{theme.color.font.muted.value}"
+                        "value": "{ids.color.font.muted.value}"
                     }
                 },
                 "hover": {
                     "border": {
-                        "value": "{theme.color.border.darker.value}"
+                        "value": "{ids.color.border.darker.value}"
                     }
                 },
                 "initial": {
@@ -53,10 +53,10 @@
                         "value": "transparent"
                     },
                     "border": {
-                        "value": "{theme.color.border.base.value}"
+                        "value": "{ids.color.border.base.value}"
                     },
                     "font": {
-                        "value": "{theme.color.font.base.value}"
+                        "value": "{ids.color.font.base.value}"
                     }
                 }
             }
@@ -64,14 +64,14 @@
         "shadow": {
             "focus": {
                 "boxshadow": {
-                    "value": "0 0 0 1px {theme.color.boxshadow.base.value}, 0 0 0 2px {theme.color.brand.primary.base.value}"
+                    "value": "0 0 0 1px {ids.color.boxshadow.base.value}, 0 0 0 2px {ids.color.brand.primary.base.value}"
                 }
             }
         },
         "size": {
             "border": {
                 "radius": {
-                    "value": "{theme.number.border.radius.sm.value}"
+                    "value": "{ids.number.border.radius.sm.value}"
                 }
             },
             "box": {

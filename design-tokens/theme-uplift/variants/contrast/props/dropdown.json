@@ -3,15 +3,15 @@
         "color": {
             "initial": {
                 "font": {
-                    "value": "{theme.color.palette.slate.90.value}"
+                    "value": "{ids.color.palette.slate.90.value}"
                 },
                 "icon": {
-                    "value": "{theme.color.palette.slate.100.value}"
+                    "value": "{ids.color.palette.slate.100.value}"
                 }
             },
             "selected": {
                 "background": {
-                    "value": "{theme.color.brand.primary.alt.value}"
+                    "value": "{ids.color.brand.primary.alt.value}"
                 }
             }
         }
