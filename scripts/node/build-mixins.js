@@ -44,7 +44,6 @@ const propKeys = {
   minWidth: 'min-w',
   padding: 'p',
   placeholderOpacity: 'placeholder-opacity',
-  position: 'position',
   right: 'right',
   spacing: 'm',
   strokeWidth: 'stroke',
@@ -77,7 +76,6 @@ const cssKeys = {
   'min-h': 'min-height',
   'min-w': 'min-width',
   p: 'padding',
-  position: 'position',
   stroke: 'stroke-width',
   w: 'width',
   z: 'z-index'
@@ -213,6 +211,30 @@ const staticProps = `@mixin align-baseline {
 }
 @mixin outline-none {
   outline: 0;
+}
+@mixin static {
+  position: static;
+}
+@mixin fixed {
+  position: fixed;
+}
+@mixin absolute {
+  position: absolute;
+}
+@mixin relative {
+  position: relative;
+}
+@mixin sticky {
+  position: sticky;
+}
+@mixin w-full {
+  width: 100%;
+}
+@mixin box-border {
+  box-sizing: border-box;
+}
+@mixin box-content {
+  box-sizing: content-box;
 }
 `;
 

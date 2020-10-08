@@ -242,6 +242,10 @@ module.exports = {
       '0': '0',
       full: '100%',
     },
+    width: {
+      '0': '0',
+      full: '100%',
+    },
     opacity: {
       '0': '0',
       '40': '0.40',
@@ -250,12 +254,6 @@ module.exports = {
       '100': '1',
     },
     padding: theme => theme('spacing'),
-    position: {
-      relative: 'relative',
-      absolute: 'absolute',
-      static: 'static',
-      fixed: 'fixed'
-    },
     right: {
       '8': '8px',
       '16': '16px',

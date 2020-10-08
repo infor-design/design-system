@@ -14,11 +14,7 @@ const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 const svgo = require('svgo');
-const util = require('util');
 const swlog = require('./utilities/stopwatch-log.js');
-
-const readFile = util.promisify(fs.readFile);
-const writeFile = util.promisify(fs.writeFile);
 
 const options = {
   binaryPath: '/Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool',
@@ -128,11 +124,13 @@ function optimizeSVGs(src) {
     try {
       const data = fs.readFileSync(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
-
-      const svgDData = /d="(.*?)"/g;
       const count = /<path/g;
 
-      iconJSON += `"${path.basename(filepath, '.svg')}": "${svgDData.exec(dataOptimized.data)[1]}"${mapIndex + 1 === (last) ? '' : ','}\n`;
+      const pathStatement = dataOptimized.data
+        .replace('<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">', '')
+        .replace('</svg>', '');
+
+      iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
       if (count.exec(dataOptimized.data).length !== 1) {
         swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
       }
