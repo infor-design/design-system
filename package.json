@@ -35,7 +35,7 @@
   "keywords": [
     "infor design system"
   ],
-  "author": "Hook & Loop",
+  "author": "Infor Design",
   "license": "Apache-2.0",
   "devDependencies": {
     "blink-diff": "^1.0.13",
