@@ -203,6 +203,18 @@ const staticProps = `@mixin align-baseline {
 @mixin border-none {
   border-style: none;
 }
+@mixin border-t-1 {
+  border-top: 1px solid;
+}
+@mixin border-b-1 {
+  border-bottom: 1px solid;
+}
+@mixin border-r-2 {
+  border-bottom: 1px solid;
+}
+@mixin border-l-1 {
+  border-left: 1px solid;
+}
 @mixin block {
   display: block;
 }
@@ -229,6 +241,9 @@ const staticProps = `@mixin align-baseline {
 }
 @mixin w-full {
   width: 100%;
+}
+@mixin h-full {
+  height: 100%;
 }
 @mixin box-border {
   box-sizing: border-box;

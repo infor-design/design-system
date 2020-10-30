@@ -180,7 +180,7 @@ module.exports = {
         '"source sans pro"',
         'helvetica',
         'arial',
-        'san-serif'
+        'sans-serif'
       ],
       mono: ['"source code pro"', 'monospace'],
     },
