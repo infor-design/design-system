@@ -16,8 +16,9 @@ const path = require('path');
 const svgo = require('svgo');
 const swlog = require('./utilities/stopwatch-log.js');
 
+// Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool'
 const options = {
-  binaryPath: '/Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool',
+  binaryPath: '/Applications/Sketch.app/Contents/MacOS/sketchtool',
   iconFormats: ['svg', 'png'],
 };
 

@@ -10,9 +10,9 @@ fi
 LOG=$(git log --pretty=format:"* %s (%h)" $VERSION_COMPARE)
 
 if [[ "$REL_VERSION" == "" ]]; then
-    COPY="To access the assets in this release, download the IDS zip above for the latest Sketch toolkit, fonts, and more! Note: 'Uplift' and 'Future' assets are still in early design and should be considered alpha."
+    COPY="To access the assets in this release, download the IDS zip above for the latest Sketch toolkit, fonts, and more!"
 else
-    COPY="To access the assets in this release, [download IDS-$REL_VERSION.zip](https://github.com/infor-design/design-system/releases/download/$REL_VERSION/IDS-$REL_VERSION.zip) for the latest Sketch toolkit, fonts, and more! Note: 'Uplift' and 'Future' assets are still in early design and should be considered alpha."
+    COPY="To access the assets in this release, [download IDS-$REL_VERSION.zip](https://github.com/infor-design/design-system/releases/download/$REL_VERSION/IDS-$REL_VERSION.zip) for the latest Sketch toolkit, fonts, and more!"
 fi
 
 echo "$COPY"

@@ -210,7 +210,7 @@ const staticProps = `@mixin align-baseline {
   border-bottom: 1px solid;
 }
 @mixin border-r-2 {
-  border-bottom: 1px solid;
+  border-right: 1px solid;
 }
 @mixin border-l-1 {
   border-left: 1px solid;
@@ -220,6 +220,15 @@ const staticProps = `@mixin align-baseline {
 }
 @mixin inline-flex {
   display: inline-flex;
+}
+@mixin flex {
+  display: flex;
+}
+@mixin table-cell {
+  display: table-cell;
+}
+@mixin table-row {
+  display: table-row;
 }
 @mixin outline-none {
   outline: 0;
