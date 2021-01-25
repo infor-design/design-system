@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v3.0.4
+
+### v3.0.4 Fixes
+
+- '[Icons]' Made rejected icons hollow
+
 ## v3.0.3
 
 ### v3.0.3 Fixes
