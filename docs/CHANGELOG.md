@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v3.0.3
+
+### v3.0.3 Fixes
+
+- '[Icons]' Added a new solid and non solid rejected status icon.
+
 ## v3.0.2
 
 ### v3.0.2 Fixes
