@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v3.0.2
+
+### v3.0.2 Fixes
+
+- '[Icons]' Added a new solid rejected status icon in soho theme.
+
 ## v3.0.1
 
 ### v3.0.1 Fixes
