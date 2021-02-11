@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v3.0.5
+
+### v3.0.5 Fixes
+
+- '[Icons]' Added new `approved` and `approved-filled` icons ([#4775](https://github.com/infor-design/enterprise/issues/4775))
+
 ## v3.0.4
 
 ### v3.0.4 Fixes
