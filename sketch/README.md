@@ -17,7 +17,7 @@ git checkout -b issueno-short-description
 ```
 
 - make updates to the icons or add new icons in the same format as it is now
-- if you add new icons make sure to add a soho icon and an uplift icon as we do need the icons to exist in both themes
+- if you add new icons make sure to add a classic icon and an new icon as we do need the icons to exist in both themes
 - commit the change
 
 ```sh
@@ -38,7 +38,7 @@ git push
 
 ## System Icons
 
-This is to explain the different methods and tools used to maintain `ids-icons-system.sketch` in the Uplift theme. Please note that while we are not changed icons `theme-soho` as a rule, we need to ensure that there is the same icons in both themes. So if you make a new icon please make one for both themes.
+This is to explain the different methods and tools used to maintain `ids-icons-system.sketch` in the New theme. Please note that while we are not changed icons `theme-classic` as a rule, we need to ensure that there is the same icons in both themes. So if you make a new icon please make one for both themes.
 
 ### Design Guidelines for System Icons
 
@@ -90,7 +90,7 @@ This is to explain the different methods and tools used to maintain `ids-icons-s
 
 ## App Icons
 
-This is to explain the different methods and tools used to maintain `ids-icons-apps.sketch`, in the Uplift theme, which contains Application/Product Icons for Infor Ming.le.
+This is to explain the different methods and tools used to maintain `ids-icons-apps.sketch`, in the New theme, which contains Application/Product Icons for Infor Ming.le.
 
 ### Design Guidelines for App Icons
 

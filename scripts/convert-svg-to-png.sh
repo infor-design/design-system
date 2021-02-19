@@ -1,7 +1,7 @@
 # Requires `brew cask install xquartz inkscape`
 
-BASE_DIR="$PWD/icons/theme-soho/svg"
-OUT_DIR="$PWD/icons/theme-soho/png"
+BASE_DIR="$PWD/icons/theme-classic/svg"
+OUT_DIR="$PWD/icons/theme-classic/png"
 INKSCAPE_BIN="/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
 
 for d in $BASE_DIR/*; do

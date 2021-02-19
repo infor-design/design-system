@@ -80,7 +80,7 @@ const getPlatforms = (dest, name) => ({
 });
 
 const makeHostCss = (_src, dest) => {
-  const theme = dest.indexOf('soho') > -1 ? 'soho' : 'uplift';
+  const theme = dest.indexOf('classic') > -1 ? 'classic' : 'new';
   const files = [
     `${dest}/web/theme-${theme}-dark.variables.css`,
     `${dest}/web/theme-${theme}-contrast.variables.css`,

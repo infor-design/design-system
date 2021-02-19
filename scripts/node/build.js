@@ -18,11 +18,10 @@ const gIcons = require('./build-icons');
 const gMeta = require('./build-meta.js');
 const gMixins = require('./build-mixins.js');
 const gTokens = require('./build-tokens');
-const swlog = require('./utilities/stopwatch-log.js');
 
 const pkgjson = require('../../package.json');
 
-const themesArr = ['theme-soho', 'theme-uplift'];
+const themesArr = ['theme-classic', 'theme-new'];
 
 // -------------------------------------
 //   Functions
@@ -85,12 +84,12 @@ if (args.build.includes('meta')) {
 
 if (args.build.includes('mixin')) {
   promises.push(() => {
-    const filename = 'dist/theme-uplift/tokens/web/theme-uplift-mixins.scss';
+    const filename = 'dist/theme-new/tokens/web/theme-new-mixins.scss';
     return gMixins(filename);
   });
 
   promises.push(() => {
-    const filename = 'dist/theme-soho/tokens/web/theme-soho-mixins.scss';
+    const filename = 'dist/theme-classic/tokens/web/theme-classic-mixins.scss';
     return gMixins(filename);
   });
 }

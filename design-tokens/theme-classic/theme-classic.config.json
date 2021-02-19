@@ -1,0 +1,7 @@
+{
+    "source": [
+        "design-tokens/theme-classic/color-palette.json",
+        "design-tokens/theme-classic/theme.json",
+        "design-tokens/props/*.json"
+    ]
+}

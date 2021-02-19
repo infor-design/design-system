@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.0.0
+
+### v4.0.0 Fixes
+
+- '[Naming]' The theme names have changed from Uplift to New and from Soho to classic. ([#2606](https://github.com/infor-design/enterprise/issues/2606))
+
 ## v3.0.5
 
 ### v3.0.5 Fixes

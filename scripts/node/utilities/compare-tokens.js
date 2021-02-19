@@ -32,14 +32,14 @@ const msg = (orig, oFile, compare, cFile) => {
   return msg;
 }
 
-const showStats = (sohoTheme, otherThemes) => {
-  let str = `\n  ${logSymbols.success} ${chalk.green(sohoTheme.props.length)} tokens in ${sohoTheme.file}`;
+const showStats = (clasicTheme, otherThemes) => {
+  let str = `\n  ${logSymbols.success} ${chalk.green(clasicTheme.props.length)} tokens in ${clasicTheme.file}`;
 
   for (let n = 0; n < otherThemes.length; n++) {
     const theme = otherThemes[n];
     const len = theme.props.length;
 
-    if (len === sohoTheme.props.length) {
+    if (len === clasicTheme.props.length) {
       str += `\n  ${logSymbols.success} ${chalk.green(len)} tokens in ${theme.file}`;
     } else {
       str += `\n  ${logSymbols.error} ${chalk.red(len)} tokens in ${theme.file}`;
@@ -74,13 +74,13 @@ function compareTokens(distTokens) {
 
   return Promise.all(promises)
     .then(() => {
-      // Use soho as a base comparison
-      const sohoIdx = allObjects.findIndex((n, idx) => {
-        return n.file.includes('theme-soho.simple.json');
+      // Use classic as a base comparison
+      const classicIdx = allObjects.findIndex((n, idx) => {
+        return n.file.includes('theme-classic.simple.json');
       });
 
-      // Keep from comparing soho to itself
-      const soho = allObjects.splice(sohoIdx, 1)[0];
+      // Keep from comparing classic to itself
+      const classic = allObjects.splice(classicIdx, 1)[0];
 
       // Loop through all properties of the first theme
       for (let idx = 0; idx < allObjects[0].props.length; idx++) {
@@ -96,7 +96,7 @@ function compareTokens(distTokens) {
           }
         }
       }
-      showStats(soho, allObjects);
+      showStats(classic, allObjects);
       swlog.logTaskEnd(startTask);
     })
     .catch(console.error);

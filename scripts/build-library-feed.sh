@@ -17,7 +17,7 @@ DOMAIN='https://design.infor.com'
 DOCS_ROOT='api/docs'
 NAME='IDS UI Design Library'
 RELEASE_URL="https://github.com/infor-design/design-system/releases/tag/$PACKAGE_VERSION"
-LIBRARY_PATH='sketch/theme-soho/ids-design-kit.sketch'
+LIBRARY_PATH='sketch/theme-classic/ids-design-kit.sketch'
 ENCLOSURE_URL="$DOMAIN/$DOCS_ROOT/$PACKAGE_LIBRARY/latest/$LIBRARY_PATH"
 DATE=`date`
 #Wed, 13 Mar 2019 10:09:18 GMT
