@@ -1,0 +1,12 @@
+{
+    "include": [
+        "design-tokens/theme-classic/color-palette.json",
+        "design-tokens/theme-classic/theme.json",
+        "design-tokens/props/*.json"
+    ],
+    "source": [
+        "design-tokens/theme-classic/variants/contrast/theme.json",
+        "design-tokens/theme-classic/variants/contrast/props/*.json"
+
+    ]
+}

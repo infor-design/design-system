@@ -19,8 +19,8 @@ The best way to integrate tokens into your project is to use [npm](https://www.n
         ├── ids-identity/
             ├──tokens/
                 ├──web/
-                    ├── theme-soho.scss
-                    ├── theme-soho-dark.scss
+                    ├── theme-classic.scss
+                    ├── theme-classic-dark.scss
     ```
 
 1. Start with a simple Sass definition to showcase the body's `background-color` property.
@@ -38,14 +38,14 @@ The best way to integrate tokens into your project is to use [npm](https://www.n
     - sass/my-theme-light.scss
 
         ```css
-        @import '../../node_modules/ids-identity/tokens/web/theme-soho.scss'; // Use the soho original theme (lighter)
+        @import '../../node_modules/ids-identity/tokens/web/theme-classic.scss'; // Use the classic original theme (lighter)
         @import styles.scss;
         ```
 
     - sass/my-theme-dark.scss
 
         ```css
-        @import '../../node_modules/ids-identity/tokens/web/theme-soho-dark.scss'; // Use the soho dark theme
+        @import '../../node_modules/ids-identity/tokens/web/theme-classic-dark.scss'; // Use the classic dark theme
         @import styles.scss;
         ```
 

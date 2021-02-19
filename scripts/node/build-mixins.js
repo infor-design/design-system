@@ -12,7 +12,7 @@ const swlog = require('./utilities/stopwatch-log.js');
 // Dummy function to resolve the theme functions
 global.theme = (property) => ({ theme: property });
 
-const uiConfigUplift = require('../../design-tokens/ui.config.js');
+const uiConfigNew= require('../../design-tokens/ui.config.js');
 
 const propKeys = {
   screens: '',
@@ -270,13 +270,13 @@ const staticProps = `@mixin align-baseline {
 function generateMixins(dest) {
   return new Promise((resolve, reject) => {
     const startTaskName = swlog.logTaskStart('creating sass mixins');
-    const entries = Object.entries(uiConfigUplift.theme);
+    const entries = Object.entries(uiConfigNew.theme);
     let mixinData = '';
 
     for (let i = 0; i < entries.length; i++) {
       if (typeof entries[i][1] === 'function') {
         const prop = entries[i][1].toString().replace('theme => theme(\'', '').replace('\')', '');
-        entries[i][1] = uiConfigUplift.theme[prop];
+        entries[i][1] = uiConfigNew.theme[prop];
       }
       const name = mapPropName(entries[i][0]);
 

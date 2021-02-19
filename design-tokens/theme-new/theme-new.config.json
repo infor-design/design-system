@@ -1,0 +1,10 @@
+{
+    "include": [
+        "design-tokens/theme-new/color-palette.json",
+        "design-tokens/theme-new/theme.json",
+        "design-tokens/props/*.json"
+    ],
+    "source": [
+        "design-tokens/theme-new/props/*.json"
+    ]
+}

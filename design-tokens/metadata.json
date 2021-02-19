@@ -1,14 +1,52 @@
 {
     "themes": [
         {
-            "name": "soho",
-            "title": "Subtle",
+            "name": "new",
+            "title": "New",
             "status": "stable",
             "base": {
                 "name": "light",
                 "title": "Light"
             },
-            "variants": [
+            "modes": [
+                {
+                    "name": "dark",
+                    "title": "Dark"
+                },
+                {
+                    "name": "contrast",
+                    "title": "High Contrast"
+                }
+            ]
+        },
+        {
+            "name": "classic",
+            "title": "Classic",
+            "status": "stable",
+            "base": {
+                "name": "light",
+                "title": "Light"
+            },
+            "modes": [
+                {
+                    "name": "dark",
+                    "title": "Dark"
+                },
+                {
+                    "name": "contrast",
+                    "title": "High Contrast"
+                }
+            ]
+        },
+        {
+            "name": "soho",
+            "title": "SOHO",
+            "status": "stable",
+            "base": {
+                "name": "light",
+                "title": "Light"
+            },
+            "modes": [
                 {
                     "name": "dark",
                     "title": "Dark"
@@ -21,13 +59,13 @@
         },
         {
             "name": "uplift",
-            "title": "Vibrant",
+            "title": "Uplift",
             "status": "stable",
             "base": {
                 "name": "light",
                 "title": "Light"
             },
-            "variants": [
+            "modes": [
                 {
                     "name": "dark",
                     "title": "Dark"

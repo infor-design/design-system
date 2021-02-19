@@ -17,7 +17,7 @@ const swlog = require('./stopwatch-log.js');
 const path = require('path');
 
 const OUTPUT_DIR = `./dist/icons`;
-const OUTPUT_JSON_FILE = `./design-tokens/theme-soho/icons.json`;
+const OUTPUT_JSON_FILE = `./design-tokens/theme-classic/icons.json`;
 
 const logStats = () => {
   console.log(`

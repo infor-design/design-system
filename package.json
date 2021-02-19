@@ -25,8 +25,7 @@
     "zip": "bash ./scripts/package-release.sh",
     "release:beta": "release-it --preRelease=beta --no-github.release",
     "release:rc": "release-it --preRelease=rc --no-github.release",
-    "release:final": "release-it",
-    "watch": "watch 'npm run build:watch && touch ../master3/src/components/typography/_typography-uplift.scss' ./design-tokens"
+    "release:final": "release-it"
   },
   "repository": {
     "type": "git",
