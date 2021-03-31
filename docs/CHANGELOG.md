@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.5.0
+
+### v4.5.0 Fixes
+
+- `[General]` We bumped the version from 4.0 to 4.5 to correspond with the general release of Soho (IDS) Design system 4.5 so the versions sync up better. ([#5012](https://github.com/infor-design/enterprise/issues/5012))
+
 ## v4.0.0
 
 ### v4.0.0 Fixes
