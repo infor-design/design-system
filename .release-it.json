@@ -10,7 +10,8 @@
     "git": {
         "changelog": "./scripts/github-changelog.sh ${version}",
         "commitMessage": "Release v${version}",
-        "tagAnnotation": "Release v${version}"
+        "tagAnnotation": "Release v${version}",
+        "requireCleanWorkingDir": "false"
     },
     "npm": {
         "tag": "latest"
