@@ -2,7 +2,7 @@
 
 ## v4.5.1
 
-### v4.5.0 Fixes
+### v4.5.1 Fixes
 
 - `[Colors]` Added a color set called classic-slate so classic theme colors can be referenced. ([#4632](https://github.com/infor-design/enterprise/issues/4632))
 
