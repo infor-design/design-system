@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.5.1
+
+### v4.5.0 Fixes
+
+- `[Colors]` Added a color set called classic-slate so classic theme colors can be referenced. ([#4632](https://github.com/infor-design/enterprise/issues/4632))
+
 ## v4.5.0
 
 ### v4.5.0 Fixes

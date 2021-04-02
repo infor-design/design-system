@@ -102,6 +102,18 @@ module.exports = {
         90: '--ids-color-palette-slate-90',
         100: '--ids-color-palette-slate-100',
       },
+      'classic-slate': {
+        10: '--ids-color-palette-classic-slate-10',
+        20: '--ids-color-palette-classic-slate-20',
+        30: '--ids-color-palette-classic-slate-30',
+        40: '--ids-color-palette-classic-slate-40',
+        50: '--ids-color-palette-classic-slate-50',
+        60: '--ids-color-palette-classic-slate-60',
+        70: '--ids-color-palette-classic-slate-70',
+        80: '--ids-color-palette-classic-slate-80',
+        90: '--ids-color-palette-classic-slate-90',
+        100: '--ids-color-palette-classic-slate-100',
+      },
       graphite: {
         10: '--ids-color-palette-graphite-10',
         20: '--ids-color-palette-graphite-20',
