@@ -8,4 +8,5 @@ RELEASE_VERSION=$2
 
 if [[ "$RELEASE_TAG" == "latest" ]]; then
     ./scripts/deploy-assets.sh -e prod
+    ./scripts/deploy-assets.sh -e staging
 fi
