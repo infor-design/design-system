@@ -110,7 +110,7 @@ themesArr.forEach((theme) => {
       const typeDest = `${iconsDest}/${iconType}`;
       createDirs([typeDest]);
 
-      promises.push(() => gIcons(iconsSrc, typeDest));
+      promises.push(() => gIcons.generateIcons(iconsSrc, typeDest));
     }
   });
 

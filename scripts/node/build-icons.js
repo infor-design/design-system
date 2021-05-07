@@ -336,3 +336,8 @@ function generateIcons(sketchfile, dest) {
 }
 
 module.exports = generateIcons;
+
+module.exports = {
+  generateIcons : generateIcons,
+  optimizeSVGs : optimizeSVGs
+}

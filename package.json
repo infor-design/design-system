@@ -12,6 +12,7 @@
     "build:fonts": "node ./scripts/node/build.js --build=fonts",
     "build:meta": "node ./scripts/node/build.js --build=meta",
     "build:mixins": "node ./scripts/node/build.js --build=mixins",
+    "build:figma": "node ./scripts/node/s3-download.js",
     "assets": "npm run build && npm run zip && bash ./scripts/deploy-assets.sh -e local",
     "assets:staging": "npm run build && npm run zip && bash ./scripts/deploy-assets.sh -e staging",
     "assets:prod": "npm run build && npm run zip && bash ./scripts/deploy-assets.sh -e prod",
@@ -65,6 +66,8 @@
     "announcements.json"
   ],
   "dependencies": {
+    "async": "^3.2.0",
+    "aws-sdk": "^2.901.0",
     "chalk": "^4.1.0",
     "log-symbols": "^4.1.0",
     "semver": "^7.3.5"

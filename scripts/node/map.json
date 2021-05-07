@@ -1,0 +1,38 @@
+[
+    {
+        "name": "IDS Assets Library v4.5 System Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "prefix": "c_217",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-new/figma/icons/standard/svg"
+    },
+    {
+        "name": "IDS Assets Library v4.5 Empty States Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "prefix": "c_218",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-new/figma/icons/empty/svg"
+    },
+    {
+        "name": "IDS Assets Library v4.5 Accent Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "prefix": "c_219",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-new/figma/icons/accent/svg"
+    },
+    {
+        "name": "IDS Assets Library v4.5 App Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "prefix": "c_220",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-new/figma/icons/apps/svg"
+    }
+]
