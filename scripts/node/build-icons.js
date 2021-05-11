@@ -126,6 +126,7 @@ function optimizeSVGs(src) {
     try {
       const data = fs.readFileSync(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
+      const countStr = '<path';
       const count = /<path/g;
 
       const pathStatement = dataOptimized.data
@@ -133,8 +134,12 @@ function optimizeSVGs(src) {
         .replace('</svg>', '');
 
       iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
-      if (count.exec(dataOptimized.data).length !== 1) {
-        swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
+
+      // checking for more than one path in the file exported from sketch
+      if (dataOptimized.data.includes(countStr)) {
+        if (count.exec(dataOptimized.data).length !== 1) {
+          swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
+        }
       }
 
       await fs.writeFileSync(filepath, dataOptimized.data, 'utf-8');
@@ -331,8 +336,7 @@ function generateIcons(sketchfile, dest) {
         resolve();
         swlog.logTaskEnd(startTaskName);
       });
-  })
-    .catch(swlog.error);
+  }).catch(swlog.error);
 }
 
 module.exports = generateIcons;
