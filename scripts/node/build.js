@@ -18,6 +18,7 @@ const gIcons = require('./build-icons');
 const gMeta = require('./build-meta.js');
 const gMixins = require('./build-mixins.js');
 const gTokens = require('./build-tokens');
+const gFigmaIcons = require('./build-figma-icons');
 
 const pkgjson = require('../../package.json');
 
@@ -74,6 +75,12 @@ del.sync([rootDest]);
 createDirs([rootDest]);
 
 const promises = [];
+
+if (args.build.includes('figma')) {
+  promises.push(() => {
+    return gFigmaIcons();
+  });
+}
 
 if (args.build.includes('meta')) {
   promises.push(() => {

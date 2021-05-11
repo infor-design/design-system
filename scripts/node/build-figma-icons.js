@@ -101,16 +101,25 @@ function fetchIcons(config) {
   })
 }
 
-for (let i = 0; i < map.length; i++) {
-  promises.push(() => {
-    return fetchIcons(map[i])
-  })
+function run(src, dest) {
+  return new Promise((resolve, reject) => {
+    if (map.length == 0) {
+      reject()
+    }
 
-  promises.push(() => {
-    return gIcons.optimizeSVGs('./dist/' + map[i].destination_path)
+    for (let i = 0; i < map.length; i++) {
+      promises.push(() => {
+        return fetchIcons(map[i])
+      })
+    
+      promises.push(() => {
+        return gIcons.optimizeSVGs('./dist/' + map[i].destination_path)
+      })
+    }
+
+    runSync(promises).then(() => {})
+    resolve()
   })
 }
 
-runSync(promises).then(() => {
-  // Any thing we do last goes here
-})
+module.exports = run;
