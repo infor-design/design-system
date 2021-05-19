@@ -21,7 +21,7 @@ if [ -z ${DOCS_API_KEY+x} ]; then
     exit 1
 fi
 
-npm install && \
-    npm run clean && \
-    npm run build && \
-    npm run test
+#npm install && \
+#    npm run clean && \
+#    npm run build && \
+#    npm run test
