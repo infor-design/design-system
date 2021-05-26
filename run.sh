@@ -8,8 +8,8 @@
 _NPM_TOKEN=${NPM_TOKEN:-}
 
 npm config set //registry.npmjs.org/:_authToken $_NPM_TOKEN
-npm install
-npm run build
+#npm install
+#npm run build
 
 # git branch --set-upstream-to origin/figma
-release-it --dry-run --no-git.requireCleanWorkingDir --config release-it.json --ci -- patch
+release-it --no-git.requireCleanWorkingDir --config release-it.json --ci -- patch
