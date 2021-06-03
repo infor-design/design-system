@@ -72,7 +72,7 @@ function moveFileTo(file, dest) {
   return new Promise((resolve, reject) => {
     const startTaskName = swlog.logTaskStart(`creating themes figma metadata file ${dest}`)
 
-    axios.get(`${apiEndpoint}/collections/${col_id}/`)
+    axios.get(`${apiEndpoint}/collections/${col_id}/svg/`)
     .then((response) => {
       try {
         const metaObj = response.data.meta_data.exported_list
