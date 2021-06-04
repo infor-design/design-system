@@ -7,7 +7,7 @@
             "prefix": "c_217",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/figma/icons/standard/svg"
+        "destination_path": "theme-new/figma/icons/standard"
     },
     {
         "name": "IDS Assets Library v4.5 Empty States Icons",
@@ -17,7 +17,7 @@
             "prefix": "c_218",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/figma/icons/empty/svg"
+        "destination_path": "theme-new/figma/icons/empty"
     },
     {
         "name": "IDS Assets Library v4.5 Accent Icons",
@@ -27,7 +27,7 @@
             "prefix": "c_219",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/figma/icons/accent/svg"
+        "destination_path": "theme-new/figma/icons/accent"
     },
     {
         "name": "IDS Assets Library v3.5 System Icons",
@@ -37,7 +37,7 @@
             "prefix": "c_221",
             "region": "us-east-1"
         },
-        "destination_path": "theme-classic/figma/icons/standard/svg"
+        "destination_path": "theme-classic/figma/icons/standard"
     },
     {
         "name": "IDS Assets Library v3.5 Empty States Icons",
@@ -47,6 +47,6 @@
             "prefix": "c_222",
             "region": "us-east-1"
         },
-        "destination_path": "theme-classic/figma/icons/empty/svg"
+        "destination_path": "theme-classic/figma/icons/empty"
     }
 ]

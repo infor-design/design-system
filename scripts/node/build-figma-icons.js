@@ -4,7 +4,6 @@ const AWS = require('aws-sdk')
 const async = require('async')
 const axios = require('axios')
 const swlog = require('./utilities/stopwatch-log.js')
-
 const util = require('util')
 const copyFile = util.promisify(fs.copyFile)
 const unlink = util.promisify(fs.unlink)
@@ -13,8 +12,6 @@ const path = require('path')
 
 const gIcons = require('./build-icons')
 const map = require('./map.json')
-
-
 const apiEndpoint = 'https://g4zv2x9d77.execute-api.us-east-1.amazonaws.com/prod/api'
 const rootDest = './dist'
 const promises = []
@@ -72,7 +69,7 @@ function moveFileTo(file, dest) {
   return new Promise((resolve, reject) => {
     const startTaskName = swlog.logTaskStart(`creating themes figma metadata file ${dest}`)
 
-    axios.get(`${apiEndpoint}/collections/${col_id}/svg/`)
+    axios.get(`${apiEndpoint}/collections/${col_id}/`)
     .then((response) => {
       try {
         const metaObj = response.data.meta_data.exported_list
@@ -111,11 +108,11 @@ function fetchIcons(config) {
     const destination = rootDest + '/' + destination_path
     let bucketParams = {
       Bucket: bucket_name,
-      Prefix: prefix
+      Delimiter: '/svg',
+      Prefix: `${prefix}/svg`
     }
 
-    del.sync([destination])
-    createDirs([destination])
+    createDirs([`${destination}/svg`])
 
     s3.listObjects(bucketParams, function (err, data) {
       if (err) return console.log(err)
@@ -135,7 +132,7 @@ function fetchIcons(config) {
             let content = fileContents.Body.toString()
             let fileName = key.replace(prefix, '')
             
-            fs.writeFile(destination + '/' + fileName, content, err => {
+            fs.writeFile(`${destination}${fileName}`, content, err => {
               if (err) {
                 console.error(err)
                 return
@@ -173,22 +170,26 @@ function run() {
 
     for (let i = 0; i < map.length; i++) {
       promises.push(() => {
+        console.log(`Fetching icons into ${map[i].destination_path}/svg.`)
         return fetchIcons(map[i])
       })
     
       promises.push(() => {
-        return gIcons.optimizeSVGs('./dist/' + map[i].destination_path)
+        console.log(`Optimizing icons in ${map[i].destination_path}/svg.`)
+        return gIcons.optimizeSVGs(`./dist/${map[i].destination_path}/svg`)
       })
 
       promises.push(() => {
-        let file = './dist/' + map[i].destination_path + '/' + 'path-data.json'
-        let dest = './dist/' + map[i].destination_path.replace('/svg', '')
+        console.log(`Moving path-data.json to ${map[i].destination_path}.`)
+        let file = `./dist/${map[i].destination_path}/svg/path-data.json`
+        let dest = `./dist/${map[i].destination_path}`
         
         return moveFileTo(file, dest)
       })
 
       promises.push(() => {
-        const dest = `./dist/${map[i].destination_path.replace('/svg', '')}`
+        console.log(`Generating meta in ${map[i].destination_path}.`)
+        const dest = `./dist/${map[i].destination_path}`
         return generateMeta(map[i].source.col_id, dest)
       })
     }

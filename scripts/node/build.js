@@ -9,7 +9,6 @@
 // -------------------------------------
 const args = require('minimist')(process.argv.slice(2));
 const glob = require('glob');
-const copydir = require('copy-dir');
 const del = require('del');
 const fs = require('fs');
 const compareTokens = require('./utilities/compare-tokens');
@@ -19,6 +18,7 @@ const gMeta = require('./build-meta.js');
 const gMixins = require('./build-mixins.js');
 const gTokens = require('./build-tokens');
 const gFigmaIcons = require('./build-figma-icons');
+const gFigmaPngs = require('./fetch-figma-pngs');
 
 const pkgjson = require('../../package.json');
 
@@ -53,17 +53,6 @@ const runSync = async (arr) => {
   return results; // will be resolved value of promise
 };
 
-/**
- * Copy one path to another
- * @param {string} from - path to directory
- * @param {string} to - path to directory
- */
-const copyDirExists = (from, to) => {
-  if (fs.existsSync(to)) {
-    copydir.sync(to, from);
-  }
-};
-
 // -------------------------------------
 //   Main
 // -------------------------------------
@@ -77,6 +66,10 @@ createDirs([rootDest]);
 const promises = [];
 
 if (args.build.includes('figma')) {
+  promises.push(() => {
+    return gFigmaPngs();
+  });
+
   promises.push(() => {
     return gFigmaIcons();
   });
