@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "4.5.4",
+  "version": "4.5.5",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "postinstall": "node ./scripts/node/postinstall.js",
@@ -26,7 +26,7 @@
     "zip": "bash ./scripts/package-release.sh",
     "release:beta": "release-it --preRelease=beta --no-github.release",
     "release:rc": "release-it --preRelease=rc --no-github.release",
-    "release:final": "release-it"
+    "release:final": "release-it --config release-it.json"
   },
   "repository": {
     "type": "git",
