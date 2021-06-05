@@ -130,8 +130,8 @@ function optimizeSVGs(src) {
       const count = /<path/g;
 
       const pathStatement = dataOptimized.data
-        .replace('<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">', '')
-        .replace('</svg>', '');
+        .replace(/<svg[^>]*>/g, '')
+        .replace(/<\/svg>/g, '');
 
       iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
 
