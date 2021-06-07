@@ -37,7 +37,7 @@
             "prefix": "c_220",
             "region": "us-east-1"
         },
-        "destination_path": "theme-classic/figma/icons/apps"
+        "destination_path": "theme-new/figma/icons/apps"
     },
     {
         "name": "IDS Assets Library v3.5 System Icons",

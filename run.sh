@@ -11,5 +11,4 @@ npm config set //registry.npmjs.org/:_authToken $_NPM_TOKEN
 npm install
 npm run build
 
-# git branch --set-upstream-to origin/figma
-#release-it --config release-it.json --ci -- patch
+release-it --config release-it.json --ci -- patch
