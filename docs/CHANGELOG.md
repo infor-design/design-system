@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.5.6
+
+### v4.5.6 Fixes
+
+- `[General]` Fixes back some incorrect releases
+
 ## v4.5.1
 
 ### v4.5.1 Fixes
