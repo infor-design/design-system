@@ -1,10 +1,10 @@
 # What's New with Infor Design System
 
-## v4.5.6
+## v4.5.2
 
-### v4.5.6 Fixes
+### v4.5.2 Fixes
 
-- `[General]` Fixes back some incorrect releases
+- `[Icons]` Added the start of icon generation from figma. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
 
 ## v4.5.1
 

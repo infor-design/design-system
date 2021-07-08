@@ -18,3 +18,8 @@ log/
 # Editor Files #
 .vscode
 *.code-*
+
+# Local Dev #
+.env
+env-vars.sh
+notes.md
