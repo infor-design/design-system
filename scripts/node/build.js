@@ -99,41 +99,46 @@ themesArr.forEach((theme) => {
   const iconsDest = `${themeDest}/icons`;
   createDirs([themeDest, iconsDest]);
 
-  const iconsSrcFiles = glob.sync(`./sketch/${theme}/ids-icons-*.sketch`);
+  if (args.build.includes('icons')) {
+    const iconsSrcFiles = glob.sync(`./sketch/${theme}/ids-icons-*.sketch`);
+    iconsSrcFiles.forEach((iconsSrc) => {
+      const reg = /ids-icons-(\w+)\.sketch/;
+      const match = iconsSrc.match(reg);
+      const iconType = match[1];
 
-  iconsSrcFiles.forEach((iconsSrc) => {
-    const reg = /ids-icons-(\w+)\.sketch/;
-    const match = iconsSrc.match(reg);
-    const iconType = match[1];
+      if (fs.existsSync(iconsSrc)) {
+        const typeDest = `${iconsDest}/${iconType}`;
+        createDirs([typeDest]);
 
-    if (args.build.includes('icons') && fs.existsSync(iconsSrc)) {
-      const typeDest = `${iconsDest}/${iconType}`;
-      createDirs([typeDest]);
-
-      promises.push(() => gIcons.generateIcons(iconsSrc, typeDest));
-    }
-  });
-
-  const fontSrc = `./font/${theme}`;
-  if (args.build.includes('fonts') && fs.existsSync(fontSrc)) {
-    const dest = `${themeDest}/fonts`;
-    createDirs([dest]);
-
-    promises.push(() => gFonts(fontSrc, dest));
+        promises.push(() => gIcons.generateIcons(iconsSrc, typeDest));
+      }
+    });
   }
 
-  const tokensSrc = `./design-tokens/${theme}`;
-  if (args.build.includes('tokens') && fs.existsSync(tokensSrc)) {
-    const dest = `${themeDest}/tokens`;
-    createDirs([dest]);
+  if (args.build.includes('fonts')) {
+    const fontSrc = `./font/${theme}`;
+    if (fs.existsSync(fontSrc)) {
+      const dest = `${themeDest}/fonts`;
+      createDirs([dest]);
 
-    promises.push(() => { //eslint-disable-line
-      return gTokens(tokensSrc, dest).then(() => {
-        const tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
-        // Verify/validate token files against eachother
-        return compareTokens(tokensToCompare).catch(console.error); //eslint-disable-line
+      promises.push(() => gFonts(fontSrc, dest));
+    }
+  }
+
+  if (args.build.includes('tokens')) {
+    const tokensSrc = `./design-tokens/${theme}`;
+    if (fs.existsSync(tokensSrc)) {
+      const dest = `${themeDest}/tokens`;
+      createDirs([dest]);
+
+      promises.push(() => { //eslint-disable-line
+        return gTokens(tokensSrc, dest).then(() => {
+          const tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
+          // Verify/validate token files against eachother
+          return compareTokens(tokensToCompare).catch(console.error); //eslint-disable-line
+        });
       });
-    });
+    }
   }
 });
 

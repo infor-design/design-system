@@ -122,7 +122,7 @@ function optimizeSVGs(src) {
   svgFiles.sort();
   const last = svgFiles.length;
 
-  const svgPromises = svgFiles.map(async (filepath, mapIndex)=> { //eslint-disable-line
+  const svgPromises = svgFiles.map(async (filepath, mapIndex) => { //eslint-disable-line
     try {
       const data = fs.readFileSync(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);

@@ -7,7 +7,7 @@
             "prefix": "c_217",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/figma/icons/standard"
+        "destination_path": "theme-new/icons/standard"
     },
     {
         "name": "IDS Assets Library v4.5 Empty States Icons",
@@ -17,7 +17,7 @@
             "prefix": "c_218",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/figma/icons/empty"
+        "destination_path": "theme-new/icons/empty"
     },
     {
         "name": "IDS Assets Library v4.5 Accent Icons",
@@ -27,17 +27,7 @@
             "prefix": "c_219",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/figma/icons/accent"
-    },
-    {
-        "name": "IDS Assets Library v4.5 App Icons",
-        "source": {
-            "bucket_name": "infor-design-assets-downloads",
-            "col_id": 220,
-            "prefix": "c_220",
-            "region": "us-east-1"
-        },
-        "destination_path": "theme-new/figma/icons/apps"
+        "destination_path": "theme-new/icons/accent"
     },
     {
         "name": "IDS Assets Library v3.5 System Icons",
@@ -47,7 +37,7 @@
             "prefix": "c_221",
             "region": "us-east-1"
         },
-        "destination_path": "theme-classic/figma/icons/standard"
+        "destination_path": "theme-classic/icons/standard"
     },
     {
         "name": "IDS Assets Library v3.5 Empty States Icons",
@@ -57,6 +47,6 @@
             "prefix": "c_222",
             "region": "us-east-1"
         },
-        "destination_path": "theme-classic/figma/icons/empty"
+        "destination_path": "theme-classic/icons/empty"
     }
 ]

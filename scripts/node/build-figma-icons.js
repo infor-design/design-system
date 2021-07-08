@@ -73,10 +73,26 @@ function moveFileTo(file, dest) {
     .then((response) => {
       try {
         const metaObj = response.data.meta_data.exported_list
+        let cleanList = {'categories': []}
         
         if (metaObj) {
+          for (const item in metaObj['categories']) {
+            const catItem = metaObj['categories'][item]
+            const iconTuples = catItem['icons']
+            let iconList = []
+
+            for (let i = 0; i < iconTuples.length; i++) {
+              iconList.push(iconTuples[i][0])
+            }
+
+            cleanList['categories'].push({
+              name: catItem['name'],
+              icons: iconList
+            })
+          }
+
           createDirs([dest])
-          fs.writeFileSync(`${dest}/metadata.json`, JSON.stringify(metaObj, null, 4), 'utf-8')
+          fs.writeFileSync(`${dest}/metadata.json`, JSON.stringify(cleanList, null, 4), 'utf-8')
         }
 
         resolve()
@@ -147,8 +163,9 @@ function fetchIcons(config) {
           console.log('Failed: ' + err)
           reject()
         } else {
-          console.log('Finished')
-          resolve()
+          setTimeout(function () {
+            resolve()
+          }, 5000)
         }
       })
     })
@@ -170,25 +187,26 @@ function run() {
 
     for (let i = 0; i < map.length; i++) {
       promises.push(() => {
-        console.log(`Fetching icons into ${map[i].destination_path}/svg.`)
+        console.log(`Fetching icons into ${map[i].destination_path}/svg/`)
         return fetchIcons(map[i])
       })
     
       promises.push(() => {
-        console.log(`Optimizing icons in ${map[i].destination_path}/svg.`)
+        console.log(`Optimizing icons in ${map[i].destination_path}/svg/`)
         return gIcons.optimizeSVGs(`./dist/${map[i].destination_path}/svg`)
       })
 
       promises.push(() => {
-        console.log(`Moving path-data.json to ${map[i].destination_path}.`)
-        let file = `./dist/${map[i].destination_path}/svg/path-data.json`
-        let dest = `./dist/${map[i].destination_path}`
-        
-        return moveFileTo(file, dest)
+        setTimeout(() => {
+          console.log(`Moving path-data.json to ${map[i].destination_path}`)
+          let file = `./dist/${map[i].destination_path}/svg/path-data.json`
+          let dest = `./dist/${map[i].destination_path}`
+          return moveFileTo(file, dest)
+        }, 5000);
       })
 
       promises.push(() => {
-        console.log(`Generating meta in ${map[i].destination_path}.`)
+        console.log(`Generating meta in ${map[i].destination_path}`)
         const dest = `./dist/${map[i].destination_path}`
         return generateMeta(map[i].source.col_id, dest)
       })

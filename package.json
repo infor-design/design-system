@@ -5,10 +5,9 @@
   "scripts": {
     "postinstall": "node ./scripts/node/postinstall.js",
     "sketch:diff": "./scripts/skdiff -o ./.tmp/ ",
-    "build": "node ./scripts/node/build.js --build=meta,tokens,icons,fonts,mixins,figma",
-    "build:icons": "node ./scripts/node/build.js --build=icons",
+    "build": "node ./scripts/node/build.js --build=meta,tokens,fonts,mixins,figma",
     "build:tokens": "node ./scripts/node/build.js --build=tokens",
-    "build:watch": "node ./scripts/node/build.js --build=meta,tokens,icons",
+    "build:watch": "node ./scripts/node/build.js --build=meta,tokens",
     "build:fonts": "node ./scripts/node/build.js --build=fonts",
     "build:meta": "node ./scripts/node/build.js --build=meta",
     "build:mixins": "node ./scripts/node/build.js --build=mixins",
