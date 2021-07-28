@@ -87,7 +87,7 @@ function moveFileTo(file, dest) {
 
             cleanList['categories'].push({
               name: catItem['name'],
-              icons: iconList
+              icons: iconList.sort()
             })
           }
 

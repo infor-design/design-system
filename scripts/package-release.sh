@@ -28,7 +28,6 @@ FNAME=${1:-IDS-${PACKAGE_VERSION}.zip}
 echo "${CYAN}Copying assets...${RESET}"
 mkdir -p deploy
 cp -r dist/* deploy
-cp -r sketch deploy
 
 echo "${CYAN}Zipping assets...${RESET}"
 cd deploy
