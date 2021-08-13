@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: build
+spec:
+  template:
+    spec:
+      volumes:
+      - name: github-ssh-key
+        secret:
+          secretName: github
+          defaultMode: 0600 
+      containers:
+      - name: build
+        image: agolub/design-system-builder:0.1.0
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: github-ssh-key
+          readOnly: true
+          mountPath: "/root/.ssh"
+        env:
+        - name: GITHUB_ACCESS_TOKEN
+          value: ""
+        - name: DOCS_API_KEY
+          value: ""
+        - name: JENKINS_JOB_TOKEN
+          value: ""
+        - name: JENKINS_API_TOKEN
+          value: ""
+        - name: RELEASE_VERSION
+          value: ""
+        - name: RELEASE_INCREMENT
+          value: ""
+        - name: DRY_RUN
+          value: ""
+        command: ["/bin/bash", "run.sh"]
+      restartPolicy: Never
+  backoffLimit: 4

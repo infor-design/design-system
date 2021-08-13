@@ -13,7 +13,8 @@ RUN apt-get -y update \
         git \
         wget \
         curl \
-        dos2unix
+        dos2unix \
+        awscli
 
 RUN npm install npm-cli-login@0.1.1 -g \
     && npm install release-it@14.6.2 -g \
