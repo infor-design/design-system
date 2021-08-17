@@ -122,19 +122,24 @@ function optimizeSVGs(src) {
   svgFiles.sort();
   const last = svgFiles.length;
 
-  const svgPromises = svgFiles.map(async (filepath, mapIndex)=> { //eslint-disable-line
+  const svgPromises = svgFiles.map(async (filepath, mapIndex) => { //eslint-disable-line
     try {
       const data = fs.readFileSync(filepath, 'utf8');
       const dataOptimized = await svgoOptimize.optimize(data);
+      const countStr = '<path';
       const count = /<path/g;
 
       const pathStatement = dataOptimized.data
-        .replace('<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">', '')
-        .replace('</svg>', '');
+        .replace(/<svg[^>]*>/g, '')
+        .replace(/<\/svg>/g, '');
 
       iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
-      if (count.exec(dataOptimized.data).length !== 1) {
-        swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
+
+      // checking for more than one path in the file exported from sketch
+      if (dataOptimized.data.includes(countStr)) {
+        if (count.exec(dataOptimized.data).length !== 1) {
+          swlog.error(`Found an Icon with not exactly one path in file: ${filepath}`);
+        }
       }
 
       await fs.writeFileSync(filepath, dataOptimized.data, 'utf-8');
@@ -331,8 +336,12 @@ function generateIcons(sketchfile, dest) {
         resolve();
         swlog.logTaskEnd(startTaskName);
       });
-  })
-    .catch(swlog.error);
+  }).catch(swlog.error);
 }
 
 module.exports = generateIcons;
+
+module.exports = {
+  generateIcons : generateIcons,
+  optimizeSVGs : optimizeSVGs
+}

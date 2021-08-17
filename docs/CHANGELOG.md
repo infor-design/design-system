@@ -1,10 +1,23 @@
 # What's New with Infor Design System
 
-## v4.5.6
+## v4.6.0
 
-### v4.5.6 Fixes
+### v4.6.0 Fixes
 
-- `[General]` Fixes back some incorrect releases
+- `[Icons]` Now generating the icons from figma instead of sketch, this should be of low impact but keep your eye on icons in general as they have all changed in generation and log an issues found. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+- `[Icons]` As part of the figma generation changes the app icons are no longer included. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+
+## v4.5.7
+
+### v4.5.7 Fixes
+
+- `[General]` Set the release back due to errant builds.
+
+## v4.5.2
+
+### v4.5.2 Fixes
+
+- `[Icons]` Added the start of icon generation from figma. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
 
 ## v4.5.1
 

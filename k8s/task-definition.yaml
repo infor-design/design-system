@@ -1,0 +1,129 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: k8s-orchestrate-
+spec:
+  arguments:
+    parameters:
+    - name: github_access_token
+      value: ""
+    - name: docs_api_key
+      value: ""
+    - name: jenkins_job_token
+      value: ""
+    - name: jenkins_api_token
+      value: ""
+    - name: release_version
+      value: ""
+    - name: release_increment
+      value: ""
+    - name: dry_run
+      value: ""
+
+  entrypoint: k8s-orchestrate
+
+  podGC:
+    # Pod GC strategy must be one of the following:
+    # * OnPodCompletion - delete pods immediately when pod is completed (including errors/failures)
+    # * OnPodSuccess - delete pods immediately when pod is successful
+    # * OnWorkflowCompletion - delete pods when workflow is completed
+    # * OnWorkflowSuccess - delete pods when workflow is successful
+    strategy: OnWorkflowSuccess
+
+  templates:
+  - name: k8s-orchestrate
+    steps:
+
+    # Build and publish design system assets.
+    - - name: build
+        template: build
+        arguments:
+          parameters:
+          - name: github_access_token
+            value: "{{workflow.parameters.github_access_token}}"
+          - name: docs_api_key
+            value: "{{workflow.parameters.docs_api_key}}"
+          - name: jenkins_job_token
+            value: "{{workflow.parameters.jenkins_job_token}}"
+          - name: jenkins_api_token
+            value: "{{workflow.parameters.jenkins_api_token}}"
+          - name: release_version
+            value: "{{workflow.parameters.release_version}}"
+          - name: release_increment
+            value: "{{workflow.parameters.release_increment}}"
+          - name: dry_run
+            value: "{{workflow.parameters.dry_run}}"
+  - name: build
+    inputs:
+      parameters:
+        - name: github_access_token
+        - name: docs_api_key
+        - name: jenkins_job_token
+        - name: jenkins_api_token
+        - name: release_version
+        - name: release_increment
+        - name: dry_run
+
+    resource:
+      action: create
+      successCondition: status.succeeded > 0
+      failureCondition: status.failed > 1
+      manifest: |
+        apiVersion: batch/v1
+        kind: Job
+        metadata:
+          generateName: build-
+        spec:
+          template:
+            metadata:
+              name: build
+            spec:
+              volumes:
+              - name: github-ssh-key
+                secret:
+                  secretName: github
+                  defaultMode: 0600
+              - name: npm-secrets
+                secret:
+                  secretName: npm
+                  defaultMode: 0600
+              containers:
+              - name: design-system-builder
+                image: agolub/design-system-builder:0.1.0
+                imagePullPolicy: Always
+                volumeMounts:
+                - name: github-ssh-key
+                  readOnly: true
+                  mountPath: "/root/.ssh"
+                - name: npm-secrets
+                  readOnly: true
+                  mountPath: "/usr/src/secrets"
+                env:
+                - name: GITHUB_ACCESS_TOKEN
+                  value: "{{inputs.parameters.github_access_token}}"
+                - name: DOCS_API_KEY
+                  value: "{{inputs.parameters.docs_api_key}}"
+                - name: JENKINS_JOB_TOKEN
+                  value: "{{inputs.parameters.jenkins_job_token}}"
+                - name: JENKINS_API_TOKEN
+                  value: "{{inputs.parameters.jenkins_api_token}}"
+                - name: RELEASE_VERSION
+                  value: "{{inputs.parameters.release_version}}"
+                - name: RELEASE_INCREMENT
+                  value: "{{inputs.parameters.release_increment}}"
+                - name: DRY_RUN
+                  value: "{{inputs.parameters.dry_run}}"
+                command: ["/bin/sh"]
+                args: [
+                  "-c",
+                  ". ./run.sh"
+                ]
+              restartPolicy: Never
+    outputs:
+      parameters:
+      - name: job-name
+        valueFrom:
+          jsonPath: '{.metadata.name}'
+      - name: job-uid
+        valueFrom:
+          jsonPath: '{.metadata.uid}'

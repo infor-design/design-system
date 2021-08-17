@@ -9,7 +9,6 @@
 // -------------------------------------
 const args = require('minimist')(process.argv.slice(2));
 const glob = require('glob');
-const copydir = require('copy-dir');
 const del = require('del');
 const fs = require('fs');
 const compareTokens = require('./utilities/compare-tokens');
@@ -18,6 +17,8 @@ const gIcons = require('./build-icons');
 const gMeta = require('./build-meta.js');
 const gMixins = require('./build-mixins.js');
 const gTokens = require('./build-tokens');
+const gFigmaIcons = require('./build-figma-icons');
+const gFigmaPngs = require('./fetch-figma-pngs');
 
 const pkgjson = require('../../package.json');
 
@@ -52,17 +53,6 @@ const runSync = async (arr) => {
   return results; // will be resolved value of promise
 };
 
-/**
- * Copy one path to another
- * @param {string} from - path to directory
- * @param {string} to - path to directory
- */
-const copyDirExists = (from, to) => {
-  if (fs.existsSync(to)) {
-    copydir.sync(to, from);
-  }
-};
-
 // -------------------------------------
 //   Main
 // -------------------------------------
@@ -74,6 +64,16 @@ del.sync([rootDest]);
 createDirs([rootDest]);
 
 const promises = [];
+
+if (args.build.includes('figma')) {
+  promises.push(() => {
+    return gFigmaPngs();
+  });
+
+  promises.push(() => {
+    return gFigmaIcons();
+  });
+}
 
 if (args.build.includes('meta')) {
   promises.push(() => {
@@ -99,41 +99,46 @@ themesArr.forEach((theme) => {
   const iconsDest = `${themeDest}/icons`;
   createDirs([themeDest, iconsDest]);
 
-  const iconsSrcFiles = glob.sync(`./sketch/${theme}/ids-icons-*.sketch`);
+  if (args.build.includes('icons')) {
+    const iconsSrcFiles = glob.sync(`./sketch/${theme}/ids-icons-*.sketch`);
+    iconsSrcFiles.forEach((iconsSrc) => {
+      const reg = /ids-icons-(\w+)\.sketch/;
+      const match = iconsSrc.match(reg);
+      const iconType = match[1];
 
-  iconsSrcFiles.forEach((iconsSrc) => {
-    const reg = /ids-icons-(\w+)\.sketch/;
-    const match = iconsSrc.match(reg);
-    const iconType = match[1];
+      if (fs.existsSync(iconsSrc)) {
+        const typeDest = `${iconsDest}/${iconType}`;
+        createDirs([typeDest]);
 
-    if (args.build.includes('icons') && fs.existsSync(iconsSrc)) {
-      const typeDest = `${iconsDest}/${iconType}`;
-      createDirs([typeDest]);
-
-      promises.push(() => gIcons(iconsSrc, typeDest));
-    }
-  });
-
-  const fontSrc = `./font/${theme}`;
-  if (args.build.includes('fonts') && fs.existsSync(fontSrc)) {
-    const dest = `${themeDest}/fonts`;
-    createDirs([dest]);
-
-    promises.push(() => gFonts(fontSrc, dest));
+        promises.push(() => gIcons.generateIcons(iconsSrc, typeDest));
+      }
+    });
   }
 
-  const tokensSrc = `./design-tokens/${theme}`;
-  if (args.build.includes('tokens') && fs.existsSync(tokensSrc)) {
-    const dest = `${themeDest}/tokens`;
-    createDirs([dest]);
+  if (args.build.includes('fonts')) {
+    const fontSrc = `./font/${theme}`;
+    if (fs.existsSync(fontSrc)) {
+      const dest = `${themeDest}/fonts`;
+      createDirs([dest]);
 
-    promises.push(() => { //eslint-disable-line
-      return gTokens(tokensSrc, dest).then(() => {
-        const tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
-        // Verify/validate token files against eachother
-        return compareTokens(tokensToCompare).catch(console.error); //eslint-disable-line
+      promises.push(() => gFonts(fontSrc, dest));
+    }
+  }
+
+  if (args.build.includes('tokens')) {
+    const tokensSrc = `./design-tokens/${theme}`;
+    if (fs.existsSync(tokensSrc)) {
+      const dest = `${themeDest}/tokens`;
+      createDirs([dest]);
+
+      promises.push(() => { //eslint-disable-line
+        return gTokens(tokensSrc, dest).then(() => {
+          const tokensToCompare = `${rootDest}/*/tokens/web/theme-*.simple.json`;
+          // Verify/validate token files against eachother
+          return compareTokens(tokensToCompare).catch(console.error); //eslint-disable-line
+        });
       });
-    });
+    }
   }
 });
 
