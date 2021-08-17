@@ -8,12 +8,15 @@
 # RELEASE_VERSION is only needed for when we push the release archive
 # to S3 for testing.
 
+export TERM=xterm
 export GIT_SSH_COMMAND='ssh -i /root/.ssh/github_rsa -o "StrictHostKeyChecking=no"'
 
 _NPM_TOKEN=${NPM_TOKEN:-}
 _RELEASE_VERSION=${RELEASE_VERSION:-}
 _RELEASE_INCREMENT=${RELEASE_INCREMENT:-}
 _DRY_RUN=${DRY_RUN:-}
+
+IFS="|" read _USERNAME _PASSWORD _EMAIL < /usr/src/secrets/secrets
 
 ls -al /root/.ssh
 git clone git@github.com:infor-design/design-system.git /root/design-system
@@ -22,6 +25,7 @@ git fetch --all
 git checkout -b figma -t remotes/origin/figma
 
 npm config set //registry.npmjs.org/:_authToken $_NPM_TOKEN
+npm-cli-login -u $_USERNAME -p $_PASSWORD -e $_EMAIL
 npm install
 npm run build
 npm run zip

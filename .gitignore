@@ -23,3 +23,4 @@ log/
 .env
 env-vars.sh
 notes.md
+secrets
