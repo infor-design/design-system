@@ -21,8 +21,10 @@ IFS="|" read _USERNAME _PASSWORD _EMAIL < /usr/src/secrets/secrets
 ls -al /root/.ssh
 git clone git@github.com:infor-design/design-system.git /root/design-system
 cd /root/design-system
-git fetch --all
-git checkout -b main -t remotes/origin/figma
+
+# leaving this for testing when working on figma dev branch
+# git fetch --all
+# git checkout -b figma -t remotes/origin/figma
 
 npm config set //registry.npmjs.org/:_authToken $_NPM_TOKEN
 npm-cli-login -u $_USERNAME -p $_PASSWORD -e $_EMAIL
