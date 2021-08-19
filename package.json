@@ -52,6 +52,7 @@
     "lodash": "^4.17.21",
     "markdownlint-cli": "^0.27.1",
     "minimist": "^1.2.5",
+    "npm-cli-login": "^0.1.1",
     "path": "^0.12.7",
     "release-it": "^14.6.2",
     "style-dictionary": "^2.10.3",
@@ -70,7 +71,6 @@
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "log-symbols": "^4.1.0",
-    "npm-cli-login": "^0.1.1",
     "semver": "^7.3.5"
   }
 }
