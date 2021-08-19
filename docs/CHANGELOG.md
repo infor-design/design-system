@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.7.1
+
+### v4.7.1 Fixes
+
+- `[General]` Removed some dependencies for smaller npm size. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+
 ## v4.7.0
 
 ### v4.7.0 Fixes
