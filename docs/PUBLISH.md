@@ -10,3 +10,4 @@ Depending which images have changed you can run only the ones you need
 1. go to http://jenkins.design.infor.com:8080/job/IDS%20Assets%20Library%20v4.5%20System%20Icons%20Figma%20Export/ and hit run
 1. Once the figma icons are built
 1. Go to http://jenkins.design.infor.com:8080/job/design-system-build/build?delay=0sec and change the version and release increment and remove dry run and hit run
+1. note that for release increment the following can be used: "major", "minor", "patch", or "pre*" version; or specify version [default: "patch"]
