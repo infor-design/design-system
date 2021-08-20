@@ -31,6 +31,11 @@ npm-cli-login -u $_USERNAME -p $_PASSWORD -e $_EMAIL
 npm install
 npm run build
 npm run zip
-aws s3 cp IDS-$_RELEASE_VERSION.zip s3://infor-design-assets-downloads/archives/IDS-$_RELEASE_VERSION.zip
+
+ZIP_FILES=`find . -iname \*.zip`
+
+for file in $ZIP_FILES; do
+    aws s3 cp "$file" "s3://infor-design-assets-downloads/archives/`basename $file`"
+done
 
 release-it $_DRY_RUN --config release-it.json --ci -- $_RELEASE_INCREMENT
