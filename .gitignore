@@ -2,7 +2,6 @@
 ############
 dist/
 IDS-*.zip
-SketchLibraryFeeds.zip
 .tmp
 
 # Packages #

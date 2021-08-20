@@ -1,17 +1,13 @@
 # Release
 
-1. Make sure you have release-it installed (`npm install release-it -g`)
-1. Checkout the release branch (X.Y.Z) and `git pull --tags`. If not created you may need to do so.
-1. Run `npm run test` just to ensure things are ok.
-1. You can run `release-it --dry-run --no-git.requireCleanWorkingDir` just to test things are ok.
-1. Run `release-it`.
-1. Always verify the release version when the script asks.
-1. Verify the release on github and npm.
-1. Merge Back to master using the following command sequence.
+Depending which images have changed you can run only the ones you need
 
-```sh
-git checkout master
-git pull origin master
-git merge {branch name}
-git push origin master
-```
+1. Go to http://jenkins.design.infor.com:8080/job/IDS%20Assets%20Library%20v3.5%20Empty%20States%20Icons%20(CLASSIC)%20Figma%20Export/ and hit run
+1. Go to http://jenkins.design.infor.com:8080/job/IDS%20Assets%20Library%20v3.5%20System%20Icons%20(CLASSIC)%20Figma%20Export/ and hit run
+1. Go to http://jenkins.design.infor.com:8080/job/IDS%20Assets%20Library%20v4.5%20Accent%20Icons%20Figma%20Export/ and hit run
+1. Go to http://jenkins.design.infor.com:8080/job/IDS%20Assets%20Library%20v4.5%20App%20Icons%20Figma%20Export/  and hit run
+1. go to http://jenkins.design.infor.com:8080/job/IDS%20Assets%20Library%20v4.5%20Empty%20States%20Icons%20Figma%20Export/ and git run
+1. go to http://jenkins.design.infor.com:8080/job/IDS%20Assets%20Library%20v4.5%20System%20Icons%20Figma%20Export/ and hit run
+1. Once the figma icons are built
+1. Go to http://jenkins.design.infor.com:8080/job/design-system-build/build?delay=0sec and change the version and release increment and remove dry run and hit run
+1. note that for release increment the following can be used: "major", "minor", "patch", or "pre*" version; or specify version [default: "patch"]

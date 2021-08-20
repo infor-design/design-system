@@ -1,5 +1,18 @@
 # What's New with Infor Design System
 
+## v4.7.1
+
+### v4.7.1 Fixes
+
+- `[General]` Removed some dependencies for smaller npm size. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+
+## v4.7.0
+
+### v4.7.0 Fixes
+
+- `[Icons]` Fixed the viewbox size on the dropdown icon in classic theme. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+- `[General]` Moved `npm-cli-login` to dev dependencies. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+
 ## v4.6.0
 
 ### v4.6.0 Fixes

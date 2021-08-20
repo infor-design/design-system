@@ -2,6 +2,3 @@
 
 # Default owners for the repo:
 *         @infor-design/eng-ids
-
-# Sketch file owners:
-*.sketch  @infor-design/eng-ids @infor-design/design

@@ -19,7 +19,6 @@ PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 # @structure:
 #    IDS-X.X.X.zip
 #        font/
-#        sketch/
 #        tokens/
 
 # Set zip filename to argument or fallback
