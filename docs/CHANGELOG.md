@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.7.2
+
+### v4.7.2 Fixes
+
+- `[Icons]` Changes launch icon to make it less "chunky". ([#5170](https://jira.infor.com/browse/UXD-2892))
+
 ## v4.7.1
 
 ### v4.7.1 Fixes
