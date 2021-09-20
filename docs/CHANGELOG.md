@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.7.4
+
+### v4.7.4 Fixes
+
+- `[Icons]` Fix sizes on some of the icons in classic mode. ([#5626](https://github.com/infor-design/enterprise/issues/5626))
+
 ## v4.7.3
 
 ### v4.7.3 Fixes
