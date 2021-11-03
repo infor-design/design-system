@@ -1,8 +1,8 @@
 # What's New with Infor Design System
 
-## v4.7.6
+## v4.7.10
 
-### v4.7.6 Fixes
+### v4.7.10 Fixes
 
 - `[Icons]` Updated several icons see issue for details. ([#5774](https://github.com/infor-design/enterprise/issues/5774))
 
