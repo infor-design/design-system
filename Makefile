@@ -19,7 +19,6 @@ build :
 		--env GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN} \
 		--env NPM_TOKEN=${NPM_TOKEN} \
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
-		--env RELEASE_VERSION=${RELEASE_VERSION} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
 		--env DRY_RUN=${DRY_RUN} \
 		-v ${PWD}/secrets:/usr/src/secrets/secrets \
@@ -35,7 +34,6 @@ shell :
 		--env GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN} \
 		--env NPM_TOKEN=${NPM_TOKEN} \
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
-		--env RELEASE_VERSION=${RELEASE_VERSION} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
 		--env DRY_RUN=${DRY_RUN} \
 		-v ${PWD}/secrets:/usr/src/secrets \
