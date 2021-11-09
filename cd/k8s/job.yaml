@@ -34,8 +34,6 @@ spec:
           value: ""
         - name: JENKINS_API_TOKEN
           value: ""
-        - name: RELEASE_VERSION
-          value: ""
         - name: RELEASE_INCREMENT
           value: ""
         - name: DRY_RUN

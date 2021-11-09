@@ -5,14 +5,10 @@
 # in kubernetes.  To run this locally, use the make build command
 # with proper environment variables set in .env file.
 
-# RELEASE_VERSION is only needed for when we push the release archive
-# to S3 for testing.
-
 export TERM=xterm
 export GIT_SSH_COMMAND='ssh -i /root/.ssh/github_rsa -o "StrictHostKeyChecking=no"'
 
 _NPM_TOKEN=${NPM_TOKEN:-}
-_RELEASE_VERSION=${RELEASE_VERSION:-}
 _RELEASE_INCREMENT=${RELEASE_INCREMENT:-}
 _DRY_RUN=${DRY_RUN:-}
 
