@@ -10,7 +10,7 @@ endif
 .PHONY: build
 
 build-image :
-	docker build -t $(ORGANIZATION)/$(CONTAINER):$(VERSION) .
+	docker build -t $(ORGANIZATION)/$(CONTAINER):$(VERSION) ./cd
 
 build :
 	docker run --rm --name $(CONTAINER) \
