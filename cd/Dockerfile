@@ -1,4 +1,4 @@
-FROM node:15.14
+FROM node:16
 
 WORKDIR /usr/src
 
@@ -16,9 +16,9 @@ RUN apt-get -y update \
         dos2unix \
         awscli
 
-RUN npm install npm-cli-login@0.1.1 -g \
-    && npm install release-it@14.6.2 -g \
-    && npm install aws-sdk@2.910.0 -g
+RUN npm install npm-cli-login@1.0.0 -g \
+    && npm install release-it@14.11.7 -g \
+    && npm install aws-sdk@2.1030.0 -g
 
 RUN mkdir -p /root/.ssh && touch /root/.ssh/config
 RUN echo "[url \"git@github.com:\"]\n\tinsteadOf = https://github.com/" >> /root/.gitconfig

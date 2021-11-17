@@ -23,7 +23,7 @@ build :
 		--env DRY_RUN=${DRY_RUN} \
 		-v ${PWD}/secrets:/usr/src/secrets/secrets \
 		-v ${PWD}/github_rsa:/root/.ssh/github_rsa \
-		-v ${PWD}/run.sh:/usr/src/run.sh \
+		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)
 
 shell :
