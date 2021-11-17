@@ -52,7 +52,7 @@
     "log-symbols": "^4.1.0",
     "markdownlint-cli": "^0.28.1",
     "minimist": "^1.2.5",
-    "npm-cli-login": "^0.1.1",
+    "npm-cli-login": "^1.0.0",
     "path": "^0.12.7",
     "release-it": "^14.11.7",
     "semver": "^7.3.5",
