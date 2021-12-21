@@ -209,7 +209,7 @@ const staticProps = `@mixin align-baseline {
 @mixin border-b-1 {
   border-bottom: 1px solid;
 }
-@mixin border-r-2 {
+@mixin border-r-1 {
   border-right: 1px solid;
 }
 @mixin border-l-1 {
