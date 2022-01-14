@@ -360,6 +360,12 @@ function generateMixins(dest) {
         resolve();
       }
     });
+
+    fs.copyFile('design-tokens/ui.config.font-sizes.js', 'dist/theme-new/tokens/web/ui.config.font-sizes.js', (err) => {
+      if (err) {
+        reject(new Error(`Error during font-size copy ${err}`));
+      }
+    });
   });
 }
 

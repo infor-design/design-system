@@ -14,8 +14,8 @@ const fs = require('fs');
 const compareTokens = require('./utilities/compare-tokens');
 const gFonts = require('./build-font');
 const gIcons = require('./build-icons');
-const gMeta = require('./build-meta.js');
-const gMixins = require('./build-mixins.js');
+const gMeta = require('./build-meta');
+const gMixins = require('./build-mixins');
 const gTokens = require('./build-tokens');
 const gFigmaIcons = require('./build-figma-icons');
 const gFigmaPngs = require('./fetch-figma-pngs');
@@ -56,8 +56,6 @@ const runSync = async (arr) => {
 // -------------------------------------
 //   Main
 // -------------------------------------
-const isVersionThreeOrNewer = parseInt(pkgjson.version.charAt(0), 10) > 2;
-
 // Clean up dist
 const rootDest = './dist';
 del.sync([rootDest]);
@@ -66,13 +64,8 @@ createDirs([rootDest]);
 const promises = [];
 
 if (args.build.includes('figma')) {
-  promises.push(() => {
-    return gFigmaPngs();
-  });
-
-  promises.push(() => {
-    return gFigmaIcons();
-  });
+  promises.push(() => gFigmaPngs());
+  promises.push(() => gFigmaIcons());
 }
 
 if (args.build.includes('meta')) {
