@@ -13,7 +13,7 @@ const glob = require('glob');
 const path = require('path');
 const styleDict = require('style-dictionary');
 
-const swlog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log');
 const customTransforms = require('./utilities/tokens/custom-transforms');
 const customFormats = require('./utilities/tokens/custom-formats');
 

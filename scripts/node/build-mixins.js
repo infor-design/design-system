@@ -7,12 +7,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const swlog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log');
 
 // Dummy function to resolve the theme functions
 global.theme = (property) => ({ theme: property });
 
-const uiConfigNew= require('../../design-tokens/ui.config.js');
+const uiConfigNew = require('../../design-tokens/ui.config');
 
 const propKeys = {
   screens: '',
@@ -142,11 +142,11 @@ function createDirs(dirPath) {
 function makeDirProps(name, entries) {
   let mixinData = '';
   const dProps = [
-    { short: 'l', long: 'left' },
-    { short: 'r', long: 'right' },
+    { short: 'l', long: 'start' },
+    { short: 'r', long: 'end' },
     { short: 't', long: 'top' },
     { short: 'b', long: 'bottom' },
-    { short: 'x', long: 'left', long2: 'right' },
+    { short: 'x', long: 'start', long2: 'end' },
     { short: 'y', long: 'top', long2: 'bottom' }
   ];
 
@@ -154,14 +154,14 @@ function makeDirProps(name, entries) {
     for (let j = 0; j < dProps.length; j++) {
       if (dProps[j].short === 'x' || dProps[j].short === 'y') {
         mixinData += `@mixin ${name}${dProps[j].short}-${entries[i]} {
-  ${name === 'm' ? 'margin-' : 'padding-'}${dProps[j].long}: ${entries[i]}px;
-  ${name === 'm' ? 'margin-' : 'padding-'}${dProps[j].long2}: ${entries[i]}px;
+  ${name === 'm' ? `margin-${dProps[j].short === 'x' ? 'inline-' : ''}` : `padding-${dProps[j].short === 'x' ? 'inline-' : ''}`}${dProps[j].long}: ${entries[i]}px;
+  ${name === 'm' ? `margin-${dProps[j].short === 'x' ? 'inline-' : ''}` : `padding-${dProps[j].short === 'x' ? 'inline-' : ''}`}${dProps[j].long2}: ${entries[i]}px;
 }
 `;
         continue;
       }
       mixinData += `@mixin ${name}${dProps[j].short}-${entries[i]} {
-  ${name === 'm' ? 'margin-' : 'padding-'}${dProps[j].long}: ${entries[i]}px;
+  ${name === 'm' ? `margin-${dProps[j].short === 'l' || dProps[j].short === 'r' ? 'inline-' : ''}` : `padding-${dProps[j].short === 'l' || dProps[j].short === 'r' ? 'inline-' : ''}`}${dProps[j].long}: ${entries[i]}px;
 }
 `;
     }
@@ -218,11 +218,17 @@ const staticProps = `@mixin align-baseline {
 @mixin block {
   display: block;
 }
+@mixin contents {
+  display: contents;
+}
 @mixin inline-flex {
   display: inline-flex;
 }
 @mixin flex {
   display: flex;
+}
+@mixin grid {
+  display: grid;
 }
 @mixin table-cell {
   display: table-cell;
@@ -259,6 +265,34 @@ const staticProps = `@mixin align-baseline {
 }
 @mixin box-content {
   box-sizing: content-box;
+}
+@mixin rounded-tr-md {
+  border-top-right-radius: 4px;
+}
+@mixin rounded-tl-md {
+  border-top-left-radius: 4px;
+}
+@mixin rounded-bl-md {
+  border-bottom-left-radius: 4px;
+}
+@mixin rounded-br-md {
+  border-bottom-right-radius: 4px;
+}
+@mixin rounded-t-md {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+@mixin rounded-b-md {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+@mixin rounded-l-md {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+@mixin rounded-r-md {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 `;
 
@@ -324,6 +358,12 @@ function generateMixins(dest) {
         swlog.logTaskAction('Generated', `'${dest}'`);
         swlog.logTaskEnd(startTaskName);
         resolve();
+      }
+    });
+
+    fs.copyFile('design-tokens/ui.config.font-sizes.js', 'dist/theme-new/tokens/web/ui.config.font-sizes.js', (err) => {
+      if (err) {
+        reject(new Error(`Error during font-size copy ${err}`));
       }
     });
   });

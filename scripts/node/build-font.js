@@ -9,7 +9,7 @@
 // -------------------------------------
 const copydir = require('copy-dir');
 const path = require('path');
-const swlog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log');
 
 // -------------------------------------
 //   Main
@@ -34,18 +34,19 @@ function generateFonts(src, dest) {
 
       fileCount += 1;
       return true;
-    }
+    };
 
     copydir(src, dest, filterFiles, err => {
       if (err) {
+        // eslint-disable-next-line prefer-promise-reject-errors
         reject(`Error! ${err}`);
       } else {
-        swlog.logTaskAction('Copied', `${fileCount} font files`)
+        swlog.logTaskAction('Copied', `${fileCount} font files`);
         swlog.logTaskEnd(startTaskName);
         resolve();
       }
     });
-  })
+  });
 }
 
 module.exports = generateFonts;
