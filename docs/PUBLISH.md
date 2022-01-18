@@ -12,6 +12,6 @@ Depending which images have changed you can run only the ones you need
 1. Go to http://jenkins.design.infor.com:8080/job/design-system-build/build?delay=0sec and change the version and release increment and remove dry run and hit run
 1. note that for release increment the following can be used: "major", "minor", "patch", or "pre*" version; or specify version [default: "patch"]
 
-# Backup
+## Backup
 
 1. Can also run `npm run release:final` locally.

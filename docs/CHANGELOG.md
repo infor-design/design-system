@@ -6,7 +6,7 @@
 
 - `[Colors]` Changed the color names for alerts and updated them for themes. ([#478](https://github.com/infor-design/enterprise/issues/478))
 - `[Mixins]` Added border radius mixins for every side. ([#478](https://github.com/infor-design/enterprise/issues/478))
-- `[Mixins]` Changed ml mr mx pl pr px to use inline-start/end for better RTL. ([#478](https://github.com/infor-design/enterprise/issues/478))
+- `[Mixins]` Changed `ml mr mx pl pr px` to use inline-start/end for better RTL. ([#478](https://github.com/infor-design/enterprise/issues/478))
 - `[Tokens]` Added an importable fontSize.js to use in the components. ([#478](https://github.com/infor-design/enterprise/issues/478))
 
 ## v4.7.10
@@ -37,15 +37,15 @@
 
 ### v4.7.0 Fixes
 
-- `[Icons]` Fixed the viewbox size on the dropdown icon in classic theme. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+- `[Icons]` Fixed the view box size on the dropdown icon in classic theme. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
 - `[General]` Moved `npm-cli-login` to dev dependencies. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
 
 ## v4.6.0
 
 ### v4.6.0 Fixes
 
-- `[Icons]` Now generating the icons from figma instead of sketch, this should be of low impact but keep your eye on icons in general as they have all changed in generation and log an issues found. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
-- `[Icons]` As part of the figma generation changes the app icons are no longer included. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+- `[Icons]` Now generating the icons from Figma instead of sketch, this should be of low impact but keep your eye on icons in general as they have all changed in generation and log an issues found. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+- `[Icons]` As part of the Figma generation changes the app icons are no longer included. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
 
 ## v4.5.7
 
@@ -57,7 +57,7 @@
 
 ### v4.5.2 Fixes
 
-- `[Icons]` Added the start of icon generation from figma. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
+- `[Icons]` Added the start of icon generation from Figma. ([#5170](https://github.com/infor-design/enterprise/issues/5170))
 
 ## v4.5.1
 
@@ -114,16 +114,16 @@
 - `[General]` In Uplift theme all colors are slate now, no graphite.
 - `[General]` Removed extra copy of token from the v2 name. Please use `/dist/theme-*/tokens`.
 - `[General]` All tokens renamed from The `theme` to `ids`. This was needed as the theme is redundant and the variables had to be name spaced.
-- `[General]` Added a tailwind config file with a lot of our settings. We dont actually use this IN tailwind for anything but is there for convenience.
-- `[General]` Added a scss file with mixins for the tailwind config.
+- `[General]` Added a tailwind config file with a lot of our settings. We don't actually use this IN tailwind for anything but is there for convenience.
+- `[General]` Added a `scss` file with mixins for the tailwind config.
 - '[Tokens]' Removed `ids.number.opacity.disabled.value` please use `theme.number.opacity.disabled.value` instead.
 - '[Tokens]' Removed `ids.size.font.line.height` please use `theme.number.font.line.height` options instead.
 - '[Tokens]' Removed `ids.size.font.line.height` please use `theme.number.font.line.height` options instead.
 - '[Tokens]' Removed `dist/*custom-properties.css` please use `dist/*.variables.css`instead if using css variables.
-- '[General]' Added eslint but didnt fix everything yet.
+- '[General]' Added `eslint` but didn't fix everything yet.
 - '[Icons]' Added a path-data.json for each set of icons so they can be imported as JSON.
 - '[Icons]' Made all icons compress to single paths.
-- '[Tokens]' Additional font size tokens have been added. The old tokens ($theme-size-font-xm, $theme-size-font-sm, $theme-size-font-md, $theme-size-font-lg, $theme-size-font-xl) will eventually be removed. Please begin using $theme-size-font-px{size} instead of $theme-size-font-{size}.
+- '[Tokens]' Additional font size tokens have been added. The old tokens (`$theme-size-font-xm, $theme-size-font-sm, $theme-size-font-md, $theme-size-font-lg, $theme-size-font-xl`) will eventually be removed. Please begin using $theme-size-font-px{size} instead of $theme-size-font-{size}.
 - '[Font]' The included source-sans font was updated to version 3.006R.
 
 ## v2.9.11
@@ -210,7 +210,7 @@
 ### v2.7.0 Features
 
 - `[Icons]` Reversed a change in previous versions to make alert icons all have a white background as this caused issues. Concerning alert icons there are now the following `icon-[name]` - which will have transparent background, in Uplift these are linear in style, in soho these are solid in style. We also add a `icon-[name]-alert` for alert icons with a white background. If you need a white background you can use these now. ([#3052](https://github.com/infor-design/enterprise/issues/3052))
-- `[Tokens]` Added a new typographic scale which expands the sizes from 5 (xm, sm, md, lg, xl) to 12. This results in the token names changing from this format `$theme-size-font-{size}` to `$theme-size-font-px{size}`, the old tokens are kept for now for backwards compatibility but may later be removed `$theme-size-font-px{size}` tokens should be used. ([#427](https://github.com/infor-design/design-system/issues/427))
+- `[Tokens]` Added a new typographic scale which expands the sizes from 5 (`xm, sm, md, lg, xl`) to 12. This results in the token names changing from this format `$theme-size-font-{size}` to `$theme-size-font-px{size}`, the old tokens are kept for now for backwards compatibility but may later be removed `$theme-size-font-px{size}` tokens should be used. ([#427](https://github.com/infor-design/design-system/issues/427))
 
 ## v2.6.18
 
