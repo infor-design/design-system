@@ -1,5 +1,14 @@
 # What's New with Infor Design System
 
+## v4.8.0
+
+### v4.8.0 Fixes
+
+- `[Colors]` Changed the color names for alerts and updated them for themes. ([#478](https://github.com/infor-design/enterprise/issues/478))
+- `[Mixins]` Added border radius mixins for every side. ([#478](https://github.com/infor-design/enterprise/issues/478))
+- `[Mixins]` Changed ml mr mx pl pr px to use inline-start/end for better RTL. ([#478](https://github.com/infor-design/enterprise/issues/478))
+- `[Tokens]` Added an importable fontSize.js to use in the components. ([#478](https://github.com/infor-design/enterprise/issues/478))
+
 ## v4.7.10
 
 ### v4.7.10 Fixes
