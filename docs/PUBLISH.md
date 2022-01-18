@@ -14,4 +14,4 @@ Depending which images have changed you can run only the ones you need
 
 # Backup
 
-1. Can also run `npm run release:final"` locally.
+1. Can also run `npm run release:final` locally.
