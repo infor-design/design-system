@@ -294,6 +294,21 @@ const staticProps = `@mixin align-baseline {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+@mixin flex-1 {
+  flex: 1 1 0%;
+}
+@mixin flex-auto {
+  flex: 1 1 auto;
+}
+@mixin flex-auto {
+  flex: 1 1 auto;
+}
+@mixin flex-initial {
+  flex: 0 1 auto;
+}
+@mixin flex-none {
+  flex: none;
+}
 `;
 
 /**
@@ -364,6 +379,12 @@ function generateMixins(dest) {
     fs.copyFile('design-tokens/ui.config.font-sizes.js', 'dist/theme-new/tokens/web/ui.config.font-sizes.js', (err) => {
       if (err) {
         reject(new Error(`Error during font-size copy ${err}`));
+      }
+    });
+
+    fs.copyFile('design-tokens/ui.config.color-palette.js', 'dist/theme-new/tokens/web/ui.config.color-palette.js', (err) => {
+      if (err) {
+        reject(new Error(`Error during color-palette copy ${err}`));
       }
     });
   });
