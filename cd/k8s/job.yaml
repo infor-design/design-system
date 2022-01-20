@@ -28,6 +28,8 @@ spec:
         env:
         - name: GITHUB_ACCESS_TOKEN
           value: ""
+        - name: NPM_TOKEN
+          value: ""
         - name: DOCS_API_KEY
           value: ""
         - name: JENKINS_JOB_TOKEN
