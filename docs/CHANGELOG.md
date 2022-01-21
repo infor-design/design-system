@@ -2,7 +2,7 @@
 
 ## v4.9.0
 
-### v4.9.02 Fixes
+### v4.9.0 Fixes
 
 - `[Icon]` Fixed framing of some icons, and fixed translate and tag icons. ([#5870](https://github.com/infor-design/enterprise/issues/5870))
 
