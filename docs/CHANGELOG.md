@@ -1,8 +1,8 @@
 # What's New with Infor Design System
 
-## v4.8.2
+## v4.9.0
 
-### v4.8.2 Fixes
+### v4.9.02 Fixes
 
 - `[Icon]` Fixed framing of some icons, and fixed translate and tag icons. ([#5870](https://github.com/infor-design/enterprise/issues/5870))
 
