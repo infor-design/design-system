@@ -35,7 +35,7 @@ For designers and developers wanting to build these assets locally, see our [dev
 
 Create a .env file and populate it.  AWS keys are required only for local docker runs.
 
-```
+```bash
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 
