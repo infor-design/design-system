@@ -26,6 +26,31 @@ Then look in `node_modules/ids-identity` for the assets.
 
 For designers and developers wanting to build these assets locally, see our [developer guide](docs/DEVELOP.md).
 
+## Using Jenkins
+
+- To release the next version, specify major, minor, or patch for RELEASE_INCREMENT, and clear FLAGS.
+- To update an existing git release/tag, clear RELEASE_INCREMENT, and use these flags for FLAGS `--no-increment --no-npm`.  Before doing this, remove the tag/version from github so it gets re-created.
+
+## Local Docker
+
+Create a .env file and populate it.  AWS keys are required only for local docker runs.
+
+```
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+
+NPM_TOKEN=""
+GITHUB_ACCESS_TOKEN=
+DOCS_API_KEY=
+
+# specify the semantic version target X.X.X
+RELEASE_INCREMENT=minor
+
+FLAGS="--release-version --no-increment --no-npm"
+```
+
+Then `make build`.
+
 ## Help
 
 For questions and support, please [open an new Issue](https://github.com/infor-design/design-system/issues/new?template=support.md&title=[Support]).
