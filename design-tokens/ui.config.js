@@ -199,12 +199,12 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        '"source sans pro"',
+        'source sans pro',
         'helvetica',
         'arial',
         'sans-serif'
       ],
-      mono: ['"source code pro"', 'monospace'],
+      mono: ['source code pro', 'monospace'],
     },
     fontSize: {
       10: '10px',
