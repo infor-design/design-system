@@ -1,8 +1,8 @@
 # What's New with Infor Design System
 
-## v4.10.1
+## v4.11.0
 
-### v4.10.1 Fixes
+### v4.11.0 Fixes
 
 - `[Font]` Removed quotes on the font names to avoid false security scan errors.
 - `[Icons]` Design removed some deprecated icons. If you are using `info-field` -> should use `icon-info`. If you are using `info-field-solid` -> should use `icon-info-alert`. If you are using `info-field-alert` -> should use `icon-info-alert`. ([#6091](https://github.com/infor-design/enterprise/issues/6091))
