@@ -21,7 +21,7 @@ build :
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
 		--env DRY_RUN=${DRY_RUN} \
-		-v ${PWD}/secrets:/usr/src/secrets/secrets \
+		-v ${PWD}/build:/root/design-system \
 		-v ${PWD}/github_rsa:/root/.ssh/github_rsa \
 		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)

@@ -1,16 +1,17 @@
 # What's New with Infor Design System
 
-## v4.8.2
+## v4.10.1
 
-### v4.8.2 Fixes
+### v4.10.1 Fixes
 
 - `[Font]` Removed quotes on the font names to avoid false security scan errors.
 - `[Icons]` Design removed some deprecated icons. If you are using `info-field` -> should use `icon-info`. If you are using `info-field-solid` -> should use `icon-info-alert`. If you are using `info-field-alert` -> should use `icon-info-alert`. ([#6091](https://github.com/infor-design/enterprise/issues/6091))
 
-## v4.8.1
+## v4.10.0
 
-### v4.8.1 Fixes
+### v4.10.0Fixes
 
+- `[Icon]` Fixed framing of some icons, and fixed translate and tag icons. ([#5870](https://github.com/infor-design/enterprise/issues/5870))
 - `[Color]` Added an importable ui.config.color-palette.js to use in the components. ([#478](https://github.com/infor-design/enterprise/issues/478))
 - `[Mixins]` Added flex mixins like tailwind. ([#478](https://github.com/infor-design/enterprise/issues/478))
 

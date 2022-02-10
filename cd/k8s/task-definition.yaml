@@ -7,6 +7,8 @@ spec:
     parameters:
     - name: github_access_token
       value: ""
+    - name: npm_token
+      value: ""
     - name: docs_api_key
       value: ""
     - name: jenkins_job_token
@@ -39,6 +41,8 @@ spec:
           parameters:
           - name: github_access_token
             value: "{{workflow.parameters.github_access_token}}"
+          - name: npm_token
+            value: "{{workflow.parameters.npm_token}}"
           - name: docs_api_key
             value: "{{workflow.parameters.docs_api_key}}"
           - name: jenkins_job_token
@@ -53,6 +57,7 @@ spec:
     inputs:
       parameters:
         - name: github_access_token
+        - name: npm_token
         - name: docs_api_key
         - name: jenkins_job_token
         - name: jenkins_api_token
@@ -96,6 +101,8 @@ spec:
                 env:
                 - name: GITHUB_ACCESS_TOKEN
                   value: "{{inputs.parameters.github_access_token}}"
+                - name: NPM_TOKEN
+                  value: "{{inputs.parameters.npm_token}}"
                 - name: DOCS_API_KEY
                   value: "{{inputs.parameters.docs_api_key}}"
                 - name: JENKINS_JOB_TOKEN
