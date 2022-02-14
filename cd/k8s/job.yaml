@@ -32,10 +32,6 @@ spec:
           value: ""
         - name: DOCS_API_KEY
           value: ""
-        - name: JENKINS_JOB_TOKEN
-          value: ""
-        - name: JENKINS_API_TOKEN
-          value: ""
         - name: RELEASE_INCREMENT
           value: ""
         - name: DRY_RUN
