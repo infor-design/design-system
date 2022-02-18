@@ -4,7 +4,7 @@
 
 ### v4.11.1 Fixes
 
-- `[Color]` Fixed body background color in new theme.
+- `[Color]` Fixed body background color in new theme. ([486]https://github.com/infor-design/design-system/issues/486)
 
 ## v4.11.0
 
