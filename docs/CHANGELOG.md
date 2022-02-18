@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.11.1
+
+### v4.11.1 Fixes
+
+- `[Color]` Fixed body background color in new theme.
+
 ## v4.11.0
 
 ### v4.11.0 Fixes
