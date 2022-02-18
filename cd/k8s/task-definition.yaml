@@ -11,13 +11,9 @@ spec:
       value: ""
     - name: docs_api_key
       value: ""
-    - name: jenkins_job_token
-      value: ""
-    - name: jenkins_api_token
-      value: ""
     - name: release_increment
       value: ""
-    - name: dry_run
+    - name: flags
       value: ""
 
   entrypoint: k8s-orchestrate
@@ -45,24 +41,18 @@ spec:
             value: "{{workflow.parameters.npm_token}}"
           - name: docs_api_key
             value: "{{workflow.parameters.docs_api_key}}"
-          - name: jenkins_job_token
-            value: "{{workflow.parameters.jenkins_job_token}}"
-          - name: jenkins_api_token
-            value: "{{workflow.parameters.jenkins_api_token}}"
           - name: release_increment
             value: "{{workflow.parameters.release_increment}}"
-          - name: dry_run
-            value: "{{workflow.parameters.dry_run}}"
+          - name: flags
+            value: "{{workflow.parameters.flags}}"
   - name: build
     inputs:
       parameters:
         - name: github_access_token
         - name: npm_token
         - name: docs_api_key
-        - name: jenkins_job_token
-        - name: jenkins_api_token
         - name: release_increment
-        - name: dry_run
+        - name: flags
 
     resource:
       action: create
@@ -74,6 +64,7 @@ spec:
         metadata:
           generateName: build-
         spec:
+          ttlSecondsAfterFinished: 100
           template:
             metadata:
               name: build
@@ -105,14 +96,10 @@ spec:
                   value: "{{inputs.parameters.npm_token}}"
                 - name: DOCS_API_KEY
                   value: "{{inputs.parameters.docs_api_key}}"
-                - name: JENKINS_JOB_TOKEN
-                  value: "{{inputs.parameters.jenkins_job_token}}"
-                - name: JENKINS_API_TOKEN
-                  value: "{{inputs.parameters.jenkins_api_token}}"
                 - name: RELEASE_INCREMENT
                   value: "{{inputs.parameters.release_increment}}"
-                - name: DRY_RUN
-                  value: "{{inputs.parameters.dry_run}}"
+                - name: FLAGS
+                  value: "{{inputs.parameters.flags}}"
                 command: ["/bin/sh"]
                 args: [
                   "-c",
