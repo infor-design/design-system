@@ -1,8 +1,8 @@
 # What's New with Infor Design System
 
-## v4.11.2
+## v4.11.3
 
-### v4.11.2 Fixes
+### v4.11.3 Fixes
 
 - `[Icon]` Added a new mobile (phone) icon. ([6144]https://github.com/infor-design/enterprise/issues/6144)
 
