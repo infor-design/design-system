@@ -387,6 +387,18 @@ function generateMixins(dest) {
         reject(new Error(`Error during color-palette copy ${err}`));
       }
     });
+
+    fs.copyFile('design-tokens/ui.config.font-sizes.js', 'dist/theme-new/tokens/web/ui.config.font-sizes.ts', (err) => {
+      if (err) {
+        reject(new Error(`Error during font-size copy ${err}`));
+      }
+    });
+
+    fs.copyFile('design-tokens/ui.config.color-palette.js', 'dist/theme-new/tokens/web/ui.config.color-palette.ts', (err) => {
+      if (err) {
+        reject(new Error(`Error during color-palette copy ${err}`));
+      }
+    });
   });
 }
 

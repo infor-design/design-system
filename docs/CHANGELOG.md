@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.11.4
+
+### v4.11.4 Fixes
+
+- `[Tokens]` Added token config files in `.ts` format. ([612]https://github.com/infor-design/enterprise-wc/issues/612)
+
 ## v4.11.3
 
 ### v4.11.3 Fixes
