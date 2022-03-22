@@ -27,7 +27,7 @@
 
 ## v4.10.0
 
-### v4.10.0Fixes
+### v4.10.0 Fixes
 
 - `[Icon]` Fixed framing of some icons, and fixed translate and tag icons. ([#5870](https://github.com/infor-design/enterprise/issues/5870))
 - `[Color]` Added an importable ui.config.color-palette.js to use in the components. ([#478](https://github.com/infor-design/enterprise/issues/478))
