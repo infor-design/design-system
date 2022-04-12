@@ -107,12 +107,31 @@ const makeHostCss = (_src, dest) => {
         destFileContents += `${fileLine}\n`;
       }
     });
-
     fs.writeFile(destFile, destFileContents, (err) => {
       if (err) {
         swlog.logTaskAction(`Error during host variable creation ${err}`);
       } else {
       //  swlog.logTaskAction('Generated', destFile);
+      }
+    });
+
+    const destFile2 = file.replace('variables.css', 'map.variables.scss');
+    destFileContents = destFileContents.replace(':host {', '$css-variables: (');
+    destFileContents = destFileContents.replace('}', ');');
+
+    destFileContents = destFileContents.replace(new RegExp('--ids', 'g'), '\'--ids');
+    destFileContents = destFileContents.replace(new RegExp(': ', 'g'), '\': ');
+
+    destFileContents = destFileContents.replace(');', ')X');
+    destFileContents = destFileContents.replace(new RegExp(';', 'g'), ',');
+    destFileContents = destFileContents.replace(')X', ');');
+    destFileContents = destFileContents.replace('css-variables\'', 'css-variables');
+    destFileContents = destFileContents.replace('\'source sans pro\', helvetica, arial, sans-serif', '"\'source sans pro\', helvetica, arial, sans-serif"');
+    destFileContents = destFileContents.replace('\'source code pro\', monospace', '"\'source code pro\', monospace"');
+
+    fs.writeFile(destFile2, destFileContents, (err) => {
+      if (err) {
+        swlog.logTaskAction(`Error during host variable creation ${err}`);
       }
     });
   });

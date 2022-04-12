@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.11.6
+
+### v4.11.6 Fixes
+
+- `[Tokens]` Added a filterable sass map file for setting ([554]https://github.com/infor-design/enterprise-wc/issues/554)
+
 ## v4.11.5
 
 ### v4.11.5 Fixes
