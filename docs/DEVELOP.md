@@ -19,9 +19,10 @@
 
 ## Using the Css Variable Sass Map
 
-- Add import `@import '../../../node_modules/ids-identity/dist/theme-new/tokens/web/theme-new.map.variables';
-` to your sass
+- Add import `@import '../../../node_modules/ids-identity/dist/theme-new/tokens/web/theme-new.map.variables'`;
+` to your sass.
 - Add a sass mixin like this
+
 ```sass
 @mixin css-variables($vars...) {
   :host {
@@ -35,7 +36,9 @@
   }
 }
 ```
+
 - use as follows:
+
 ```sass
 @include css-variables(
   --ids-color-brand-primary-base,
