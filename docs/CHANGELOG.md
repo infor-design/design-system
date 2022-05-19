@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.11.7
+
+### v4.11.7 Fixes
+
+- `[Tokens]` Fixed wrong token colors in  dark mode ([6446]https://github.com/infor-design/enterprise/issues/6446)
+
 ## v4.11.6
 
 ### v4.11.6 Fixes
