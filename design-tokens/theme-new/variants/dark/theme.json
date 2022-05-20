@@ -4,6 +4,20 @@
             "status": {
                 "base":    { "value": "{ids.color.brand.primary.base.value}" }
             },
+            "brand": {
+                "primary": {
+                    "lighter":  { "value": "{ids.color.palette.slate.40.value}" },
+                    "base":     { "value": "{ids.color.palette.slate.60.value}" },
+                    "alt":      { "value": "{ids.color.palette.azure.70.value}" },
+                    "contrast": { "value": "{ids.color.palette.white.value}" }
+                },
+                "secondary": {
+                    "lighter": { "value": "{ids.color.palette.slate.40.value}" },
+                    "base":     { "value": "{ids.color.palette.slate.50.value}" },
+                    "alt":      { "value": "{ids.color.palette.slate.70.value}" },
+                    "contrast": { "value": "{ids.color.palette.slate.90.value}" }
+                }
+            },
             "boxshadow": {
                 "base": { "value": "{ids.color.palette.slate.10.value}" }
             },
