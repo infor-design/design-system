@@ -11,6 +11,20 @@
                 "base":  { "value": "{ids.color.palette.white.value}" },
                 "info":  { "value": "{ids.color.palette.slate.30.value}" },
                 "muted": { "value": "{ids.color.palette.slate.40.value}" }
+            },
+            "brand": {
+                "primary": {
+                    "lighter":  { "value": "{ids.color.palette.slate.40.value}" },
+                    "base":     { "value": "{ids.color.palette.slate.60.value}" },
+                    "alt":      { "value": "{ids.color.palette.azure.70.value}" },
+                    "contrast": { "value": "{ids.color.palette.white.value}" }
+                },
+                "secondary": {
+                    "lighter": { "value": "{ids.color.palette.slate.40.value}" },
+                    "base":     { "value": "{ids.color.palette.slate.50.value}" },
+                    "alt":      { "value": "{ids.color.palette.slate.70.value}" },
+                    "contrast": { "value": "{ids.color.palette.slate.90.value}" }
+                }
             }
         }
     }
