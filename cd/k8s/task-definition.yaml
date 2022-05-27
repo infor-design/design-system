@@ -5,12 +5,6 @@ metadata:
 spec:
   arguments:
     parameters:
-    - name: github_access_token
-      value: ""
-    - name: npm_token
-      value: ""
-    - name: docs_api_key
-      value: ""
     - name: release_increment
       value: ""
     - name: flags
@@ -35,12 +29,6 @@ spec:
         template: build
         arguments:
           parameters:
-          - name: github_access_token
-            value: "{{workflow.parameters.github_access_token}}"
-          - name: npm_token
-            value: "{{workflow.parameters.npm_token}}"
-          - name: docs_api_key
-            value: "{{workflow.parameters.docs_api_key}}"
           - name: release_increment
             value: "{{workflow.parameters.release_increment}}"
           - name: flags
@@ -48,9 +36,6 @@ spec:
   - name: build
     inputs:
       parameters:
-        - name: github_access_token
-        - name: npm_token
-        - name: docs_api_key
         - name: release_increment
         - name: flags
 
@@ -91,11 +76,20 @@ spec:
                   mountPath: "/usr/src/secrets"
                 env:
                 - name: GITHUB_ACCESS_TOKEN
-                  value: "{{inputs.parameters.github_access_token}}"
+                  valueFrom:
+                    secretKeyRef:
+                      name: github-access-token
+                      key: token
                 - name: NPM_TOKEN
-                  value: "{{inputs.parameters.npm_token}}"
+                  valueFrom:
+                    secretKeyRef:
+                      name: npm-token
+                      key: token
                 - name: DOCS_API_KEY
-                  value: "{{inputs.parameters.docs_api_key}}"
+                  valueFrom:
+                    secretKeyRef:
+                      name: docs-api-key
+                      key: token
                 - name: RELEASE_INCREMENT
                   value: "{{inputs.parameters.release_increment}}"
                 - name: FLAGS
