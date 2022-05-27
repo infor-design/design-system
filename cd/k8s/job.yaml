@@ -27,11 +27,20 @@ spec:
           mountPath: "/usr/src/secrets"
         env:
         - name: GITHUB_ACCESS_TOKEN
-          value: ""
+          valueFrom:
+            secretKeyRef:
+              name: github-access-token
+              key: token
         - name: NPM_TOKEN
-          value: ""
+          valueFrom:
+            secretKeyRef:
+              name: npm-token
+              key: token
         - name: DOCS_API_KEY
-          value: ""
+          valueFrom:
+            secretKeyRef:
+              name: docs-api-key
+              key: token
         - name: RELEASE_INCREMENT
           value: ""
         - name: DRY_RUN

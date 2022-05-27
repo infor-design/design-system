@@ -12,22 +12,16 @@ _GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN:-}
 _RELEASE_INCREMENT=${RELEASE_INCREMENT:-}
 _FLAGS=${FLAGS:-}
 
-git clone https://corpulent:${_GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git /root/design-system
+rm -fr /root/design-system/{..?*,.[!.]*,*} 2>/dev/null
+git clone https://${_GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git /root/design-system
 cd /root/design-system
-git remote set-url origin https://corpulent:${_GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git
-git config --global user.email "artemgolub@gmail.com"
-git config --global user.name "corpulent"
+git remote set-url origin git@github.com:infor-design/design-system.git
 
-# leaving this for testing when working on figma dev branch
-# git fetch --all
-# git checkout -b figma -t remotes/origin/figma
-
-npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+npm config set '//registry.npmjs.org/:_authToken' "${_NPM_TOKEN}"
 npm install
 npm run build
 
 release-it $_FLAGS --config release-it.json --ci -- $_RELEASE_INCREMENT
-
 
 if [[ "$_FLAGS" != *"--dry-run"* ]]; then
     ZIP_FILES=`find . -iname \*.zip`
