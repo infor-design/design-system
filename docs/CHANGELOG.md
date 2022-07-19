@@ -4,6 +4,12 @@
 
 ### v4.11.9 Fixes
 
+- `[Icons]` Added two new icons for `interaction` and `interaction-reply`. ([6666]https://github.com/infor-design/enterprise/issues/6666)
+
+## v4.11.9
+
+### v4.11.9 Fixes
+
 - `[Tokens]` Fixed wrong token colors in dark mode for classic. ([6446]https://github.com/infor-design/enterprise/issues/6446)
 
 ## v4.11.7
