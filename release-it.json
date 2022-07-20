@@ -11,16 +11,16 @@
         "changelog": "./scripts/github-changelog.sh ${npm.tag}",
         "commitMessage": "Release v${version}",
         "tagAnnotation": "Release v${version}",
-        "requireCleanWorkingDir": false,
-        "commit": true,
-        "push": true,
-        "tag": true
+        "requireCleanWorkingDir": false
     },
     "github": {
         "release": true,
         "releaseName": "v${version}",
         "tokenRef": "GITHUB_ACCESS_TOKEN",
-        "assets": "IDS-*.zip"
+        "assets": "IDS-*.zip",
+        "commit": true,
+        "push": true,
+        "tag": true
     },
     "npm": {
         "tag": "latest",
