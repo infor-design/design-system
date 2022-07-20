@@ -1,8 +1,8 @@
 # What's New with Infor Design System
 
-## v4.11.10
+## v4.11.11
 
-### v4.11.10 Fixes
+### v4.11.11 Fixes
 
 - `[Icons]` Added two new icons for `interaction` and `interaction-reply`. ([6666]https://github.com/infor-design/enterprise/issues/6666)
 
