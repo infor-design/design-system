@@ -10,20 +10,24 @@ export TERM=xterm
 _NPM_TOKEN=${NPM_TOKEN:-}
 _GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN:-}
 _RELEASE_INCREMENT=${RELEASE_INCREMENT:-}
-_FLAGS=${FLAGS:-}
+_RELEASEIT_FLAGS=${RELEASEIT_FLAGS:-}
 
 rm -fr /root/design-system/{..?*,.[!.]*,*} 2>/dev/null
 git clone https://${_GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git /root/design-system
 cd /root/design-system
-git remote set-url origin git@github.com:infor-design/design-system.git
+git remote set-url origin https://${_GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git
 
 npm config set '//registry.npmjs.org/:_authToken' "${_NPM_TOKEN}"
 npm install
 npm run build
 
-release-it $_FLAGS --config release-it.json --ci -- $_RELEASE_INCREMENT
+if [ -n "$_RELEASEIT_FLAGS" ];
+then
+  release-it $_RELEASEIT_FLAGS --config .release-it.json --ci -- $_RELEASE_INCREMENT
+fi
 
-if [[ "$_FLAGS" != *"--dry-run"* ]]; then
+if [[ "$_RELEASEIT_FLAGS" != *"--dry-run=true"* ]];
+then
     ZIP_FILES=`find . -iname \*.zip`
 
     for file in $ZIP_FILES; do

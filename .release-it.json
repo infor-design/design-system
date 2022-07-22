@@ -1,7 +1,6 @@
 {
-    "non-interactive": false,
-    "dry-run": false,
-    "verbose": true,
+    "dry-run": true,
+    "verbose": 2,
     "hooks": {
         "before:init": "./scripts/before-stage.sh",
         "after:bump": "npm run zip",
@@ -11,19 +10,19 @@
         "changelog": "./scripts/github-changelog.sh ${npm.tag}",
         "commitMessage": "Release v${version}",
         "tagAnnotation": "Release v${version}",
-        "requireCleanWorkingDir": false
+        "requireCleanWorkingDir": false,
+        "commit": false,
+        "push": false,
+        "tag": false
     },
     "github": {
-        "release": true,
+        "release": false,
         "releaseName": "v${version}",
         "tokenRef": "GITHUB_ACCESS_TOKEN",
-        "assets": "IDS-*.zip",
-        "commit": true,
-        "push": true,
-        "tag": true
+        "assets": "IDS-*.zip"
     },
     "npm": {
         "tag": "latest",
-        "publish": true
+        "publish": false
     }
 }

@@ -3,48 +3,48 @@ kind: Job
 metadata:
   name: build
 spec:
+  backoffLimit: 0
   template:
     spec:
       volumes:
-      - name: github-ssh-key
-        secret:
-          secretName: github
-          defaultMode: 0600 
-      - name: npm-secrets
-        secret:
-          secretName: npm
-          defaultMode: 0600
-      containers:
-      - name: build
-        image: agolub/design-system-builder:0.1.0
-        imagePullPolicy: Always
-        volumeMounts:
         - name: github-ssh-key
-          readOnly: true
-          mountPath: "/root/.ssh"
+          secret:
+            secretName: github
+            defaultMode: 0600
         - name: npm-secrets
-          readOnly: true
-          mountPath: "/usr/src/secrets"
-        env:
-        - name: GITHUB_ACCESS_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: github-access-token
-              key: token
-        - name: NPM_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: npm-token
-              key: token
-        - name: DOCS_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: docs-api-key
-              key: token
-        - name: RELEASE_INCREMENT
-          value: ""
-        - name: DRY_RUN
-          value: ""
-        command: ["/bin/bash", "run.sh"]
+          secret:
+            secretName: npm
+            defaultMode: 0600
+      containers:
+        - name: build
+          image: agolub/design-system-builder:0.1.0
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: github-ssh-key
+              readOnly: true
+              mountPath: "/root/.ssh"
+            - name: npm-secrets
+              readOnly: true
+              mountPath: "/usr/src/secrets"
+          env:
+            - name: GITHUB_ACCESS_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: github-access-token
+                  key: token
+            - name: NPM_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: npm-token
+                  key: token
+            - name: DOCS_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: docs-api-key
+                  key: token
+            - name: RELEASE_INCREMENT
+              value: ""
+            - name: RELEASEIT_FLAGS
+              value: ""
+          command: ["/bin/bash", "run.sh"]
       restartPolicy: Never
-  backoffLimit: 4
