@@ -4,17 +4,17 @@ WORKDIR /usr/src
 
 RUN apt-get update \
     && apt-get install -y \
-        software-properties-common \
-        build-essential
+    software-properties-common \
+    build-essential
 
 RUN apt-get -y update \
     && apt-get -y install \
-        zip \
-        git \
-        wget \
-        curl \
-        dos2unix \
-        awscli
+    zip \
+    git \
+    wget \
+    curl \
+    dos2unix \
+    awscli
 
 RUN npm install npm-cli-login@1.0.0 -g \
     && npm install release-it@14.11.7 -g \
