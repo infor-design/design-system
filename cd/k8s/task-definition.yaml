@@ -54,23 +54,16 @@ spec:
                 name: build
               spec:
                 volumes:
-                  - name: github-ssh-key
+                  - name: gitconfig
                     secret:
-                      secretName: github
-                      defaultMode: 0600
-                  - name: npm-secrets
-                    secret:
-                      secretName: npm
+                      secretName: gitconfig
                       defaultMode: 0600
                 containers:
                   - name: design-system-builder
                     image: agolub/design-system-builder:0.1.0
                     imagePullPolicy: Always
                     volumeMounts:
-                      - name: github-ssh-key
-                        readOnly: true
-                        mountPath: "/root/.ssh"
-                      - name: npm-secrets
+                      - name: gitconfig
                         readOnly: true
                         mountPath: "/usr/src/secrets"
                     env:
@@ -93,6 +86,13 @@ spec:
                         value: "{{inputs.parameters.releaseit_flags}}"
                       - name: RELEASE_INCREMENT
                         value: "{{inputs.parameters.release_increment}}"
+                    lifecycle:
+                      postStart:
+                        exec:
+                          command:
+                            - /bin/sh
+                            - -c
+                            - cp /usr/src/secrets/gitconfig /root/.gitconfig
                     command: ["/bin/sh"]
                     args: [
                       "-c",
