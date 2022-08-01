@@ -28,8 +28,8 @@ For designers and developers wanting to build these assets locally, see our [dev
 
 ## Using Jenkins
 
--   To release the next version, specify major, minor, or patch for RELEASE_INCREMENT, and clear RELEASEIT_FLAGS.
--   To update an existing git release/tag, clear RELEASE_INCREMENT, and use these flags for RELEASEIT_FLAGS `--dry-run=false --no-increment --no-npm`. Before doing this, remove the tag/version from github so it gets re-created.
+- To release the next version, specify major, minor, or patch for RELEASE_INCREMENT, and clear RELEASEIT_FLAGS.
+- To update an existing git release/tag, clear RELEASE_INCREMENT, and use these flags for RELEASEIT_FLAGS `--dry-run=false --no-increment --no-npm`. Before doing this, remove the tag/version from github so it gets re-created.
 
 ## Local Docker
 
