@@ -20,7 +20,8 @@ build :
 		--env NPM_TOKEN=${NPM_TOKEN} \
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
-		--env FLAGS=${FLAGS} \
+		--env RELEASEIT_FLAGS=${RELEASEIT_FLAGS} \
+		-v ${PWD}/cd/.gitconfig:/root/.gitconfig \
 		-v ${PWD}/build:/root/design-system \
 		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)
@@ -34,6 +35,8 @@ shell :
 		--env NPM_TOKEN=${NPM_TOKEN} \
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
-		--env FLAGS=${FLAGS} \
-		-v ${PWD}/run.sh:/usr/src/run.sh \
+		--env RELEASEIT_FLAGS=${RELEASEIT_FLAGS} \
+		-v ${PWD}/cd/.gitconfig:/root/.gitconfig \
+		-v ${PWD}/build:/root/design-system \
+		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)

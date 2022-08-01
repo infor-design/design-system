@@ -28,12 +28,12 @@ For designers and developers wanting to build these assets locally, see our [dev
 
 ## Using Jenkins
 
-- To release the next version, specify major, minor, or patch for RELEASE_INCREMENT, and clear FLAGS.
-- To update an existing git release/tag, clear RELEASE_INCREMENT, and use these flags for FLAGS `--no-increment --no-npm`.  Before doing this, remove the tag/version from github so it gets re-created.
+-   To release the next version, specify major, minor, or patch for RELEASE_INCREMENT, and clear RELEASEIT_FLAGS.
+-   To update an existing git release/tag, clear RELEASE_INCREMENT, and use these flags for RELEASEIT_FLAGS `--dry-run=false --no-increment --no-npm`. Before doing this, remove the tag/version from github so it gets re-created.
 
 ## Local Docker
 
-Create a .env file and populate it.  AWS keys are required only for local docker runs.
+Create a .env file and populate it. AWS keys are required only for local docker runs.
 
 ```bash
 AWS_ACCESS_KEY_ID=
@@ -46,7 +46,7 @@ DOCS_API_KEY=
 # specify the semantic version target X.X.X
 RELEASE_INCREMENT=minor
 
-FLAGS="--release-version --no-increment --no-npm"
+RELEASEIT_FLAGS="--dry-run=true"
 ```
 
 Then `make build`.

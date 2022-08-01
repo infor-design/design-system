@@ -4,8 +4,10 @@
 # kubernetes job. AWS permissions are controlled by a role setup 
 # in kubernetes.  To run this locally, use the "make build" command
 # with proper environment variables set in .env file.
+set -e
 
 export TERM=xterm
+export NODE_OPTIONS=--max_old_space_size=4096
 
 _NPM_TOKEN=${NPM_TOKEN:-}
 _GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN:-}
@@ -26,7 +28,7 @@ then
   release-it $_RELEASEIT_FLAGS --config .release-it.json --ci -- $_RELEASE_INCREMENT
 fi
 
-if [[ "$_RELEASEIT_FLAGS" != *"--dry-run=true"* ]];
+if [[ "$_RELEASEIT_FLAGS" == *"--dry-run=false"* ]];
 then
     ZIP_FILES=`find . -iname \*.zip`
 

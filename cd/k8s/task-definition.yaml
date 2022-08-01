@@ -62,6 +62,10 @@ spec:
                     secret:
                       secretName: npm
                       defaultMode: 0600
+                  - name: gitconfig
+                    secret:
+                      defaultMode: 0600
+                      secretName: gitconfig
                 containers:
                   - name: design-system-builder
                     image: agolub/design-system-builder:0.1.0
@@ -73,6 +77,9 @@ spec:
                       - name: npm-secrets
                         readOnly: true
                         mountPath: "/usr/src/secrets"
+                      - name: gitconfig
+                        mountPath: "/root/.gitconfig"
+                        readOnly: true
                     env:
                       - name: GITHUB_ACCESS_TOKEN
                         valueFrom:
