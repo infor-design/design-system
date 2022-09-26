@@ -60,7 +60,7 @@ spec:
                       defaultMode: 0600
                 containers:
                   - name: design-system-builder
-                    image: agolub/design-system-builder:0.1.0
+                    image: hookandloop/design-system-builder:0.1.0
                     imagePullPolicy: Always
                     volumeMounts:
                       - name: gitconfig
