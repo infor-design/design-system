@@ -1,4 +1,4 @@
-ORGANIZATION = agolub
+ORGANIZATION = hookandloop
 CONTAINER = design-system-builder
 VERSION = 0.1.0
 
@@ -10,7 +10,7 @@ endif
 .PHONY: build
 
 build-image :
-	docker build -t $(ORGANIZATION)/$(CONTAINER):$(VERSION) ./cd
+	docker build -t $(ORGANIZATION)/$(CONTAINER):$(VERSION) .
 
 build :
 	docker run --rm --name $(CONTAINER) \
@@ -20,7 +20,8 @@ build :
 		--env NPM_TOKEN=${NPM_TOKEN} \
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
-		--env FLAGS=${FLAGS} \
+		--env RELEASEIT_FLAGS=${RELEASEIT_FLAGS} \
+		-v ${PWD}/.gitconfig:/root/.gitconfig \
 		-v ${PWD}/build:/root/design-system \
 		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)
@@ -34,6 +35,8 @@ shell :
 		--env NPM_TOKEN=${NPM_TOKEN} \
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
-		--env FLAGS=${FLAGS} \
-		-v ${PWD}/run.sh:/usr/src/run.sh \
+		--env RELEASEIT_FLAGS=${RELEASEIT_FLAGS} \
+		-v ${PWD}/cd/.gitconfig:/root/.gitconfig \
+		-v ${PWD}/build:/root/design-system \
+		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)
