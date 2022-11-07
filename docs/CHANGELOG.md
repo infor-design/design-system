@@ -1,5 +1,12 @@
 # What's New with Infor Design System
 
+## v4.14.0
+
+### v4.14.0 Fixes
+
+- `[Icons]` Fixed flipped icons. ([#6868](https://github.com/infor-design/enterprise/issues/6868))
+- `[Icons]` Added empty state icons. ([#6934](https://github.com/infor-design/enterprise/issues/6934))
+
 ## v4.13.0
 
 ### v4.13.0 Fixes
