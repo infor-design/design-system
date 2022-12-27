@@ -2,11 +2,18 @@
     "ids": {
         "color": {
             "status": {
-                "base":    { "value": "{ids.color.brand.primary.alt.value}" },
+                "base": { "value": "{ids.color.brand.primary.alt.value}" },
                 "caution": { "value": "#ffd726" },
-                "danger":  { "value": "#e84f4f" },
+                "danger": { "value": "#e84f4f" },
+                "error": { "value": "#e84f4f" },
                 "success": { "value": "#80ce4d" },
-                "warning": { "value": "#ff9426" }
+                "warning": { "value": "#ff9426" },
+                "info": { "value": "{ids.color.palette.azure.70.value}" },
+                "status01": { "value": "#e84f4f" },
+                "status02": { "value": "#e84f4f" },
+                "status03": { "value": "#ffd726" },
+                "status04": { "value": "#80ce4d" },
+                "status05": { "value": "{ids.color.palette.azure.70.value}" }
             },
             "brand": {
                 "primary": {

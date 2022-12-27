@@ -2,11 +2,18 @@
     "ids": {
         "color": {
             "status": {
-                "base":    { "value": "{ids.color.brand.primary.alt.value}" },
-                "caution": { "value": "#FFD726" },
-                "danger":  { "value": "#DA1217" },
+                "base": { "value": "{ids.color.brand.primary.alt.value}" },
+                "caution": { "value": "#FFD100" },
+                "danger": { "value": "#DA1217" },
+                "error": { "value": "#DA1217" },
                 "success": { "value": "#2AC371" },
-                "warning": { "value": "#F98300" }
+                "warning": { "value": "#F98300" },
+                "info": { "value": "#0064D4" },
+                "status01": { "value": "#DA1217" },
+                "status02": { "value": "#F98300" },
+                "status03": { "value": "#FFD100" },
+                "status04": { "value": "#2AC371" },
+                "status05": { "value": "#0064D4" }
             },
             "brand": {
                 "primary": {
