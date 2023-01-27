@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.14.5
+
+### v4.14.5 Fixes
+
+- `[Icons]` Added four new icons: `up-down-chevron, approve-all, import-spreadsheet, microphone`. ([#7142](https://github.com/infor-design/enterprise/issues/7142))
+
 ## v4.14.4
 
 ### v4.14.4 Fixes
