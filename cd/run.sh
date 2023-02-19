@@ -29,10 +29,7 @@ _RELEASE_INCREMENT=${RELEASE_INCREMENT:-}
 
 rm -fr /root/design-system/{..?*,.[!.]*,*} 2>/dev/null
 
-#echo "[url \"git@github.com:\"]\n\tinsteadOf = https://github.com/" >> /root/.gitconfig
-#git config --global url."https://${GITHUB_ACCESS_TOKEN}:@github.com/".insteadOf "https://github.com/"
-
-git clone https://${GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git /root/design-system
+git clone https://$GITHUB_ACCESS_TOKEN@github.com/$REPO_OWNER_NAME.git /root/design-system
 cd /root/design-system
 git remote set-url origin https://${GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git
 

@@ -20,16 +20,6 @@
         "destination_path": "theme-new/icons/empty"
     },
     {
-        "name": "IDS Assets Library v4.5 Accent Icons",
-        "source": {
-            "bucket_name": "infor-design-assets-downloads",
-            "col_id": 219,
-            "prefix": "c_219",
-            "region": "us-east-1"
-        },
-        "destination_path": "theme-new/icons/accent"
-    },
-    {
         "name": "IDS Assets Library v3.5 System Icons",
         "source": {
             "bucket_name": "infor-design-assets-downloads",
