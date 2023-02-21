@@ -14,7 +14,7 @@
             "name": "gitconfig",
             "secret": {
               "secretName": "gitconfig",
-              "defaultMode": 600
+              "defaultMode": 384
             }
           }
         ],
