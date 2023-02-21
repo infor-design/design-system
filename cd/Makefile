@@ -21,9 +21,11 @@ build :
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
 		--env RELEASEIT_FLAGS=${RELEASEIT_FLAGS} \
+		--env BRANCH=${BRANCH} \
+		--env REPO_OWNER_NAME=${REPO_OWNER_NAME} \
 		-v ${PWD}/.gitconfig:/root/.gitconfig \
 		-v ${PWD}/build:/root/design-system \
-		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
+		-v ${PWD}/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)
 
 shell :
@@ -36,7 +38,9 @@ shell :
 		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env RELEASE_INCREMENT=${RELEASE_INCREMENT} \
 		--env RELEASEIT_FLAGS=${RELEASEIT_FLAGS} \
-		-v ${PWD}/cd/.gitconfig:/root/.gitconfig \
+		--env BRANCH=${BRANCH} \
+		--env REPO_OWNER_NAME=${REPO_OWNER_NAME} \
+		-v ${PWD}/.gitconfig:/root/.gitconfig \
 		-v ${PWD}/build:/root/design-system \
-		-v ${PWD}/cd/run.sh:/usr/src/run.sh \
+		-v ${PWD}/run.sh:/usr/src/run.sh \
 		$(ORGANIZATION)/$(CONTAINER):$(VERSION)
