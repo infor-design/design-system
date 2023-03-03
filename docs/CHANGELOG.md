@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.14.6
+
+### v4.14.6 Fixes
+
+- `[Icons]` Added new empty state icons and some in larger sizes. ([#7115](https://github.com/infor-design/enterprise/issues/7115))
+
 ## v4.14.5
 
 ### v4.14.5 Fixes
