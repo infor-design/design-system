@@ -7,6 +7,7 @@ spec:
   backoffLimit: 0
   template:
     spec:
+      restartPolicy: Never
       volumes:
         - name: gitconfig
           secret:
@@ -40,6 +41,12 @@ spec:
               value: ""
             - name: RELEASE_INCREMENT
               value: ""
+            - name: REPO_OWNER_NAME
+              value: "infor-design/design-system"
+            - name: BRANCH
+              value: main
+          command: ["/bin/bash"]
+          args: ["-c", ". ./run.sh"]
           lifecycle:
             postStart:
               exec:
@@ -47,6 +54,3 @@ spec:
                   - /bin/sh
                   - -c
                   - cp /usr/src/secrets/gitconfig /root/.gitconfig
-          command: ["/bin/sh"]
-          args: ["-c", ". ./run.sh"]
-      restartPolicy: Never

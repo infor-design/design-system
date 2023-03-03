@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "name": "design-system-release",
+    "namespace": "argo"
+  },
+  "spec": {
+    "ttlSecondsAfterFinished": 100,
+    "backoffLimit": 0,
+    "template": {
+      "spec": {
+        "restartPolicy": "Never",
+        "volumes": [
+          {
+            "name": "gitconfig",
+            "secret": {
+              "secretName": "gitconfig",
+              "defaultMode": 384
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "design-system-release",
+            "image": "hookandloop/design-system-builder:0.1.0",
+            "imagePullPolicy": "Always",
+            "volumeMounts": [
+              {
+                "name": "gitconfig",
+                "readOnly": true,
+                "mountPath": "/usr/src/secrets"
+              }
+            ],
+            "command": [
+              "/bin/bash"
+            ],
+            "args": [
+              "-c",
+              ". ./run.sh"
+            ],
+            "lifecycle": {
+              "postStart": {
+                "exec": {
+                  "command": [
+                    "/bin/sh",
+                    "-c",
+                    "cp /usr/src/secrets/gitconfig /root/.gitconfig"
+                  ]
+                }
+              }
+            },
+            "env": [
+              {
+                "name": "GITHUB_ACCESS_TOKEN",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "github-access-token",
+                    "key": "token"
+                  }
+                }
+              },
+              {
+                "name": "NPM_TOKEN",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "npm-token",
+                    "key": "token"
+                  }
+                }
+              },
+              {
+                "name": "DOCS_API_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "docs-api-key",
+                    "key": "token"
+                  }
+                }
+              },
+              {
+                "name": "RELEASEIT_FLAGS",
+                "value": "--dry-run=true --git.commit --git.push --git.tag --github.release --npm.publish"
+              },
+              {
+                "name": "RELEASE_INCREMENT",
+                "value": "patch"
+              },
+              {
+                "name": "REPO_OWNER_NAME",
+                "value": "infor-design/design-system"
+              },
+              {
+                "name": "BRANCH",
+                "value": "main"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
