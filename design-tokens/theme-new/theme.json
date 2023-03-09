@@ -59,6 +59,7 @@
         "size": {
             "font": {
                 "base": { "value": "{ids.size.font.sm.value}" },
+                "xxs":   { "value": "1.2rem" },
                 "xs":   { "value": "1.4rem" },
                 "sm":   { "value": "1.6rem" },
                 "md":   { "value": "2.2rem" },
