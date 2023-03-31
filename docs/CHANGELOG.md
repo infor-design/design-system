@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.14.7
+
+### v4.14.7 Fixes
+
+- `[Icons]` Icon updated for 44 icons, added new `success-message` empty state and two new icons `vertical-ellipsis` and `microphone-filled`. ([#7394](https://github.com/infor-design/enterprise/issues/7394))
+
 ## v4.14.6
 
 ### v4.14.6 Fixes
