@@ -33,6 +33,14 @@ git clone https://$GITHUB_ACCESS_TOKEN@github.com/$REPO_OWNER_NAME.git /root/des
 cd /root/design-system
 git remote set-url origin https://${GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git
 
+git fetch --all
+git checkout $BRANCH > /dev/null
+
+if [ $? = 1 ] ; then
+    echo "Git checkout failed. Please make sure the branch you are checking out exists."
+    exit 1
+fi
+
 npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
 npm install
 npm run build
@@ -42,6 +50,11 @@ then
   release-it $RELEASEIT_FLAGS --config .release-it.json --ci -- $_RELEASE_INCREMENT
 fi
 
+if [ -z $VERSION ]
+then
+    VERSION=$(node -p "require('./package.json').version")
+fi
+
 if [[ "$RELEASEIT_FLAGS" == *"--dry-run=false"* ]];
 then
     ZIP_FILES=`find . -iname \*.zip`
@@ -49,4 +62,8 @@ then
     for file in $ZIP_FILES; do
         aws s3 cp "$file" "s3://infor-design-assets-downloads/archives/`basename $file`"
     done
+
+    cd ./dist
+    aws s3 sync . s3://ids-com/docs/ids-identity/$VERSION/
+    aws s3 sync . s3://ids-com-staging/docs/ids-identity/$VERSION/
 fi
