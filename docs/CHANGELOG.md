@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.14.8
+
+### v4.14.8 Fixes
+
+- `[Icons]` Icon updated for 16 icons, added new icons `change-department, shifting, shift-origin, shift-destination, swap-list-left, swap-list-right`. ([#7510](https://github.com/infor-design/enterprise/issues/7510))
+
 ## v4.14.7
 
 ### v4.14.7 Fixes
