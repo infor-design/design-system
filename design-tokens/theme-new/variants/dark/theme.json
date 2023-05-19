@@ -34,7 +34,7 @@
                 "base": { "value": "{ids.color.palette.slate.40.value}" }
             },
             "body": {
-                "base" : { "value": "{ids.color.palette.slate.90.value}" },
+                "base" : { "value": "{ids.color.palette.slate.100.value}" },
                 "lightest": { "value": "{ids.color.palette.slate.80.value}" }
             }
         }
