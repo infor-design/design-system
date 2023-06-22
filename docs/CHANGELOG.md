@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.14.9
+
+### v4.14.9 Fixes
+
+- `[Colors]` Updated all the slate colors in new theme. ([#7624](https://github.com/infor-design/enterprise/issues/7624))
+
 ## v4.14.8
 
 ### v4.14.8 Fixes
