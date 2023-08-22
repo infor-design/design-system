@@ -26,11 +26,12 @@ check_required_vars \
   REPO_OWNER_NAME
 
 _RELEASE_INCREMENT=${RELEASE_INCREMENT:-}
+_ROOT_DIR=/root/design-system
 
-rm -fr /root/design-system/{..?*,.[!.]*,*} 2>/dev/null
+rm -fr $_ROOT_DIR/{..?*,.[!.]*,*} 2>/dev/null
 
-git clone https://$GITHUB_ACCESS_TOKEN@github.com/$REPO_OWNER_NAME.git /root/design-system
-cd /root/design-system
+git clone https://$GITHUB_ACCESS_TOKEN@github.com/$REPO_OWNER_NAME.git $_ROOT_DIR
+cd $_ROOT_DIR
 git remote set-url origin https://${GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git
 
 git fetch --all
@@ -55,15 +56,24 @@ then
     VERSION=$(node -p "require('./package.json').version")
 fi
 
+if [[ "$RELEASEIT_FLAGS" == *"--dry-run=true"* ]];
+then
+    cd $_ROOT_DIR/dist && \
+        zip -r $_ROOT_DIR/dry-run-dist-$VERSION.zip .
+fi
+
 if [[ "$RELEASEIT_FLAGS" == *"--dry-run=false"* ]];
 then
-    ZIP_FILES=`find . -iname \*.zip`
-
-    for file in $ZIP_FILES; do
-        aws s3 cp "$file" "s3://infor-design-assets-downloads/archives/`basename $file`"
-    done
-
-    cd ./dist
-    aws s3 sync . s3://ids-com/docs/ids-identity/$VERSION/
-    aws s3 sync . s3://ids-com-staging/docs/ids-identity/$VERSION/
+    cd $_ROOT_DIR/dist && {
+        aws s3 sync . s3://ids-com/docs/ids-identity/$VERSION/
+        aws s3 sync . s3://ids-com-staging/docs/ids-identity/$VERSION/
+    }
 fi
+
+ZIP_FILES=`find $_ROOT_DIR -iname \*.zip`
+
+echo "Found zip files: $ZIP_FILES"
+
+for file in $ZIP_FILES; do
+    aws s3 cp "$file" "s3://infor-design-assets-downloads/archives/`basename $file`"
+done

@@ -9,8 +9,13 @@ endif
 
 .PHONY: build
 
+all-image : build-image push-image
+
 build-image :
 	docker build -t $(ORGANIZATION)/$(CONTAINER):$(VERSION) .
+
+push-image :
+	docker push $(ORGANIZATION)/$(CONTAINER):$(VERSION)
 
 build :
 	docker run --rm --name $(CONTAINER) \
