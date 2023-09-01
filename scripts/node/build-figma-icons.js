@@ -206,7 +206,7 @@ function run() {
       });
     }
 
-    runSync(promises).then(() => {});
+    runSync(promises).then(() => { });
     resolve();
   });
 }

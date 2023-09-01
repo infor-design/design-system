@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.14.11
+
+### v4.14.11 Fixes
+
+- `[Icons]` Fixed issues with asset pipeline. ([#518](https://github.com/infor-design/design-system/issues/518))
+
 ## v4.14.10
 
 ### v4.14.10 Fixes

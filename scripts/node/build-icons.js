@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable quotes */
 
 /**
  * @fileoverview Create svg icons from a sketch file
@@ -14,7 +15,7 @@ const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 const svgo = require('svgo');
-const swlog = require('./utilities/stopwatch-log.js');
+const swlog = require('./utilities/stopwatch-log');
 
 // Old Path was:
 // Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool'
@@ -104,7 +105,7 @@ function optimizeSVGs(src) {
     js2svg: { useShortTags: false },
     plugins: [
       { removeViewBox: false },
-      { convertColors: { currentColor: '#000000' } },
+      { convertColors: { currentColor: '#000' } },
       { removeDimensions: true },
       { moveGroupAttrsToElems: true },
       { removeUselessStrokeAndFill: true },
@@ -142,7 +143,8 @@ function optimizeSVGs(src) {
         }
       }
 
-      await fs.writeFileSync(filepath, dataOptimized.data, 'utf-8');
+      const svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: white"`);
+      await fs.writeFileSync(filepath, svgFile, 'utf-8');
     } catch (err) {
       swlog.error(err);
     }
@@ -342,6 +344,6 @@ function generateIcons(sketchfile, dest) {
 module.exports = generateIcons;
 
 module.exports = {
-  generateIcons : generateIcons,
-  optimizeSVGs : optimizeSVGs
-}
+  generateIcons,
+  optimizeSVGs
+};
