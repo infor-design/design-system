@@ -1,22 +1,10 @@
 # What's New with Infor Design System
 
-## v4.14.12
+## v4.14.13
 
-### v4.14.12 Fixes
+### v4.14.13 Fixes
 
 - `[Icons]` Fixed issues with asset pipeline. ([#518](https://github.com/infor-design/design-system/issues/518))
-
-## v4.14.11
-
-### v4.14.11 Fixes
-
-- `[Colors]` Updated all the slate colors in new theme again to fix issues. ([#7624](https://github.com/infor-design/enterprise/issues/7624))
-
-## v4.14.10
-
-### v4.14.10 Fixes
-
-- `[Colors]` Updated all the slate colors in new theme again to fix issues. ([#7624](https://github.com/infor-design/enterprise/issues/7624))
 
 ## v4.14.9
 
