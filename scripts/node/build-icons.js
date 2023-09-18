@@ -154,6 +154,8 @@ function optimizeSVGs(src) {
       } else if (!isEmpty) {
         svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
       }
+      console.log(`Optimizing ${filepath}`);
+
       await fs.writeFileSync(filepath, svgFile, 'utf-8');
     } catch (err) {
       swlog.error(err);
