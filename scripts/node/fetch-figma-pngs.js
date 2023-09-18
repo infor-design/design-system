@@ -1,4 +1,7 @@
-const del = require('del');
+/* eslint-disable no-console */
+/* eslint-disable no-shadow */
+/* eslint-disable consistent-return */
+/* eslint-disable camelcase */
 const fs = require('fs');
 const AWS = require('aws-sdk');
 const async = require('async');
@@ -102,6 +105,7 @@ function fetchPngs(config) {
  */
 function run() {
   return new Promise((resolve, reject) => {
+    // eslint-disable-next-line eqeqeq
     if (map.length == 0) {
       reject();
     }

@@ -1,15 +1,17 @@
-const del = require('del');
+/* eslint-disable no-console */
+/* eslint-disable no-shadow */
+/* eslint-disable consistent-return */
+/* eslint-disable guard-for-in */
+/* eslint-disable camelcase */
 const fs = require('fs');
 const AWS = require('aws-sdk');
 const async = require('async');
 const axios = require('axios');
-const swlog = require('./utilities/stopwatch-log.js');
 const util = require('util');
 
 const copyFile = util.promisify(fs.copyFile);
 const unlink = util.promisify(fs.unlink);
 const path = require('path');
-
 const gIcons = require('./build-icons');
 const map = require('./map.json');
 
@@ -35,6 +37,7 @@ const runSync = async (arr) => {
  * @param  {array} arrPaths - the directory path(s)
  */
 const createDirs = (arrPaths) => {
+  // eslint-disable-next-line no-shadow
   arrPaths.forEach((path) => {
     if (!fs.existsSync(path)) {
       fs.mkdirSync(path, { recursive: true });
@@ -64,8 +67,6 @@ function moveFileTo(file, dest) {
  */
 function generateMeta(col_id, dest) {
   return new Promise((resolve, reject) => {
-    const startTaskName = swlog.logTaskStart(`creating themes figma metadata file ${dest}`);
-
     axios.get(`${apiEndpoint}/collections/${col_id}/`)
       .then((response) => {
         try {
@@ -175,6 +176,7 @@ function fetchIcons(config) {
  */
 function run() {
   return new Promise((resolve, reject) => {
+    // eslint-disable-next-line eqeqeq
     if (map.length == 0) {
       reject();
     }
