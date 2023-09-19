@@ -144,7 +144,7 @@ function optimizeSVGs(src) {
       }
 
       let svgFile = dataOptimized.data;
-      svgFile = svgFile.replaceAll('stroke="#000"', 'stroke="currentColor"');
+      svgFile = svgFile.replaceAll('#000', 'currentColor');
       const hasStroke = svgFile.indexOf('stroke="currentColor"') > -1;
       const isEmpty = filepath.indexOf(`icons${path.sep}empty`) > 1;
       const isClassic = filepath.indexOf(`theme-classic`) > 1;
@@ -165,6 +165,8 @@ function optimizeSVGs(src) {
 
   return Promise.all(svgPromises).then(() => {
     iconJSON = iconJSON.replace(',\n}', '\n}');
+    iconJSON = iconJSON.replaceAll('#000', 'currentColor');
+
     fs.writeFileSync(`${src}/path-data.json`, `${iconJSON}}`, 'utf-8');
     swlog.logSubEnd(startOptimizeTaskName);
   }).catch(swlog.error);
