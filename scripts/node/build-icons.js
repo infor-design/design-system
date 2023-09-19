@@ -158,7 +158,7 @@ function optimizeSVGs(src) {
       if (!hasStroke2) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
 
       if (pathStatement.indexOf('stroke=') === -1) {
-        pathStatement = pathStatement.replaceAll('fill-rule="evenodd"', 'fill="currentColor" fill-rule="evenodd"');
+        pathStatement = pathStatement.replaceAll('fill-rule="evenodd"', 'fill="currentColor" fill-rule="evenodd" stroke="none" data=test="x"');
       }
 
       if (pathStatement.indexOf('stroke=') === -1) {
