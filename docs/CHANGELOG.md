@@ -1,10 +1,10 @@
 # What's New with Infor Design System
 
-## v4.14.13
+## v4.15.1
 
-### v4.14.13 Fixes
+### v4.15.1 Fixes
 
-- `[Icons]` Fixed issues with asset pipeline. ([#518](https://github.com/infor-design/design-system/issues/518))
+- `[Icons]` Fixed issues with asset pipeline. Made icons downloadable ([#518](https://github.com/infor-design/design-system/issues/518))
 
 ## v4.14.9
 
