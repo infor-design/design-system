@@ -144,10 +144,10 @@ function optimizeSVGs(src) {
       const isClassic = filepath.indexOf(`theme-classic`) > 1;
 
       if (hasStroke && !isEmpty) {
-        if (!isClassic) svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: #28282A; fill: transparent"`);
+        if (!isClassic) svgFile = svgFile.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: #28282A; fill: transparent"`);
         svgFile = svgFile.replaceAll('stroke="currentColor"', 'stroke="currentColor" fill="transparent"');
       } else if (!isEmpty && !isClassic) {
-        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
+        svgFile = svgFile.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
       }
 
       let pathStatement = svgFile
