@@ -150,9 +150,13 @@ function optimizeSVGs(src) {
         svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
       }
 
-      const pathStatement = svgFile
+      let pathStatement = svgFile
         .replace(/<svg[^>]*>/g, '')
         .replace(/<\/svg>/g, '');
+      pathStatement = pathStatement.replaceAll('#000', 'currentColor');
+      const hasStroke2 = svgFile.indexOf('stroke="currentColor"') > -1;
+      if (!hasStroke2) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
+
       iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
       await fs.writeFileSync(filepath, svgFile, 'utf-8');
     } catch (err) {
