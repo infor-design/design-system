@@ -154,7 +154,7 @@ function optimizeSVGs(src) {
         .replace(/<svg[^>]*>/g, '')
         .replace(/<\/svg>/g, '');
       pathStatement = pathStatement.replaceAll('#000', 'currentColor');
-      const hasStroke2 = svgFile.indexOf('stroke="currentColor"') > -1;
+      const hasStroke2 = pathStatement.indexOf('stroke="currentColor"') > -1;
       if (!hasStroke2) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
 
       iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
