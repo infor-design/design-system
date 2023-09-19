@@ -188,8 +188,10 @@ function run() {
       });
 
       promises.push(() => {
-        console.log(`Optimizing icons in ${map[i].destination_path}/svg/`);
-        return gIcons.optimizeSVGs(`./dist/${map[i].destination_path}/svg`);
+        setTimeout(() => {
+          console.log(`Optimizing icons in ${map[i].destination_path}/svg/`);
+          return gIcons.optimizeSVGs(`./dist/${map[i].destination_path}/svg`);
+        }, 9000);
       });
 
       promises.push(() => {
