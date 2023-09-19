@@ -157,6 +157,14 @@ function optimizeSVGs(src) {
       const hasStroke2 = pathStatement.indexOf('stroke="currentColor"') > -1;
       if (!hasStroke2) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
 
+      if (pathStatement.indexOf('stroke=') === -1) {
+        pathStatement = pathStatement.replaceAll('fill-rule="evenodd"', 'fill="currentColor" fill-rule="evenodd"');
+      }
+
+      if (pathStatement.indexOf('stroke=') === -1) {
+        pathStatement = pathStatement.replaceAll('<path d="', '<path fill="currentColor" d="');
+      }
+
       iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
       await fs.writeFileSync(filepath, svgFile, 'utf-8');
     } catch (err) {
