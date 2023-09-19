@@ -130,12 +130,6 @@ function optimizeSVGs(src) {
       const countStr = '<path';
       const count = /<path/g;
 
-      const pathStatement = dataOptimized.data
-        .replace(/<svg[^>]*>/g, '')
-        .replace(/<\/svg>/g, '');
-
-      iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
-
       // checking for more than one path in the file exported from sketch
       if (dataOptimized.data.includes(countStr)) {
         if (count.exec(dataOptimized.data).length !== 1) {
@@ -155,8 +149,11 @@ function optimizeSVGs(src) {
       } else if (!isEmpty && !isClassic) {
         svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
       }
-      console.log(`Optimizing ${filepath}${svgFile.indexOf('stroke="#000"') > -1}`);
 
+      const pathStatement = svgFile
+        .replace(/<svg[^>]*>/g, '')
+        .replace(/<\/svg>/g, '');
+      iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
       await fs.writeFileSync(filepath, svgFile, 'utf-8');
     } catch (err) {
       swlog.error(err);
@@ -164,9 +161,6 @@ function optimizeSVGs(src) {
   });
 
   return Promise.all(svgPromises).then(() => {
-    iconJSON = iconJSON.replace(',\n}', '\n}');
-    iconJSON = iconJSON.replaceAll('#000', 'currentColor');
-
     fs.writeFileSync(`${src}/path-data.json`, `${iconJSON}}`, 'utf-8');
     swlog.logSubEnd(startOptimizeTaskName);
   }).catch(swlog.error);
