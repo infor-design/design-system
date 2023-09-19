@@ -147,14 +147,15 @@ function optimizeSVGs(src) {
       svgFile = svgFile.replaceAll('stroke="#000"', 'stroke="currentColor"');
       const hasStroke = svgFile.indexOf('stroke="currentColor"') > -1;
       const isEmpty = filepath.indexOf(`icons${path.sep}empty`) > 1;
+      const isClassic = filepath.indexOf(`theme-classic`) > 1;
 
       if (hasStroke && !isEmpty) {
-        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: #28282A; fill: transparent" data-test="true"`);
+        if (!isClassic) svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: #28282A; fill: transparent"`);
         svgFile = svgFile.replaceAll('stroke="currentColor"', 'stroke="currentColor" fill="transparent"');
-      } else if (!isEmpty) {
-        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;" data-test="true"`);
+      } else if (!isEmpty && !isClassic) {
+        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
       }
-      console.log(`Optimizing ${filepath}`);
+      console.log(`Optimizing ${filepath}${svgFile.indexOf('stroke="#000"') > -1}`);
 
       await fs.writeFileSync(filepath, svgFile, 'utf-8');
     } catch (err) {
