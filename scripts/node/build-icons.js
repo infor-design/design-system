@@ -149,10 +149,10 @@ function optimizeSVGs(src) {
       const isEmpty = filepath.indexOf(`icons${path.sep}empty`) > 1;
 
       if (hasStroke && !isEmpty) {
-        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: #28282A; fill: transparent;"`);
+        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: #28282A; fill: transparent" data-test="true"`);
         svgFile = svgFile.replaceAll('stroke="currentColor"', 'stroke="currentColor" fill="transparent"');
       } else if (!isEmpty) {
-        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
+        svgFile = dataOptimized.data.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;" data-test="true"`);
       }
       console.log(`Optimizing ${filepath}`);
 
