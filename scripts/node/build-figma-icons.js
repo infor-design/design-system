@@ -161,7 +161,7 @@ function fetchIcons(config) {
         } else {
           setTimeout(() => {
             resolve();
-          }, 5000);
+          }, 15000);
         }
       });
     });
@@ -188,10 +188,8 @@ function run() {
       });
 
       promises.push(() => {
-        setTimeout(() => {
-          console.log(`Optimizing icons in ${map[i].destination_path}/svg/`);
-          return gIcons.optimizeSVGs(`./dist/${map[i].destination_path}/svg`);
-        }, 9000);
+        console.log(`Optimizing icons in ${map[i].destination_path}/svg/`);
+        return gIcons.optimizeSVGs(`./dist/${map[i].destination_path}/svg`);
       });
 
       promises.push(() => {
