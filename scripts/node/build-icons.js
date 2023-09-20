@@ -155,12 +155,12 @@ function optimizeSVGs(src) {
         .replace(/<\/svg>/g, '');
       pathStatement = pathStatement.replaceAll('#000', 'currentColor');
       const hasStroke2 = pathStatement.indexOf('stroke="currentColor"') > -1;
-      if (!hasStroke2) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
+      if (!hasStroke2 && !isEmpty) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
 
-      if (pathStatement.indexOf('stroke="currentColor"') === -1) {
+      if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty) {
         pathStatement = pathStatement.replaceAll('fill-rule="evenodd"', 'fill="currentColor" fill-rule="evenodd" stroke="none"');
       }
-      if (pathStatement.indexOf('stroke="currentColor"') === -1) {
+      if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty) {
         pathStatement = pathStatement.replaceAll('<path d="', '<path fill="currentColor" d="');
       }
 
