@@ -141,7 +141,7 @@ function optimizeSVGs(src) {
       svgFile = svgFile.replaceAll('#000', 'currentColor');
       const hasStroke = svgFile.indexOf('stroke="currentColor"') > -1;
       const isEmpty = filepath.indexOf(`icons${path.sep}empty`) > 1;
-      const isLogo = filepath.indexOf(`log0-`) > 1;
+      const isLogo = filepath.indexOf(`logo-`) > 1;
       const isClassic = filepath.indexOf(`theme-classic`) > 1;
 
       if (hasStroke && !isEmpty) {
@@ -164,6 +164,8 @@ function optimizeSVGs(src) {
       if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty && !isLogo) {
         pathStatement = pathStatement.replaceAll('<path d="', '<path fill="currentColor" d="');
       }
+
+      pathStatement = pathStatement.replace('d="M16.5 6H11V5h5.5v1zM11 9h5.5V8H11v1z"', 'd="M16.5 6H11V5h5.5v1zM11 9h5.5V8H11v1z" stroke="none"');
 
       iconJSON += `"${path.basename(filepath, '.svg')}": "${pathStatement.replace(/"/g, '\\"')}"${mapIndex + 1 === (last) ? '' : ','}\n`;
       await fs.writeFileSync(filepath, svgFile, 'utf-8');
