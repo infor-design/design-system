@@ -144,19 +144,22 @@ function optimizeSVGs(src) {
       const isLogo = filepath.indexOf(`logo-`) > 1;
       const isClassic = filepath.indexOf(`theme-classic`) > 1;
 
-      if (hasStroke && !isEmpty) {
+      if (hasStroke && !isEmpty && !isLogo) {
         if (!isClassic) svgFile = svgFile.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: #28282A; fill: transparent"`);
         svgFile = svgFile.replaceAll('stroke="currentColor"', 'stroke="currentColor" fill="transparent"');
-      } else if (!isEmpty && !isClassic) {
+      } else if (!isEmpty && !isClassic && !isLogo) {
         svgFile = svgFile.replace(`xmlns="http://www.w3.org/2000/svg"`, `xmlns="http://www.w3.org/2000/svg" style="color: transparent; fill: #28282A;"`);
       }
 
       let pathStatement = svgFile
         .replace(/<svg[^>]*>/g, '')
         .replace(/<\/svg>/g, '');
-      pathStatement = pathStatement.replaceAll('#000', 'currentColor');
+
+      if (isLogo) {
+        pathStatement = pathStatement.replaceAll('#000', 'currentColor');
+      }
       const hasStroke2 = pathStatement.indexOf('stroke="currentColor"') > -1;
-      if (!hasStroke2 && !isEmpty) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
+      if (!hasStroke2 && !isEmpty && !isLogo) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
 
       if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty && !isLogo) {
         pathStatement = pathStatement.replaceAll('fill-rule="evenodd"', 'fill="currentColor" fill-rule="evenodd" stroke="none"');
