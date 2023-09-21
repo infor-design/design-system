@@ -141,6 +141,7 @@ function optimizeSVGs(src) {
       svgFile = svgFile.replaceAll('#000', 'currentColor');
       const hasStroke = svgFile.indexOf('stroke="currentColor"') > -1;
       const isEmpty = filepath.indexOf(`icons${path.sep}empty`) > 1;
+      const isLogo = filepath.indexOf(`log0-`) > 1;
       const isClassic = filepath.indexOf(`theme-classic`) > 1;
 
       if (hasStroke && !isEmpty) {
@@ -157,10 +158,10 @@ function optimizeSVGs(src) {
       const hasStroke2 = pathStatement.indexOf('stroke="currentColor"') > -1;
       if (!hasStroke2 && !isEmpty) pathStatement = pathStatement.replace('d=', 'fill="currentColor" stroke="none" d=');
 
-      if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty) {
+      if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty && !isLogo) {
         pathStatement = pathStatement.replaceAll('fill-rule="evenodd"', 'fill="currentColor" fill-rule="evenodd" stroke="none"');
       }
-      if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty) {
+      if (pathStatement.indexOf('stroke="currentColor"') === -1 && !isEmpty && !isLogo) {
         pathStatement = pathStatement.replaceAll('<path d="', '<path fill="currentColor" d="');
       }
 
