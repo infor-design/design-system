@@ -1,8 +1,8 @@
 # What's New with Infor Design System
 
-## v4.15.2
+## v4.15.5
 
-### v4.15.2 Fixes
+### v4.15.5 Fixes
 
 - `[Colors]` Re-Updated all the slate colors in new theme to `#f5f5f5`. ([#8067](https://github.com/infor-design/enterprise/issues/8067))
 
