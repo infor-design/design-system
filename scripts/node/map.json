@@ -8,5 +8,45 @@
             "region": "us-east-1"
         },
         "destination_path": "theme-new/icons/default"
+    },
+    {
+        "name": "IDS Assets Library v4.5 Old Standard Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "col_id": 217,
+            "prefix": "c_217",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-new/icons/old/standard"
+    },
+    {
+        "name": "IDS Assets Library v4.5 Old Empty States Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "col_id": 218,
+            "prefix": "c_218",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-new/icons/old/empty"
+    },
+    {
+        "name": "IDS Assets Library v3.5 System Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "col_id": 221,
+            "prefix": "c_221",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-classic/icons/standard"
+    },
+    {
+        "name": "IDS Assets Library v3.5 Empty States Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "col_id": 222,
+            "prefix": "c_222",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-classic/icons/empty"
     }
 ]
