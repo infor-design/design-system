@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.16.0
+
+### v4.16.0 Fixes
+
+- `[Icons]` Now have 3 icons sets: classic, new (default) and new (old). The best and greates are the new (default) ones and should be adopted and tested. The folders in the package have been changed for this. ([#8129](https://github.com/infor-design/enterprise/issues/8129))
+
 ## v4.15.5
 
 ### v4.15.5 Fixes
