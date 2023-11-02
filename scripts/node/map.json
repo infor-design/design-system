@@ -1,23 +1,33 @@
 [
     {
-        "name": "IDS Assets Library v4.5 System Icons",
+        "name": "IDS Assets Library v4.5 Default Icons",
+        "source": {
+            "bucket_name": "infor-design-assets-downloads",
+            "col_id": 226,
+            "prefix": "c_226",
+            "region": "us-east-1"
+        },
+        "destination_path": "theme-new/icons/default"
+    },
+    {
+        "name": "IDS Assets Library v4.5 Old Standard Icons",
         "source": {
             "bucket_name": "infor-design-assets-downloads",
             "col_id": 217,
             "prefix": "c_217",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/icons/standard"
+        "destination_path": "theme-new/icons/old/standard"
     },
     {
-        "name": "IDS Assets Library v4.5 Empty States Icons",
+        "name": "IDS Assets Library v4.5 Old Empty States Icons",
         "source": {
             "bucket_name": "infor-design-assets-downloads",
             "col_id": 218,
             "prefix": "c_218",
             "region": "us-east-1"
         },
-        "destination_path": "theme-new/icons/empty"
+        "destination_path": "theme-new/icons/old/empty"
     },
     {
         "name": "IDS Assets Library v3.5 System Icons",
