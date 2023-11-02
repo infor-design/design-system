@@ -76,4 +76,5 @@ echo "Found zip files: $ZIP_FILES"
 
 for file in $ZIP_FILES; do
     aws s3 cp "$file" "s3://infor-design-assets-downloads/archives/`basename $file`"
+    echo "public link to $file: https://infor-design-assets-downloads.s3.amazonaws.com/archives/`basename $file`"
 done
