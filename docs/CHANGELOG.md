@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.16.1
+
+### v4.16.1 Fixes
+
+- `[Icons]` Added new icons `tack-filled, smart-panel-opened, smart-panel-closed` and corrected `tile, tile-filled` icons. ([#8129](https://github.com/infor-design/enterprise/issues/8129))
+
 ## v4.16.0
 
 ### v4.16.0 Fixes
