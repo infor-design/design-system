@@ -140,7 +140,8 @@ function optimizeSVGs(src) {
       let svgFile = dataOptimized.data;
       svgFile = svgFile.replaceAll('#000', 'currentColor');
       const hasStroke = svgFile.indexOf('stroke="currentColor"') > -1;
-      const isEmpty = filepath.indexOf(`icons${path.sep}empty`) > 1;
+      const isEmpty = filepath.indexOf(`${path.sep}empty-`) > 1;
+
       const iconName = path.basename(filepath).replace('.svg', '');
       const isLogo = iconName.indexOf(`logo-`) > -1 || iconName === 'logo';
       const isClassic = filepath.indexOf(`theme-classic`) > 1;
