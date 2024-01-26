@@ -140,8 +140,7 @@ function optimizeSVGs(src) {
       let svgFile = dataOptimized.data;
       svgFile = svgFile.replaceAll('#000', 'currentColor');
       const hasStroke = svgFile.indexOf('stroke="currentColor"') > -1;
-      const isEmpty = filepath.indexOf(`${path.sep}empty-`) > 1;
-
+      const isEmpty = (filepath.indexOf(`${path.sep}empty-`) > 1 || filepath.indexOf(`service-unavailable.svg`) > 1 || filepath.indexOf(`150x150.svg`) > 1 || filepath.indexOf(`300x300.svg`) > 1 || filepath.indexOf(`-500x500.svg`) > 1) && filepath.indexOf(`empty-circle.svg`) === -1;
       const iconName = path.basename(filepath).replace('.svg', '');
       const isLogo = iconName.indexOf(`logo-`) > -1 || iconName === 'logo';
       const isClassic = filepath.indexOf(`theme-classic`) > 1;
