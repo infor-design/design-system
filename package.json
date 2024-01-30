@@ -1,6 +1,6 @@
 {
   "name": "ids-identity",
-  "version": "4.16.1",
+  "version": "4.16.2",
   "description": "Infor Design System Design Assets",
   "scripts": {
     "build": "node ./scripts/node/build.js --build=meta,tokens,fonts,mixins,figma",
