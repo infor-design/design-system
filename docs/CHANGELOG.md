@@ -1,5 +1,12 @@
 # What's New with Infor Design System
 
+## v4.17.0
+
+### v4.17.0 Fixes
+
+- `[Fonts]` Added all source sans and language fonts so they can be served locally. ([#8671](https://github.com/infor-design/enterprise/issues/8671))
+- `[Fonts]` Added recommendations to serve files locally. ([#8635](https://github.com/infor-design/enterprise/issues/8635))
+
 ## v4.16.2
 
 ### v4.16.2 Fixes
