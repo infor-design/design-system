@@ -6,6 +6,8 @@
 
 - `[Fonts]` Added all source sans and language fonts so they can be served locally. ([#8671](https://github.com/infor-design/enterprise/issues/8671))
 - `[Fonts]` Added recommendations to serve files locally. ([#8635](https://github.com/infor-design/enterprise/issues/8635))
+- `[Icons]` Added new icons `trend-left` and `trend-right`. ([#8403](https://github.com/infor-design/enterprise/issues/8403))
+- `[Icons]` Added new icons `user-remove`, `trending-down`, `snooze`  and `trending-up`. ([#8403](https://github.com/infor-design/enterprise/issues/8403))
 
 ## v4.16.2
 
