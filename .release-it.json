@@ -17,6 +17,7 @@
     "gitlab": {
         "release": true,
         "sshKey": "/root/.ssh/id_rsa",
+	"tokenRef": "CI_JOB_TOKEN",
     	"tokenHeader": "Job-Token",
         "skipChecks": true,
         "releaseName": "v${version}",
