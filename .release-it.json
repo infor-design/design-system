@@ -16,9 +16,9 @@
     },
     "gitlab": {
         "release": true,
-        "releaseName": "v${version}",
         "sshKey": "/root/.ssh/id_rsa",
-	"skipChecks": true,
+        "skipChecks": true,
+        "releaseName": "v${version}",
         "assets": "IDS-*.zip"
     },
     "npm": {
