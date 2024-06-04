@@ -17,8 +17,8 @@
     "gitlab": {
         "release": true,
         "sshKey": "/root/.ssh/id_rsa",
-	"token": "${process.env.GITLAB_TOKEN}",
-    	"tokenHeader": "Job-Token",
+	"tokenRef": "GITLAB_TOKEN",
+    	"tokenHeader": "PRIVATE-TOKEN",
         "skipChecks": true,
         "releaseName": "v${version}",
         "assets": "IDS-*.zip"
