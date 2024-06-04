@@ -10,14 +10,15 @@
         "commitMessage": "Release v${version}",
         "tagAnnotation": "Release v${version}",
         "requireCleanWorkingDir": false,
-        "commit": false,
-        "push": false,
-        "tag": false
+        "commit": true,
+        "push": true,
+        "tag": true
     },
-    "github": {
-        "release": false,
+    "gitlab": {
+        "release": true,
         "releaseName": "v${version}",
-        "tokenRef": "GITHUB_ACCESS_TOKEN",
+        "sshKey": "/root/.ssh/id_rsa",
+	"skipChecks": true,
         "assets": "IDS-*.zip"
     },
     "npm": {
