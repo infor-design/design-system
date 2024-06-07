@@ -1,5 +1,11 @@
 # What's New with Infor Design System
 
+## v4.17.1
+
+### v4.17.1 Fixes
+
+- `[Fonts]` Added fonts to the npm package. ([#8671](https://github.com/infor-design/enterprise/issues/8671))
+
 ## v4.17.0
 
 ### v4.17.0 Fixes

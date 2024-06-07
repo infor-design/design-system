@@ -109,8 +109,8 @@ themesArr.forEach((theme) => {
   }
 
   if (args.build.includes('fonts')) {
-    const fontSrc = `./font/${theme}`;
-    if (fs.existsSync(fontSrc)) {
+    const fontSrc = './fonts/';
+    if (fs.existsSync(fontSrc) && themeDest === './dist/theme-new') {
       const dest = `${themeDest}/fonts`;
       createDirs([dest]);
 
