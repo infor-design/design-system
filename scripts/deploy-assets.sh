@@ -37,8 +37,7 @@ done
 case $DEPLOY_ENV in
   "local") DEPLOY_URL='http://localhost/api/docs/';;
   "localDebug") DEPLOY_URL='http://localhost:9002/api/docs/';;
-  "staging") DEPLOY_URL='https://staging.design.infor.com/api/docs/';;
-  "prod")  DEPLOY_URL='https://design.infor.com/api/docs/';;
+  "prod")  DEPLOY_URL='https://legacy.design.infor.com/api/docs/';;
    *) echo "Invalid option for deploy environment";;
 esac
 
