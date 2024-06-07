@@ -1,5 +1,0 @@
-{
-  "ui:order": [
-    "spec.template.spec.containers[0].env"
-  ]
-}
