@@ -1,5 +1,5 @@
 {
-  "name": "ids-identity",
+  "name": "@ids-sandbox/ids-identity",
   "version": "4.17.0",
   "description": "Infor Design System Design Assets",
   "scripts": {
