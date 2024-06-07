@@ -1,9 +1,4 @@
 #!/bin/bash
-
-# This script runs inside of a docker container on start as a
-# kubernetes job. AWS permissions are controlled by a role setup 
-# in kubernetes.  To run this locally, use the "make build" command
-# with proper environment variables set in .env file.
 set -e
 
 export TERM=xterm
@@ -54,8 +49,6 @@ fi
 
 git tag "${VERSION}"
 
-# DRY_RUN is a string, true or false
-
 if [ "$DRY_RUN" = "true" ]
 then
     echo "Skipping git push and npm publish in dry run mode."
@@ -70,12 +63,3 @@ cd $_ROOT_DIR/dist && {
     aws s3 sync . s3://ids-com/docs/ids-identity/$VERSION/
     aws s3 sync . s3://ids-com-staging/docs/ids-identity/$VERSION/
 }
-
-ZIP_FILES=`find $_ROOT_DIR -iname \*.zip`
-
-echo "Found zip files: $ZIP_FILES"
-
-for file in $ZIP_FILES; do
-    aws s3 cp "$file" "s3://infor-design-assets-downloads/archives/`basename $file`"
-    echo "public link to $file: https://infor-design-assets-downloads.s3.amazonaws.com/archives/`basename $file`"
-done
