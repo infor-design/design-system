@@ -24,7 +24,6 @@ shell :
 		--env AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} \
 		--env AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} \
 		--env NPM_TOKEN=${NPM_TOKEN} \
-		--env DOCS_API_KEY=${DOCS_API_KEY} \
 		--env DRY_RUN=${DRY_RUN} \
 		--env BRANCH=${BRANCH} \
 		--env REPO_OWNER_NAME=${REPO_OWNER_NAME} \

@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:18
 
 WORKDIR /usr/src
 
@@ -24,10 +24,6 @@ RUN curl -L "https://gitlab.com/gitlab-org/cli/-/releases/v1.41.0/downloads/glab
     cp bin/glab /usr/local/bin/glab && \
     chmod +x /usr/local/bin/glab && \
     rm -rf glab.tar.gz bin
-
-RUN npm install npm-cli-login@1.0.0 -g \
-    && npm install release-it@14.11.7 -g \
-    && npm install aws-sdk@2.1030.0 -g
 
 RUN mkdir -p /root/.ssh && touch /root/.ssh/config
 RUN echo "StrictHostKeyChecking no " > /root/.ssh/config
