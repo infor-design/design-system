@@ -1,3 +1,4 @@
+
 {
     "dry-run": true,
     "verbose": 2,
@@ -10,14 +11,17 @@
         "commitMessage": "Release v${version}",
         "tagAnnotation": "Release v${version}",
         "requireCleanWorkingDir": false,
-        "commit": false,
-        "push": false,
-        "tag": false
+        "commit": true,
+        "push": true,
+        "tag": true
     },
-    "github": {
-        "release": false,
+    "gitlab": {
+        "release": true,
+        "sshKey": "/root/.ssh/id_rsa",
+	"tokenRef": "GITLAB_TOKEN",
+    	"tokenHeader": "private-token",
+        "skipChecks": true,
         "releaseName": "v${version}",
-        "tokenRef": "GITHUB_ACCESS_TOKEN",
         "assets": "IDS-*.zip"
     },
     "npm": {
