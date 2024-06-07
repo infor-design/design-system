@@ -42,11 +42,8 @@ AWS_SECRET_ACCESS_KEY=
 NPM_TOKEN=""
 GITHUB_ACCESS_TOKEN=
 DOCS_API_KEY=
-
-# specify the semantic version target X.X.X
-RELEASE_INCREMENT=minor
-
-RELEASEIT_FLAGS="--dry-run=true"
+DRY_RUN=
+BRANCH=
 ```
 
 Then `make build`.

@@ -20,19 +20,20 @@ check_required_vars()
 }
 
 check_required_vars \
-  GITHUB_ACCESS_TOKEN \
   NPM_TOKEN \
   BRANCH \
-  REPO_OWNER_NAME
+  REPO_OWNER_NAME \
+  DRY_RUN
+
+npm set "//registry.npmjs.org/:_authToken=${NPM_TOKEN}"
 
 _RELEASE_INCREMENT=${RELEASE_INCREMENT:-}
 _ROOT_DIR=/root/design-system
 
 rm -fr $_ROOT_DIR/{..?*,.[!.]*,*} 2>/dev/null
 
-git clone https://$GITHUB_ACCESS_TOKEN@github.com/$REPO_OWNER_NAME.git $_ROOT_DIR
+git clone $REPO_OWNER_NAME $_ROOT_DIR
 cd $_ROOT_DIR
-git remote set-url origin https://${GITHUB_ACCESS_TOKEN}@github.com/infor-design/design-system.git
 
 git fetch --all
 git checkout $BRANCH > /dev/null
@@ -46,29 +47,29 @@ npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
 npm install
 npm run build
 
-if [ -n "$RELEASEIT_FLAGS" ];
-then
-  release-it $RELEASEIT_FLAGS --config .release-it.json --ci -- $_RELEASE_INCREMENT
-fi
-
 if [ -z $VERSION ]
 then
     VERSION=$(node -p "require('./package.json').version")
 fi
 
-if [[ "$RELEASEIT_FLAGS" == *"--dry-run=true"* ]];
+git tag "${VERSION}"
+
+# DRY_RUN is a string, true or false
+
+if [ "$DRY_RUN" = "true" ]
 then
-    cd $_ROOT_DIR/dist && \
-        zip -r $_ROOT_DIR/dry-run-dist-$VERSION.zip .
+    echo "Skipping git push and npm publish in dry run mode."
+    npm publish --access public --dry-run
+    exit 0
 fi
 
-if [[ "$RELEASEIT_FLAGS" == *"--dry-run=false"* ]];
-then
-    cd $_ROOT_DIR/dist && {
-        aws s3 sync . s3://ids-com/docs/ids-identity/$VERSION/
-        aws s3 sync . s3://ids-com-staging/docs/ids-identity/$VERSION/
-    }
-fi
+git push origin "${VERSION}"
+npm publish --access public
+
+cd $_ROOT_DIR/dist && {
+    aws s3 sync . s3://ids-com/docs/ids-identity/$VERSION/
+    aws s3 sync . s3://ids-com-staging/docs/ids-identity/$VERSION/
+}
 
 ZIP_FILES=`find $_ROOT_DIR -iname \*.zip`
 
